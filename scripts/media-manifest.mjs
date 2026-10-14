@@ -9,8 +9,7 @@ import { createHash } from "node:crypto";
 import { readdir, readFile, writeFile } from "node:fs/promises";
 import { join, relative, sep } from "node:path";
 import { fileURLToPath } from "node:url";
-
-export const PLACEHOLDER_MARKER = "albayan-placeholder";
+import { PLACEHOLDER_MARKER } from "./media-marker.mjs";
 
 const root = fileURLToPath(new URL("..", import.meta.url));
 const mediaDir = join(root, "public", "media");

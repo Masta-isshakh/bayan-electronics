@@ -290,3 +290,14 @@ html.lenis body {
 .lenis.lenis-stopped {
   overflow: clip;
 }
+
+/* Home intro: the header slides down as the hero finishes switching on. */
+@keyframes header-in {
+  from {
+    transform: translateY(-100%);
+  }
+}
+
+html:has([data-hero-intro]) [data-site-header] {
+  animation: header-in 500ms var(--ease-entrance) 1100ms backwards;
+}

@@ -53,3 +53,29 @@ Decisions taken without stopping to ask, with the reason. Newest at the bottom o
   identifiable as Al Bayan's, so deploying would risk creating resources in the wrong account. An
   `amplify_outputs.json` from the existing Amplify app (still describing the old Todo model) is present locally;
   the form checks for the `Inquiry` model at runtime and falls back to WhatsApp / email until the backend redeploys.
+
+## Motion and hero
+
+- **The switch-on intro is pure CSS**, keyed on `[data-hero-intro]`. It starts with the first paint instead of
+  waiting for hydration, never blocks input, and collapses to its end state under reduced motion. A module flag in
+  `Hero.tsx` drops the attribute on later client-side visits, so it plays once per page load. The header slide-in
+  uses `html:has([data-hero-intro]) [data-site-header]`, so the layout does not need to know the route.
+- **Words are split on the server** (`components/motion/SplitWords.tsx`) instead of with GSAP SplitText: no extra
+  plugin bytes, no layout shift at hydration, correct for Arabic (words only, never characters). SplitText is
+  therefore not registered.
+- **Intro reveals use clip-path + slide, not a fade from `opacity: 0`.** Chrome ignores opacity-0 paints for LCP,
+  so a faded-in subline became a late LCP candidate (~1.7 s on mobile) in testing; clip-path paints count immediately.
+- **Hero media mode is chosen from the media manifest:** a real poster (not a generated placeholder) becomes the LCP
+  `<picture>` with per-media-query preloads; otherwise the CSS light field shows. Video layers on top only when all
+  four encoded files exist. Verified with synthetic clips run through `npm run media:hero` (sources appended only
+  after `load` + idle, correct portrait/landscape set, crossfade, pause, CLS 0), then reverted.
+- **Intro and scroll transforms live on different elements** (`.mediaInner` vs `.media`, words vs content layer) so
+  CSS animation fill never overrides GSAP's inline transforms.
+- **Pause control is 44 × 44 px** (brief: 40 px) to meet the 44 px touch-target rule; it also pauses the light field
+  and scroll cue, and is hidden under reduced motion, when nothing moves.
+- **Hero content fades over the first 30% of the pin** so the headline is gone before the next section covers it.
+- **Lenis is loaded after hydration** and only when the desktop motion query matches, so it never counts toward
+  first-load JS; it shares GSAP's ticker.
+- **WhatsApp prefill is localized** (English on /en, Arabic on /ar) rather than one message containing both languages.
+- **`lib/gsap.ts` refreshes ScrollTrigger** after fonts load, after page transitions, and when the document height
+  changes (ResizeObserver, guarded against refresh loops), which covers `content-visibility` sections rendering late.

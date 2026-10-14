@@ -1,14 +1,20 @@
 import { getTranslations } from "next-intl/server";
+import { HomeHero } from "@/components/hero/HomeHero";
 import { type LocaleParams, resolveLocale } from "@/lib/i18n";
 
 export default async function HomePage({ params }: LocaleParams) {
   await resolveLocale(params);
-  const t = await getTranslations("hero");
+  const t = await getTranslations("home.products");
 
   return (
-    <section className="shell grid min-h-svh content-center gap-6">
-      <h1 className="display text-6xl">{t("headline")}</h1>
-      <p className="measure text-lg text-fg-muted">{t("subline")}</p>
-    </section>
+    <>
+      <HomeHero scrollTarget="#what-we-make" />
+      {/* Sections after the hero sit above it, so they slide over the pinned frame. */}
+      <div className="relative z-10 bg-canvas">
+        <section id="what-we-make" className="shell section-y min-h-svh">
+          <h2 className="display text-4xl">{t("title")}</h2>
+        </section>
+      </div>
+    </>
   );
 }

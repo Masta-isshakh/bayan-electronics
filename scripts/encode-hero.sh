@@ -32,8 +32,8 @@ ffmpeg -y -i media-src/hero/desktop.mp4 -an -vf "scale=1920:-2,fps=24" -c:v libv
 ffmpeg -y -i media-src/hero/desktop.mp4 -an -vf "scale=1920:-2,fps=24" -c:v libx264 -preset slow -crf 24 -profile:v high -level 4.1 -pix_fmt yuv420p -movflags +faststart "$out/hero-desktop.mp4"
 ffmpeg -y -i media-src/hero/mobile.mp4  -an -vf "scale=1080:-2,fps=24" -c:v libvpx-vp9 -b:v 0 -crf 34 -row-mt 1 -deadline good -cpu-used 2 -pix_fmt yuv420p "$out/hero-mobile.webm"
 ffmpeg -y -i media-src/hero/mobile.mp4  -an -vf "scale=1080:-2,fps=24" -c:v libx264 -preset slow -crf 25 -profile:v high -level 4.1 -pix_fmt yuv420p -movflags +faststart "$out/hero-mobile.mp4"
-ffmpeg -y -ss 00:00:02 -i "$out/hero-desktop.mp4" -frames:v 1 -q:v 2 "$out/poster-desktop.jpg"
-ffmpeg -y -ss 00:00:02 -i "$out/hero-mobile.mp4"  -frames:v 1 -q:v 2 "$out/poster-mobile.jpg"
+ffmpeg -y -ss 00:00:02 -i "$out/hero-desktop.mp4" -frames:v 1 -update 1 -q:v 2 "$out/poster-desktop.jpg"
+ffmpeg -y -ss 00:00:02 -i "$out/hero-mobile.mp4"  -frames:v 1 -update 1 -q:v 2 "$out/poster-mobile.jpg"
 
 # Report sizes against the budget (KB).
 check() {

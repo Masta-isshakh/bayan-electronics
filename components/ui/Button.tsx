@@ -6,7 +6,7 @@ export type ButtonVariant = "lumen" | "outline" | "quiet";
 
 const base =
   "inline-flex min-h-12 select-none items-center justify-center gap-2 rounded-control px-5 text-sm font-medium " +
-  "transition-[background-color,border-color,color,transform,filter] duration-300 ease-entrance active:scale-[0.98]";
+  "transition-[background-color,border-color,color,translate,scale,filter] duration-300 ease-entrance active:scale-[0.98]";
 
 const variants: Record<ButtonVariant, string> = {
   lumen: "bg-lumen text-void hover:brightness-110",

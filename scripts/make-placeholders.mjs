@@ -12,7 +12,7 @@ import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 import sharp from "sharp";
 import { tsImport } from "tsx/esm/api";
-import { PLACEHOLDER_MARKER } from "./media-manifest.mjs";
+import { PLACEHOLDER_MARKER } from "./media-marker.mjs";
 
 const root = fileURLToPath(new URL("..", import.meta.url));
 const mediaDir = join(root, "public", "media");
@@ -88,7 +88,11 @@ for (const image of listImages()) {
   await ensureDir(file);
 
   if (image.path === "textures/noise.png") {
-    await sharp(Buffer.from(noiseSvg(image.width))).png({ compressionLevel: 9 }).toFile(file);
+    // Grain is drawn at a few percent opacity: 16 grey levels are indistinguishable from 256.
+    await sharp(Buffer.from(noiseSvg(image.width)))
+      .toColourspace("b-w")
+      .png({ compressionLevel: 9, palette: true, colours: 16 })
+      .toFile(file);
   } else {
     await sharp(Buffer.from(placeholderSvg(image)))
       .jpeg({ quality: 80, mozjpeg: true })
