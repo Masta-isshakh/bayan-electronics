@@ -79,3 +79,31 @@ Decisions taken without stopping to ask, with the reason. Newest at the bottom o
 - **WhatsApp prefill is localized** (English on /en, Arabic on /ar) rather than one message containing both languages.
 - **`lib/gsap.ts` refreshes ScrollTrigger** after fonts load, after page transitions, and when the document height
   changes (ResizeObserver, guarded against refresh loops), which covers `content-visibility` sections rendering late.
+
+## Performance (measured with Lighthouse mobile, simulated slow 4G)
+
+Baseline after M4 sections: Performance 94, simulated LCP 3.0 s, observed LCP 0.46 s, first-load JS 180 kB.
+Lighthouse's simulation counts every request started before the LCP paint, so the work went into getting
+bytes out of that window:
+
+- **GSAP loads after idle.** Each scroll choreography is a small behaviour component (`HeroScroll`,
+  `TraceScroll`, `KenBurnsScroll`) that still uses `useGSAP` scoped to its owner's ref, loaded with
+  `next/dynamic` once the browser is idle. The markup is complete without it (fully drawn / static states).
+- **motion loads after idle.** `LazyMotion` + `domAnimation` now live in `MotionScope`, inside the lazily loaded
+  menus (`MegaPanel`, `MobileMenu`, mounted on idle or first open) and `AnimatedPage`. Page transitions keep the
+  motion wrapper in a module cache once loaded, so later navigations render it synchronously (no Suspense flash);
+  the very first load is never animated anyway.
+- **No message runtime on the client.** Client components get their strings as props from server wrappers
+  (`components/layout/labels.ts`); `NextIntlClientProvider` only provides the locale (`messages={null}`).
+- **Archivo self-hosted and reduced** (88 → 46 kB, see `fonts/README.md`).
+- **Inline CSS** (`experimental.inlineCss`): removes the render-blocking stylesheet round trip (FCP 1.4 → 1.2 s).
+- **Deferred media:** bento and CCT images stay `display:none` until within 400 px of the viewport, because Chrome's
+  lazy-load distance (≈1250 px) would otherwise fetch every product photo during the first paint.
+- **One image per bento tile:** the flashlight is a masked dimming layer instead of a second, brighter copy.
+- **Grain tile after idle**, 16-level palette PNG (139 → 32 kB).
+- **Modern `browserslist`** (Chrome/Edge 111, Firefox 113, Safari 16.4 — the CSS already needs these for
+  `color-mix`, `:has()`, logical properties).
+
+Result (home, warm server): Performance 97, FCP 1.2 s, simulated LCP 2.5 s (observed 0.43 s), TBT 70 ms, CLS 0,
+first-load JS 123 kB. An experiment without the web font gave the same simulated LCP: the remainder is the
+~100 kB React/Next runtime and the HTML + RSC payload that every App Router page carries.

@@ -27,7 +27,8 @@ export async function HomeHero({ scrollTarget }: { scrollTarget: string }) {
   const posterReady = !posterDesktop.placeholder && !posterMobile.placeholder;
   const video = site.hero.video;
   const videoReady =
-    video !== null && [video.desktop.webm, video.desktop.mp4, video.mobile.webm, video.mobile.mp4].every((file) => file.available);
+    video !== null &&
+    [video.desktop.webm, video.desktop.mp4, video.mobile.webm, video.mobile.mp4].every((file) => file.available);
 
   return (
     <Hero

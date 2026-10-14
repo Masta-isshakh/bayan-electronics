@@ -17,8 +17,3 @@ export async function resolveLocale(params: Promise<{ locale: string }>): Promis
 export function localeStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
 }
-
-/** Picks a subset of a messages object for a client provider. */
-export function pickMessages<M extends Record<string, unknown>, K extends keyof M>(messages: M, keys: readonly K[]) {
-  return Object.fromEntries(keys.map((key) => [key, messages[key]])) as Pick<M, K>;
-}

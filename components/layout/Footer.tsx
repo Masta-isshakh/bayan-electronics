@@ -8,6 +8,7 @@ import { Link } from "@/i18n/navigation";
 import type { Locale } from "@/i18n/locales";
 import { contactChannels, type ContactChannel } from "@/lib/contact";
 import { isPlaceholder } from "@/lib/placeholder";
+import { getLanguageLabels } from "./labels";
 import { LanguageSwitch } from "./LanguageSwitch";
 import { QatarMark } from "./QatarMark";
 import { Wordmark } from "./Wordmark";
@@ -19,7 +20,8 @@ const channelIcon: Record<ContactChannel["kind"], typeof Phone> = {
   address: MapPin,
 };
 
-const linkClass = "inline-flex min-h-11 items-center text-sm text-fg-muted transition-colors hover:text-fg lg:min-h-0 lg:py-1";
+const linkClass =
+  "inline-flex min-h-11 items-center text-sm text-fg-muted transition-colors hover:text-fg lg:min-h-0 lg:py-1";
 
 export async function Footer({ locale }: { locale: Locale }) {
   const t = await getTranslations("footer");
@@ -28,6 +30,7 @@ export async function Footer({ locale }: { locale: Locale }) {
   const channels = contactChannels(locale, tc("whatsAppGreeting"));
   const social = site.social.filter((link) => !isPlaceholder(link.href));
   const year = new Date().getFullYear();
+  const languageLabels = await getLanguageLabels();
 
   return (
     <footer className="border-t border-line bg-void">
@@ -108,7 +111,10 @@ export async function Footer({ locale }: { locale: Locale }) {
               ) : (
                 <div className="mt-4 space-y-3">
                   <p className="text-sm text-fg-muted">{t("contactPending")}</p>
-                  <Link href="/contact" className="inline-flex min-h-11 items-center text-sm text-lumen hover:underline">
+                  <Link
+                    href="/contact"
+                    className="inline-flex min-h-11 items-center text-sm text-lumen hover:underline"
+                  >
                     {tc("contactUs")}
                   </Link>
                 </div>
@@ -143,7 +149,7 @@ export async function Footer({ locale }: { locale: Locale }) {
                 {t("terms")}
               </Link>
             </nav>
-            <LanguageSwitch />
+            <LanguageSwitch labels={languageLabels} />
           </div>
         </div>
       </div>

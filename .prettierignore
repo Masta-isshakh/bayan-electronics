@@ -1,0 +1,9 @@
+.next
+node_modules
+.amplify
+amplify_outputs.json
+package-lock.json
+content/media-manifest.json
+CONTENT-TODO.md
+public
+fonts

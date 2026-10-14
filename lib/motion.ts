@@ -20,7 +20,8 @@ export const motionQueries = {
   /** Pinned, scrubbed choreography and smooth scrolling: desktop pointer devices only. */
   desktop: "(min-width: 1024px) and (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference)",
   /** Lighter scrubs for touch devices and narrow screens. */
-  compact: "(max-width: 1023px) and (prefers-reduced-motion: no-preference), (hover: none) and (prefers-reduced-motion: no-preference)",
+  compact:
+    "(max-width: 1023px) and (prefers-reduced-motion: no-preference), (hover: none) and (prefers-reduced-motion: no-preference)",
   motionOk: "(prefers-reduced-motion: no-preference)",
 } as const;
 

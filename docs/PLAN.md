@@ -5,17 +5,17 @@ Next.js App Router on AWS Amplify Gen 2. Decisions and deviations are logged in 
 
 ## Stack
 
-| Concern | Choice |
-|---|---|
-| Framework | Next.js 15.5 (App Router), React 19, TypeScript 5.9 strict |
-| Styling | Tailwind CSS v4, tokens in `@theme` (`app/globals.css`), logical utilities only |
-| i18n | next-intl 4, `app/[locale]/`, `localePrefix: 'always'`, middleware |
-| UI motion | `motion` (`motion/react`), `LazyMotion` + async `domAnimation` |
+| Concern       | Choice                                                                          |
+| ------------- | ------------------------------------------------------------------------------- |
+| Framework     | Next.js 15.5 (App Router), React 19, TypeScript 5.9 strict                      |
+| Styling       | Tailwind CSS v4, tokens in `@theme` (`app/globals.css`), logical utilities only |
+| i18n          | next-intl 4, `app/[locale]/`, `localePrefix: 'always'`, middleware              |
+| UI motion     | `motion` (`motion/react`), `LazyMotion` + async `domAnimation`                  |
 | Scroll motion | GSAP 3 + ScrollTrigger via `@gsap/react` `useGSAP`, registered in `lib/gsap.ts` |
-| Smooth scroll | Lenis, desktop fine-pointer only, lazy-loaded, driven by `gsap.ticker` |
-| Icons | lucide-react (stroke 1.5) |
-| Backend | Amplify Gen 2 Data: `Inquiry` model, public API key create-only |
-| Media tooling | sharp (placeholders, noise), ffmpeg (hero encode) |
+| Smooth scroll | Lenis, desktop fine-pointer only, lazy-loaded, driven by `gsap.ticker`          |
+| Icons         | lucide-react (stroke 1.5)                                                       |
+| Backend       | Amplify Gen 2 Data: `Inquiry` model, public API key create-only                 |
+| Media tooling | sharp (placeholders, noise), ffmpeg (hero encode)                               |
 
 ## Routes (`app/[locale]/…`, locales `en`, `ar`)
 

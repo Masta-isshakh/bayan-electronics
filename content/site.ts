@@ -65,8 +65,16 @@ export const site = {
 
   /** Rendered only when every value is confirmed — never show invented numbers. */
   stats: [
-    { id: "years", value: pending("years manufacturing in Qatar"), label: { en: "Years manufacturing in Qatar", ar: "سنوات من التصنيع في قطر" } },
-    { id: "capacity", value: pending("monthly production capacity (fixtures)"), label: { en: "Fixtures produced per month", ar: "وحدة إنارة تُنتَج شهرياً" } },
+    {
+      id: "years",
+      value: pending("years manufacturing in Qatar"),
+      label: { en: "Years manufacturing in Qatar", ar: "سنوات من التصنيع في قطر" },
+    },
+    {
+      id: "capacity",
+      value: pending("monthly production capacity (fixtures)"),
+      label: { en: "Fixtures produced per month", ar: "وحدة إنارة تُنتَج شهرياً" },
+    },
     { id: "projects", value: pending("projects delivered"), label: { en: "Projects delivered", ar: "مشروعاً منجزاً" } },
     { id: "families", value: pending("number of product lines"), label: { en: "Product lines", ar: "خط منتجات" } },
   ] satisfies Stat[],

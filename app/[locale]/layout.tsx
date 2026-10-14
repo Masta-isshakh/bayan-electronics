@@ -2,18 +2,18 @@ import "../globals.css";
 import type { Metadata, Viewport } from "next";
 import type { ReactNode } from "react";
 import { NextIntlClientProvider } from "next-intl";
-import { getMessages, getTranslations } from "next-intl/server";
+import { getTranslations } from "next-intl/server";
 import { Footer } from "@/components/layout/Footer";
 import { SiteHeader } from "@/components/layout/SiteHeader";
 import { WhatsAppFloat } from "@/components/layout/WhatsAppFloat";
+import { DeferredMediaObserver } from "@/components/motion/DeferredMediaObserver";
 import { RevealObserver } from "@/components/motion/RevealObserver";
-import { MotionProvider } from "@/components/providers/MotionProvider";
 import { SmoothScroll } from "@/components/providers/SmoothScroll";
 import { site } from "@/content/site";
 import { localeMeta } from "@/i18n/locales";
 import { whatsappHref } from "@/lib/contact";
 import { archivo, plexArabic } from "@/lib/fonts";
-import { localeStaticParams, pickMessages, resolveLocale } from "@/lib/i18n";
+import { localeStaticParams, resolveLocale } from "@/lib/i18n";
 
 export const dynamicParams = false;
 
@@ -39,7 +39,6 @@ export default async function LocaleLayout({
   params: Promise<{ locale: string }>;
 }) {
   const locale = await resolveLocale(params);
-  const messages = await getMessages();
   const t = await getTranslations("common");
   const ta = await getTranslations("a11y");
   const whatsapp = whatsappHref(t("whatsAppGreeting"));
@@ -48,24 +47,28 @@ export default async function LocaleLayout({
   return (
     <html lang={locale} dir={localeMeta[locale].dir} className={fontClasses}>
       <body>
-        <NextIntlClientProvider messages={pickMessages(messages, ["common", "nav", "a11y"])}>
-          <MotionProvider>
-            <a
-              href="#main"
-              className="sr-only focus:not-sr-only focus:fixed focus:start-4 focus:top-4 focus:z-70 focus:rounded-control focus:bg-lumen focus:px-4 focus:py-3 focus:text-sm focus:font-medium focus:text-void"
-            >
-              {ta("skipToContent")}
-            </a>
-            <SiteHeader locale={locale} />
-            <main id="main" tabIndex={-1} className="outline-none">
-              {children}
-            </main>
-            <Footer locale={locale} />
-            {whatsapp && <WhatsAppFloat href={whatsapp} label={t("chatWhatsApp")} />}
-          </MotionProvider>
+        {/* Locale context only: client components receive their strings as props, so no
+            messages (or message-formatting runtime) are shipped to the browser. */}
+        <NextIntlClientProvider messages={null}>
+          <a
+            href="#main"
+            className="sr-only focus:not-sr-only focus:fixed focus:start-4 focus:top-4 focus:z-70 focus:rounded-control focus:bg-lumen focus:px-4 focus:py-3 focus:text-sm focus:font-medium focus:text-void"
+          >
+            {ta("skipToContent")}
+          </a>
+          <SiteHeader locale={locale} />
+          <main id="main" tabIndex={-1} className="outline-none">
+            {children}
+          </main>
+          <Footer locale={locale} />
+          {whatsapp && <WhatsAppFloat href={whatsapp} label={t("chatWhatsApp")} />}
         </NextIntlClientProvider>
         <SmoothScroll />
         <RevealObserver />
+        <DeferredMediaObserver />
+        <noscript>
+          <style>{"[data-defer] img{display:block!important}"}</style>
+        </noscript>
         {/* Analytics slot — add later with next/script, strategy="afterInteractive". No third-party scripts today. */}
       </body>
     </html>

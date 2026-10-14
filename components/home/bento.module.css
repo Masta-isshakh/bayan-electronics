@@ -1,0 +1,97 @@
+/* Product tile with a flashlight: the photo sits under a dimming layer; when the tile
+   is lit, the layer is masked away in a 320px circle that follows the pointer
+   (--mx / --my) and a faint lumen glow fills the same circle. */
+.tile {
+  --mx: 50%;
+  --my: 45%;
+  position: relative;
+  isolation: isolate;
+  display: flex;
+  overflow: hidden;
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius-media);
+  background-color: var(--color-surface);
+  transition: border-color 400ms var(--ease-entrance);
+}
+
+.image {
+  object-fit: cover;
+  transition: scale 900ms var(--ease-entrance);
+}
+
+/* Dims the photo; when lit, a 320px hole follows the pointer — the flashlight. */
+.dim {
+  position: absolute;
+  inset: 0;
+  background-color: rgb(7 10 18 / 0.5);
+  transition: background-color 500ms var(--ease-entrance);
+}
+
+.glow {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  background: radial-gradient(320px circle at var(--mx) var(--my), rgb(255 194 71 / 0.18), transparent 70%);
+  transition: opacity 400ms var(--ease-entrance);
+}
+
+.shade {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgb(7 10 18 / 0.92) 0%, rgb(7 10 18 / 0.35) 45%, rgb(7 10 18 / 0) 70%);
+}
+
+.chips {
+  position: absolute;
+  z-index: 1;
+  top: 1rem;
+  inset-inline: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  opacity: 0;
+  transform: translateY(-6px);
+  transition:
+    opacity 400ms var(--ease-entrance),
+    transform 400ms var(--ease-entrance);
+}
+
+.body {
+  position: relative;
+  z-index: 1;
+  margin-top: auto;
+  padding: 1.25rem;
+}
+
+/* Lit: mouse hover, keyboard focus, or the first tap on touch. */
+.tile:hover,
+.tile:focus-visible,
+.tile[data-lit] {
+  border-color: rgb(255 194 71 / 0.35);
+}
+
+.tile:hover .image,
+.tile:focus-visible .image,
+.tile[data-lit] .image {
+  scale: 1.02;
+}
+
+.tile:hover .dim,
+.tile:focus-visible .dim,
+.tile[data-lit] .dim {
+  background-color: rgb(7 10 18 / 0.32);
+  mask-image: radial-gradient(320px circle at var(--mx) var(--my), transparent 0%, rgb(0 0 0 / 0.5) 45%, #000 75%);
+}
+
+.tile:hover :is(.glow, .chips),
+.tile:focus-visible :is(.glow, .chips),
+.tile[data-lit] :is(.glow, .chips) {
+  opacity: 1;
+  transform: none;
+}
+
+@media (min-width: 1024px) {
+  .body {
+    padding: 1.5rem;
+  }
+}

@@ -295,5 +295,7 @@ export function getFamily(slug: string): ProductFamily | undefined {
 }
 
 export function familiesBySlugs(slugs: readonly FamilySlug[]): ProductFamily[] {
-  return slugs.map((slug) => products.find((family) => family.slug === slug)).filter((f): f is ProductFamily => Boolean(f));
+  return slugs
+    .map((slug) => products.find((family) => family.slug === slug))
+    .filter((f): f is ProductFamily => Boolean(f));
 }

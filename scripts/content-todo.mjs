@@ -15,13 +15,34 @@ const messageFiles = ["en", "ar"];
 
 /** Manual items that are not placeholder strings in the content files. */
 const manualItems = [
-  ["Production domain", "Set `NEXT_PUBLIC_SITE_URL` in Amplify → Environment variables (canonical URLs, sitemap and OG images use it). Currently `https://albayan.example`."],
-  ["Email notification on new inquiry (SES/Lambda) — not set up", "Inquiries are stored in the Amplify `Inquiry` table only. Add an SES-backed function or a DynamoDB stream trigger to email the sales inbox."],
-  ["Form reply promise", "The success message says \"we reply within one business day\" (`form.success` in messages/*.json). Confirm or change the commitment."],
-  ["Logo", "Supply `public/media/brand/logo.svg`, `logo-mark.svg` and `logo-white.svg`. Until then the site renders a typographic \"AL BAYAN\" wordmark."],
-  ["Hero video", "Place source clips in `media-src/hero/desktop.mp4` and `media-src/hero/mobile.mp4`, then run `npm run media:hero`. Until then the hero uses the CSS light field."],
-  ["Legal pages", "Privacy and terms text (`legal` in messages/*.json) is a draft. Have it reviewed by the client's legal adviser."],
-  ["Arabic copy", "All Arabic copy (every `ar` field in content/ and all of messages/ar.json) was written for client review. See the section at the end."],
+  [
+    "Production domain",
+    "Set `NEXT_PUBLIC_SITE_URL` in Amplify → Environment variables (canonical URLs, sitemap and OG images use it). Currently `https://albayan.example`.",
+  ],
+  [
+    "Email notification on new inquiry (SES/Lambda) — not set up",
+    "Inquiries are stored in the Amplify `Inquiry` table only. Add an SES-backed function or a DynamoDB stream trigger to email the sales inbox.",
+  ],
+  [
+    "Form reply promise",
+    'The success message says "we reply within one business day" (`form.success` in messages/*.json). Confirm or change the commitment.',
+  ],
+  [
+    "Logo",
+    'Supply `public/media/brand/logo.svg`, `logo-mark.svg` and `logo-white.svg`. Until then the site renders a typographic "AL BAYAN" wordmark.',
+  ],
+  [
+    "Hero video",
+    "Place source clips in `media-src/hero/desktop.mp4` and `media-src/hero/mobile.mp4`, then run `npm run media:hero`. Until then the hero uses the CSS light field.",
+  ],
+  [
+    "Legal pages",
+    "Privacy and terms text (`legal` in messages/*.json) is a draft. Have it reviewed by the client's legal adviser.",
+  ],
+  [
+    "Arabic copy",
+    "All Arabic copy (every `ar` field in content/ and all of messages/ar.json) was written for client review. See the section at the end.",
+  ],
 ];
 
 function labelFor(value, index) {
@@ -70,7 +91,12 @@ function mergeLocales(rows) {
     const key = match ? match[1] : row.path;
     const existing = merged.get(key);
     if (existing) existing.locales.add(match?.[2]);
-    else merged.set(key, { path: key, what: row.what.replace(/\s*\((English|Arabic)\)/, ""), locales: new Set(match ? [match[2]] : []) });
+    else
+      merged.set(key, {
+        path: key,
+        what: row.what.replace(/\s*\((English|Arabic)\)/, ""),
+        locales: new Set(match ? [match[2]] : []),
+      });
   }
   return [...merged.values()].map(({ path, what, locales }) => ({
     path,
@@ -82,7 +108,8 @@ function countArabic(node) {
   if (Array.isArray(node)) return node.reduce((sum, child) => sum + countArabic(child), 0);
   if (!node || typeof node !== "object") return 0;
   return Object.entries(node).reduce(
-    (sum, [key, child]) => sum + (key === "ar" && typeof child === "string" && !child.includes(MARKER) ? 1 : countArabic(child)),
+    (sum, [key, child]) =>
+      sum + (key === "ar" && typeof child === "string" && !child.includes(MARKER) ? 1 : countArabic(child)),
     0,
   );
 }
@@ -95,7 +122,11 @@ function countStrings(node) {
 
 const escape = (text) => String(text).replaceAll("|", "\\|");
 const table = (head, rows) =>
-  [`| ${head.join(" | ")} |`, `|${head.map(() => "---").join("|")}|`, ...rows.map((r) => `| ${r.map(escape).join(" | ")} |`)].join("\n");
+  [
+    `| ${head.join(" | ")} |`,
+    `|${head.map(() => "---").join("|")}|`,
+    ...rows.map((r) => `| ${r.map(escape).join(" | ")} |`),
+  ].join("\n");
 
 const sections = [];
 let placeholderCount = 0;
@@ -120,8 +151,22 @@ for (const name of contentModules) {
   if (!merged.length && !flags.length) continue;
 
   const parts = [`### content/${name}.ts`];
-  if (flags.length) parts.push("**Confirm**", table(["Key", "What to check"], flags.map((f) => [`\`${f.path}\``, f.what])));
-  if (merged.length) parts.push("**Supply**", table(["Key", "What to supply"], merged.map((r) => [`\`${r.path}\``, r.what])));
+  if (flags.length)
+    parts.push(
+      "**Confirm**",
+      table(
+        ["Key", "What to check"],
+        flags.map((f) => [`\`${f.path}\``, f.what]),
+      ),
+    );
+  if (merged.length)
+    parts.push(
+      "**Supply**",
+      table(
+        ["Key", "What to supply"],
+        merged.map((r) => [`\`${r.path}\``, r.what]),
+      ),
+    );
   sections.push(parts.join("\n\n"));
 }
 
@@ -132,7 +177,15 @@ for (const locale of messageFiles) {
   if (locale === "ar") arabicCounts.push(["messages/ar.json", countStrings(messages)]);
   if (!rows.length) continue;
   placeholderCount += rows.length;
-  sections.push([`### messages/${locale}.json`, table(["Key", "What to supply"], rows.map((r) => [`\`${r.path}\``, r.what]))].join("\n\n"));
+  sections.push(
+    [
+      `### messages/${locale}.json`,
+      table(
+        ["Key", "What to supply"],
+        rows.map((r) => [`\`${r.path}\``, r.what]),
+      ),
+    ].join("\n\n"),
+  );
 }
 
 const { listImages, listMediaFiles } = await tsImport("../content/assets.ts", import.meta.url);
@@ -179,4 +232,6 @@ ${table(["File", "Arabic strings"], arabicCounts)}
 `;
 
 await writeFile(join(root, "CONTENT-TODO.md"), output);
-console.log(`content-todo: ${placeholderCount} values, ${flagCount} confirmations, ${pendingMedia.length} media → CONTENT-TODO.md`);
+console.log(
+  `content-todo: ${placeholderCount} values, ${flagCount} confirmations, ${pendingMedia.length} media → CONTENT-TODO.md`,
+);

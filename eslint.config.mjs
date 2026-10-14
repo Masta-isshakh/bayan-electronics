@@ -6,13 +6,7 @@ const compat = new FlatCompat({ baseDirectory: dirname(fileURLToPath(import.meta
 
 const config = [
   {
-    ignores: [
-      ".next/**",
-      ".amplify/**",
-      "node_modules/**",
-      "next-env.d.ts",
-      "amplify_outputs.json",
-    ],
+    ignores: [".next/**", ".amplify/**", "node_modules/**", "next-env.d.ts", "amplify_outputs.json"],
   },
   ...compat.extends("next/core-web-vitals", "next/typescript"),
   {

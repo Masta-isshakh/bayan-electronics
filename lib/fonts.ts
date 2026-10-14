@@ -1,11 +1,18 @@
-import { Archivo, IBM_Plex_Sans_Arabic } from "next/font/google";
+import { IBM_Plex_Sans_Arabic } from "next/font/google";
+import localFont from "next/font/local";
 
-/** Latin for both locales. Variable weight + width axis for the expanded display cut. */
-export const archivo = Archivo({
-  subsets: ["latin"],
-  axes: ["wdth"],
+/**
+ * Latin for both locales: Archivo, self-hosted and reduced to weight 400–700 ×
+ * width 100–125 %, Latin-1 (see fonts/README.md) — 46 KB instead of 88 KB.
+ */
+export const archivo = localFont({
+  src: "../fonts/archivo-variable.woff2",
+  weight: "400 700",
+  style: "normal",
   display: "swap",
   variable: "--font-archivo",
+  declarations: [{ prop: "font-stretch", value: "100% 125%" }],
+  adjustFontFallback: "Arial",
 });
 
 /**

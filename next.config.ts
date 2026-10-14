@@ -3,7 +3,11 @@ import createNextIntlPlugin from "next-intl/plugin";
 import bundleAnalyzer from "@next/bundle-analyzer";
 
 const withNextIntl = createNextIntlPlugin("./i18n/request.ts");
-const withBundleAnalyzer = bundleAnalyzer({ enabled: process.env.ANALYZE === "1" });
+const withBundleAnalyzer = bundleAnalyzer({
+  enabled: process.env.ANALYZE === "1",
+  analyzerMode: process.env.ANALYZE_MODE === "json" ? "json" : "static",
+  openAnalyzer: false,
+});
 
 const ONE_YEAR_SECONDS = 60 * 60 * 24 * 365;
 const immutable = [{ key: "Cache-Control", value: `public, max-age=${ONE_YEAR_SECONDS}, immutable` }];
@@ -11,6 +15,10 @@ const immutable = [{ key: "Cache-Control", value: `public, max-age=${ONE_YEAR_SE
 const nextConfig: NextConfig = {
   reactStrictMode: true,
   poweredByHeader: false,
+  experimental: {
+    // Inline the (small) stylesheet into the HTML: removes a render-blocking round trip.
+    inlineCss: true,
+  },
   images: {
     formats: ["image/avif", "image/webp"],
     minimumCacheTTL: ONE_YEAR_SECONDS,

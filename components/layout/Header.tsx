@@ -1,15 +1,18 @@
 "use client";
 
+import dynamic from "next/dynamic";
 import { useCallback, useEffect, useRef, useState, type FocusEvent, type PointerEvent, type ReactNode } from "react";
-import { useTranslations } from "next-intl";
 import { ChevronDown, Menu } from "lucide-react";
 import { Link, usePathname } from "@/i18n/navigation";
+import { useIdle } from "@/components/motion/useIdle";
 import { buttonClasses } from "@/components/ui/Button";
 import { cn } from "@/lib/cn";
 import { LanguageSwitch } from "./LanguageSwitch";
-import { MegaPanel } from "./MegaPanel";
-import { MobileMenu } from "./MobileMenu";
-import { primaryNav, type NavFamily, type NavFeature } from "./nav";
+import { primaryNav, type NavFamily, type NavFeature, type NavLabels } from "./nav";
+
+// Menus (and motion with them) load after first paint; they mount on idle or first open.
+const MegaPanel = dynamic(() => import("./MegaPanel"), { ssr: false });
+const MobileMenu = dynamic(() => import("./MobileMenu"), { ssr: false });
 
 const SOLID_AFTER_PX = 40;
 const HOVER_OPEN_MS = 80;
@@ -20,11 +23,10 @@ type HeaderProps = {
   logo: ReactNode;
   families: NavFamily[];
   feature: NavFeature;
+  labels: NavLabels;
 };
 
-export function Header({ logo, families, feature }: HeaderProps) {
-  const t = useTranslations("nav");
-  const tc = useTranslations("common");
+export function Header({ logo, families, feature, labels }: HeaderProps) {
   const pathname = usePathname();
   const [scrolled, setScrolled] = useState(false);
   const [panelOpen, setPanelOpen] = useState(false);
@@ -33,6 +35,7 @@ export function Header({ logo, families, feature }: HeaderProps) {
   const triggerRef = useRef<HTMLButtonElement>(null);
   const menuButtonRef = useRef<HTMLButtonElement>(null);
   const hoverTimer = useRef<number | undefined>(undefined);
+  const idle = useIdle();
 
   useEffect(() => {
     const update = () => setScrolled(window.scrollY > SOLID_AFTER_PX);
@@ -90,11 +93,16 @@ export function Header({ logo, families, feature }: HeaderProps) {
         )}
       >
         <div className="shell flex h-[var(--header-h)] items-center justify-between gap-6">
-          <Link href="/" aria-label={t("homeLink")} onClick={closePanel} className="inline-flex min-h-11 items-center">
+          <Link
+            href="/"
+            aria-label={labels.homeLink}
+            onClick={closePanel}
+            className="inline-flex min-h-11 items-center"
+          >
             {logo}
           </Link>
 
-          <nav aria-label={t("primary")} className="hidden lg:block">
+          <nav aria-label={labels.primary} className="hidden lg:block">
             <ul className="flex items-center gap-1">
               <li onPointerEnter={(event) => scheduleHover(true, event)}>
                 <button
@@ -106,7 +114,7 @@ export function Header({ logo, families, feature }: HeaderProps) {
                   className={cn(navLinkClass, "gap-1.5")}
                   aria-current={isCurrent("/products") ? "page" : undefined}
                 >
-                  {t("products")}
+                  {labels.products}
                   <ChevronDown
                     aria-hidden="true"
                     strokeWidth={1.5}
@@ -122,7 +130,7 @@ export function Header({ logo, families, feature }: HeaderProps) {
                     aria-current={isCurrent(item.href) ? "page" : undefined}
                     className={navLinkClass}
                   >
-                    {t(item.key)}
+                    {labels[item.key]}
                   </Link>
                 </li>
               ))}
@@ -130,16 +138,16 @@ export function Header({ logo, families, feature }: HeaderProps) {
           </nav>
 
           <div className="flex items-center gap-4">
-            <LanguageSwitch className="hidden lg:flex" />
+            <LanguageSwitch labels={labels.language} className="hidden lg:flex" />
             <Link href="/quote" onClick={closePanel} className={buttonClasses("lumen", "min-h-11 max-sm:hidden")}>
-              {tc("requestQuote")}
+              {labels.requestQuote}
             </Link>
             <button
               ref={menuButtonRef}
               type="button"
               aria-expanded={menuOpen}
               aria-controls="mobile-menu"
-              aria-label={t("openMenu")}
+              aria-label={labels.openMenu}
               onClick={() => setMenuOpen(true)}
               className="-me-2 inline-flex size-11 items-center justify-center rounded-control text-fg lg:hidden"
             >
@@ -148,16 +156,28 @@ export function Header({ logo, families, feature }: HeaderProps) {
           </div>
         </div>
 
-        <MegaPanel id={PANEL_ID} open={panelOpen} families={families} feature={feature} onNavigate={closePanel} />
+        {(idle || panelOpen) && (
+          <MegaPanel
+            id={PANEL_ID}
+            open={panelOpen}
+            families={families}
+            feature={feature}
+            onNavigate={closePanel}
+            labels={labels}
+          />
+        )}
       </header>
 
-      <MobileMenu
-        open={menuOpen}
-        onClose={closeMenu}
-        returnFocusTo={menuButtonRef}
-        logo={logo}
-        isCurrent={isCurrent}
-      />
+      {(idle || menuOpen) && (
+        <MobileMenu
+          open={menuOpen}
+          onClose={closeMenu}
+          returnFocusTo={menuButtonRef}
+          logo={logo}
+          isCurrent={isCurrent}
+          labels={labels}
+        />
+      )}
     </>
   );
 }

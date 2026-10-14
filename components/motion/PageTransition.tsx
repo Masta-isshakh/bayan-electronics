@@ -1,28 +1,37 @@
 "use client";
 
-import { useEffect, useState, type ReactNode } from "react";
-import { m } from "motion/react";
-import { DURATION, EASE_ENTRANCE } from "@/lib/motion";
+import { useEffect, useState, type ComponentType, type ReactNode } from "react";
 
-// The first page load is never animated (it would delay LCP and fight the hero intro);
-// client-side navigations fade in with a short rise.
+type Wrapper = ComponentType<{ children: ReactNode }>;
+
+// The animated wrapper (motion) is fetched once the browser is idle and kept here, so
+// later navigations can render it synchronously — no Suspense fallback, no flash.
+let AnimatedPage: Wrapper | null = null;
 let hasNavigated = false;
 
+function preloadAnimatedPage() {
+  if (AnimatedPage) return;
+  void import("./AnimatedPage").then((mod) => {
+    AnimatedPage = mod.default;
+  });
+}
+
+/**
+ * Page transition for app/[locale]/template.tsx. The first page load is never
+ * animated (it would delay LCP and fight the hero intro); client-side navigations
+ * fade in with a 12 px rise once motion has loaded.
+ */
 export function PageTransition({ children }: { children: ReactNode }) {
-  const [animate] = useState(() => hasNavigated);
+  const [Wrapper] = useState<Wrapper | null>(() => (hasNavigated ? AnimatedPage : null));
 
   useEffect(() => {
     hasNavigated = true;
+    if (typeof window.requestIdleCallback === "function") {
+      const handle = window.requestIdleCallback(preloadAnimatedPage);
+      return () => window.cancelIdleCallback(handle);
+    }
+    preloadAnimatedPage();
   }, []);
 
-  return (
-    <m.div
-      initial={animate ? { opacity: 0, y: 12 } : false}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: DURATION.page, ease: EASE_ENTRANCE }}
-      onAnimationComplete={() => window.dispatchEvent(new Event("page-transition-end"))}
-    >
-      {children}
-    </m.div>
-  );
+  return Wrapper ? <Wrapper>{children}</Wrapper> : <div>{children}</div>;
 }

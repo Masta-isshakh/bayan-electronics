@@ -13,8 +13,18 @@ const QUALITY = 70;
  */
 export function HeroPoster({ desktop, mobile }: { desktop: ImageAsset; mobile: ImageAsset }) {
   const common = { alt: "", sizes: "100vw", quality: QUALITY, priority: true } as const;
-  const { props: mobileProps } = getImageProps({ ...common, src: mobile.src, width: mobile.width, height: mobile.height });
-  const { props: desktopProps } = getImageProps({ ...common, src: desktop.src, width: desktop.width, height: desktop.height });
+  const { props: mobileProps } = getImageProps({
+    ...common,
+    src: mobile.src,
+    width: mobile.width,
+    height: mobile.height,
+  });
+  const { props: desktopProps } = getImageProps({
+    ...common,
+    src: desktop.src,
+    width: desktop.width,
+    height: desktop.height,
+  });
 
   preload(desktopProps.src, {
     as: "image",

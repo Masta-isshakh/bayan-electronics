@@ -26,7 +26,15 @@ export function Wordmark({ className }: { className?: string }) {
 
   if (logo.available) {
     return (
-      <Image src={logo.src} alt="" width={160} height={28} unoptimized priority className={cn("h-7 w-auto", className)} />
+      <Image
+        src={logo.src}
+        alt=""
+        width={160}
+        height={28}
+        unoptimized
+        priority
+        className={cn("h-7 w-auto", className)}
+      />
     );
   }
 

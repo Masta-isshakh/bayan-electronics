@@ -1,19 +1,30 @@
-import { getTranslations } from "next-intl/server";
 import { HomeHero } from "@/components/hero/HomeHero";
+import { CctSection } from "@/components/home/CctSection";
+import { FeaturedProjects } from "@/components/home/FeaturedProjects";
+import { ProductBento } from "@/components/home/ProductBento";
+import { QualitySection } from "@/components/home/QualitySection";
+import { SectorsSection } from "@/components/home/SectorsSection";
+import { StartProject } from "@/components/home/StartProject";
+import { Stats } from "@/components/home/Stats";
+import { TraceabilitySection } from "@/components/home/TraceabilitySection";
 import { type LocaleParams, resolveLocale } from "@/lib/i18n";
 
 export default async function HomePage({ params }: LocaleParams) {
-  await resolveLocale(params);
-  const t = await getTranslations("home.products");
+  const locale = await resolveLocale(params);
 
   return (
     <>
       <HomeHero scrollTarget="#what-we-make" />
-      {/* Sections after the hero sit above it, so they slide over the pinned frame. */}
+      {/* Everything after the hero sits above it, so it slides over the pinned frame. */}
       <div className="relative z-10 bg-canvas">
-        <section id="what-we-make" className="shell section-y min-h-svh">
-          <h2 className="display text-4xl">{t("title")}</h2>
-        </section>
+        <ProductBento locale={locale} id="what-we-make" />
+        <CctSection id="colour-temperature" />
+        <TraceabilitySection locale={locale} id="traceability" />
+        <QualitySection locale={locale} id="manufacturing-quality" />
+        <SectorsSection locale={locale} id="sectors" />
+        <FeaturedProjects locale={locale} id="projects" />
+        <Stats locale={locale} id="in-numbers" />
+        <StartProject id="start-a-project" />
       </div>
     </>
   );

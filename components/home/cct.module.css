@@ -1,0 +1,118 @@
+.explorer {
+  --p: 0.34;
+  --cct-tint: color-mix(in oklab, var(--color-cct-cool) calc(var(--p) * 100%), var(--color-cct-warm));
+  display: grid;
+  gap: 2.5rem;
+}
+
+.stage {
+  position: relative;
+  aspect-ratio: 8 / 5;
+  overflow: hidden;
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius-media);
+  background-color: var(--color-surface);
+}
+
+.scene {
+  object-fit: cover;
+  filter: brightness(calc(0.92 + var(--p) * 0.14));
+  transition: filter 200ms linear;
+}
+
+.tint {
+  position: absolute;
+  inset: 0;
+  background-color: var(--cct-tint);
+  mix-blend-mode: soft-light;
+  opacity: 0.9;
+  transition: background-color 200ms linear;
+}
+
+.panel {
+  align-self: center;
+}
+
+/* The same colour as a lit diode, so the change reads even on a dark photo. */
+.diode {
+  flex-shrink: 0;
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle at 50% 45%,
+    var(--color-text) 0%,
+    var(--cct-tint) 45%,
+    color-mix(in oklab, var(--cct-tint) 30%, transparent) 100%
+  );
+  box-shadow:
+    0 0 24px color-mix(in oklab, var(--cct-tint) 70%, transparent),
+    0 0 64px color-mix(in oklab, var(--cct-tint) 35%, transparent);
+}
+
+/* Range input: a warm→cool track and a thumb in the page colours. 44px tall hit area. */
+.range {
+  --track: linear-gradient(to right, var(--color-cct-warm), var(--color-cct-neutral) 45%, var(--color-cct-cool));
+  width: 100%;
+  height: 2.75rem;
+  margin-block: 0.5rem;
+  background: transparent;
+  cursor: pointer;
+  appearance: none;
+}
+
+:global([dir="rtl"]) .range {
+  --track: linear-gradient(to left, var(--color-cct-warm), var(--color-cct-neutral) 45%, var(--color-cct-cool));
+}
+
+.range::-webkit-slider-runnable-track {
+  height: 4px;
+  border-radius: 2px;
+  background: var(--track);
+}
+
+.range::-moz-range-track {
+  height: 4px;
+  border-radius: 2px;
+  background: var(--track);
+}
+
+.range::-webkit-slider-thumb {
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-top: calc(-0.75rem + 2px);
+  border: 2px solid var(--color-void);
+  border-radius: 50%;
+  background-color: var(--color-text);
+  box-shadow: 0 0 0 1px var(--color-line-strong);
+  appearance: none;
+}
+
+.range::-moz-range-thumb {
+  width: 1.25rem;
+  height: 1.25rem;
+  border: 2px solid var(--color-void);
+  border-radius: 50%;
+  background-color: var(--color-text);
+}
+
+.range:focus-visible {
+  outline: none;
+}
+
+.range:focus-visible::-webkit-slider-thumb {
+  outline: 2px solid var(--color-lumen);
+  outline-offset: 3px;
+}
+
+.range:focus-visible::-moz-range-thumb {
+  outline: 2px solid var(--color-lumen);
+  outline-offset: 3px;
+}
+
+@media (min-width: 1024px) {
+  .explorer {
+    grid-template-columns: minmax(0, 8fr) minmax(0, 4fr);
+    gap: 4rem;
+  }
+}

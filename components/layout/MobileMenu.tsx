@@ -1,15 +1,15 @@
 "use client";
 
 import { useEffect, useRef, type ReactNode, type RefObject } from "react";
-import { useTranslations } from "next-intl";
 import { AnimatePresence, m, type Variants } from "motion/react";
 import { X } from "lucide-react";
 import { Link } from "@/i18n/navigation";
 import { buttonClasses } from "@/components/ui/Button";
+import { MotionScope } from "@/components/motion/MotionScope";
 import { lockScroll } from "@/lib/smooth-scroll";
 import { DURATION, EASE_ENTRANCE, STAGGER } from "@/lib/motion";
 import { LanguageSwitch } from "./LanguageSwitch";
-import { primaryNav } from "./nav";
+import { primaryNav, type NavLabels } from "./nav";
 
 const FOCUSABLE = 'a[href], button:not([disabled]), [tabindex]:not([tabindex="-1"])';
 
@@ -29,12 +29,11 @@ type MobileMenuProps = {
   returnFocusTo: RefObject<HTMLButtonElement | null>;
   logo: ReactNode;
   isCurrent: (href: string) => boolean;
+  labels: NavLabels;
 };
 
-/** Full-screen overlay menu below 1024px. Focus is trapped while open; Escape closes. */
-export function MobileMenu({ open, onClose, returnFocusTo, logo, isCurrent }: MobileMenuProps) {
-  const t = useTranslations("nav");
-  const tc = useTranslations("common");
+/** Full-screen overlay menu below 1024px. Focus is trapped while open; Escape closes. Loaded lazily. */
+export default function MobileMenu({ open, onClose, returnFocusTo, logo, isCurrent, labels }: MobileMenuProps) {
   const dialogRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -72,64 +71,71 @@ export function MobileMenu({ open, onClose, returnFocusTo, logo, isCurrent }: Mo
   const links = [{ key: "products", href: "/products" }, ...primaryNav, { key: "contact", href: "/contact" }] as const;
 
   return (
-    <AnimatePresence>
-      {open && (
-        <m.div
-          ref={dialogRef}
-          id="mobile-menu"
-          role="dialog"
-          aria-modal="true"
-          aria-label={t("menu")}
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-          transition={{ duration: DURATION.page, ease: EASE_ENTRANCE }}
-          className="fixed inset-0 z-60 flex flex-col bg-void lg:hidden"
-        >
-          <div className="shell flex h-[var(--header-h)] shrink-0 items-center justify-between">
-            <Link href="/" onClick={onClose} aria-label={t("homeLink")} className="inline-flex min-h-11 items-center">
-              {logo}
-            </Link>
-            <button
-              type="button"
-              onClick={onClose}
-              aria-label={t("closeMenu")}
-              className="-me-2 inline-flex size-11 items-center justify-center rounded-control text-fg"
-            >
-              <X aria-hidden="true" strokeWidth={1.5} className="size-6" />
-            </button>
-          </div>
-
-          <nav aria-label={t("primary")} className="shell flex-1 overflow-y-auto py-8">
-            <m.ul variants={list} initial="hidden" animate="shown" className="space-y-1">
-              {links.map((link) => (
-                <m.li key={link.key} variants={item}>
-                  <Link
-                    href={link.href}
-                    onClick={onClose}
-                    aria-current={isCurrent(link.href) ? "page" : undefined}
-                    className="display block py-2 text-4xl text-fg/85 transition-colors hover:text-fg aria-[current=page]:text-lumen"
-                  >
-                    {t(link.key)}
-                  </Link>
-                </m.li>
-              ))}
-            </m.ul>
-          </nav>
-
+    <MotionScope>
+      <AnimatePresence>
+        {open && (
           <m.div
-            initial={{ opacity: 0, y: 12 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: DURATION.ui, ease: EASE_ENTRANCE, delay: 0.3 }}
-            className="shell flex shrink-0 flex-wrap items-center justify-between gap-4 border-t border-line py-6 pb-[max(1.5rem,env(safe-area-inset-bottom))]"
+            ref={dialogRef}
+            id="mobile-menu"
+            role="dialog"
+            aria-modal="true"
+            aria-label={labels.menu}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: DURATION.page, ease: EASE_ENTRANCE }}
+            className="fixed inset-0 z-60 flex flex-col bg-void lg:hidden"
           >
-            <LanguageSwitch />
-            <Link href="/quote" onClick={onClose} className={buttonClasses("lumen")}>
-              {tc("requestQuote")}
-            </Link>
+            <div className="shell flex h-[var(--header-h)] shrink-0 items-center justify-between">
+              <Link
+                href="/"
+                onClick={onClose}
+                aria-label={labels.homeLink}
+                className="inline-flex min-h-11 items-center"
+              >
+                {logo}
+              </Link>
+              <button
+                type="button"
+                onClick={onClose}
+                aria-label={labels.closeMenu}
+                className="-me-2 inline-flex size-11 items-center justify-center rounded-control text-fg"
+              >
+                <X aria-hidden="true" strokeWidth={1.5} className="size-6" />
+              </button>
+            </div>
+
+            <nav aria-label={labels.primary} className="shell flex-1 overflow-y-auto py-8">
+              <m.ul variants={list} initial="hidden" animate="shown" className="space-y-1">
+                {links.map((link) => (
+                  <m.li key={link.key} variants={item}>
+                    <Link
+                      href={link.href}
+                      onClick={onClose}
+                      aria-current={isCurrent(link.href) ? "page" : undefined}
+                      className="display block py-2 text-4xl text-fg/85 transition-colors hover:text-fg aria-[current=page]:text-lumen"
+                    >
+                      {labels[link.key]}
+                    </Link>
+                  </m.li>
+                ))}
+              </m.ul>
+            </nav>
+
+            <m.div
+              initial={{ opacity: 0, y: 12 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: DURATION.ui, ease: EASE_ENTRANCE, delay: 0.3 }}
+              className="shell flex shrink-0 flex-wrap items-center justify-between gap-4 border-t border-line py-6 pb-[max(1.5rem,env(safe-area-inset-bottom))]"
+            >
+              <LanguageSwitch labels={labels.language} />
+              <Link href="/quote" onClick={onClose} className={buttonClasses("lumen")}>
+                {labels.requestQuote}
+              </Link>
+            </m.div>
           </m.div>
-        </m.div>
-      )}
-    </AnimatePresence>
+        )}
+      </AnimatePresence>
+    </MotionScope>
   );
 }

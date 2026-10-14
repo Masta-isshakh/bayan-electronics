@@ -113,4 +113,6 @@ for (const media of listMediaFiles()) {
   console.log(`  + ${media.path}`);
 }
 
-console.log(created ? `make-placeholders: created ${created} file(s).` : "make-placeholders: nothing to do — all media present.");
+console.log(
+  created ? `make-placeholders: created ${created} file(s).` : "make-placeholders: nothing to do — all media present.",
+);

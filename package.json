@@ -17,7 +17,9 @@
     "media:placeholders": "node scripts/make-placeholders.mjs && node scripts/media-manifest.mjs",
     "media:hero": "bash scripts/encode-hero.sh && node scripts/media-manifest.mjs",
     "media:manifest": "node scripts/media-manifest.mjs",
-    "content:todo": "node scripts/content-todo.mjs"
+    "content:todo": "node scripts/content-todo.mjs",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
   },
   "dependencies": {
     "@gsap/react": "^2.1.2",
@@ -47,9 +49,17 @@
     "esbuild": "^0.28.2",
     "eslint": "^9.39.5",
     "eslint-config-next": "^15.5.28",
+    "prettier": "^3.9.10",
     "sharp": "^0.35.5",
     "tailwindcss": "^4.3.3",
     "tsx": "^4.23.15",
     "typescript": "~5.9.3"
-  }
+  },
+  "browserslist": [
+    "chrome >= 111",
+    "edge >= 111",
+    "firefox >= 113",
+    "safari >= 16.4",
+    "ios_saf >= 16.4"
+  ]
 }

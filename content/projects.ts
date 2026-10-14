@@ -61,7 +61,10 @@ export const projects: Project[] = [
     alt: { en: "Warehouse under high-bay lighting", ar: "مستودع تحت إنارة الأسقف العالية" },
     gallery: [
       { image: assets.solutions["industrial-warehouses"], alt: { en: "Warehouse aisles", ar: "ممرات المستودع" } },
-      { image: assets.products["high-bay-industrial"], alt: { en: "High-bay luminaire", ar: "وحدة إنارة للأسقف العالية" } },
+      {
+        image: assets.products["high-bay-industrial"],
+        alt: { en: "High-bay luminaire", ar: "وحدة إنارة للأسقف العالية" },
+      },
     ],
     facts: sampleFacts("project-02"),
     products: ["high-bay-industrial", "linear-batten", "floodlights-area"],
@@ -76,7 +79,10 @@ export const projects: Project[] = [
     image: assets.projects["project-03"],
     alt: { en: "Road lit by LED street lights", ar: "طريق مضاء بوحدات إنارة شوارع LED" },
     gallery: [
-      { image: assets.solutions["infrastructure-roads"], alt: { en: "Road interchange at night", ar: "تقاطع طرق ليلاً" } },
+      {
+        image: assets.solutions["infrastructure-roads"],
+        alt: { en: "Road interchange at night", ar: "تقاطع طرق ليلاً" },
+      },
       { image: assets.products["street-roadway"], alt: { en: "Street light", ar: "وحدة إنارة شوارع" } },
     ],
     facts: sampleFacts("project-03"),

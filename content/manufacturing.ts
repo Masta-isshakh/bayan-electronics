@@ -140,7 +140,10 @@ export const correctiveAction: Stage[] = [
   {
     id: "contain",
     title: { en: "Contain", ar: "الاحتواء" },
-    text: { en: "Affected parts or fixtures are isolated so they cannot ship.", ar: "تُعزل القطع أو الوحدات المتأثرة حتى لا تُشحن." },
+    text: {
+      en: "Affected parts or fixtures are isolated so they cannot ship.",
+      ar: "تُعزل القطع أو الوحدات المتأثرة حتى لا تُشحن.",
+    },
   },
   {
     id: "investigate",
@@ -150,7 +153,10 @@ export const correctiveAction: Stage[] = [
   {
     id: "correct",
     title: { en: "Correct", ar: "التصحيح" },
-    text: { en: "A corrective action is assigned, carried out and tracked to closure.", ar: "يُحدَّد إجراء تصحيحي ويُنفَّذ ويُتابَع حتى الإغلاق." },
+    text: {
+      en: "A corrective action is assigned, carried out and tracked to closure.",
+      ar: "يُحدَّد إجراء تصحيحي ويُنفَّذ ويُتابَع حتى الإغلاق.",
+    },
   },
   {
     id: "verify",

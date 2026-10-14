@@ -156,7 +156,14 @@
   inset-inline-start: 0;
   width: 45%;
   height: 2px;
-  background: linear-gradient(90deg, transparent, var(--color-lumen) 25%, #fff6e0 50%, var(--color-lumen) 75%, transparent);
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--color-lumen) 25%,
+    #fff6e0 50%,
+    var(--color-lumen) 75%,
+    transparent
+  );
   box-shadow: 0 0 28px 3px rgb(255 194 71 / 0.55);
   filter: blur(0.6px);
   opacity: 0;

@@ -23,6 +23,10 @@
   --color-day-muted: #5b6578;
   --color-day-line: rgb(11 15 28 / 0.1);
   --color-day-line-strong: rgb(11 15 28 / 0.2);
+  /* CCT explorer endpoints: 2700 K and 6500 K. */
+  --color-cct-warm: #ffb65c;
+  --color-cct-cool: #d7e8ff;
+  --color-cct-neutral: #fff1dc;
 
   --font-*: initial;
   --font-sans: var(--font-body);
@@ -300,4 +304,10 @@ html.lenis body {
 
 html:has([data-hero-intro]) [data-site-header] {
   animation: header-in 500ms var(--ease-entrance) 1100ms backwards;
+}
+
+/* Deferred media (components/motion/DeferredMediaObserver.tsx): hidden lazy images are
+   not fetched until their container is near the viewport. */
+[data-defer]:not([data-defer-ready]) img {
+  display: none;
 }

@@ -1,0 +1,109 @@
+/* Traceability chain. Mobile / reduced motion: a vertical timeline, fully drawn.
+   ≥ 1024px: seven columns on a horizontal line (drawn by GSAP on pointer devices). */
+.chain {
+  display: grid;
+  gap: 3rem;
+}
+
+.track {
+  position: relative;
+}
+
+.nodes {
+  display: grid;
+  gap: 2rem;
+}
+
+.item {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1.25rem minmax(0, 1fr);
+  gap: 1.25rem;
+}
+
+/* Vertical rule through the node centres (mobile). */
+.item::before {
+  content: "";
+  position: absolute;
+  top: 1.25rem;
+  bottom: -2rem;
+  inset-inline-start: calc(0.625rem - 1px);
+  width: 2px;
+  background-color: var(--color-lumen);
+  opacity: 0.6;
+}
+
+.item:last-child::before {
+  display: none;
+}
+
+.node {
+  --lit: 1;
+  position: relative;
+  z-index: 1;
+  width: 1.25rem;
+  height: 1.25rem;
+  margin-top: 0.15rem;
+  border: 2px solid color-mix(in oklab, var(--color-lumen) calc(var(--lit) * 100%), var(--color-line-strong));
+  border-radius: 50%;
+  background-color: color-mix(in oklab, var(--color-lumen) calc(var(--lit) * 100%), var(--color-void));
+  box-shadow: 0 0 calc(var(--lit) * 18px) rgb(255 194 71 / calc(var(--lit) * 0.55));
+}
+
+.line {
+  display: none;
+}
+
+.lineBase {
+  stroke: var(--color-line-strong);
+  stroke-width: 2px;
+}
+
+.lineLit {
+  stroke: var(--color-lumen);
+  stroke-width: 2px;
+  stroke-dasharray: 1;
+  stroke-dashoffset: 0;
+}
+
+@media (min-width: 1024px) {
+  .chain {
+    min-height: 100svh;
+    align-content: center;
+    padding-block: calc(var(--header-h) + 2rem) 3rem;
+  }
+
+  .nodes {
+    grid-template-columns: repeat(7, minmax(0, 1fr));
+    gap: 1.5rem;
+  }
+
+  .item {
+    grid-template-columns: none;
+    justify-items: start;
+    gap: 1.5rem;
+  }
+
+  .item::before {
+    display: none;
+  }
+
+  .node {
+    margin-top: 0;
+  }
+
+  /* The line runs from the first node's centre to the last one's. */
+  .line {
+    position: absolute;
+    top: calc(0.625rem - 1px);
+    inset-inline-start: 0.625rem;
+    display: block;
+    width: calc((100% - 6 * 1.5rem) / 7 * 6 + 6 * 1.5rem);
+    height: 2px;
+    overflow: visible;
+  }
+
+  :global([dir="rtl"]) .line {
+    transform: scaleX(-1);
+  }
+}

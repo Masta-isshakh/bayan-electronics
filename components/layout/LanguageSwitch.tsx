@@ -1,16 +1,16 @@
 "use client";
 
 import { Fragment, type MouseEvent } from "react";
-import { useLocale, useTranslations } from "next-intl";
+import { useLocale } from "next-intl";
 import { Link, usePathname, useRouter } from "@/i18n/navigation";
 import { localeMeta, locales, type Locale } from "@/i18n/locales";
 import { cn } from "@/lib/cn";
+import type { LanguageLabels } from "./nav";
 
 const shortLabel: Record<Locale, string> = { en: "EN", ar: "AR" };
 
 /** EN | AR. Keeps the current path, query and hash when switching. */
-export function LanguageSwitch({ className }: { className?: string }) {
-  const t = useTranslations("nav");
+export function LanguageSwitch({ labels, className }: { labels: LanguageLabels; className?: string }) {
   const current = useLocale();
   const pathname = usePathname();
   const router = useRouter();
@@ -23,12 +23,15 @@ export function LanguageSwitch({ className }: { className?: string }) {
   }
 
   return (
-    <div role="group" aria-label={t("language")} className={cn("flex items-center text-sm", className)}>
+    <div role="group" aria-label={labels.group} className={cn("flex items-center text-sm", className)}>
       {locales.map((locale, index) => (
         <Fragment key={locale}>
           {index > 0 && <span aria-hidden="true" className="mx-1 h-4 w-px bg-rule-strong" />}
           {locale === current ? (
-            <span aria-current="true" className="inline-flex min-h-11 min-w-9 items-center justify-center font-medium text-fg">
+            <span
+              aria-current="true"
+              className="inline-flex min-h-11 min-w-9 items-center justify-center font-medium text-fg"
+            >
               {shortLabel[locale]}
             </span>
           ) : (
@@ -36,11 +39,11 @@ export function LanguageSwitch({ className }: { className?: string }) {
               href={pathname}
               locale={locale}
               hrefLang={localeMeta[locale].hreflang}
-              aria-label={t("switchLanguage", { language: localeMeta[locale].label })}
               onClick={(event) => keepQuery(event, locale)}
               className="inline-flex min-h-11 min-w-9 items-center justify-center text-fg-muted transition-colors hover:text-fg"
             >
               {shortLabel[locale]}
+              <span className="sr-only"> {labels.switchTo[locale]}</span>
             </Link>
           )}
         </Fragment>
