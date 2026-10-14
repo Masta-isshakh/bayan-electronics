@@ -319,4 +319,4 @@ native-speaking member of the client's team before launch. Technical terms (LED,
 | content/solutions.ts | 45 |
 | content/projects.ts | 24 |
 | content/manufacturing.ts | 82 |
-| messages/ar.json | 104 |
+| messages/ar.json | 259 |

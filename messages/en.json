@@ -8,6 +8,34 @@
     "notFound": {
       "title": "Page not found",
       "description": "The page you are looking for does not exist or has moved."
+    },
+    "products": {
+      "title": "Products",
+      "description": "Eleven families of LED luminaires and electronics — panels, downlights, linear, high-bay, flood, street, façade, strips, drivers, smart controls and OEM — designed, built and tested in Qatar."
+    },
+    "solutions": {
+      "title": "Solutions by sector",
+      "description": "LED lighting specified for offices, industry, roads, hospitality, retail, education, healthcare, sports, homes and mosques in Qatar."
+    },
+    "manufacturing": {
+      "title": "Manufacturing and quality",
+      "description": "How Al Bayan builds LED luminaires in Qatar: six production stages, three inspection stages, an in-house laboratory and batch-level traceability."
+    },
+    "projects": {
+      "title": "Projects",
+      "description": "LED lighting projects delivered by Al Bayan across Qatar."
+    },
+    "about": {
+      "title": "About us",
+      "description": "Al Bayan Electronics & LED Technologies designs, manufactures and tests LED lighting in Qatar."
+    },
+    "privacy": {
+      "title": "Privacy notice",
+      "description": "How Al Bayan handles the information you send through this website."
+    },
+    "terms": {
+      "title": "Terms of use",
+      "description": "Terms for using the Al Bayan website."
     }
   },
   "common": {
@@ -89,10 +117,22 @@
       "valueText": "{kelvin} kelvin, {name}",
       "typical": "Typical uses",
       "bands": {
-        "warm": { "name": "Warm white", "uses": "Hotels, homes, restaurants and prayer halls" },
-        "neutral": { "name": "Neutral white", "uses": "Offices, schools, retail and clinics" },
-        "cool": { "name": "Cool white", "uses": "Industry, warehouses, car parks and healthcare" },
-        "daylight": { "name": "Daylight", "uses": "Sports, roads, inspection and outdoor areas" }
+        "warm": {
+          "name": "Warm white",
+          "uses": "Hotels, homes, restaurants and prayer halls"
+        },
+        "neutral": {
+          "name": "Neutral white",
+          "uses": "Offices, schools, retail and clinics"
+        },
+        "cool": {
+          "name": "Cool white",
+          "uses": "Industry, warehouses, car parks and healthcare"
+        },
+        "daylight": {
+          "name": "Daylight",
+          "uses": "Sports, roads, inspection and outdoor areas"
+        }
       },
       "min": "Warmer",
       "max": "Cooler"
@@ -140,5 +180,238 @@
     "text": "The page you are looking for does not exist or has moved.",
     "home": "Back to the home page",
     "products": "Browse products"
+  },
+  "products": {
+    "title": "Products",
+    "intro": "Eleven families of LED luminaires and electronics, designed, built and tested in Qatar.",
+    "filterLabel": "Filter by category",
+    "filters": {
+      "all": "All",
+      "indoor": "Indoor",
+      "outdoor": "Outdoor",
+      "electronics": "Electronics",
+      "smart": "Smart"
+    },
+    "results": "{count, plural, one {# product family} other {# product families}}",
+    "custom": {
+      "title": "Need something that is not in the range?",
+      "text": "We engineer and build luminaires to your drawings and specification — from a modified housing to a private-label range — with the same testing and traceability as our own products.",
+      "cta": "Custom & OEM manufacturing"
+    }
+  },
+  "family": {
+    "specsTitle": "Key specifications",
+    "specsNote": "Values depend on the configuration you choose. Ask for the datasheet for your project.",
+    "specColumn": "Specification",
+    "valueColumn": "Value",
+    "applicationsTitle": "Typical applications",
+    "downloadsTitle": "Downloads",
+    "relatedTitle": "Related families",
+    "ctaTitle": "Specifying this family for a project?",
+    "ctaText": "Send the quantities and drawings you have. We reply in Arabic or English with a proposal you can check line by line.",
+    "contact": "Ask a question"
+  },
+  "solutions": {
+    "title": "Solutions by sector",
+    "intro": "Lighting specified for how each type of building is used, maintained and lit in Qatar.",
+    "processTitle": "From specification to site",
+    "processIntro": "The same four steps for every sector, in Arabic or English.",
+    "steps": {
+      "share": {
+        "title": "Share your drawings",
+        "text": "Send layouts, a bill of quantities or a product list — whatever stage the project is at."
+      },
+      "propose": {
+        "title": "We propose and document",
+        "text": "Fixtures matched to the space, with specifications you can check line by line."
+      },
+      "build": {
+        "title": "Built and tested in Qatar",
+        "text": "Production in our own factory, with every batch tested in our own laboratory."
+      },
+      "deliver": {
+        "title": "Delivered with traceability",
+        "text": "Each delivery is recorded against your project, from supplier batch to site."
+      }
+    },
+    "ctaTitle": "Not sure which sector your project fits?",
+    "ctaText": "Tell us about the building and how it is used. We will suggest a starting point."
+  },
+  "sector": {
+    "challenge": "The challenge",
+    "approach": "How we approach it",
+    "products": "Typical products",
+    "project": "Related project",
+    "ctaTitle": "Planning a project in this sector?",
+    "ctaText": "Send us what you have — drawings, quantities or a short description — and we will reply with a proposal."
+  },
+  "manufacturing": {
+    "title": "Manufacturing and quality",
+    "intro": "Every fixture is inspected, tested in our own laboratory, and traceable from supplier batch to your project.",
+    "facilityTitle": "One factory, every stage",
+    "facilityAlt": "Al Bayan factory exterior",
+    "processTitle": "Six stages from design to dispatch",
+    "processIntro": "Each stage works from controlled instructions and is inspected before the next one starts.",
+    "qcTitle": "Quality control at three points",
+    "qcIntro": "Inspection happens when materials arrive, while fixtures are built, and before anything is packed.",
+    "ncrTitle": "When something is not right",
+    "ncrIntro": "Non-conformances follow a fixed route, so problems are contained, understood and not repeated.",
+    "labTitle": "Laboratory and testing",
+    "labIntro": "Testing happens in our own laboratory, so results are recorded against the production order and available when you need them.",
+    "certTitle": "Certifications",
+    "docsTitle": "Controlled documents",
+    "docsIntro": "Procedures, instructions and training are kept as controlled documents, so every station works from the current revision.",
+    "ctaTitle": "Want to see how your fixtures are made?",
+    "ctaText": "Ask about factory visits, test records or the documentation for your project."
+  },
+  "projects": {
+    "title": "Projects",
+    "intro": "Lighting we have engineered, built and delivered for projects across Qatar.",
+    "filterLabel": "Filter by sector",
+    "all": "All sectors",
+    "results": "{count, plural, one {# project} other {# projects}}",
+    "promiseTitle": "What every project receives",
+    "promise": {
+      "records": {
+        "title": "Test records",
+        "text": "Results for each production order, recorded in our own laboratory."
+      },
+      "trace": {
+        "title": "Traceability",
+        "text": "Every fixture traceable from supplier batch to your site."
+      },
+      "language": {
+        "title": "Arabic and English",
+        "text": "Proposals, documents and support in the language your team works in."
+      }
+    },
+    "ctaTitle": "Starting a project in Qatar?",
+    "ctaText": "Send us your drawings or specification. We reply in Arabic or English."
+  },
+  "project": {
+    "factsTitle": "Project facts",
+    "facts": {
+      "client": "Client",
+      "location": "Location",
+      "year": "Completed",
+      "scope": "Scope of supply"
+    },
+    "sampleNote": "This is a sample project layout. The real project, its details and photographs will be published once confirmed.",
+    "productsTitle": "Products used",
+    "galleryLabel": "Project photographs",
+    "ctaTitle": "Planning a similar project?",
+    "ctaText": "Tell us about the space and the timeline. We will reply with a proposal."
+  },
+  "about": {
+    "title": "About Al Bayan",
+    "intro": "A Qatari manufacturer of LED lighting and electronics, with production, testing and records under one roof.",
+    "whatTitle": "What we do",
+    "what": {
+      "production": {
+        "title": "In-house production",
+        "text": "From electronics assembly to finished luminaires, built in our factory in Qatar."
+      },
+      "lab": {
+        "title": "Our own laboratory",
+        "text": "Photometric, electrical, thermal and protection tests, recorded against each order."
+      },
+      "trace": {
+        "title": "Traceability",
+        "text": "Supplier, purchase order, material batch, production order, test results and delivery — linked."
+      },
+      "quality": {
+        "title": "A documented quality system",
+        "text": "Inspections, non-conformance reports, corrective actions and controlled documents."
+      },
+      "digital": {
+        "title": "Digitally managed production",
+        "text": "Planning, materials, inventory and maintenance managed digitally, from order to dispatch."
+      },
+      "language": {
+        "title": "Arabic and English",
+        "text": "We work with customers in both languages, by email and WhatsApp."
+      }
+    },
+    "madeTitle": "Made in Qatar",
+    "madeText": "We design, build and test in Qatar. The factory, the laboratory and the people who made your fixtures are within reach of every project we supply.",
+    "valuesTitle": "What we hold ourselves to",
+    "values": {
+      "precision": {
+        "title": "Precision",
+        "text": "Specifications that mean what they say, and fixtures built to them — checked, measured and recorded."
+      },
+      "reliability": {
+        "title": "Reliability",
+        "text": "Light that keeps working in Qatar's heat and dust, from a supplier that answers when you call."
+      },
+      "responsibility": {
+        "title": "Responsibility",
+        "text": "We stand behind every fixture we ship: if something is wrong, we trace it, fix it and make sure it does not happen again."
+      }
+    },
+    "facilityTitle": "The factory",
+    "facilityText": "Planning, production, testing and dispatch run in one facility in Qatar.",
+    "facilityCta": "How we manufacture",
+    "facilityAlt": "Al Bayan factory exterior",
+    "teamTitle": "Our team",
+    "timelineTitle": "Milestones",
+    "ctaTitle": "Talk to the people who make it",
+    "ctaText": "Questions about a product, a project or the factory — we reply in Arabic or English."
+  },
+  "legal": {
+    "draftNote": "Draft — to be reviewed by Al Bayan's legal adviser before publication.",
+    "updated": "Last updated: {date}",
+    "privacy": {
+      "title": "Privacy notice",
+      "intro": "This notice explains what information this website collects and how it is used.",
+      "sections": [
+        {
+          "heading": "What we collect",
+          "body": "When you send an inquiry or a request for quotation, we receive the details you enter: your name, company, email address, phone number, role, the product and project details you provide, and your message. We also record the page the form was sent from and the language you used."
+        },
+        {
+          "heading": "How we use it",
+          "body": "We use this information only to answer your inquiry, prepare quotations and follow up on your project. We do not sell it or share it for marketing."
+        },
+        {
+          "heading": "Where it is stored",
+          "body": "Form submissions are stored with our cloud provider, Amazon Web Services, and are accessible only to authorised Al Bayan staff."
+        },
+        {
+          "heading": "Cookies",
+          "body": "The website sets one functional cookie that remembers your language. It does not use advertising or analytics cookies."
+        },
+        {
+          "heading": "Your choices",
+          "body": "You can ask us to correct or delete the information you have sent by contacting us through the details on the contact page."
+        }
+      ]
+    },
+    "terms": {
+      "title": "Terms of use",
+      "intro": "By using this website you agree to these terms.",
+      "sections": [
+        {
+          "heading": "Information on this website",
+          "body": "Product descriptions, specifications and images are provided for general information. Binding specifications, prices and delivery terms are those stated in a written quotation or contract."
+        },
+        {
+          "heading": "Intellectual property",
+          "body": "Text, images, designs and trademarks on this website belong to Al Bayan Electronics & LED Technologies Factory or are used with permission. Do not reproduce them without written consent."
+        },
+        {
+          "heading": "Links",
+          "body": "Links to other websites are provided for convenience. We are not responsible for their content."
+        },
+        {
+          "heading": "Liability",
+          "body": "We take care to keep this website accurate and available, but we do not guarantee that it is free of errors or interruptions."
+        },
+        {
+          "heading": "Governing law",
+          "body": "These terms are governed by the laws of the State of Qatar."
+        }
+      ]
+    }
   }
 }

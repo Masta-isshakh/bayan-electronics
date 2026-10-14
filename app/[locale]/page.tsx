@@ -1,3 +1,5 @@
+import type { Metadata } from "next";
+import { getTranslations } from "next-intl/server";
 import { HomeHero } from "@/components/hero/HomeHero";
 import { CctSection } from "@/components/home/CctSection";
 import { FeaturedProjects } from "@/components/home/FeaturedProjects";
@@ -8,6 +10,13 @@ import { StartProject } from "@/components/home/StartProject";
 import { Stats } from "@/components/home/Stats";
 import { TraceabilitySection } from "@/components/home/TraceabilitySection";
 import { type LocaleParams, resolveLocale } from "@/lib/i18n";
+import { pageMetadata } from "@/lib/seo";
+
+export async function generateMetadata({ params }: LocaleParams): Promise<Metadata> {
+  const locale = await resolveLocale(params);
+  const t = await getTranslations({ locale, namespace: "meta.home" });
+  return pageMetadata({ locale, path: "/", title: t("title"), description: t("description") });
+}
 
 export default async function HomePage({ params }: LocaleParams) {
   const locale = await resolveLocale(params);
