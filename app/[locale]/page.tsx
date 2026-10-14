@@ -6,9 +6,9 @@ export default async function HomePage({ params }: LocaleParams) {
   const t = await getTranslations("hero");
 
   return (
-    <main id="main" className="shell grid min-h-svh content-center gap-6">
+    <section className="shell grid min-h-svh content-center gap-6">
       <h1 className="display text-6xl">{t("headline")}</h1>
       <p className="measure text-lg text-fg-muted">{t("subline")}</p>
-    </main>
+    </section>
   );
 }

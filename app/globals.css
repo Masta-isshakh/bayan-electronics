@@ -257,3 +257,36 @@
     transform 700ms var(--ease-entrance),
     clip-path 1000ms var(--ease-entrance);
 }
+
+/* 404: one diode trying to switch on. */
+@keyframes flicker {
+  0%,
+  62%,
+  70%,
+  100% {
+    opacity: 0.12;
+  }
+  64%,
+  68%,
+  76% {
+    opacity: 1;
+  }
+}
+
+/* Lenis (desktop pointer devices only). */
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: clip;
+}
