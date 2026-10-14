@@ -107,3 +107,22 @@ bytes out of that window:
 Result (home, warm server): Performance 97, FCP 1.2 s, simulated LCP 2.5 s (observed 0.43 s), TBT 70 ms, CLS 0,
 first-load JS 123 kB. An experiment without the web font gave the same simulated LCP: the remainder is the
 ~100 kB React/Next runtime and the HTML + RSC payload that every App Router page carries.
+
+## Inquiry form
+
+- **`lib/amplify-client.tsx` configures Amplify once (`ssr: true`) and is imported on demand** by the form (preloaded
+  when a field first gets focus), so `aws-amplify` never ships in first-load JS.
+- **Backend readiness is detected from `amplify_outputs.json`:** if the file is the stub or has no `Inquiry` model in
+  its model introspection, the form shows the WhatsApp / email fallback instead of calling the API.
+  `scripts/ensure-amplify-outputs.mjs` (runs before `dev` and `build`) writes the stub when the file is missing.
+- **Required fields:** contact — name, email, message (≥ 10 characters); quotation — name, email, "I am a", product
+  family ("Not sure yet" allowed). Everything else is optional and labelled as such.
+- **Submissions time out after 12 s.** Amplify retries 5xx responses with backoff, which left the form on "Sending…"
+  for well over 15 s in testing; the visitor now gets the error state with retry and direct channels.
+- **Honeypot submissions show the success state** without sending, so bots get no signal.
+- **Tested end to end without deploying:** model introspection for `Inquiry` was generated locally from the schema
+  (`@aws-amplify/graphql-generator`), `amplify_outputs.json` pointed temporarily at an `.invalid` AppSync URL, and
+  Playwright intercepted the GraphQL call — the `createInquiry` mutation carried every field; success, server error
+  (Arabic), rate limit, honeypot, validation and the fallback path all behaved as designed. The real outputs file was
+  restored afterwards.
+- **Favicon:** `app/icon.svg` (the LED-matrix mark) and a generated `app/apple-icon.png` replace the starter favicon.

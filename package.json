@@ -6,9 +6,9 @@
     "node": ">=20.9.0"
   },
   "scripts": {
-    "predev": "node scripts/media-manifest.mjs",
+    "predev": "node scripts/ensure-amplify-outputs.mjs && node scripts/media-manifest.mjs",
     "dev": "next dev --turbopack",
-    "prebuild": "node scripts/media-manifest.mjs",
+    "prebuild": "node scripts/ensure-amplify-outputs.mjs && node scripts/media-manifest.mjs",
     "build": "next build",
     "start": "next start",
     "lint": "eslint .",

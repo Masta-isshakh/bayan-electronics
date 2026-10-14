@@ -36,6 +36,14 @@
     "terms": {
       "title": "Terms of use",
       "description": "Terms for using the Al Bayan website."
+    },
+    "contact": {
+      "title": "Contact",
+      "description": "Contact Al Bayan Electronics & LED Technologies in Qatar. Send an inquiry in Arabic or English."
+    },
+    "quote": {
+      "title": "Request a quotation",
+      "description": "Request a quotation for LED lighting manufactured in Qatar: product family, quantity, project and delivery date."
     }
   },
   "common": {
@@ -413,5 +421,84 @@
         }
       ]
     }
+  },
+  "contact": {
+    "title": "Contact",
+    "intro": "Questions about products, projects or the factory. We reply in Arabic or English.",
+    "detailsTitle": "Contact details",
+    "hours": "Working hours",
+    "whatsappTitle": "Chat on WhatsApp",
+    "whatsappText": "Send a message in Arabic or English — share drawings or photos directly.",
+    "mapTitle": "Location",
+    "formTitle": "Send an inquiry",
+    "formIntro": "Tell us what you need. Fields marked optional can be left empty.",
+    "quoteHint": "Pricing a specific project?",
+    "quoteLink": "Request a quotation instead"
+  },
+  "quote": {
+    "title": "Request a quotation",
+    "intro": "Share the product, quantity and timeline. We reply with a proposal you can check line by line.",
+    "formTitle": "Quotation details",
+    "formIntro": "The more you share, the more precise the proposal. Fields marked optional can be left empty."
+  },
+  "form": {
+    "optional": "optional",
+    "name": "Full name",
+    "company": "Company",
+    "email": "Email",
+    "phone": "Phone",
+    "phoneHint": "Include the country code, e.g. +974.",
+    "role": "I am a",
+    "roles": {
+      "contractor": "Contractor",
+      "consultant": "Consultant",
+      "developer": "Developer",
+      "distributor": "Distributor",
+      "endUser": "End user",
+      "other": "Other"
+    },
+    "productFamily": "Product family",
+    "productFamilyPlaceholder": "Choose a product family",
+    "notSure": "Not sure yet",
+    "quantity": "Estimated quantity",
+    "quantityHint": "For example: 250 fixtures, or 1,200 m of strip.",
+    "projectName": "Project name",
+    "deliveryDate": "Required delivery date",
+    "message": "Message",
+    "messageQuoteLabel": "Project details",
+    "honeypot": "Leave this field empty",
+    "submit": "Send inquiry",
+    "submitQuote": "Send request",
+    "submitting": "Sending…",
+    "errors": {
+      "summary": "Please check the highlighted fields.",
+      "nameRequired": "Enter your name.",
+      "emailRequired": "Enter your email address.",
+      "emailInvalid": "Enter a valid email address, like name@company.com.",
+      "phoneInvalid": "Enter a valid phone number.",
+      "roleRequired": "Choose the option that describes you.",
+      "familyRequired": "Choose a product family, or “Not sure yet”.",
+      "messageRequired": "Tell us a little about what you need (at least 10 characters).",
+      "dateInvalid": "Choose a date from today onwards."
+    },
+    "success": {
+      "title": "Request sent — we reply within one business day.",
+      "text": "Thank you. Our team will review your request and reply by email or phone.",
+      "again": "Send another"
+    },
+    "error": {
+      "title": "Your request could not be sent.",
+      "text": "Please try again. If the problem continues, contact us directly.",
+      "retry": "Try again",
+      "rateLimited": "Please wait a few seconds before sending another request."
+    },
+    "fallback": {
+      "title": "The online form is not connected yet.",
+      "text": "Please send your request directly instead — your details above are kept so you can copy them.",
+      "none": "Direct contact details are being finalised. Please try again shortly.",
+      "email": "Send by email",
+      "whatsapp": "Send on WhatsApp"
+    },
+    "mailSubject": "Inquiry from the website"
   }
 }
