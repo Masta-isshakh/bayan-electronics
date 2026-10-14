@@ -1,62 +1,259 @@
-:root {
-  --max-width: 1100px;
-  --border-radius: 12px;
-  --font-mono: ui-monospace, Menlo, Monaco, 'Cascadia Mono', 'Segoe UI Mono',
-    'Roboto Mono', 'Oxygen Mono', 'Ubuntu Monospace', 'Source Code Pro',
-    'Fira Mono', 'Droid Sans Mono', 'Courier New', monospace;
+@import "tailwindcss";
 
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: #CBBEFF;
-  --background-end-rgb: 255, 255, 255;
+/* ── Design tokens ──────────────────────────────────────────────────────────
+   "Light is the product": a dark site the content illuminates, with one
+   daylight section per page. Palette, type scale, radii and easing live here;
+   components use the generated utilities (bg-void, text-lumen, rounded-media…). */
+@theme {
+  --color-*: initial;
+  --color-void: #070a12;
+  --color-surface: #0f1424;
+  --color-surface-2: #161c30;
+  --color-line: rgb(255 255 255 / 0.08);
+  --color-line-strong: rgb(255 255 255 / 0.16);
+  --color-text: #f2f4f8;
+  --color-muted: #9aa5bc;
+  --color-lumen: #ffc247;
+  --color-lumen-deep: #8a5a00;
+  --color-lumen-cool: #cde6ff;
+  --color-maroon: #8a1538;
+  --color-day: #f5f6f9;
+  --color-day-surface: #ffffff;
+  --color-day-text: #0b0f1c;
+  --color-day-muted: #5b6578;
+  --color-day-line: rgb(11 15 28 / 0.1);
+  --color-day-line-strong: rgb(11 15 28 / 0.2);
 
-  --callout-rgb: 238, 240, 241;
-  --callout-border-rgb: 172, 175, 176;
-  --card-rgb: #6649AE;
-  --card-border-rgb: 131, 134, 135;
+  --font-*: initial;
+  --font-sans: var(--font-body);
+
+  /* 14 / 16 / 18 / 22 / 28 / 36 / 48 / 64 / 88 */
+  --text-*: initial;
+  --text-sm: 0.875rem;
+  --text-sm--line-height: 1.55;
+  --text-base: 1rem;
+  --text-base--line-height: 1.65;
+  --text-lg: 1.125rem;
+  --text-lg--line-height: 1.6;
+  --text-xl: 1.375rem;
+  --text-xl--line-height: 1.4;
+  --text-2xl: clamp(1.5rem, 1.3rem + 0.75vw, 1.75rem);
+  --text-2xl--line-height: 1.25;
+  --text-3xl: clamp(1.75rem, 1.45rem + 1.2vw, 2.25rem);
+  --text-3xl--line-height: 1.15;
+  --text-4xl: clamp(2.125rem, 1.65rem + 2vw, 3rem);
+  --text-4xl--line-height: 1.08;
+  --text-5xl: clamp(2.375rem, 1.6rem + 3.3vw, 4rem);
+  --text-5xl--line-height: 1.02;
+  --text-6xl: clamp(2.25rem, 1rem + 5.4vw, 5.5rem);
+  --text-6xl--line-height: 1;
+
+  --radius-control: 4px;
+  --radius-media: 12px;
+  --radius-frame: 24px;
+
+  --ease-entrance: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+
+  --breakpoint-wide: 90rem;
+
+  --animate-word-in: word-in 600ms var(--ease-entrance) both;
 }
 
-@media (prefers-color-scheme: dark) {
+/* Semantic tokens that flip inside a daylight section. `inline` makes utilities
+   reference the variable directly, so a descendant override takes effect. */
+@theme inline {
+  --color-fg: var(--fg);
+  --color-fg-muted: var(--fg-muted);
+  --color-rule: var(--rule);
+  --color-rule-strong: var(--rule-strong);
+  --color-canvas: var(--canvas);
+  --color-panel: var(--panel);
+  --color-focus: var(--focus);
+}
+
+@layer base {
   :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-
-    --callout-rgb: 20, 20, 20;
-    --callout-border-rgb: 108, 108, 108;
-    --card-rgb: 100, 100, 100;
-    --card-border-rgb: 200, 200, 200;
-  }
-}
-
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-}
-
-html,
-body {
-  max-width: 100vw;
-  overflow-x: hidden;
-}
-
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-@media (prefers-color-scheme: dark) {
-  html {
+    --font-body: var(--font-archivo), ui-sans-serif, system-ui, sans-serif;
+    --fg: var(--color-text);
+    --fg-muted: var(--color-muted);
+    --rule: var(--color-line);
+    --rule-strong: var(--color-line-strong);
+    --canvas: var(--color-void);
+    --panel: var(--color-surface);
+    --focus: var(--color-lumen);
+    --header-h: 4.5rem;
     color-scheme: dark;
   }
+
+  /* Arabic glyphs from IBM Plex Sans Arabic; Latin (LED, DALI, 0–9) stays in Archivo. */
+  :root:lang(ar) {
+    --font-body: var(--font-plex-arabic), var(--font-archivo), ui-sans-serif, system-ui, sans-serif;
+  }
+
+  html {
+    background-color: var(--color-void);
+    -webkit-text-size-adjust: 100%;
+    scrollbar-color: var(--color-line-strong) var(--color-void);
+  }
+
+  body {
+    min-height: 100svh;
+    background-color: var(--canvas);
+    color: var(--fg);
+    font-family: var(--font-body);
+    font-size: var(--text-base);
+    line-height: 1.65;
+    font-variant-numeric: tabular-nums;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  :root:lang(ar) body {
+    line-height: 1.8;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--focus);
+    outline-offset: 3px;
+  }
+
+  ::selection {
+    background-color: var(--color-lumen);
+    color: var(--color-void);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    ::before,
+    ::after {
+      animation-duration: 0.01ms !important;
+      animation-delay: 0ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+/* ── Layout utilities ─────────────────────────────────────────────────────── */
+@utility shell {
+  width: 100%;
+  max-width: 90rem;
+  margin-inline: auto;
+  padding-inline: 1.5rem;
+
+  @variant md {
+    padding-inline: 3rem;
+  }
+}
+
+/* Section rhythm: 64px on phones → 160px on wide screens. */
+@utility section-y {
+  padding-block: clamp(4rem, 2.4rem + 6.4vw, 10rem);
+}
+
+@utility measure {
+  max-width: 70ch;
+}
+
+/* Below-the-fold sections without pins: skip rendering until near the viewport. */
+@utility cv-auto {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 800px;
+}
+
+/* Display headings: Archivo expanded. Arabic: Plex 700, no tracking, taller lines. */
+@utility display {
+  font-weight: 650;
+  font-stretch: 118%;
+  letter-spacing: -0.02em;
+  text-wrap: balance;
+
+  &:lang(ar) {
+    font-weight: 700;
+    letter-spacing: 0;
+    line-height: 1.25;
+  }
+}
+
+/* Daylight section: flips the semantic tokens to the light palette. */
+@utility daylight {
+  --fg: var(--color-day-text);
+  --fg-muted: var(--color-day-muted);
+  --rule: var(--color-day-line);
+  --rule-strong: var(--color-day-line-strong);
+  --canvas: var(--color-day);
+  --panel: var(--color-day-surface);
+  --focus: var(--color-lumen-deep);
+  background-color: var(--canvas);
+  color: var(--fg);
+  color-scheme: light;
+}
+
+@utility visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* ── Motion ───────────────────────────────────────────────────────────────── */
+
+/* Word-by-word headline reveal (never per character: Arabic letters join).
+   Negative insets keep Arabic diacritics and descenders unclipped at rest. */
+@keyframes word-in {
+  from {
+    clip-path: inset(-0.35em -0.1em calc(100% + 0.35em) -0.1em);
+    transform: translateY(0.3em);
+  }
+  to {
+    clip-path: inset(-0.35em -0.1em -0.35em -0.1em);
+    transform: none;
+  }
+}
+
+.word-reveal .word {
+  display: inline-block;
+  animation: var(--animate-word-in);
+  animation-delay: calc(var(--word-delay, 0ms) + var(--i, 0) * 60ms);
+}
+
+/* Scroll reveal, driven by components/motion/RevealObserver.tsx. Elements are only
+   put into the pending pose by JS, so content is complete without JavaScript. */
+[data-reveal][data-reveal-state="pending"] {
+  opacity: 0;
+  transform: translateY(12px);
+}
+
+[data-reveal="clip"][data-reveal-state="pending"] {
+  opacity: 1;
+  transform: none;
+  clip-path: inset(0 0 100% 0);
+}
+
+[data-reveal][data-reveal-state="in"] {
+  opacity: 1;
+  transform: none;
+  clip-path: inset(0 0 0 0);
+  transition:
+    opacity 700ms var(--ease-entrance),
+    transform 700ms var(--ease-entrance),
+    clip-path 1000ms var(--ease-entrance);
 }

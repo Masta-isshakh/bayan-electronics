@@ -1,0 +1,144 @@
+{
+  "meta": {
+    "titleSuffix": "Al Bayan Electronics & LED Technologies",
+    "home": {
+      "title": "LED lighting engineered and manufactured in Qatar",
+      "description": "Al Bayan designs and manufactures LED luminaires and electronics in Qatar. Every fixture inspected, tested in our own laboratory and traceable from supplier batch to your project."
+    },
+    "notFound": {
+      "title": "Page not found",
+      "description": "The page you are looking for does not exist or has moved."
+    }
+  },
+  "common": {
+    "requestQuote": "Request a quotation",
+    "exploreProducts": "Explore products",
+    "chatWhatsApp": "Chat on WhatsApp",
+    "contactUs": "Contact us",
+    "viewAll": "View all",
+    "learnMore": "Learn more",
+    "sample": "Sample",
+    "toBeConfirmed": "To be confirmed",
+    "home": "Home",
+    "breadcrumb": "Breadcrumb",
+    "previous": "Previous",
+    "next": "Next",
+    "madeInQatar": "Manufactured in Qatar",
+    "whatsAppGreeting": "Hello Al Bayan, I would like to ask about LED lighting for a project in Qatar."
+  },
+  "nav": {
+    "primary": "Main",
+    "products": "Products",
+    "solutions": "Solutions",
+    "manufacturing": "Manufacturing",
+    "projects": "Projects",
+    "about": "About",
+    "contact": "Contact",
+    "allProducts": "All products",
+    "productsIntro": "Eleven product families, designed, built and tested in Qatar.",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "menu": "Menu",
+    "language": "Language",
+    "switchLanguage": "Switch language to {language}",
+    "homeLink": "Al Bayan home"
+  },
+  "a11y": {
+    "skipToContent": "Skip to content",
+    "pauseMotion": "Pause background motion",
+    "playMotion": "Play background motion"
+  },
+  "footer": {
+    "products": "Products",
+    "solutions": "Solutions",
+    "company": "Company",
+    "contact": "Contact",
+    "privacy": "Privacy",
+    "terms": "Terms",
+    "phone": "Phone",
+    "email": "Email",
+    "whatsapp": "WhatsApp",
+    "address": "Address",
+    "contactPending": "Contact details are being finalised. Use the inquiry form and we will reply.",
+    "social": "Follow us",
+    "copyright": "© {year} {legalName}. All rights reserved.",
+    "statement": "LED luminaires and electronics, engineered, built and tested in Qatar."
+  },
+  "hero": {
+    "headline": "Light, engineered and built in Qatar.",
+    "subline": "Every fixture inspected, tested in our own laboratory, and traceable from supplier batch to your project.",
+    "proofLabel": "Why Al Bayan",
+    "proof": {
+      "made": "Manufactured in Qatar",
+      "lab": "In-house testing laboratory",
+      "trace": "Batch-level traceability",
+      "language": "Arabic & English support"
+    },
+    "scroll": "Scroll to explore"
+  },
+  "home": {
+    "products": {
+      "title": "What we make",
+      "intro": "Eleven product families, from ceiling panels to roadway luminaires and the electronics inside them.",
+      "viewAll": "All product families"
+    },
+    "cct": {
+      "title": "See the difference colour temperature makes",
+      "intro": "Move the slider to relight the room from warm to daylight white. Every family is available in the colour temperatures your project needs.",
+      "label": "Colour temperature",
+      "valueText": "{kelvin} kelvin, {name}",
+      "typical": "Typical uses",
+      "bands": {
+        "warm": { "name": "Warm white", "uses": "Hotels, homes, restaurants and prayer halls" },
+        "neutral": { "name": "Neutral white", "uses": "Offices, schools, retail and clinics" },
+        "cool": { "name": "Cool white", "uses": "Industry, warehouses, car parks and healthcare" },
+        "daylight": { "name": "Daylight", "uses": "Sports, roads, inspection and outdoor areas" }
+      },
+      "min": "Warmer",
+      "max": "Cooler"
+    },
+    "trace": {
+      "title": "Built to be traced",
+      "intro": "Every fixture can be followed back through our records: which supplier batch it came from, which order built it and how it tested.",
+      "mediaAlt": "Batch traceability label on a finished luminaire"
+    },
+    "quality": {
+      "title": "Manufacturing and quality, step by step",
+      "intro": "Six stages, one factory. Each step is inspected and recorded before the next one starts.",
+      "cta": "How we manufacture"
+    },
+    "sectors": {
+      "title": "Solutions by sector",
+      "intro": "Lighting specified for how each type of building is used, maintained and lit in Qatar.",
+      "viewAll": "All sectors",
+      "progress": "Scroll position"
+    },
+    "projects": {
+      "title": "Selected projects",
+      "intro": "A look at the kind of work we deliver across Qatar.",
+      "viewAll": "All projects"
+    },
+    "stats": {
+      "title": "In numbers"
+    },
+    "start": {
+      "title": "Starting a project in Qatar?",
+      "text": "Send us your drawings or specification. We reply in Arabic or English with a proposal you can check line by line.",
+      "imageAlt": "Doha skyline at night"
+    }
+  },
+  "specs": {
+    "efficacy": "Luminous efficacy",
+    "cct": "Colour temperature (CCT)",
+    "cri": "Colour rendering (CRI)",
+    "ipik": "IP / IK rating",
+    "power": "Power range",
+    "warranty": "Warranty"
+  },
+  "notFound": {
+    "title": "Nothing is lit here yet.",
+    "text": "The page you are looking for does not exist or has moved.",
+    "home": "Back to the home page",
+    "products": "Browse products"
+  }
+}

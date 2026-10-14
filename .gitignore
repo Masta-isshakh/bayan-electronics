@@ -39,3 +39,8 @@ next-env.d.ts
 .amplify
 amplify_outputs*
 amplifyconfiguration*
+# bundle analyzer
+/.next/analyze
+
+# raw hero sources (encoded output lives in public/media/hero)
+/media-src

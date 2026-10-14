@@ -1,0 +1,196 @@
+{
+  "files": {
+    "about/factory-exterior.jpg": {
+      "v": "40973b00",
+      "placeholder": true
+    },
+    "about/team.jpg": {
+      "v": "e1a3204f",
+      "placeholder": true
+    },
+    "brand/logo-mark.svg": {
+      "v": "bda86ac0",
+      "placeholder": true
+    },
+    "brand/logo-white.svg": {
+      "v": "f9adb142",
+      "placeholder": true
+    },
+    "brand/logo.svg": {
+      "v": "cf7f8438",
+      "placeholder": true
+    },
+    "hero/poster-desktop.jpg": {
+      "v": "cbba6da4",
+      "placeholder": true
+    },
+    "hero/poster-mobile.jpg": {
+      "v": "656aff2b",
+      "placeholder": true
+    },
+    "home/cct-scene.jpg": {
+      "v": "d2e847ac",
+      "placeholder": true
+    },
+    "home/doha-night.jpg": {
+      "v": "366f6def",
+      "placeholder": true
+    },
+    "home/factory-overview.jpg": {
+      "v": "dae38e77",
+      "placeholder": true
+    },
+    "home/qc-lab.jpg": {
+      "v": "537f31d0",
+      "placeholder": true
+    },
+    "home/traceability-label.jpg": {
+      "v": "a0a82958",
+      "placeholder": true
+    },
+    "manufacturing/aging-racks.jpg": {
+      "v": "8da06dea",
+      "placeholder": true
+    },
+    "manufacturing/assembly-line.jpg": {
+      "v": "d9e576f6",
+      "placeholder": true
+    },
+    "manufacturing/calibration-bench.jpg": {
+      "v": "fe6e8c0b",
+      "placeholder": true
+    },
+    "manufacturing/engineer.jpg": {
+      "v": "efb1a7f8",
+      "placeholder": true
+    },
+    "manufacturing/ip-test.jpg": {
+      "v": "7a926b54",
+      "placeholder": true
+    },
+    "manufacturing/smt-line.jpg": {
+      "v": "f1d09038",
+      "placeholder": true
+    },
+    "manufacturing/thermal-imaging.jpg": {
+      "v": "f59973b5",
+      "placeholder": true
+    },
+    "manufacturing/warehouse.jpg": {
+      "v": "c2594cf9",
+      "placeholder": true
+    },
+    "og/og-default.jpg": {
+      "v": "911024fc",
+      "placeholder": true
+    },
+    "products/custom-oem.jpg": {
+      "v": "9249f7c3",
+      "placeholder": true
+    },
+    "products/downlights-spotlights.jpg": {
+      "v": "c0049e8d",
+      "placeholder": true
+    },
+    "products/drivers-electronics.jpg": {
+      "v": "39da31cd",
+      "placeholder": true
+    },
+    "products/facade-architectural.jpg": {
+      "v": "8c4a53da",
+      "placeholder": true
+    },
+    "products/floodlights-area.jpg": {
+      "v": "85202da1",
+      "placeholder": true
+    },
+    "products/high-bay-industrial.jpg": {
+      "v": "212f4b77",
+      "placeholder": true
+    },
+    "products/led-panels.jpg": {
+      "v": "bff67611",
+      "placeholder": true
+    },
+    "products/led-strips-profiles.jpg": {
+      "v": "dae29186",
+      "placeholder": true
+    },
+    "products/linear-batten.jpg": {
+      "v": "f9bbf6e0",
+      "placeholder": true
+    },
+    "products/smart-connected.jpg": {
+      "v": "b56da560",
+      "placeholder": true
+    },
+    "products/street-roadway.jpg": {
+      "v": "0d2f0e56",
+      "placeholder": true
+    },
+    "projects/project-01.jpg": {
+      "v": "4bae3167",
+      "placeholder": true
+    },
+    "projects/project-02.jpg": {
+      "v": "0cc45ffb",
+      "placeholder": true
+    },
+    "projects/project-03.jpg": {
+      "v": "7eec0160",
+      "placeholder": true
+    },
+    "projects/project-04.jpg": {
+      "v": "c9d997db",
+      "placeholder": true
+    },
+    "projects/project-05.jpg": {
+      "v": "f396d7bb",
+      "placeholder": true
+    },
+    "projects/project-06.jpg": {
+      "v": "d90e0e2f",
+      "placeholder": true
+    },
+    "solutions/commercial-offices.jpg": {
+      "v": "c05c2fb8",
+      "placeholder": true
+    },
+    "solutions/education-healthcare.jpg": {
+      "v": "dd1ad276",
+      "placeholder": true
+    },
+    "solutions/hospitality.jpg": {
+      "v": "7e5d0971",
+      "placeholder": true
+    },
+    "solutions/industrial-warehouses.jpg": {
+      "v": "e87af8f8",
+      "placeholder": true
+    },
+    "solutions/infrastructure-roads.jpg": {
+      "v": "19bd9c9e",
+      "placeholder": true
+    },
+    "solutions/mosques-public.jpg": {
+      "v": "d423fbc8",
+      "placeholder": true
+    },
+    "solutions/residential-villas.jpg": {
+      "v": "cb41128b",
+      "placeholder": true
+    },
+    "solutions/retail-malls.jpg": {
+      "v": "6384260f",
+      "placeholder": true
+    },
+    "solutions/sports-outdoor.jpg": {
+      "v": "41b906d6",
+      "placeholder": true
+    },
+    "textures/noise.png": {
+      "v": "ce638c83",
+      "placeholder": false
+    }
+  }
+}
