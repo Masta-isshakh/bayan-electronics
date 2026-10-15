@@ -48,6 +48,7 @@ export function Header({ logo, families, feature, labels }: HeaderProps) {
     if (!panelOpen) return;
     const onKey = (event: KeyboardEvent) => {
       if (event.key !== "Escape") return;
+      window.clearTimeout(hoverTimer.current);
       setPanelOpen(false);
       triggerRef.current?.focus();
     };
@@ -93,13 +94,9 @@ export function Header({ logo, families, feature, labels }: HeaderProps) {
         )}
       >
         <div className="shell flex h-[var(--header-h)] items-center justify-between gap-6">
-          <Link
-            href="/"
-            aria-label={labels.homeLink}
-            onClick={closePanel}
-            className="inline-flex min-h-11 items-center"
-          >
+          <Link href="/" onClick={closePanel} className="inline-flex min-h-11 items-center">
             {logo}
+            <span className="sr-only"> {labels.homeLink}</span>
           </Link>
 
           <nav aria-label={labels.primary} className="hidden lg:block">
@@ -110,7 +107,10 @@ export function Header({ logo, families, feature, labels }: HeaderProps) {
                   type="button"
                   aria-expanded={panelOpen}
                   aria-controls={PANEL_ID}
-                  onClick={() => setPanelOpen((open) => !open)}
+                  onClick={() => {
+                    window.clearTimeout(hoverTimer.current);
+                    setPanelOpen((open) => !open);
+                  }}
                   className={cn(navLinkClass, "gap-1.5")}
                   aria-current={isCurrent("/products") ? "page" : undefined}
                 >

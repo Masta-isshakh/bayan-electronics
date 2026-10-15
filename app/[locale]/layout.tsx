@@ -1,6 +1,7 @@
 import "../globals.css";
 import type { Metadata, Viewport } from "next";
 import type { ReactNode } from "react";
+import { preload } from "react-dom";
 import { NextIntlClientProvider } from "next-intl";
 import { getTranslations } from "next-intl/server";
 import { Footer } from "@/components/layout/Footer";
@@ -9,10 +10,12 @@ import { WhatsAppFloat } from "@/components/layout/WhatsAppFloat";
 import { DeferredMediaObserver } from "@/components/motion/DeferredMediaObserver";
 import { RevealObserver } from "@/components/motion/RevealObserver";
 import { SmoothScroll } from "@/components/providers/SmoothScroll";
+import { JsonLd } from "@/components/seo/JsonLd";
 import { site } from "@/content/site";
 import { localeMeta } from "@/i18n/locales";
 import { whatsappHref } from "@/lib/contact";
-import { archivo, plexArabic } from "@/lib/fonts";
+import { arabicFontFiles, archivo } from "@/lib/fonts";
+import { organizationJsonLd } from "@/lib/jsonld";
 import { localeStaticParams, resolveLocale } from "@/lib/i18n";
 
 export const dynamicParams = false;
@@ -42,10 +45,12 @@ export default async function LocaleLayout({
   const t = await getTranslations("common");
   const ta = await getTranslations("a11y");
   const whatsapp = whatsappHref(t("whatsAppGreeting"));
-  const fontClasses = locale === "ar" ? `${archivo.variable} ${plexArabic.variable}` : archivo.variable;
+  if (locale === "ar") {
+    for (const href of arabicFontFiles) preload(href, { as: "font", type: "font/woff2", crossOrigin: "anonymous" });
+  }
 
   return (
-    <html lang={locale} dir={localeMeta[locale].dir} className={fontClasses}>
+    <html lang={locale} dir={localeMeta[locale].dir} className={archivo.variable}>
       <body>
         {/* Locale context only: client components receive their strings as props, so no
             messages (or message-formatting runtime) are shipped to the browser. */}
@@ -63,6 +68,7 @@ export default async function LocaleLayout({
           <Footer locale={locale} />
           {whatsapp && <WhatsAppFloat href={whatsapp} label={t("chatWhatsApp")} />}
         </NextIntlClientProvider>
+        <JsonLd data={organizationJsonLd(locale)} />
         <SmoothScroll />
         <RevealObserver />
         <DeferredMediaObserver />

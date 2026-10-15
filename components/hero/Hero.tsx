@@ -36,51 +36,55 @@ export function Hero({ poster, video, grainSrc, labels, scrollTarget, children }
     introPlayed = true;
   }, []);
 
+  // The wrapper is GSAP's pin spacer: supplying it means the pinned section is never
+  // moved in the DOM, which would restart the CSS switch-on intro.
   return (
-    <section
-      id="hero"
-      ref={root}
-      className={styles.hero}
-      data-hero-intro={intro ? "" : undefined}
-      data-paused={paused}
-      // The 2% grain is decorative: request it after first paint.
-      style={idle ? ({ "--grain": `url(${grainSrc})` } as CSSProperties) : undefined}
-    >
-      <div className={styles.frame} data-hero-frame="">
-        <div className={styles.media} data-hero-media="">
-          <div className={styles.mediaInner}>
-            {poster ?? <HeroLightField />}
-            {video && <HeroVideo sources={video} paused={paused} />}
+    <div data-hero-spacer="">
+      <section
+        id="hero"
+        ref={root}
+        className={styles.hero}
+        data-hero-intro={intro ? "" : undefined}
+        data-paused={paused}
+        // The 2% grain is decorative: request it after first paint.
+        style={idle ? ({ "--grain": `url(${grainSrc})` } as CSSProperties) : undefined}
+      >
+        <div className={styles.frame} data-hero-frame="">
+          <div className={styles.media} data-hero-media="">
+            <div className={styles.mediaInner}>
+              {poster ?? <HeroLightField />}
+              {video && <HeroVideo sources={video} paused={paused} />}
+            </div>
           </div>
+          <div className={styles.scrim} aria-hidden="true" />
+          <div className={styles.grain} aria-hidden="true" />
+          <span className={styles.strip} aria-hidden="true" />
+          <span className={styles.edge} aria-hidden="true" data-hero-edge="" />
         </div>
-        <div className={styles.scrim} aria-hidden="true" />
-        <div className={styles.grain} aria-hidden="true" />
-        <span className={styles.strip} aria-hidden="true" />
-        <span className={styles.edge} aria-hidden="true" data-hero-edge="" />
-      </div>
 
-      <div className={`shell ${styles.content}`} data-hero-content="">
-        {children}
-      </div>
+        <div className={`shell ${styles.content}`} data-hero-content="">
+          {children}
+        </div>
 
-      <a href={scrollTarget} className={styles.cue} aria-label={labels.scroll} />
+        <a href={scrollTarget} className={styles.cue} aria-label={labels.scroll} />
 
-      {hasMotion && (
-        <button
-          type="button"
-          className={styles.pause}
-          onClick={() => setPaused((value) => !value)}
-          aria-label={paused ? labels.play : labels.pause}
-        >
-          {paused ? (
-            <Play aria-hidden="true" strokeWidth={1.5} className="size-4" />
-          ) : (
-            <Pause aria-hidden="true" strokeWidth={1.5} className="size-4" />
-          )}
-        </button>
-      )}
+        {hasMotion && (
+          <button
+            type="button"
+            className={styles.pause}
+            onClick={() => setPaused((value) => !value)}
+            aria-label={paused ? labels.play : labels.pause}
+          >
+            {paused ? (
+              <Play aria-hidden="true" strokeWidth={1.5} className="size-4" />
+            ) : (
+              <Pause aria-hidden="true" strokeWidth={1.5} className="size-4" />
+            )}
+          </button>
+        )}
 
-      {idle && <HeroScroll root={root} />}
-    </section>
+        {idle && <HeroScroll root={root} />}
+      </section>
+    </div>
   );
 }

@@ -87,13 +87,9 @@ export default function MobileMenu({ open, onClose, returnFocusTo, logo, isCurre
             className="fixed inset-0 z-60 flex flex-col bg-void lg:hidden"
           >
             <div className="shell flex h-[var(--header-h)] shrink-0 items-center justify-between">
-              <Link
-                href="/"
-                onClick={onClose}
-                aria-label={labels.homeLink}
-                className="inline-flex min-h-11 items-center"
-              >
+              <Link href="/" onClick={onClose} className="inline-flex min-h-11 items-center">
                 {logo}
+                <span className="sr-only"> {labels.homeLink}</span>
               </Link>
               <button
                 type="button"

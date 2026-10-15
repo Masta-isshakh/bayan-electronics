@@ -12,10 +12,13 @@
   background-color: var(--color-void);
 }
 
+/* overflow: clip, not hidden: the light layers overflow leftwards in RTL, and a
+   scroll container (hidden) re-anchors its RTL scroll origin as they move, which
+   registered as layout shift. clip creates no scroll container. */
 .frame {
   position: absolute;
   inset: 0;
-  overflow: hidden;
+  overflow: clip;
   transform-origin: 50% 50%;
   background-color: var(--color-void);
 }
@@ -53,7 +56,7 @@
 .field {
   position: absolute;
   inset: 0;
-  overflow: hidden;
+  overflow: clip;
   background: radial-gradient(120% 90% at 50% 110%, var(--color-surface) 0%, var(--color-void) 62%);
 }
 
@@ -258,7 +261,10 @@
   .hero .headline {
     font-stretch: 118%;
   }
+}
 
+/* One row from 1024px; below that a 2×2 grid, so a wrapped item never starts with a rule. */
+@media (min-width: 1024px) {
   .proof {
     display: flex;
     flex-wrap: wrap;
@@ -383,8 +389,11 @@
   animation-name: strip-rtl;
 }
 
+/* Via the theme variable: CSS Modules would rename a literal "word-in" to a module-local
+   keyframe that does not exist; custom-property values are left untouched. */
 .hero[data-hero-intro] .word {
-  animation: word-in 520ms var(--ease-entrance) both;
+  animation: var(--animate-word-in);
+  animation-duration: 520ms;
   animation-delay: calc(700ms + var(--i, 0) * 60ms);
 }
 

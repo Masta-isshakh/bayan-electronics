@@ -79,7 +79,7 @@ export function ManufacturingSteps({ intro, steps }: { intro: ReactNode; steps: 
             <span
               className={cn(
                 "display text-5xl tabular-nums transition-colors duration-500",
-                index === active ? "text-lumen-deep" : "text-fg-muted/40",
+                index === active ? "text-lumen-deep" : "text-fg-muted",
               )}
               aria-hidden="true"
             >

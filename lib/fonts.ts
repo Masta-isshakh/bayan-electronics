@@ -1,4 +1,3 @@
-import { IBM_Plex_Sans_Arabic } from "next/font/google";
 import localFont from "next/font/local";
 
 /**
@@ -16,17 +15,8 @@ export const archivo = localFont({
 });
 
 /**
- * Arabic, applied only on /ar. Not preloaded: the [locale] layout is shared by both
- * locales, so a preload would make every English page download Arabic files too.
- * Without the class on <html>, English pages never request these fonts.
- * No fallback metrics: an unranged fallback face would capture Latin glyphs
- * before Archivo gets them.
+ * Arabic font files (declared with @font-face in app/globals.css). Preloaded by the
+ * [locale] layout on /ar only — English pages never request them. Self-hosted rather
+ * than next/font so the preload can be per locale inside the shared layout.
  */
-export const plexArabic = IBM_Plex_Sans_Arabic({
-  subsets: ["arabic"],
-  weight: ["400", "500", "700"],
-  display: "swap",
-  variable: "--font-plex-arabic",
-  preload: false,
-  adjustFontFallback: false,
-});
+export const arabicFontFiles = ["/fonts/arabic-sans-400.v1.woff2", "/fonts/arabic-sans-700.v1.woff2"] as const;

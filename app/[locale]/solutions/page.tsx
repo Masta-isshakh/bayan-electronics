@@ -30,10 +30,11 @@ export default async function SolutionsPage({ params }: LocaleParams) {
 
       <section aria-label={t("title")} className="shell pb-24 lg:pb-32">
         <ul className="grid gap-x-6 gap-y-12 sm:grid-cols-2 lg:grid-cols-3">
-          {sectors.map((sector) => (
+          {sectors.map((sector, index) => (
             <li key={sector.slug}>
               <SectorCard
                 sector={sector}
+                priority={index === 0}
                 locale={locale}
                 sizes="(min-width: 1024px) 30vw, (min-width: 640px) 45vw, 100vw"
               />

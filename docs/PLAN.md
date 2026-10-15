@@ -5,17 +5,17 @@ Next.js App Router on AWS Amplify Gen 2. Decisions and deviations are logged in 
 
 ## Stack
 
-| Concern       | Choice                                                                          |
-| ------------- | ------------------------------------------------------------------------------- |
-| Framework     | Next.js 15.5 (App Router), React 19, TypeScript 5.9 strict                      |
-| Styling       | Tailwind CSS v4, tokens in `@theme` (`app/globals.css`), logical utilities only |
-| i18n          | next-intl 4, `app/[locale]/`, `localePrefix: 'always'`, middleware              |
-| UI motion     | `motion` (`motion/react`), `LazyMotion` + async `domAnimation`                  |
-| Scroll motion | GSAP 3 + ScrollTrigger via `@gsap/react` `useGSAP`, registered in `lib/gsap.ts` |
-| Smooth scroll | Lenis, desktop fine-pointer only, lazy-loaded, driven by `gsap.ticker`          |
-| Icons         | lucide-react (stroke 1.5)                                                       |
-| Backend       | Amplify Gen 2 Data: `Inquiry` model, public API key create-only                 |
-| Media tooling | sharp (placeholders, noise), ffmpeg (hero encode)                               |
+| Concern       | Choice                                                                                                   |
+| ------------- | -------------------------------------------------------------------------------------------------------- |
+| Framework     | Next.js 15.5 (App Router), React 19, TypeScript 5.9 strict                                               |
+| Styling       | Tailwind CSS v4, tokens in `@theme` (`app/globals.css`), logical utilities only                          |
+| i18n          | next-intl 4, `app/[locale]/`, `localePrefix: 'always'`, middleware                                       |
+| UI motion     | `motion` (`motion/react`), `LazyMotion` + `domAnimation` inside lazily loaded menus and page transitions |
+| Scroll motion | GSAP 3 + ScrollTrigger via `@gsap/react` `useGSAP`, registered in `lib/gsap.ts`                          |
+| Smooth scroll | Lenis, desktop fine-pointer only, lazy-loaded, driven by `gsap.ticker`                                   |
+| Icons         | lucide-react (stroke 1.5)                                                                                |
+| Backend       | Amplify Gen 2 Data: `Inquiry` model, public API key create-only                                          |
+| Media tooling | sharp (placeholders, noise), ffmpeg (hero encode)                                                        |
 
 ## Routes (`app/[locale]/…`, locales `en`, `ar`)
 
@@ -28,7 +28,7 @@ Plus `app/sitemap.ts`, `app/robots.ts`, `opengraph-image.tsx` (locale + per fami
 
 ```
 app/[locale]/layout.tsx        html lang/dir, fonts, providers, Header, Footer, WhatsAppFloat
-  providers: MotionProvider (LazyMotion), SmoothScroll (lazy Lenis), RevealObserver
+  providers: SmoothScroll (lazy Lenis), RevealObserver, DeferredMediaObserver; motion via MotionScope in lazy chunks
   template.tsx → PageTransition (motion, skipped on first load)
 components/
   layout/   Header, DesktopNav, MegaPanel, MobileMenu, LanguageSwitch, Wordmark, Footer,
@@ -68,3 +68,5 @@ dev: typescript@5.9 tailwindcss @tailwindcss/postcss eslint@9 eslint-config-next
    states, fallback), contact and quote pages.
 7. **M7 SEO, performance, QA** — metadata, OG images, sitemap/robots, JSON-LD, budgets measured,
    CONTENT-TODO, README, QA record.
+
+Status: all seven milestones delivered — see `docs/QA.md` for results and `docs/DECISIONS.md` for deviations.

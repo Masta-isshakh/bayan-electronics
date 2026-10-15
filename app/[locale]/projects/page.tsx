@@ -45,10 +45,11 @@ export default async function ProjectsPage({ params }: LocaleParams) {
       <section aria-label={t("title")} className="shell pb-24 lg:pb-32">
         <FilterBar param="sector" options={options} label={t("filterLabel")} targetId="project-grid" />
         <ul id="project-grid" className="mt-8 grid gap-x-6 gap-y-14 sm:grid-cols-2 lg:grid-cols-3">
-          {projects.map((project) => (
+          {projects.map((project, index) => (
             <li key={project.slug} data-categories={project.sector}>
               <ProjectCard
                 project={project}
+                priority={index === 0}
                 locale={locale}
                 sampleLabel={tc("sample")}
                 headingLevel="h2"

@@ -37,8 +37,9 @@ export async function Footer({ locale }: { locale: Locale }) {
       <div className="shell pt-16 pb-8 lg:pt-24">
         <div className="grid gap-12 lg:grid-cols-12">
           <div className="space-y-6 lg:col-span-4">
-            <Link href="/" aria-label={tn("homeLink")} className="inline-flex min-h-11 items-center">
+            <Link href="/" className="inline-flex min-h-11 items-center">
               <Wordmark />
+              <span className="sr-only"> {tn("homeLink")}</span>
             </Link>
             <p className="max-w-sm text-sm text-fg-muted">{t("statement")}</p>
             <QatarMark label={tc("madeInQatar")} />

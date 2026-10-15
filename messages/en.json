@@ -77,7 +77,7 @@
     "menu": "Menu",
     "language": "Language",
     "switchLanguage": "Switch language to {language}",
-    "homeLink": "Al Bayan home"
+    "homeLink": "home page"
   },
   "a11y": {
     "skipToContent": "Skip to content",

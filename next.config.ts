@@ -32,6 +32,8 @@ const nextConfig: NextConfig = {
   async headers() {
     return [
       { source: "/media/:path*", headers: immutable },
+      // Font files carry a version in their name (e.g. arabic-sans-400.v1.woff2).
+      { source: "/fonts/:path*", headers: immutable },
       { source: "/_next/static/:path*", headers: immutable },
     ];
   },

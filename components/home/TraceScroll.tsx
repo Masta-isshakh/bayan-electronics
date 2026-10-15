@@ -20,7 +20,14 @@ export default function TraceScroll({ root, steps }: { root: RefObject<HTMLEleme
       mm.add(motionQueries.desktop, () => {
         const timeline = gsap.timeline({
           defaults: { ease: "none" },
-          scrollTrigger: { trigger: root.current, start: "top top", end: PIN_LENGTH, pin: true, scrub: SCRUB },
+          scrollTrigger: {
+            trigger: root.current,
+            start: "top top",
+            end: PIN_LENGTH,
+            pin: true,
+            pinSpacer: root.current?.parentElement,
+            scrub: SCRUB,
+          },
         });
         timeline.fromTo("[data-trace-path]", { strokeDashoffset: 1 }, { strokeDashoffset: 0, duration: steps }, 0);
         const start = (index: number) => Math.max(0, index - NODE_LIGHT_DURATION / 2);

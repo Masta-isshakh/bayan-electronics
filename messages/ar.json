@@ -77,7 +77,7 @@
     "menu": "القائمة",
     "language": "اللغة",
     "switchLanguage": "تغيير اللغة إلى {language}",
-    "homeLink": "الصفحة الرئيسية للبيان"
+    "homeLink": "الصفحة الرئيسية"
   },
   "a11y": {
     "skipToContent": "انتقل إلى المحتوى",

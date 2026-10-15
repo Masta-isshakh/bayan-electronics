@@ -38,13 +38,22 @@ Decisions taken without stopping to ask, with the reason. Newest at the bottom o
 
 ## Fonts
 
-- **IBM Plex Sans Arabic is not preloaded** (`preload: false`) and only its CSS variable is applied on `/ar`.
-  The `[locale]` layout is shared by both locales, so a preload would make every English page download Arabic
-  fonts. Without the class, English pages never request them. `adjustFontFallback: false` stops the metric-adjusted
-  fallback face (which has no unicode-range) from capturing Latin glyphs before Archivo.
-- **Local Windows builds show no font preload at all.** Next 15.5's font-manifest plugin matches
+- **Archivo is self-hosted through `next/font/local`**, reduced to weight 400–700 × width 100–125 % and Latin-1
+  (88 → 46 kB). Details in `fonts/README.md`.
+- **Arabic is not loaded through `next/font`** (deviation from the brief). The `[locale]` layout is shared by both
+  locales, so next/font can either preload the Arabic font on every English page or not at all; it also emits every
+  Google subset, so Arabic pages downloaded Plex's Latin faces (six files, ≈ 150 kB) and Latin text briefly rendered
+  in them. Instead, `public/fonts/arabic-sans-{400,700}.v1.woff2` — subsets of IBM Plex Sans Arabic limited to the
+  Arabic block, presentation forms and joiners (≈ 33 kB each) — are declared with `@font-face` (Arabic
+  `unicode-range` only) and preloaded by the layout **only when the locale is `ar`**. English pages never request
+  them. Result on `/ar`: FCP 2.1 → 1.2 s, three fewer font files.
+- **The Arabic subset is renamed "Al Bayan Arabic Sans".** IBM's OFL reserves the name "Plex", and a subset is a
+  modified version. Licence files ship next to both fonts.
+- **Weight 500 resolves to 400 in Arabic** (only 400 and 700 ship) — Arabic typography here relies on regular vs bold.
+- **Local Windows builds show no `next/font` preload at all.** Next 15.5's font-manifest plugin matches
   `'/next-font-loader/index.js?'` with forward slashes, which never matches Windows module paths. Linux builds
-  (Amplify CI) are unaffected. Lighthouse runs on a local Windows build are therefore slightly pessimistic.
+  (Amplify CI) are unaffected. Verified by patching that line locally (then reverting): with the preload, every
+  measured page had CLS 0 and FCP 0.8–1.0 s. Lighthouse runs on a local Windows build are slightly pessimistic.
 
 ## Backend
 
@@ -126,3 +135,29 @@ first-load JS 123 kB. An experiment without the web font gave the same simulated
   (Arabic), rate limit, honeypot, validation and the fallback path all behaved as designed. The real outputs file was
   restored afterwards.
 - **Favicon:** `app/icon.svg` (the LED-matrix mark) and a generated `app/apple-icon.png` replace the starter favicon.
+
+## SEO, accessibility and late fixes (M7)
+
+- **Open Graph cards are generated per locale and per product family** (`lib/og.tsx`, Archivo static instances in
+  `fonts/og/`) and prerendered at build. They use Latin text only — Satori has no Arabic shaping — so Arabic pages
+  share the English card while `og:title` / `og:description` stay Arabic.
+- **Sample projects are `noindex` and left out of the sitemap** until `isPlaceholder` is false. The sitemap lists
+  every other route in both locales with hreflang alternates (`en-QA`, `ar-QA`, `x-default`).
+- **Organization JSON-LD omits every unconfirmed field** (address is country-only, no phone/email/logo/sameAs yet).
+  Product JSON-LD has no offers or invented specifications.
+- **Hero layers use `overflow: clip`, not `hidden`.** In RTL the light-field layers overflow leftwards; an
+  `overflow: hidden` box is a scroll container whose RTL scroll origin is re-anchored as they move, which Chrome
+  recorded as 0.13–0.21 CLS on `/ar`. `clip` creates no scroll container: CLS 0.
+- **Pinned elements get their own pin spacer.** GSAP normally wraps a pinned element in a new div, moving it in the
+  DOM — which restarts every CSS animation inside it, so the hero intro replayed when the scroll choreography loaded.
+  Both pins now pass a React-owned parent as `pinSpacer`; GSAP only sets and restores its styles.
+- **Hero words reference the global keyframes through `var(--animate-word-in)`.** CSS Modules rename a literal
+  `word-in` inside `hero.module.css` to a module-local name with no keyframes, which silently disabled the reveal.
+- **Lenis is settled on every click and `popstate`** so an in-flight smooth scroll cannot pull the next page away
+  from the top after navigation.
+- **Accessibility fixes from Lighthouse/axe:** the home links' accessible names now start with the visible wordmark
+  ("AL BAYAN" + a screen-reader suffix), the inactive step numbers meet 3:1, and the first image of each index grid
+  is `priority`.
+- **LCP ≤ 2.0 s is not met in Lighthouse's simulation** (2.5 s English, 2.9–3.1 s Arabic; observed 0.24–0.41 s). The
+  remaining pre-paint bytes are the React/Next runtime, the HTML + RSC payload and the fonts; removing more would
+  mean dropping the self-hosted fonts or the App Router. Recorded in `docs/QA.md`.

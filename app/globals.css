@@ -76,6 +76,26 @@
   --color-focus: var(--focus);
 }
 
+/* Arabic: a renamed subset of IBM Plex Sans Arabic (OFL; see fonts/README.md), self-hosted
+   so it can be preloaded on /ar only. Arabic ranges only — Latin stays in Archivo. */
+@font-face {
+  font-family: "Al Bayan Arabic Sans";
+  src: url("/fonts/arabic-sans-400.v1.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0600-06FF, U+200C-200F, U+FB50-FDFF, U+FE70-FE74, U+FE76-FEFC;
+}
+
+@font-face {
+  font-family: "Al Bayan Arabic Sans";
+  src: url("/fonts/arabic-sans-700.v1.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0600-06FF, U+200C-200F, U+FB50-FDFF, U+FE70-FE74, U+FE76-FEFC;
+}
+
 @layer base {
   :root {
     --font-body: var(--font-archivo), ui-sans-serif, system-ui, sans-serif;
@@ -90,9 +110,9 @@
     color-scheme: dark;
   }
 
-  /* Arabic glyphs from IBM Plex Sans Arabic; Latin (LED, DALI, 0–9) stays in Archivo. */
+  /* Arabic glyphs from the Arabic face; Latin (LED, DALI, 0–9) stays in Archivo. */
   :root:lang(ar) {
-    --font-body: var(--font-plex-arabic), var(--font-archivo), ui-sans-serif, system-ui, sans-serif;
+    --font-body: "Al Bayan Arabic Sans", var(--font-archivo), ui-sans-serif, system-ui, sans-serif;
   }
 
   html {

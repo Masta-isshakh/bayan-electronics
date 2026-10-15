@@ -44,9 +44,10 @@ export default async function ProductsPage({ params }: LocaleParams) {
       <section aria-label={t("title")} className="shell pb-24 lg:pb-32">
         <FilterBar param="category" options={options} label={t("filterLabel")} targetId="family-grid" />
         <FlashlightGrid id="family-grid" className="mt-8 grid grid-cols-2 gap-3 md:gap-4 lg:grid-cols-4">
-          {products.map((family) => (
+          {products.map((family, index) => (
             <FamilyTile
               key={family.slug}
+              priority={index < 2}
               family={family}
               locale={locale}
               sizes="(min-width: 1024px) 25vw, 50vw"

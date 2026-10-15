@@ -19,28 +19,31 @@ export function TraceabilityChain({ nodes, header }: { nodes: TraceNode[]; heade
   const root = useRef<HTMLDivElement>(null);
   const idle = useIdle();
 
+  // Outer div = GSAP pin spacer, so pinning never moves the chain in the DOM.
   return (
-    <div ref={root} className={styles.chain}>
-      {header}
-      <div className={styles.track}>
-        <svg className={styles.line} aria-hidden="true">
-          <line x1="0" y1="1" x2="100%" y2="1" className={styles.lineBase} />
-          <line data-trace-path="" x1="0" y1="1" x2="100%" y2="1" pathLength={1} className={styles.lineLit} />
-        </svg>
-        <ol className={styles.nodes}>
-          {nodes.map((node, index) => (
-            <li key={node.id} className={styles.item}>
-              <span data-trace-node="" className={styles.node} aria-hidden="true" />
-              <div data-trace-caption="" className={styles.caption}>
-                <span className="block text-sm text-fg-muted tabular-nums">{String(index + 1).padStart(2, "0")}</span>
-                <h3 className="mt-1 text-base font-medium text-fg">{node.title}</h3>
-                <p className="mt-2 text-sm text-fg-muted">{node.text}</p>
-              </div>
-            </li>
-          ))}
-        </ol>
+    <div>
+      <div ref={root} className={styles.chain}>
+        {header}
+        <div className={styles.track}>
+          <svg className={styles.line} aria-hidden="true">
+            <line x1="0" y1="1" x2="100%" y2="1" className={styles.lineBase} />
+            <line data-trace-path="" x1="0" y1="1" x2="100%" y2="1" pathLength={1} className={styles.lineLit} />
+          </svg>
+          <ol className={styles.nodes}>
+            {nodes.map((node, index) => (
+              <li key={node.id} className={styles.item}>
+                <span data-trace-node="" className={styles.node} aria-hidden="true" />
+                <div data-trace-caption="" className={styles.caption}>
+                  <span className="block text-sm text-fg-muted tabular-nums">{String(index + 1).padStart(2, "0")}</span>
+                  <h3 className="mt-1 text-base font-medium text-fg">{node.title}</h3>
+                  <p className="mt-2 text-sm text-fg-muted">{node.text}</p>
+                </div>
+              </li>
+            ))}
+          </ol>
+        </div>
+        {idle && <TraceScroll root={root} steps={nodes.length - 1} />}
       </div>
-      {idle && <TraceScroll root={root} steps={nodes.length - 1} />}
     </div>
   );
 }

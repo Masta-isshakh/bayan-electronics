@@ -34,6 +34,7 @@ export default function HeroScroll({ root }: { root: RefObject<HTMLElement | nul
               end: PIN_LENGTH,
               pin: true,
               pinSpacing: false,
+              pinSpacer: root.current?.parentElement,
               scrub: SCRUB,
             },
           })

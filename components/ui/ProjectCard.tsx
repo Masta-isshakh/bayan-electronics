@@ -14,6 +14,7 @@ type ProjectCardProps = {
   /** Tailwind aspect class for the image. */
   aspect?: string;
   headingLevel?: "h2" | "h3";
+  priority?: boolean;
 };
 
 /** Project tile: image (revealed once with a clip-path wipe), sector tag, sample badge, title. */
@@ -24,6 +25,7 @@ export function ProjectCard({
   sizes,
   aspect = "aspect-[3/2]",
   headingLevel = "h3",
+  priority = false,
 }: ProjectCardProps) {
   const Heading = headingLevel;
   const sector = getSector(project.sector);
@@ -39,6 +41,7 @@ export function ProjectCard({
           alt={project.alt[locale]}
           fill
           sizes={sizes}
+          priority={priority}
           className="object-cover transition-[scale] duration-700 ease-entrance group-hover:scale-[1.03]"
         />
       </span>

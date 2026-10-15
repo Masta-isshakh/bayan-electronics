@@ -15,13 +15,22 @@ type FamilyTileProps = {
   className?: string;
   /** Larger name for large bento tiles. */
   prominent?: boolean;
+  /** Above-the-fold tile that is the page's LCP candidate. */
+  priority?: boolean;
 };
 
 /**
  * Product family tile with the flashlight reveal. Must sit inside a FlashlightGrid,
  * which drives --mx/--my and the touch "first tap reveals" behaviour.
  */
-export async function FamilyTile({ family, locale, sizes, className, prominent = false }: FamilyTileProps) {
+export async function FamilyTile({
+  family,
+  locale,
+  sizes,
+  className,
+  prominent = false,
+  priority = false,
+}: FamilyTileProps) {
   const ts = await getTranslations("specs");
   const tc = await getTranslations("common");
 
@@ -32,7 +41,7 @@ export async function FamilyTile({ family, locale, sizes, className, prominent =
       data-categories={family.categories.join(" ")}
       className={cn(styles.tile, "group", className)}
     >
-      <Image src={family.image.src} alt="" fill sizes={sizes} className={styles.image} />
+      <Image src={family.image.src} alt="" fill sizes={sizes} priority={priority} className={styles.image} />
       <span className={styles.dim} aria-hidden="true" />
       <span className={styles.glow} aria-hidden="true" />
       <span className={styles.shade} aria-hidden="true" />

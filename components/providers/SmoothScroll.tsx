@@ -23,13 +23,23 @@ export function SmoothScroll() {
 
       const lenis = new Lenis({ autoRaf: false, syncTouch: false, anchors: true });
       const tick = (time: number) => lenis.raf(time * 1000);
+      // Stop any in-flight easing before a navigation, so Lenis cannot pull the next
+      // page back toward the previous page's scroll target.
+      const settle = () => {
+        lenis.stop();
+        lenis.start();
+      };
       lenis.on("scroll", ScrollTrigger.update);
+      document.addEventListener("click", settle, true);
+      window.addEventListener("popstate", settle);
       gsap.ticker.add(tick);
       gsap.ticker.lagSmoothing(0);
       setLenis(lenis);
       ScrollTrigger.refresh();
 
       teardown = () => {
+        document.removeEventListener("click", settle, true);
+        window.removeEventListener("popstate", settle);
         gsap.ticker.remove(tick);
         lenis.destroy();
         setLenis(null);
