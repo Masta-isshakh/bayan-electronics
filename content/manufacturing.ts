@@ -29,7 +29,7 @@ export const processSteps: ProcessStep[] = [
       ar: "يحدّد المهندسون العدسات والمسار الحراري والإلكترونيات، ثم تُعتمد قائمة المواد. وتُبنى عليها متطلبات المواد وخطط الإنتاج، مع مراعاة مخزون الأمان ومُهل التوريد لدى الموردين.",
     },
     image: assets.manufacturing.engineer,
-    alt: { en: "Engineer reviewing a luminaire design", ar: "مهندس يراجع تصميم وحدة إنارة" },
+    alt: { en: "Engineering and production team on the factory floor", ar: "فريق الهندسة والإنتاج في صالة المصنع" },
   },
   {
     id: "smt",
@@ -43,7 +43,7 @@ export const processSteps: ProcessStep[] = [
       ar: "تُصرف المكوّنات من المخزون المفحوص بموجب أمر الإنتاج، ثم تُركَّب على اللوحات وتُلحَم وتُفحص، وتُسجَّل النتائج على دفعة الإنتاج.",
     },
     image: assets.manufacturing.smtLine,
-    alt: { en: "SMT line placing components on LED boards", ar: "خط SMT يركّب المكوّنات على لوحات LED" },
+    alt: { en: "LED circuit boards on the production line", ar: "لوحات دوائر LED على خط الإنتاج" },
   },
   {
     id: "assembly",
@@ -85,7 +85,7 @@ export const processSteps: ProcessStep[] = [
       ar: "يكشف التشغيل التجريبي المتواصل أعطال المكوّنات المبكرة قبل خروج الوحدة من المصنع، ولا تنتقل إلى الفحص النهائي إلا الوحدات التي تجتاز هذه المرحلة.",
     },
     image: assets.manufacturing.agingRacks,
-    alt: { en: "Luminaires running on aging racks", ar: "وحدات إنارة قيد التشغيل على حوامل التعتيق" },
+    alt: { en: "Finished luminaires switched on along the line", ar: "وحدات إنارة مكتملة قيد التشغيل على امتداد الخط" },
   },
   {
     id: "dispatch",
@@ -99,7 +99,10 @@ export const processSteps: ProcessStep[] = [
       ar: "تخضع كل وحدة للفحص النهائي وتُوسَم ببيانات دفعتها، ثم تُغلَّف وتُشحن بموجب طلبكم، مع تسجيل عملية التسليم لأغراض التتبّع.",
     },
     image: assets.manufacturing.warehouse,
-    alt: { en: "Packed fixtures ready for dispatch", ar: "وحدات مغلّفة جاهزة للشحن" },
+    alt: {
+      en: "Packed goods at the loading dock, ready for dispatch",
+      ar: "بضائع مغلّفة عند رصيف التحميل جاهزة للشحن",
+    },
   },
 ];
 
@@ -207,7 +210,10 @@ export const labCapabilities: LabCapability[] = [
       ar: "رصد النقاط الساخنة في اللوحات والمشغّلات والهياكل أثناء التشغيل.",
     },
     image: assets.manufacturing.thermalImaging,
-    alt: { en: "Thermal image of a luminaire under load", ar: "صورة حرارية لوحدة إنارة أثناء التشغيل" },
+    alt: {
+      en: "Thermal camera check of a high-bay luminaire under load",
+      ar: "فحص بالكاميرا الحرارية لوحدة إنارة للأسقف العالية أثناء التشغيل",
+    },
   },
   {
     id: "ip-ik",
@@ -240,7 +246,10 @@ export const labCapabilities: LabCapability[] = [
       ar: "تخضع الأجهزة لجدول معايرة، وتصدر شهادات الاختبار استناداً إلى النتائج المسجّلة.",
     },
     image: assets.manufacturing.calibrationBench,
-    alt: { en: "Calibration bench with measuring instruments", ar: "طاولة معايرة عليها أجهزة قياس" },
+    alt: {
+      en: "Test bench with photometric camera and measuring instruments",
+      ar: "طاولة اختبار عليها كاميرا قياس ضوئي وأجهزة قياس",
+    },
   },
 ];
 

@@ -148,7 +148,7 @@
     "trace": {
       "title": "Built to be traced",
       "intro": "Every fixture can be followed back through our records: which supplier batch it came from, which order built it and how it tested.",
-      "mediaAlt": "Batch traceability label on a finished luminaire"
+      "mediaAlt": "Engineer checking production records on a tablet"
     },
     "quality": {
       "title": "Manufacturing and quality, step by step",
@@ -204,7 +204,8 @@
     "custom": {
       "title": "Need something that is not in the range?",
       "text": "We engineer and build luminaires to your drawings and specification — from a modified housing to a private-label range — with the same testing and traceability as our own products.",
-      "cta": "Custom & OEM manufacturing"
+      "cta": "Custom & OEM manufacturing",
+      "imageAlt": "LED panel production floor"
     }
   },
   "family": {
@@ -258,6 +259,7 @@
     "intro": "Every fixture is inspected, tested in our own laboratory, and traceable from supplier batch to your project.",
     "facilityTitle": "One factory, every stage",
     "facilityAlt": "Al Bayan factory exterior",
+    "lineAlt": "Automated LED panel production line",
     "processTitle": "Six stages from design to dispatch",
     "processIntro": "Each stage works from controlled instructions and is inspected before the next one starts.",
     "qcTitle": "Quality control at three points",

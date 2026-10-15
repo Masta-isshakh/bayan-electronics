@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
 import { ArrowRight } from "lucide-react";
 import { TraceabilitySection } from "@/components/home/TraceabilitySection";
+import { AmbientVideo } from "@/components/media/AmbientVideo";
 import { CtaBand } from "@/components/ui/CtaBand";
 import { PageHeader } from "@/components/ui/PageHeader";
 import { assets } from "@/content/assets";
@@ -15,6 +16,7 @@ import {
   qcStages,
 } from "@/content/manufacturing";
 import { site } from "@/content/site";
+import type { ImageAsset } from "@/content/types";
 import { cn } from "@/lib/cn";
 import { type LocaleParams, resolveLocale } from "@/lib/i18n";
 import { isPlaceholder } from "@/lib/placeholder";
@@ -29,8 +31,16 @@ export async function generateMetadata({ params }: LocaleParams): Promise<Metada
 export default async function ManufacturingPage({ params }: LocaleParams) {
   const locale = await resolveLocale(params);
   const t = await getTranslations("manufacturing");
+  const ta = await getTranslations("a11y");
   const certifications = site.certifications.filter((item) => !isPlaceholder(item.name));
   const facilityDetails = isPlaceholder(facility.details[locale]) ? null : facility.details[locale];
+  const line = assets.manufacturing.line;
+  const lineReady =
+    !line.poster.placeholder &&
+    [line.desktop.webm, line.desktop.mp4, line.mobile.webm, line.mobile.mp4].every((file) => file.available);
+  // A lab photo already used by a process step or the traceability section is not repeated.
+  const shown = new Set([...processSteps.map((step) => step.image.path), assets.home.traceabilityLabel.path]);
+  const labImage = (image?: ImageAsset) => (image && !image.placeholder && !shown.has(image.path) ? image : null);
 
   return (
     <>
@@ -44,14 +54,32 @@ export default async function ManufacturingPage({ params }: LocaleParams) {
       <section aria-labelledby="facility-title" className="pb-20 lg:pb-28">
         <div className="shell">
           <div className="relative aspect-[16/9] overflow-hidden rounded-media border border-line bg-surface">
-            <Image
-              src={assets.about.factoryExterior.src}
-              alt={t("facilityAlt")}
-              fill
-              priority
-              sizes="(min-width: 1440px) 1344px, calc(100vw - 3rem)"
-              className="object-cover"
-            />
+            {lineReady ? (
+              <AmbientVideo
+                sources={{ desktop: line.desktop, mobile: line.mobile }}
+                labels={{ pause: ta("pauseMotion"), play: ta("playMotion") }}
+                className="absolute inset-0"
+                poster={
+                  <Image
+                    src={line.poster.src}
+                    alt={t("lineAlt")}
+                    fill
+                    priority
+                    sizes="(min-width: 1440px) 1344px, calc(100vw - 3rem)"
+                    className="object-cover"
+                  />
+                }
+              />
+            ) : (
+              <Image
+                src={assets.about.factoryExterior.src}
+                alt={t("facilityAlt")}
+                fill
+                priority
+                sizes="(min-width: 1440px) 1344px, calc(100vw - 3rem)"
+                className="object-cover"
+              />
+            )}
           </div>
           <div className="mt-12 grid gap-6 lg:grid-cols-12">
             <h2 id="facility-title" className="display text-3xl lg:col-span-5">
@@ -154,25 +182,28 @@ export default async function ManufacturingPage({ params }: LocaleParams) {
           </h2>
           <p className="measure mt-5 text-lg text-fg-muted">{t("labIntro")}</p>
           <ul className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {labCapabilities.map((capability) => (
-              <li key={capability.id} className="overflow-hidden rounded-media border border-line bg-surface">
-                {capability.image && (
-                  <div className="relative aspect-[3/2]">
-                    <Image
-                      src={capability.image.src}
-                      alt={capability.alt?.[locale] ?? ""}
-                      fill
-                      sizes="(min-width: 1024px) 30vw, (min-width: 640px) 45vw, 100vw"
-                      className="object-cover"
-                    />
+            {labCapabilities.map((capability) => {
+              const image = labImage(capability.image);
+              return (
+                <li key={capability.id} className="overflow-hidden rounded-media border border-line bg-surface">
+                  {image && (
+                    <div className="relative aspect-[3/2]">
+                      <Image
+                        src={image.src}
+                        alt={capability.alt?.[locale] ?? ""}
+                        fill
+                        sizes="(min-width: 1024px) 30vw, (min-width: 640px) 45vw, 100vw"
+                        className="object-cover"
+                      />
+                    </div>
+                  )}
+                  <div className="p-6">
+                    <h3 className="text-lg font-medium">{capability.title[locale]}</h3>
+                    <p className="mt-2 text-base text-fg-muted">{capability.text[locale]}</p>
                   </div>
-                )}
-                <div className="p-6">
-                  <h3 className="text-lg font-medium">{capability.title[locale]}</h3>
-                  <p className="mt-2 text-base text-fg-muted">{capability.text[locale]}</p>
-                </div>
-              </li>
-            ))}
+                </li>
+              );
+            })}
           </ul>
         </div>
       </section>

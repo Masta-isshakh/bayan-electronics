@@ -327,7 +327,7 @@ html:has([data-hero-intro]) [data-site-header] {
 }
 
 /* Deferred media (components/motion/DeferredMediaObserver.tsx): hidden lazy images are
-   not fetched until their container is near the viewport. */
+   not fetched until the page has loaded or their container nears the viewport. */
 [data-defer]:not([data-defer-ready]) img {
   display: none;
 }

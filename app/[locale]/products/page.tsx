@@ -7,6 +7,7 @@ import { JsonLd } from "@/components/seo/JsonLd";
 import { ButtonLink } from "@/components/ui/Button";
 import { FilterBar, type FilterOption } from "@/components/ui/FilterBar";
 import { PageHeader } from "@/components/ui/PageHeader";
+import { assets } from "@/content/assets";
 import { getFamily, products } from "@/content/products";
 import { productCategories } from "@/content/taxonomy";
 import { type LocaleParams, resolveLocale } from "@/lib/i18n";
@@ -62,8 +63,8 @@ export default async function ProductsPage({ params }: LocaleParams) {
           <div className="shell grid gap-10 lg:grid-cols-12 lg:items-center lg:gap-16">
             <div className="relative aspect-[4/3] overflow-hidden rounded-media border border-rule bg-day-text lg:col-span-6">
               <Image
-                src={custom.image.src}
-                alt={custom.alt[locale]}
+                src={assets.home.factoryOverview.src}
+                alt={t("custom.imageAlt")}
                 fill
                 sizes="(min-width: 1024px) 45vw, 100vw"
                 className="object-cover"

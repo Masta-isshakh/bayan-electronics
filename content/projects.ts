@@ -37,14 +37,14 @@ export const projects: Project[] = [
   {
     slug: "project-01",
     isPlaceholder: true,
-    featured: true,
+    featured: false,
     sector: "commercial-offices",
     title: { en: "Office tower, Doha — sample", ar: "برج مكاتب، الدوحة — نموذج" },
     summary: sampleSummary("project-01"),
     image: assets.projects["project-01"],
-    alt: { en: "Office floor lit by LED panels", ar: "طابق مكاتب مضاء بألواح LED" },
+    alt: { en: "Office tower entrance lit at dusk", ar: "مدخل برج مكاتب مضاء عند الغسق" },
     gallery: [
-      { image: assets.solutions["commercial-offices"], alt: { en: "Open-plan office", ar: "مكتب مفتوح" } },
+      { image: assets.products["led-panels"], alt: { en: "LED panels in production", ar: "ألواح LED قيد الإنتاج" } },
       { image: assets.products["linear-batten"], alt: { en: "Linear luminaires", ar: "وحدات إنارة خطية" } },
     ],
     facts: sampleFacts("project-01"),
@@ -60,7 +60,10 @@ export const projects: Project[] = [
     image: assets.projects["project-02"],
     alt: { en: "Warehouse under high-bay lighting", ar: "مستودع تحت إنارة الأسقف العالية" },
     gallery: [
-      { image: assets.solutions["industrial-warehouses"], alt: { en: "Warehouse aisles", ar: "ممرات المستودع" } },
+      {
+        image: assets.solutions["industrial-warehouses"],
+        alt: { en: "Industrial building at sunset", ar: "مبنى صناعي عند الغروب" },
+      },
       {
         image: assets.products["high-bay-industrial"],
         alt: { en: "High-bay luminaire", ar: "وحدة إنارة للأسقف العالية" },
@@ -77,13 +80,16 @@ export const projects: Project[] = [
     title: { en: "Roadway lighting upgrade, Qatar — sample", ar: "تحديث إنارة طريق، قطر — نموذج" },
     summary: sampleSummary("project-03"),
     image: assets.projects["project-03"],
-    alt: { en: "Road lit by LED street lights", ar: "طريق مضاء بوحدات إنارة شوارع LED" },
+    alt: { en: "Roundabout and road lit by LED street lights", ar: "دوّار وطريق مضاءان بوحدات إنارة شوارع LED" },
     gallery: [
       {
         image: assets.solutions["infrastructure-roads"],
         alt: { en: "Road interchange at night", ar: "تقاطع طرق ليلاً" },
       },
-      { image: assets.products["street-roadway"], alt: { en: "Street light", ar: "وحدة إنارة شوارع" } },
+      {
+        image: assets.products["street-roadway"],
+        alt: { en: "Street lights along the road", ar: "وحدات إنارة شوارع على امتداد الطريق" },
+      },
     ],
     facts: sampleFacts("project-03"),
     products: ["street-roadway", "smart-connected"],
@@ -93,12 +99,12 @@ export const projects: Project[] = [
     isPlaceholder: true,
     featured: true,
     sector: "hospitality",
-    title: { en: "Hotel lobby and façade, Doha — sample", ar: "ردهة فندق وواجهته، الدوحة — نموذج" },
+    title: { en: "Hotel courtyard and façades, Doha — sample", ar: "فناء فندق وواجهاته، الدوحة — نموذج" },
     summary: sampleSummary("project-04"),
     image: assets.projects["project-04"],
-    alt: { en: "Hotel lobby with warm lighting", ar: "ردهة فندق بإضاءة دافئة" },
+    alt: { en: "Hotel courtyard with the Doha skyline at dusk", ar: "فناء فندق وأفق الدوحة عند الغسق" },
     gallery: [
-      { image: assets.solutions.hospitality, alt: { en: "Hotel interior", ar: "التصميم الداخلي للفندق" } },
+      { image: assets.solutions.hospitality, alt: { en: "Courtyard and pool", ar: "فناء ومسبح" } },
       { image: assets.products["facade-architectural"], alt: { en: "Lit façade", ar: "واجهة مضاءة" } },
     ],
     facts: sampleFacts("project-04"),
@@ -107,15 +113,18 @@ export const projects: Project[] = [
   {
     slug: "project-05",
     isPlaceholder: true,
-    featured: false,
+    featured: true,
     sector: "mosques-public",
     title: { en: "Mosque interior and exterior, Qatar — sample", ar: "إنارة داخلية وخارجية لمسجد، قطر — نموذج" },
     summary: sampleSummary("project-05"),
     image: assets.projects["project-05"],
-    alt: { en: "Mosque prayer hall lighting", ar: "إنارة قاعة الصلاة في مسجد" },
+    alt: { en: "Mosque and minaret floodlit at dusk", ar: "مسجد ومئذنة مضاءان بالكشافات عند الغسق" },
     gallery: [
       { image: assets.solutions["mosques-public"], alt: { en: "Mosque at night", ar: "مسجد ليلاً" } },
-      { image: assets.products["custom-oem"], alt: { en: "Custom luminaire", ar: "وحدة إنارة مخصّصة" } },
+      {
+        image: assets.products["custom-oem"],
+        alt: { en: "Custom floodlight under test", ar: "كشاف مخصّص أثناء الاختبار" },
+      },
     ],
     facts: sampleFacts("project-05"),
     products: ["facade-architectural", "downlights-spotlights", "custom-oem"],

@@ -32,7 +32,7 @@ export const sectors: Sector[] = [
     },
     products: ["led-panels", "linear-batten", "downlights-spotlights", "smart-connected"],
     image: assets.solutions["commercial-offices"],
-    alt: { en: "Open-plan office lit by LED panels", ar: "مكتب مفتوح مضاء بألواح LED" },
+    alt: { en: "Office tower and plaza lit at dusk", ar: "برج مكاتب وساحة مضاءان عند الغسق" },
   },
   {
     slug: "industrial-warehouses",
@@ -52,7 +52,7 @@ export const sectors: Sector[] = [
     },
     products: ["high-bay-industrial", "linear-batten", "floodlights-area", "drivers-electronics"],
     image: assets.solutions["industrial-warehouses"],
-    alt: { en: "Warehouse aisles under LED high-bay lighting", ar: "ممرات مستودع تحت إنارة LED للأسقف العالية" },
+    alt: { en: "Industrial building with LED façade lighting at sunset", ar: "مبنى صناعي بإنارة واجهة LED عند الغروب" },
   },
   {
     slug: "infrastructure-roads",
@@ -92,7 +92,7 @@ export const sectors: Sector[] = [
     },
     products: ["downlights-spotlights", "led-strips-profiles", "facade-architectural", "smart-connected"],
     image: assets.solutions.hospitality,
-    alt: { en: "Hotel lobby with warm accent lighting", ar: "ردهة فندق بإضاءة إبراز دافئة" },
+    alt: { en: "Hotel courtyard and pool with warm accent lighting", ar: "فناء فندق ومسبح بإضاءة إبراز دافئة" },
   },
   {
     slug: "retail-malls",
@@ -172,7 +172,7 @@ export const sectors: Sector[] = [
     },
     products: ["downlights-spotlights", "led-strips-profiles", "street-roadway", "facade-architectural"],
     image: assets.solutions["residential-villas"],
-    alt: { en: "Villa exterior lit at dusk", ar: "واجهة فيلا مضاءة عند الغسق" },
+    alt: { en: "Villa courtyard lit at dusk", ar: "فناء فيلا مضاء عند الغسق" },
   },
   {
     slug: "mosques-public",
@@ -192,7 +192,7 @@ export const sectors: Sector[] = [
     },
     products: ["facade-architectural", "downlights-spotlights", "custom-oem", "led-strips-profiles"],
     image: assets.solutions["mosques-public"],
-    alt: { en: "Mosque dome and minaret lit at night", ar: "قبة مسجد ومئذنته مضاءتان ليلاً" },
+    alt: { en: "Mosque courtyard, dome and minaret lit at night", ar: "فناء مسجد وقبته ومئذنته مضاءة ليلاً" },
   },
 ];
 
