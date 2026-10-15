@@ -161,3 +161,14 @@ first-load JS 123 kB. An experiment without the web font gave the same simulated
 - **LCP ≤ 2.0 s is not met in Lighthouse's simulation** (2.5 s English, 2.9–3.1 s Arabic; observed 0.24–0.41 s). The
   remaining pre-paint bytes are the React/Next runtime, the HTML + RSC payload and the fonts; removing more would
   mean dropping the self-hosted fonts or the App Router. Recorded in `docs/QA.md`.
+
+## Follow-up after delivery
+
+- **Links prefetch on intent, not on viewport entry.** Next's default prefetched every visible link's full RSC
+  payload: scrolling the home page on a phone fetched 32 routes, ≈ 3.1 MB uncompressed, mostly from the bento tiles
+  and ~30 footer links. `i18n/IntentLink.tsx` (exported as `Link` from `@/i18n/navigation`) disables that and calls
+  `router.prefetch` on hover, keyboard focus or touch start instead. Scroll-time prefetching is now zero; a hovered
+  link still navigates in ≈ 50 ms. `prefetch={false}` opts a link out completely.
+- **LCP floor measured.** The near-empty privacy page simulates LCP 2.4 s (observed 0.23 s) — the home page at 2.5 s
+  is at the stack's floor (React/Next runtime, HTML + RSC payload, one web font). Meeting 2.0 s in Lighthouse's
+  simulation would require removing the web font from the first paint or leaving the App Router.

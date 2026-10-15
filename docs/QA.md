@@ -74,7 +74,19 @@ Interaction checks (18/18 pass): mega panel (13 links, Escape closes, focus retu
 mobile menu (dialog, focus trap, scroll lock, Escape, focus return), products filter, bento first-tap-reveals /
 second-tap-navigates on touch, hero pause, 404s for unknown family, path and project (all 404 with the designed page).
 
-Not tested: physical devices, Safari/Firefox engines, a manual screen-reader pass.
+### Other engines
+
+Playwright WebKit 27.2 (iPhone 14 profile and 1440 px) and Firefox 157 (1440 px and 390 px), on `/en`, `/ar`,
+`/en/products`, `/ar/products/street-roadway`, `/en/manufacturing`, `/ar/contact`: HTTP 200, no console errors, no
+horizontal overflow, intro animations complete, correct font per locale, and `color-mix()`, `:has()` and
+`overflow: clip` all supported. Firefox renders identically to Chrome.
+
+One WebKit finding, **to verify on a real iPhone / Mac**: in Playwright's _Windows_ WebKit build, Archivo's width axis
+widens the letter advances but not the outlines, so expanded headings look letter-spaced. A test page shows the same
+with the original, unmodified Google Fonts file, so it is that build's font backend, not the subset; real Safari renders
+variable fonts through CoreText. If a real device shows it, the fallback is to drop `font-stretch` on headings.
+
+Not tested: physical devices, real Safari, a manual screen-reader pass.
 
 ## 7. Performance
 
@@ -91,6 +103,12 @@ Not tested: physical devices, Safari/Firefox engines, a manual screen-reader pas
 The small CLS on two pages is Archivo swapping in: local Windows builds never preload `next/font` files (Next 15.5
 bug, see DECISIONS → Fonts). With that one line patched locally to behave like the Linux build Amplify runs (patch
 reverted afterwards), every page above measured **CLS 0** and FCP 0.8–1.0 s.
+
+**Floor:** the near-empty `/en/privacy` page simulates LCP 2.4 s (observed 0.23 s), so the 2.5 s home page is at the
+stack's floor rather than held back by its own content.
+
+**Prefetching:** after switching links to intent-based prefetching, scrolling the whole home page on a phone triggers
+0 route prefetches (previously 32, ≈ 3.1 MB uncompressed). Hover still prefetches; navigation then takes ≈ 50 ms.
 
 SEO is 100 with the real site URL; with the default `https://albayan.example` the `canonical` audit flags the cross-origin
 canonical when testing on localhost (92).

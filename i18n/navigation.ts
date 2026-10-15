@@ -1,4 +1,3 @@
-import { createNavigation } from "next-intl/navigation";
-import { routing } from "./routing";
-
-export const { Link, redirect, usePathname, useRouter, getPathname } = createNavigation(routing);
+// Public navigation API: next-intl's helpers with an intent-prefetching Link.
+export { getPathname, redirect, usePathname, useRouter } from "./navigation-base";
+export { Link } from "./IntentLink";
