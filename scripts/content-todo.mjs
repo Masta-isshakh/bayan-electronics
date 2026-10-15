@@ -32,10 +32,6 @@ const manualItems = [
     'Supply `public/media/brand/logo.svg`, `logo-mark.svg` and `logo-white.svg`. Until then the site renders a typographic "AL BAYAN" wordmark.',
   ],
   [
-    "Hero video",
-    "Place source clips in `media-src/hero/desktop.mp4` and `media-src/hero/mobile.mp4`, then run `npm run media:hero`. Until then the hero uses the CSS light field.",
-  ],
-  [
     "Legal pages",
     "Privacy and terms text (`legal` in messages/*.json) is a draft. Have it reviewed by the client's legal adviser.",
   ],

@@ -13,7 +13,8 @@ type AmbientVideoProps = {
   /** Server-rendered image of the loop's first frame (usually the page's LCP image). */
   poster: ReactNode;
   labels: { pause: string; play: string };
-  className?: string;
+  /** Must position the box (e.g. "absolute inset-0" or "relative aspect-video"). */
+  className: string;
 };
 
 /** An in-page ambient film: poster, muted loop over it and — once it plays — a pause control. */
@@ -22,7 +23,7 @@ export function AmbientVideo({ sources, poster, labels, className }: AmbientVide
   const [active, setActive] = useState(false);
 
   return (
-    <div className={cn("relative overflow-hidden", className)}>
+    <div className={cn("overflow-hidden", className)}>
       {poster}
       <LoopVideo
         sources={sources}
