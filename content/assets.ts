@@ -1,20 +1,30 @@
 // Media manifest. Paths are relative to public/media and match the filenames the
-// client's image prompts use — do not rename. Sizes are the delivery sizes for
-// real media; scripts/make-placeholders.mjs generates any missing file at that size.
+// client's image prompts use — do not rename. Sizes are the target delivery sizes;
+// scripts/make-placeholders.mjs generates any missing file at that size, and real files
+// report their own pixel size from the manifest (same aspect ratio, never upscaled).
 import manifest from "./media-manifest.json";
 import { familySlugs, projectSlugs, sectorSlugs, type FamilySlug, type ProjectSlug, type SectorSlug } from "./taxonomy";
 import type { ImageAsset, MediaFile } from "./types";
 
-type ManifestEntry = { v: string; placeholder: boolean };
+type ManifestEntry = { v: string; placeholder: boolean; w?: number; h?: number };
 const files: Record<string, ManifestEntry | undefined> = manifest.files;
 
+/** URL with the content hash and, for photos, the source width lib/image-loader.ts needs. */
 function versioned(path: string): string {
   const entry = files[path];
-  return entry ? `/media/${path}?v=${entry.v}` : `/media/${path}`;
+  if (!entry) return `/media/${path}`;
+  return entry.w ? `/media/${path}?v=${entry.v}&w=${entry.w}` : `/media/${path}?v=${entry.v}`;
 }
 
 function img(path: string, width: number, height: number): ImageAsset {
-  return { path, width, height, src: versioned(path), placeholder: files[path]?.placeholder ?? true };
+  const entry = files[path];
+  return {
+    path,
+    width: entry?.w ?? width,
+    height: entry?.h ?? height,
+    src: versioned(path),
+    placeholder: entry?.placeholder ?? true,
+  };
 }
 
 function media(path: string): MediaFile {
@@ -53,6 +63,12 @@ export const assets = {
     calibrationBench: img("manufacturing/calibration-bench.jpg", 2400, 1600),
     warehouse: img("manufacturing/warehouse.jpg", 2400, 1600),
     engineer: img("manufacturing/engineer.jpg", 2400, 1600),
+    /** Ambient film at the top of the manufacturing page (scripts/encode-video.sh). */
+    line: {
+      poster: img("manufacturing/line-poster.jpg", 1920, 1080),
+      desktop: { webm: media("manufacturing/line-desktop.webm"), mp4: media("manufacturing/line-desktop.mp4") },
+      mobile: { webm: media("manufacturing/line-mobile.webm"), mp4: media("manufacturing/line-mobile.mp4") },
+    },
   },
   projects: bySlug<ProjectSlug>(projectSlugs, (slug) => img(`projects/${slug}.jpg`, 2400, 1600)),
   about: {

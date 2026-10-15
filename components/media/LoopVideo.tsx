@@ -1,12 +1,9 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import type { HeroVideoSources } from "@/content/site";
-import styles from "./hero.module.css";
+import type { VideoSources } from "@/content/types";
 
-const IDLE_TIMEOUT_MS = 1500;
 const SLOW_CONNECTIONS = new Set(["slow-2g", "2g", "3g"]);
-const PORTRAIT = "(max-width: 767px) and (orientation: portrait)";
 
 type NetworkInformation = { saveData?: boolean; effectiveType?: string };
 type PlaybackState = { ready: boolean; inView: boolean; paused: boolean; sync?: () => void };
@@ -18,13 +15,24 @@ function videoAllowed(): boolean {
   return !SLOW_CONNECTIONS.has(connection?.effectiveType ?? "");
 }
 
+type LoopVideoProps = {
+  sources: VideoSources;
+  /** Media query that selects the `mobile` files. */
+  mobileQuery: string;
+  paused: boolean;
+  className?: string;
+  /** Called once the video is actually playing. */
+  onActive?: () => void;
+};
+
 /**
- * Background video, never in the critical path: no src until after window load
- * (then idle), skipped for reduced motion, Save-Data and slow connections. Fades in
- * over the poster once it is actually playing; pauses off-screen, in hidden tabs and
- * when the visitor presses pause.
+ * Muted background loop over a server-rendered poster that shows its first frame, so the
+ * fade from poster to video is invisible. Sources are attached as soon as the page has
+ * loaded (the poster stays the LCP element) and playback starts at the first playable
+ * frame; never for reduced motion, Save-Data or slow connections. Fades in once playing;
+ * pauses off-screen, in hidden tabs and while `paused`.
  */
-export function HeroVideo({ sources, paused }: { sources: HeroVideoSources; paused: boolean }) {
+export function LoopVideo({ sources, mobileQuery, paused, className, onActive }: LoopVideoProps) {
   const ref = useRef<HTMLVideoElement>(null);
   const [active, setActive] = useState(false);
   const state = useRef<PlaybackState>({ ready: false, inView: true, paused });
@@ -43,7 +51,7 @@ export function HeroVideo({ sources, paused }: { sources: HeroVideoSources; paus
 
     const start = () => {
       if (!videoAllowed()) return;
-      const set = window.matchMedia(PORTRAIT).matches ? sources.mobile : sources.desktop;
+      const set = window.matchMedia(mobileQuery).matches ? sources.mobile : sources.desktop;
       for (const [type, file] of [
         ["video/webm", set.webm],
         ["video/mp4", set.mp4],
@@ -54,8 +62,9 @@ export function HeroVideo({ sources, paused }: { sources: HeroVideoSources; paus
         video.append(source);
       }
       video.muted = true;
+      video.preload = "auto";
       video.addEventListener(
-        "canplaythrough",
+        "canplay",
         () => {
           state.current.ready = true;
           sync();
@@ -65,15 +74,8 @@ export function HeroVideo({ sources, paused }: { sources: HeroVideoSources; paus
       video.load();
     };
 
-    let idleHandle: number | undefined;
-    const schedule = () => {
-      idleHandle =
-        typeof window.requestIdleCallback === "function"
-          ? window.requestIdleCallback(start, { timeout: IDLE_TIMEOUT_MS })
-          : window.setTimeout(start, IDLE_TIMEOUT_MS);
-    };
-    if (document.readyState === "complete") schedule();
-    else window.addEventListener("load", schedule, { once: true });
+    if (document.readyState === "complete") start();
+    else window.addEventListener("load", start, { once: true });
 
     const observer = new IntersectionObserver(
       ([entry]) => {
@@ -86,16 +88,12 @@ export function HeroVideo({ sources, paused }: { sources: HeroVideoSources; paus
     document.addEventListener("visibilitychange", sync);
 
     return () => {
-      window.removeEventListener("load", schedule);
-      if (idleHandle !== undefined) {
-        if (typeof window.cancelIdleCallback === "function") window.cancelIdleCallback(idleHandle);
-        window.clearTimeout(idleHandle);
-      }
+      window.removeEventListener("load", start);
       observer.disconnect();
       document.removeEventListener("visibilitychange", sync);
       video.pause();
     };
-  }, [sources]);
+  }, [sources, mobileQuery]);
 
   useEffect(() => {
     state.current.paused = paused;
@@ -105,7 +103,7 @@ export function HeroVideo({ sources, paused }: { sources: HeroVideoSources; paus
   return (
     <video
       ref={ref}
-      className={styles.video}
+      className={className}
       data-active={active}
       preload="none"
       muted
@@ -115,7 +113,10 @@ export function HeroVideo({ sources, paused }: { sources: HeroVideoSources; paus
       disableRemotePlayback
       aria-hidden="true"
       tabIndex={-1}
-      onPlaying={() => setActive(true)}
+      onPlaying={() => {
+        setActive(true);
+        onActive?.();
+      }}
     />
   );
 }

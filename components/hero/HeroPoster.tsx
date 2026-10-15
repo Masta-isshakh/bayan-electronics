@@ -5,14 +5,13 @@ import styles from "./hero.module.css";
 
 const PORTRAIT = "(max-width: 767px) and (orientation: portrait)";
 const NOT_PORTRAIT = "(min-width: 768px), (orientation: landscape)";
-const QUALITY = 70;
 
 /**
  * The LCP element: an art-directed <picture> (portrait poster on phones, landscape
  * elsewhere) with a matching high-priority preload for each, so only one downloads.
  */
 export function HeroPoster({ desktop, mobile }: { desktop: ImageAsset; mobile: ImageAsset }) {
-  const common = { alt: "", sizes: "100vw", quality: QUALITY, priority: true } as const;
+  const common = { alt: "", sizes: "100vw", priority: true } as const;
   const { props: mobileProps } = getImageProps({
     ...common,
     src: mobile.src,

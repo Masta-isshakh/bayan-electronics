@@ -15,7 +15,7 @@
     "typecheck": "tsc --noEmit",
     "analyze": "cross-env ANALYZE=1 next build",
     "media:placeholders": "node scripts/make-placeholders.mjs && node scripts/media-manifest.mjs",
-    "media:hero": "bash scripts/encode-hero.sh && node scripts/media-manifest.mjs",
+    "media:video": "bash scripts/encode-video.sh && node scripts/media-manifest.mjs",
     "media:manifest": "node scripts/media-manifest.mjs",
     "content:todo": "node scripts/content-todo.mjs",
     "format": "prettier --write .",

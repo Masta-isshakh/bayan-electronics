@@ -1,12 +1,16 @@
 {
   "files": {
     "about/factory-exterior.jpg": {
-      "v": "40973b00",
-      "placeholder": true
+      "v": "7678a45f",
+      "placeholder": false,
+      "w": 1672,
+      "h": 941
     },
     "about/team.jpg": {
-      "v": "e1a3204f",
-      "placeholder": true
+      "v": "70765bdd",
+      "placeholder": false,
+      "w": 1536,
+      "h": 1024
     },
     "brand/logo-mark.svg": {
       "v": "bda86ac0",
@@ -20,177 +24,301 @@
       "v": "cf7f8438",
       "placeholder": true
     },
+    "hero/hero-desktop.mp4": {
+      "v": "418eeda9",
+      "placeholder": false
+    },
+    "hero/hero-desktop.webm": {
+      "v": "fe0f7b6e",
+      "placeholder": false
+    },
+    "hero/hero-mobile.mp4": {
+      "v": "cf38c3af",
+      "placeholder": false
+    },
+    "hero/hero-mobile.webm": {
+      "v": "819722bb",
+      "placeholder": false
+    },
     "hero/poster-desktop.jpg": {
-      "v": "cbba6da4",
-      "placeholder": true
+      "v": "0c0165dc",
+      "placeholder": false,
+      "w": 1920,
+      "h": 1080
     },
     "hero/poster-mobile.jpg": {
-      "v": "656aff2b",
-      "placeholder": true
+      "v": "6b4cdf3d",
+      "placeholder": false,
+      "w": 1080,
+      "h": 1920
     },
     "home/cct-scene.jpg": {
-      "v": "d2e847ac",
-      "placeholder": true
+      "v": "733fa3d9",
+      "placeholder": false,
+      "w": 2400,
+      "h": 1500
     },
     "home/doha-night.jpg": {
-      "v": "366f6def",
-      "placeholder": true
+      "v": "0af228b6",
+      "placeholder": false,
+      "w": 2880,
+      "h": 1200
     },
     "home/factory-overview.jpg": {
-      "v": "dae38e77",
-      "placeholder": true
+      "v": "047cc622",
+      "placeholder": false,
+      "w": 2400,
+      "h": 1600
     },
     "home/qc-lab.jpg": {
-      "v": "537f31d0",
-      "placeholder": true
+      "v": "3ac9185c",
+      "placeholder": false,
+      "w": 2400,
+      "h": 1600
     },
     "home/traceability-label.jpg": {
-      "v": "a0a82958",
-      "placeholder": true
+      "v": "8076f3d5",
+      "placeholder": false,
+      "w": 1536,
+      "h": 1024
     },
     "manufacturing/aging-racks.jpg": {
-      "v": "8da06dea",
-      "placeholder": true
+      "v": "877acfb8",
+      "placeholder": false,
+      "w": 1620,
+      "h": 1080
     },
     "manufacturing/assembly-line.jpg": {
-      "v": "d9e576f6",
-      "placeholder": true
+      "v": "12b938b9",
+      "placeholder": false,
+      "w": 1362,
+      "h": 908
     },
     "manufacturing/calibration-bench.jpg": {
-      "v": "fe6e8c0b",
-      "placeholder": true
+      "v": "5cc9a486",
+      "placeholder": false,
+      "w": 1536,
+      "h": 1024
     },
     "manufacturing/engineer.jpg": {
-      "v": "efb1a7f8",
-      "placeholder": true
+      "v": "70765bdd",
+      "placeholder": false,
+      "w": 1536,
+      "h": 1024
     },
     "manufacturing/ip-test.jpg": {
       "v": "7a926b54",
-      "placeholder": true
+      "placeholder": true,
+      "w": 2400,
+      "h": 1600
+    },
+    "manufacturing/line-desktop.mp4": {
+      "v": "0b1706e7",
+      "placeholder": false
+    },
+    "manufacturing/line-desktop.webm": {
+      "v": "11d944d7",
+      "placeholder": false
+    },
+    "manufacturing/line-mobile.mp4": {
+      "v": "1c9f69d0",
+      "placeholder": false
+    },
+    "manufacturing/line-mobile.webm": {
+      "v": "5a6b28bf",
+      "placeholder": false
+    },
+    "manufacturing/line-poster.jpg": {
+      "v": "da6cb9cb",
+      "placeholder": false,
+      "w": 1920,
+      "h": 1080
     },
     "manufacturing/smt-line.jpg": {
-      "v": "f1d09038",
-      "placeholder": true
+      "v": "c166f7b3",
+      "placeholder": false,
+      "w": 1364,
+      "h": 909
     },
     "manufacturing/thermal-imaging.jpg": {
-      "v": "f59973b5",
-      "placeholder": true
+      "v": "a4531949",
+      "placeholder": false,
+      "w": 1536,
+      "h": 1024
     },
     "manufacturing/warehouse.jpg": {
-      "v": "c2594cf9",
-      "placeholder": true
+      "v": "858e9eb8",
+      "placeholder": false,
+      "w": 1536,
+      "h": 1024
     },
     "og/og-default.jpg": {
-      "v": "911024fc",
-      "placeholder": true
+      "v": "17d4e013",
+      "placeholder": false,
+      "w": 1200,
+      "h": 630
     },
     "products/custom-oem.jpg": {
-      "v": "9249f7c3",
-      "placeholder": true
+      "v": "04cf68bd",
+      "placeholder": false,
+      "w": 819,
+      "h": 1024
     },
     "products/downlights-spotlights.jpg": {
-      "v": "c0049e8d",
-      "placeholder": true
+      "v": "0d0f2589",
+      "placeholder": false,
+      "w": 819,
+      "h": 1024
     },
     "products/drivers-electronics.jpg": {
-      "v": "39da31cd",
-      "placeholder": true
+      "v": "08a474cc",
+      "placeholder": false,
+      "w": 1600,
+      "h": 2000
     },
     "products/facade-architectural.jpg": {
-      "v": "8c4a53da",
-      "placeholder": true
+      "v": "f6976d9c",
+      "placeholder": false,
+      "w": 819,
+      "h": 1024
     },
     "products/floodlights-area.jpg": {
-      "v": "85202da1",
-      "placeholder": true
+      "v": "16b01dfa",
+      "placeholder": false,
+      "w": 819,
+      "h": 1024
     },
     "products/high-bay-industrial.jpg": {
-      "v": "212f4b77",
-      "placeholder": true
+      "v": "463b1e0e",
+      "placeholder": false,
+      "w": 819,
+      "h": 1024
     },
     "products/led-panels.jpg": {
-      "v": "bff67611",
-      "placeholder": true
+      "v": "8bb03d5a",
+      "placeholder": false,
+      "w": 864,
+      "h": 1080
     },
     "products/led-strips-profiles.jpg": {
-      "v": "dae29186",
-      "placeholder": true
+      "v": "976626f1",
+      "placeholder": false,
+      "w": 1600,
+      "h": 2000
     },
     "products/linear-batten.jpg": {
-      "v": "f9bbf6e0",
-      "placeholder": true
+      "v": "b211cbe6",
+      "placeholder": false,
+      "w": 941,
+      "h": 1176
     },
     "products/smart-connected.jpg": {
-      "v": "b56da560",
-      "placeholder": true
+      "v": "c00053dc",
+      "placeholder": false,
+      "w": 819,
+      "h": 1024
     },
     "products/street-roadway.jpg": {
-      "v": "0d2f0e56",
-      "placeholder": true
+      "v": "62225e47",
+      "placeholder": false,
+      "w": 819,
+      "h": 1024
     },
     "projects/project-01.jpg": {
-      "v": "4bae3167",
-      "placeholder": true
+      "v": "bd6230d1",
+      "placeholder": false,
+      "w": 1260,
+      "h": 840
     },
     "projects/project-02.jpg": {
-      "v": "0cc45ffb",
-      "placeholder": true
+      "v": "858e9eb8",
+      "placeholder": false,
+      "w": 1536,
+      "h": 1024
     },
     "projects/project-03.jpg": {
-      "v": "7eec0160",
-      "placeholder": true
+      "v": "77f1f32b",
+      "placeholder": false,
+      "w": 1536,
+      "h": 1024
     },
     "projects/project-04.jpg": {
-      "v": "c9d997db",
-      "placeholder": true
+      "v": "b208fbdd",
+      "placeholder": false,
+      "w": 1536,
+      "h": 1024
     },
     "projects/project-05.jpg": {
-      "v": "f396d7bb",
-      "placeholder": true
+      "v": "969e6f6c",
+      "placeholder": false,
+      "w": 1536,
+      "h": 1024
     },
     "projects/project-06.jpg": {
       "v": "d90e0e2f",
-      "placeholder": true
+      "placeholder": true,
+      "w": 2400,
+      "h": 1600
     },
     "solutions/commercial-offices.jpg": {
-      "v": "c05c2fb8",
-      "placeholder": true
+      "v": "17e0d95a",
+      "placeholder": false,
+      "w": 1536,
+      "h": 1024
     },
     "solutions/education-healthcare.jpg": {
       "v": "dd1ad276",
-      "placeholder": true
+      "placeholder": true,
+      "w": 2400,
+      "h": 1600
     },
     "solutions/hospitality.jpg": {
-      "v": "7e5d0971",
-      "placeholder": true
+      "v": "5ac61704",
+      "placeholder": false,
+      "w": 1536,
+      "h": 1024
     },
     "solutions/industrial-warehouses.jpg": {
-      "v": "e87af8f8",
-      "placeholder": true
+      "v": "20bf3a5d",
+      "placeholder": false,
+      "w": 1412,
+      "h": 941
     },
     "solutions/infrastructure-roads.jpg": {
-      "v": "19bd9c9e",
-      "placeholder": true
+      "v": "0383970f",
+      "placeholder": false,
+      "w": 2400,
+      "h": 1600
     },
     "solutions/mosques-public.jpg": {
-      "v": "d423fbc8",
-      "placeholder": true
+      "v": "78ed8dab",
+      "placeholder": false,
+      "w": 1536,
+      "h": 1024
     },
     "solutions/residential-villas.jpg": {
-      "v": "cb41128b",
-      "placeholder": true
+      "v": "fe3a8a95",
+      "placeholder": false,
+      "w": 1536,
+      "h": 1024
     },
     "solutions/retail-malls.jpg": {
       "v": "6384260f",
-      "placeholder": true
+      "placeholder": true,
+      "w": 2400,
+      "h": 1600
     },
     "solutions/sports-outdoor.jpg": {
       "v": "41b906d6",
-      "placeholder": true
+      "placeholder": true,
+      "w": 2400,
+      "h": 1600
     },
     "textures/noise.png": {
       "v": "b232bdc1",
-      "placeholder": false
+      "placeholder": false,
+      "w": 256,
+      "h": 256
     }
   }
 }

@@ -1,6 +1,7 @@
 import type { NextConfig } from "next";
 import createNextIntlPlugin from "next-intl/plugin";
 import bundleAnalyzer from "@next/bundle-analyzer";
+import imageSizes from "./lib/image-sizes.json";
 
 const withNextIntl = createNextIntlPlugin("./i18n/request.ts");
 const withBundleAnalyzer = bundleAnalyzer({
@@ -20,18 +21,18 @@ const nextConfig: NextConfig = {
     inlineCss: true,
   },
   images: {
-    formats: ["image/avif", "image/webp"],
-    minimumCacheTTL: ONE_YEAR_SECONDS,
-    deviceSizes: [390, 640, 828, 1080, 1280, 1600, 1920, 2560],
-    imageSizes: [64, 128, 256, 384],
-    qualities: [60, 70, 75],
-    // Media URLs carry a ?v=<content hash> (see content/media-manifest.json), so
-    // replacing a file under public/media busts every cache layer.
-    localPatterns: [{ pathname: "/media/**" }],
+    // Photos are pre-built as static WebP variants (scripts/media-manifest.mjs) and mapped
+    // by lib/image-loader.ts: nothing is resized on request, every image is a CDN hit.
+    loader: "custom",
+    loaderFile: "./lib/image-loader.ts",
+    deviceSizes: imageSizes.deviceSizes,
+    imageSizes: imageSizes.imageSizes,
   },
   async headers() {
     return [
+      // Media and variant URLs carry a content hash (see content/media-manifest.json).
       { source: "/media/:path*", headers: immutable },
+      { source: "/_img/:path*", headers: immutable },
       // Font files carry a version in their name (e.g. arabic-sans-400.v1.woff2).
       { source: "/fonts/:path*", headers: immutable },
       { source: "/_next/static/:path*", headers: immutable },

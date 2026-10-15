@@ -25,5 +25,7 @@ frontend:
   cache:
     paths:
       - .next/cache/**/*
+      # Pre-built image variants: only new or changed photos are encoded on the next build.
+      - public/_img/**/*
       - .npm/**/*
       - node_modules/**/*

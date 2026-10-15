@@ -23,5 +23,11 @@ export type MediaFile = {
   readonly available: boolean;
 };
 
+/** A background loop: WebM + MP4 for wide screens and for phones. */
+export type VideoSources = {
+  readonly desktop: { readonly webm: MediaFile; readonly mp4: MediaFile };
+  readonly mobile: { readonly webm: MediaFile; readonly mp4: MediaFile };
+};
+
 /** Marks a record whose existence or naming the client still has to confirm. */
 export type Confirmable = { readonly confirm?: true };

@@ -1,11 +1,6 @@
 import { pending } from "@/lib/placeholder";
 import { assets } from "./assets";
-import type { ImageAsset, Localized, MediaFile } from "./types";
-
-export type HeroVideoSources = {
-  desktop: { webm: MediaFile; mp4: MediaFile };
-  mobile: { webm: MediaFile; mp4: MediaFile };
-};
+import type { ImageAsset, Localized, VideoSources } from "./types";
 
 export type Stat = { id: string; value: string; label: Localized };
 export type SocialLink = { id: string; label: string; href: string };
@@ -16,7 +11,7 @@ export type Milestone = { id: string; year: string; text: Localized };
 const heroVideo = {
   desktop: assets.hero.video.desktop,
   mobile: assets.hero.video.mobile,
-} as HeroVideoSources | null;
+} as VideoSources | null;
 
 export const site = {
   /** Canonical origin. Set NEXT_PUBLIC_SITE_URL in Amplify once the domain is confirmed. */

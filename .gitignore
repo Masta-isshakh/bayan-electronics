@@ -44,3 +44,6 @@ amplifyconfiguration*
 
 # raw hero sources (encoded output lives in public/media/hero)
 /media-src
+
+# pre-built image variants (scripts/media-manifest.mjs)
+/public/_img
