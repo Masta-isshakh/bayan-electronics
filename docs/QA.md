@@ -74,6 +74,14 @@ Interaction checks (18/18 pass): mega panel (13 links, Escape closes, focus retu
 mobile menu (dialog, focus trap, scroll lock, Escape, focus return), products filter, bento first-tap-reveals /
 second-tap-navigates on touch, hero pause, 404s for unknown family, path and project (all 404 with the designed page).
 
+### Accessibility sweep
+
+- **axe-core 4** on all 36 routes × 2 locales (WCAG 2.0–2.2 A/AA and best-practice rules, page scrolled first so
+  every section is rendered): **72/72 pages with no violations**.
+- **Keyboard:** first Tab lands on the skip link, Enter moves focus to `<main>` (both locales); the header order is
+  wordmark → Products → Solutions → Manufacturing → Projects → About → language → Request a quotation, then the page.
+  Every stop is visible and settles on the 2 px lumen ring (links with `transition-colors` fade the ring in over 150 ms).
+
 ### Other engines
 
 Playwright WebKit 27.2 (iPhone 14 profile and 1440 px) and Firefox 157 (1440 px and 390 px), on `/en`, `/ar`,
