@@ -44,8 +44,11 @@ export const projects: Project[] = [
     image: assets.projects["project-01"],
     alt: { en: "Office tower entrance lit at dusk", ar: "مدخل برج مكاتب مضاء عند الغسق" },
     gallery: [
-      { image: assets.products["led-panels"], alt: { en: "LED panels in production", ar: "ألواح LED قيد الإنتاج" } },
-      { image: assets.products["linear-batten"], alt: { en: "Linear luminaires", ar: "وحدات إنارة خطية" } },
+      { image: assets.home.factoryOverview, alt: { en: "LED panels in production", ar: "ألواح LED قيد الإنتاج" } },
+      {
+        image: assets.manufacturing.assemblyLine,
+        alt: { en: "Linear luminaires on the assembly line", ar: "وحدات إنارة خطية على خط التجميع" },
+      },
     ],
     facts: sampleFacts("project-01"),
     products: ["led-panels", "linear-batten", "smart-connected"],
@@ -65,8 +68,8 @@ export const projects: Project[] = [
         alt: { en: "Industrial building at sunset", ar: "مبنى صناعي عند الغروب" },
       },
       {
-        image: assets.products["high-bay-industrial"],
-        alt: { en: "High-bay luminaire", ar: "وحدة إنارة للأسقف العالية" },
+        image: assets.manufacturing.agingRacks,
+        alt: { en: "Luminaires switched on before dispatch", ar: "وحدات إنارة قيد التشغيل قبل الشحن" },
       },
     ],
     facts: sampleFacts("project-02"),
@@ -87,8 +90,8 @@ export const projects: Project[] = [
         alt: { en: "Road interchange at night", ar: "تقاطع طرق ليلاً" },
       },
       {
-        image: assets.products["street-roadway"],
-        alt: { en: "Street lights along the road", ar: "وحدات إنارة شوارع على امتداد الطريق" },
+        image: assets.home.qcLab,
+        alt: { en: "Photometric testing in the laboratory", ar: "اختبار ضوئي في المختبر" },
       },
     ],
     facts: sampleFacts("project-03"),
@@ -105,7 +108,7 @@ export const projects: Project[] = [
     alt: { en: "Hotel courtyard with the Doha skyline at dusk", ar: "فناء فندق وأفق الدوحة عند الغسق" },
     gallery: [
       { image: assets.solutions.hospitality, alt: { en: "Courtyard and pool", ar: "فناء ومسبح" } },
-      { image: assets.products["facade-architectural"], alt: { en: "Lit façade", ar: "واجهة مضاءة" } },
+      { image: assets.home.dohaNight, alt: { en: "Doha waterfront at night", ar: "واجهة الدوحة البحرية ليلاً" } },
     ],
     facts: sampleFacts("project-04"),
     products: ["downlights-spotlights", "led-strips-profiles", "facade-architectural"],
@@ -122,8 +125,8 @@ export const projects: Project[] = [
     gallery: [
       { image: assets.solutions["mosques-public"], alt: { en: "Mosque at night", ar: "مسجد ليلاً" } },
       {
-        image: assets.products["custom-oem"],
-        alt: { en: "Custom floodlight under test", ar: "كشاف مخصّص أثناء الاختبار" },
+        image: assets.manufacturing.thermalImaging,
+        alt: { en: "Luminaire checked under load", ar: "فحص وحدة إنارة أثناء التشغيل" },
       },
     ],
     facts: sampleFacts("project-05"),
@@ -140,7 +143,7 @@ export const projects: Project[] = [
     alt: { en: "Classroom lit by LED panels", ar: "فصل دراسي مضاء بألواح LED" },
     gallery: [
       { image: assets.solutions["education-healthcare"], alt: { en: "Classroom", ar: "فصل دراسي" } },
-      { image: assets.products["led-panels"], alt: { en: "LED panel", ar: "لوح LED" } },
+      { image: assets.home.factoryOverview, alt: { en: "LED panels in production", ar: "ألواح LED قيد الإنتاج" } },
     ],
     facts: sampleFacts("project-06"),
     products: ["led-panels", "linear-batten"],

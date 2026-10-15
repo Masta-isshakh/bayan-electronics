@@ -22,6 +22,7 @@ export function SectorRail({ cards, labels }: SectorRailProps) {
   const scroller = useRef<HTMLUListElement>(null);
   const [progress, setProgress] = useState(0);
   const [edges, setEdges] = useState({ start: true, end: false });
+  const [near, setNear] = useState(false);
 
   const measure = useCallback(() => {
     const element = scroller.current;
@@ -30,6 +31,23 @@ export function SectorRail({ cards, labels }: SectorRailProps) {
     const position = Math.abs(element.scrollLeft);
     setProgress(max > 0 ? position / max : 1);
     setEdges({ start: position <= 1, end: position >= max - 1 });
+  }, []);
+
+  // Cards off to the side would only load once swiped to. When the rail nears the
+  // viewport, load them all so swiping never reveals an empty card.
+  useEffect(() => {
+    const element = scroller.current;
+    if (!element) return;
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (!entry.isIntersecting) return;
+        setNear(true);
+        observer.disconnect();
+      },
+      { rootMargin: "800px 0px" },
+    );
+    observer.observe(element);
+    return () => observer.disconnect();
   }, []);
 
   useEffect(() => {
@@ -62,6 +80,7 @@ export function SectorRail({ cards, labels }: SectorRailProps) {
                   src={card.image.src}
                   alt={card.alt}
                   fill
+                  loading={near ? "eager" : "lazy"}
                   sizes="(min-width: 1024px) 30vw, (min-width: 640px) 44vw, 78vw"
                   className="object-cover transition-[scale,filter] duration-700 ease-entrance group-hover:scale-[1.03] group-hover:brightness-110"
                 />
