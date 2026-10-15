@@ -172,3 +172,66 @@ first-load JS 123 kB. An experiment without the web font gave the same simulated
 - **LCP floor measured.** The near-empty privacy page simulates LCP 2.4 s (observed 0.23 s) — the home page at 2.5 s
   is at the stack's floor (React/Next runtime, HTML + RSC payload, one web font). Meeting 2.0 s in Lighthouse's
   simulation would require removing the web font from the first paint or leaving the App Router.
+
+## Real media (client uploads, 2026-10-15)
+
+The client uploaded 25 images and 3 clips. Originals are kept, unchanged, in `media-src/uploads/` and
+`media-src/{hero,manufacturing}/` (git-ignored); the site uses crops of them at the slot paths in `content/assets.ts`.
+
+- **Mapping.** Each upload went to the slot whose subject it shows; uploads already named `albayan__<folder>__<slot>`
+  went to that slot. Portrait product slots (4:5) are full-height crops of landscape scenes, centred on the luminaire
+  or lighting effect. Nothing is upscaled: a smaller source keeps its own size (the manifest reports it).
+
+  | Upload                                                     | Slot(s)                                                                                                                               |
+  | ---------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
+  | Hero clips (desktop / mobile)                              | hero video + posters (first frame of each loop)                                                                                       |
+  | Third clip (robot, LED panels on conveyor)                 | manufacturing page film + poster; a graded frame → `products/led-panels`                                                              |
+  | albayan\_\_home\_\_factory-overview                        | `home/factory-overview` (products page custom band), `home/cct-scene`, project galleries                                              |
+  | albayan\_\_home\_\_qc-lab, doha-night                      | `home/qc-lab` (testing step, sphere), `home/doha-night`                                                                               |
+  | albayan\_\_hero\_\_poster-desktop                          | `manufacturing/aging-racks` — a still of a different shot than the video, so it would not match the loop's first frame as hero poster |
+  | albayan\_\_products\_\__, solutions\_\__                   | their named slots                                                                                                                     |
+  | Confident Engineer                                         | `home/traceability-label` (engineer checking records)                                                                                 |
+  | Diverse Manufacturing Team                                 | `about/team` (still hidden), `manufacturing/engineer` (design step)                                                                   |
+  | Industrial LED Testing Lab                                 | `manufacturing/calibration-bench`, crop → `products/custom-oem`                                                                       |
+  | LED Assembly Line (PCBs) / Illuminated LED Assembly Line   | `manufacturing/smt-line` / `manufacturing/assembly-line`                                                                              |
+  | Cinematic LED Factory Assembly Line                        | `products/linear-batten`                                                                                                              |
+  | Thermal Inspection                                         | `manufacturing/thermal-imaging`, crop → `products/high-bay-industrial`                                                                |
+  | Symmetrical Warehouse                                      | `manufacturing/warehouse` (dispatch), `projects/project-02`                                                                           |
+  | Modern Industrial Building                                 | `about/factory-exterior`, `solutions/industrial-warehouses`, `og/og-default`                                                          |
+  | Glass Towers plaza                                         | `solutions/commercial-offices`, tighter crop → `projects/project-01`                                                                  |
+  | Moonlit courtyard / Mosque courtyard / Courtyard of Villas | `solutions/hospitality` / `mosques-public` / `residential-villas`                                                                     |
+  | Roundabout / Golden Mosque / Villa by the Bay              | `projects/project-03` / `05` / `04`, crops → `products/street-roadway` / `floodlights-area` / `smart-connected`                       |
+  | Luxury Villa Courtyard / Oasis of Villas                   | crops → `products/downlights-spotlights` / `facade-architectural`                                                                     |
+
+  No upload fits `solutions/retail-malls`, `education-healthcare`, `sports-outdoor`, `manufacturing/ip-test` or
+  `projects/project-06`; they stay placeholders (listed in `CONTENT-TODO.md`).
+
+- **No photo twice on one page.** With ~45 slots for 25 photos some reuse is unavoidable; it is kept to different
+  pages, or to a tight crop vs. the full scene. Featured projects are now 03, 04, 05 (project-01 would repeat the
+  offices sector image on the home page). Sample-project galleries use factory/lab/location photos instead of product
+  photos, which the "products used" grid below already shows. On the manufacturing page a lab card omits its photo
+  when a process step or the traceability section already shows it (`labImage` in the page).
+- **Alt text and two sample-project titles were rewritten to describe the actual photos** (EN + AR), e.g. the
+  traceability image is now "Engineer checking production records on a tablet", project-04 is "Hotel courtyard and
+  façades, Doha — sample".
+- **Static image variants instead of the on-demand optimizer.** `scripts/media-manifest.mjs` writes each photo as
+  WebP at every configured width up to its own (437 files, 18 MB, ≈ 14 s cold, < 1 s when unchanged) and
+  `lib/image-loader.ts` maps `next/image` to them. The loader is passed as a prop by `components/ui/Image.tsx` (a
+  thin client wrapper every photo uses) and to `getImageProps` in `HeroPoster`, not through `images.loaderFile`:
+  Turbopack in Next 15.5 does not apply `loaderFile` to server components, so `npm run dev` returned 500. An image
+  rendered without the loader still works — it falls back to the optimizer. On Amplify the optimizer runs in a function: the first request
+  per size waits for a resize + encode; static variants are plain CDN hits from the first visitor on. WebP rather
+  than AVIF: one static file per size cannot be content-negotiated, Safari 16.x on macOS < 13 cannot decode AVIF,
+  and WebP decodes faster on phones. `public/_img` is git-ignored and in the Amplify build cache.
+- **Video loops.** Both hero clips open in darkness and switch on; the loops use only the lit part (desktop 2.5–8 s,
+  mobile 4.5–10 s) so the poster (the loop's first frame) and the video match and no loop flashes dark. The camera
+  moves, so a crossfade loop would ghost: they play forward then back instead. The conveyor clip would look wrong
+  reversed, so it loops with a 1 s crossfade. Mobile hero is 720×1280 (≈ 0.8 MB WebM); desktop hero 1920×1080
+  (≈ 2.3 MB). The third clip became an ambient film at the top of the manufacturing page (`AmbientVideo`, with its
+  own pause control for WCAG 2.2.2); the factory exterior photo stays on About and is the fallback there.
+- **Videos start sooner.** `LoopVideo` (shared by both) attaches sources on `load` instead of `load` + idle, sets
+  `preload="auto"` explicitly and starts on `canplay` rather than `canplaythrough`. The poster stays the LCP element.
+- **Deferred grids release after load.** `[data-defer]` image grids (home bento, galleries) now load once the page
+  has finished loading, or 1200 px before they scroll into view, instead of within 400 px — so fast scrolling no
+  longer reveals empty tiles. The home sector rail switches its images to eager when it nears the viewport, so cards
+  off to the side are loaded before they are swiped in.

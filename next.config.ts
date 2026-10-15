@@ -21,12 +21,13 @@ const nextConfig: NextConfig = {
     inlineCss: true,
   },
   images: {
-    // Photos are pre-built as static WebP variants (scripts/media-manifest.mjs) and mapped
-    // by lib/image-loader.ts: nothing is resized on request, every image is a CDN hit.
-    loader: "custom",
-    loaderFile: "./lib/image-loader.ts",
+    // Photos are pre-built as static WebP variants (scripts/media-manifest.mjs) and mapped by
+    // lib/image-loader.ts, passed as the loader in components/ui/Image.tsx and HeroPoster:
+    // nothing is resized on request, every image is a CDN hit. These widths drive srcset.
     deviceSizes: imageSizes.deviceSizes,
     imageSizes: imageSizes.imageSizes,
+    // Fallback only (an image rendered without the loader): media URLs carry ?v=<hash>.
+    localPatterns: [{ pathname: "/media/**" }],
   },
   async headers() {
     return [

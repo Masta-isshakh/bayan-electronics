@@ -15,16 +15,16 @@ npm ci
 npm run dev          # http://localhost:3000 → redirects to /en
 ```
 
-| Script                                                  | What it does                                                                         |
-| ------------------------------------------------------- | ------------------------------------------------------------------------------------ |
-| `npm run dev`                                           | Dev server (Turbopack). Runs `ensure-amplify-outputs` and `media-manifest` first.    |
-| `npm run build` / `npm start`                           | Production build (all pages static) and server.                                      |
-| `npm run lint` · `npm run typecheck` · `npm run format` | ESLint, TypeScript, Prettier.                                                        |
-| `npm run analyze`                                       | Build with the bundle analyzer (`.next/analyze/*.html`).                             |
-| `npm run media:placeholders`                            | Generates any missing media file as a placeholder (never overwrites).                |
-| `npm run media:hero`                                    | Encodes the hero video and posters with ffmpeg (see below).                          |
-| `npm run media:manifest`                                | Re-hashes `public/media` into `content/media-manifest.json` (runs before dev/build). |
-| `npm run content:todo`                                  | Regenerates `CONTENT-TODO.md`.                                                       |
+| Script                                                  | What it does                                                                      |
+| ------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| `npm run dev`                                           | Dev server (Turbopack). Runs `ensure-amplify-outputs` and `media-manifest` first. |
+| `npm run build` / `npm start`                           | Production build (all pages static) and server.                                   |
+| `npm run lint` · `npm run typecheck` · `npm run format` | ESLint, TypeScript, Prettier.                                                     |
+| `npm run analyze`                                       | Build with the bundle analyzer (`.next/analyze/*.html`).                          |
+| `npm run media:placeholders`                            | Generates any missing media file as a placeholder (never overwrites).             |
+| `npm run media:video`                                   | Encodes the background videos and their posters with ffmpeg (see below).          |
+| `npm run media:manifest`                                | Re-hashes `public/media`, builds the image variants (runs before dev/build).      |
+| `npm run content:todo`                                  | Regenerates `CONTENT-TODO.md`.                                                    |
 
 ### Backend (Amplify sandbox)
 
@@ -54,40 +54,58 @@ the backend is redeployed.
 
 ## Adding real media
 
-All media lives under `public/media/` at the exact paths and sizes in `content/assets.ts` — the client's image
-prompts use the same filenames, so **do not rename**. The repo ships generated placeholders; replace them in place.
+All media lives under `public/media/` at the exact paths in `content/assets.ts` — the client's image prompts use
+the same filenames, so **do not rename**. Replace a file in place; missing ones are generated placeholders. The sizes
+below are targets: a smaller file at the same aspect ratio works (it is never upscaled), a different ratio is
+cropped by the layout. The client's original uploads are kept in `media-src/uploads/` (git-ignored).
 
-| Path                                                                                                                  | Size                                            | Used for                                               |
-| --------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------- | ------------------------------------------------------ |
-| `hero/poster-desktop.jpg` · `hero/poster-mobile.jpg`                                                                  | 1920×1080 · 1080×1920                           | Hero poster (LCP)                                      |
-| `hero/hero-desktop.{webm,mp4}` · `hero/hero-mobile.{webm,mp4}`                                                        | 1920×1080 · 1080×1920, 24 fps, 8–12 s, no audio | Hero video                                             |
-| `home/factory-overview.jpg`, `home/qc-lab.jpg`, `home/traceability-label.jpg`                                         | 2400×1600                                       | Home sections                                          |
-| `home/doha-night.jpg`                                                                                                 | 2880×1200                                       | "Starting a project" band                              |
-| `home/cct-scene.jpg`                                                                                                  | 2400×1500                                       | CCT explorer (neutral-white interior)                  |
-| `products/<family>.jpg` × 11                                                                                          | 1600×2000                                       | Product tiles and family pages                         |
-| `solutions/<sector>.jpg` × 9                                                                                          | 2400×1600                                       | Sector cards and pages                                 |
-| `manufacturing/{smt-line,assembly-line,aging-racks,ip-test,thermal-imaging,calibration-bench,warehouse,engineer}.jpg` | 2400×1600                                       | Process steps, laboratory                              |
-| `projects/project-01.jpg` … `project-06.jpg`                                                                          | 2400×1600                                       | Projects                                               |
-| `about/factory-exterior.jpg`                                                                                          | 2880×1620                                       | About, manufacturing                                   |
-| `about/team.jpg`                                                                                                      | 2400×1600                                       | About (hidden until team details exist)                |
-| `brand/logo.svg`, `brand/logo-mark.svg`, `brand/logo-white.svg`                                                       | vector                                          | Real logo (the header switches automatically)          |
-| `og/og-default.jpg`                                                                                                   | 1200×630                                        | Static share image (generated cards are used per page) |
+| Path                                                                                                                  | Size                                     | Used for                                               |
+| --------------------------------------------------------------------------------------------------------------------- | ---------------------------------------- | ------------------------------------------------------ |
+| `hero/poster-desktop.jpg` · `hero/poster-mobile.jpg`                                                                  | 1920×1080 · 1080×1920                    | Hero poster (LCP)                                      |
+| `hero/hero-desktop.{webm,mp4}` · `hero/hero-mobile.{webm,mp4}`                                                        | encoded by `npm run media:video` (below) | Hero video                                             |
+| `home/factory-overview.jpg`, `home/qc-lab.jpg`, `home/traceability-label.jpg`                                         | 2400×1600                                | Home sections                                          |
+| `home/doha-night.jpg`                                                                                                 | 2880×1200                                | "Starting a project" band                              |
+| `home/cct-scene.jpg`                                                                                                  | 2400×1500                                | CCT explorer (neutral-white interior)                  |
+| `products/<family>.jpg` × 11                                                                                          | 1600×2000                                | Product tiles and family pages                         |
+| `solutions/<sector>.jpg` × 9                                                                                          | 2400×1600                                | Sector cards and pages                                 |
+| `manufacturing/{smt-line,assembly-line,aging-racks,ip-test,thermal-imaging,calibration-bench,warehouse,engineer}.jpg` | 2400×1600                                | Process steps, laboratory                              |
+| `projects/project-01.jpg` … `project-06.jpg`                                                                          | 2400×1600                                | Projects                                               |
+| `about/factory-exterior.jpg`                                                                                          | 2880×1620                                | About, manufacturing                                   |
+| `about/team.jpg`                                                                                                      | 2400×1600                                | About (hidden until team details exist)                |
+| `brand/logo.svg`, `brand/logo-mark.svg`, `brand/logo-white.svg`                                                       | vector                                   | Real logo (the header switches automatically)          |
+| `og/og-default.jpg`                                                                                                   | 1200×630                                 | Static share image (generated cards are used per page) |
 
 Then run `npm run media:manifest` (or just `npm run dev` / `build`). The manifest records a content hash per file
-(URLs get `?v=<hash>`, so the year-long immutable cache is busted) and whether each file is still a placeholder.
-The site reacts automatically: a real hero poster becomes the LCP image instead of the light field, a real logo
-replaces the typographic wordmark.
+(URLs get `?v=<hash>`, so the year-long immutable cache is busted), each photo's pixel size and whether it is still
+a placeholder. The site reacts automatically: a real hero poster becomes the LCP image instead of the light field, a
+real logo replaces the typographic wordmark.
 
-### Hero video
+### Image variants (why images load instantly)
 
-1. Put the source clips in `media-src/hero/desktop.mp4` (landscape) and `media-src/hero/mobile.mp4` (portrait).
-   `media-src/` is git-ignored.
-2. Install ffmpeg if needed (`winget install Gyan.FFmpeg`, `brew install ffmpeg`, `apt install ffmpeg`).
-3. `npm run media:hero` — writes the four video files and both posters, then prints sizes against the budget
-   (desktop WebM ≤ 3.5 MB, MP4 ≤ 5 MB; mobile ≤ 2.5 MB each).
+Photos are never resized on request. `npm run media:manifest` writes every photo as WebP at each width in
+`lib/image-sizes.json` up to its own width, to `public/_img/<name>.<hash>.<width>.webp` (git-ignored, rebuilt on
+`dev`/`build`, cached between Amplify builds). `lib/image-loader.ts` points `next/image` at those files (render photos with `@/components/ui/Image`, which passes
+the loader), so every
+image is a static, immutable CDN hit with the right size for the screen — no optimizer cold starts. Only new or
+changed photos are encoded (≈ 14 s for all of them from scratch, < 1 s otherwise); stale variants are removed.
 
-The video only loads after the page has finished loading, never for reduced motion, Save-Data or slow connections.
-To force the CSS light field, set `site.hero.video` to `null` in `content/site.ts`.
+### Background videos
+
+| Source (git-ignored)               | Output (`public/media/…`)                                                              | Loop                                 |
+| ---------------------------------- | -------------------------------------------------------------------------------------- | ------------------------------------ |
+| `media-src/hero/desktop.mp4`       | `hero/hero-desktop.{webm,mp4}` 1920×1080, `hero/poster-desktop.jpg`                    | 2.5–8 s, forward then back (≈ 11 s)  |
+| `media-src/hero/mobile.mp4`        | `hero/hero-mobile.{webm,mp4}` 720×1280, `hero/poster-mobile.jpg`                       | 4.5–10 s, forward then back (≈ 11 s) |
+| `media-src/manufacturing/line.mp4` | `manufacturing/line-{desktop,mobile}.{webm,mp4}` 1600×900 / 960×540, `line-poster.jpg` | 0–10 s with a 1 s crossfade (9 s)    |
+
+1. Install ffmpeg if needed (`winget install Gyan.FFmpeg`, `brew install ffmpeg`, `apt install ffmpeg`).
+2. `npm run media:video` — encodes all of the above without audio and prints sizes against the budget.
+   Trim points live in `scripts/encode-video.sh`: the hero clips open in darkness, so their loops use only the lit
+   part; the moving camera would ghost in a crossfade, so they play forward and back instead.
+
+Each poster is the first frame of its loop, so the poster → video fade is invisible. Videos attach after the page has
+loaded (the poster is the LCP image), start at the first playable frame, pause off-screen, in hidden tabs and via the
+pause button, and never load for reduced motion, Save-Data or slow connections. Each device downloads one file only.
+To force the CSS light field in the hero, set `site.hero.video` to `null` in `content/site.ts`.
 
 ### Placeholders
 

@@ -1,6 +1,6 @@
 "use client";
 
-import Image from "next/image";
+import { Image } from "@/components/ui/Image";
 import { useId, useState, type CSSProperties } from "react";
 import type { ImageAsset } from "@/content/types";
 import styles from "./cct.module.css";

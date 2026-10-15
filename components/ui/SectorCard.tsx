@@ -1,4 +1,4 @@
-import Image from "next/image";
+import { Image } from "@/components/ui/Image";
 import type { Sector } from "@/content/solutions";
 import { Link } from "@/i18n/navigation";
 import type { Locale } from "@/i18n/locales";

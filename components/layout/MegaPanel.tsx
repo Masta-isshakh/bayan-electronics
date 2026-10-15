@@ -1,6 +1,6 @@
 "use client";
 
-import Image from "next/image";
+import { Image } from "@/components/ui/Image";
 import { AnimatePresence, m } from "motion/react";
 import { Link } from "@/i18n/navigation";
 import { MotionScope } from "@/components/motion/MotionScope";

@@ -1,5 +1,6 @@
 import { getImageProps } from "next/image";
 import { preload } from "react-dom";
+import imageLoader from "@/lib/image-loader";
 import type { ImageAsset } from "@/content/types";
 import styles from "./hero.module.css";
 
@@ -11,7 +12,7 @@ const NOT_PORTRAIT = "(min-width: 768px), (orientation: landscape)";
  * elsewhere) with a matching high-priority preload for each, so only one downloads.
  */
 export function HeroPoster({ desktop, mobile }: { desktop: ImageAsset; mobile: ImageAsset }) {
-  const common = { alt: "", sizes: "100vw", priority: true } as const;
+  const common = { alt: "", sizes: "100vw", priority: true, loader: imageLoader } as const;
   const { props: mobileProps } = getImageProps({
     ...common,
     src: mobile.src,

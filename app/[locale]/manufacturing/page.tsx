@@ -1,4 +1,4 @@
-import Image from "next/image";
+import { Image } from "@/components/ui/Image";
 import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
 import { ArrowRight } from "lucide-react";
@@ -65,6 +65,7 @@ export default async function ManufacturingPage({ params }: LocaleParams) {
                     alt={t("lineAlt")}
                     fill
                     priority
+                    fetchPriority="high"
                     sizes="(min-width: 1440px) 1344px, calc(100vw - 3rem)"
                     className="object-cover"
                   />

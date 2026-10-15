@@ -33,7 +33,8 @@ app/[locale]/layout.tsx        html lang/dir, fonts, providers, Header, Footer, 
 components/
   layout/   Header, DesktopNav, MegaPanel, MobileMenu, LanguageSwitch, Wordmark, Footer,
             WhatsAppFloat, SkipLink, QatarMark
-  hero/     Hero (client), HeroVideo, HeroLightField, HeroHeadline, hero.module.css
+  hero/     Hero (client), HeroPoster, HeroLightField, HeroHeadline, hero.module.css
+  media/    LoopVideo (shared background loop), AmbientVideo (in-page film + pause control)
   home/     ProductBento (+ FlashlightGrid), CctExplorer, TraceabilityChain, ManufacturingSteps,
             SectorRail, FeaturedProjects, Stats, StartProject
   ui/       Button/ButtonLink, MagneticButton, PageHeader, WordReveal, Breadcrumbs, Badge,
@@ -42,8 +43,9 @@ components/
   forms/    InquiryForm (contact | quote)
 content/    site, products, solutions, projects, manufacturing, assets, taxonomy, types,
             media-manifest.json (generated)
-lib/        gsap, smooth-scroll, placeholder, i18n helpers, seo, jsonld, amplify-client, motion tokens
-scripts/    make-placeholders.mjs, media-manifest.mjs, encode-hero.sh, content-todo.mjs
+lib/        gsap, smooth-scroll, placeholder, i18n helpers, seo, jsonld, amplify-client, motion tokens,
+            image-loader + image-sizes.json (static WebP variants)
+scripts/    make-placeholders.mjs, media-manifest.mjs (+ image variants), encode-video.sh, content-todo.mjs
 ```
 
 ## Install list

@@ -1,4 +1,4 @@
-import Image from "next/image";
+import { Image } from "@/components/ui/Image";
 import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
 import { QatarMark } from "@/components/layout/QatarMark";
