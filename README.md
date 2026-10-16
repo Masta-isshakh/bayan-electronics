@@ -44,6 +44,9 @@ the backend is redeployed.
 
 1. Push this repository; in the Amplify console connect the branch (the app already uses `amplify.yml`).
 2. The build runs `ampx pipeline-deploy` (backend, creates the `Inquiry` table and API key) and then `npm run build`.
+   Its `npm ci` uses the npm that ships with Node 22 (10.9.9 today), which validates the lock file more strictly
+   than older npm releases. After changing dependencies run `npm run lockfile:check`; if it reports "Missing: …
+   from lock file", regenerate the lock with `npx npm@10.9.9 install --package-lock-only` and commit it.
    Node 22 is selected in `amplify.yml` (Tailwind v4 and sharp need Node ≥ 20).
 3. **Environment variables** (Amplify → Hosting → Environment variables):
    - `NEXT_PUBLIC_SITE_URL` = the production origin, e.g. `https://www.albayan.qa` — used for canonical URLs,
