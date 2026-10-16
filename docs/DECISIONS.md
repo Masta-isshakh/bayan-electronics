@@ -297,3 +297,6 @@ public pages and REST/Store APIs. Everything taken from it is the company's own 
   page 228 → 116 KB HTML and 118 → 58 KB RSC; Lighthouse mobile home 96, catalogue 98, model 97 (TBT down, FCP
   +0.2 s on a first visit for the stylesheet request).
 - **nvm default packages** (Amplify CLI, Cypress, Bower, …) are skipped (`--skip-default-packages`): ~1 min per build.
+- **Static file caching on Amplify.** Amplify serves `public/` itself and ignores `next.config.ts` `headers()` for it:
+  `/_img`, `/media` and `/fonts` came back with `max-age=5`. `customHttp.yml` (repo root) sets one year, immutable —
+  safe because each of those URLs carries a content hash or version.
