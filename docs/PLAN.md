@@ -37,11 +37,14 @@ components/
   media/    LoopVideo (shared background loop), AmbientVideo (in-page film + pause control)
   home/     ProductBento (+ FlashlightGrid), CctExplorer, TraceabilityChain, ManufacturingSteps,
             SectorRail, FeaturedProjects, Stats, StartProject
+  catalogue/ CatalogueBrowser (filters, search), ModelCard, AddToQuoteButton
+  company/  CompanyNav          search/ SearchButton, SearchDialog (lazy)
   ui/       Button/ButtonLink, MagneticButton, PageHeader, WordReveal, Breadcrumbs, Badge,
             SectionHeading, CtaBand, ProductCard, SectorCard, ProjectCard, JsonLd
   products/ ProductFilter          projects/ ProjectFilter
   forms/    InquiryForm (contact | quote)
-content/    site, products, solutions, projects, manufacturing, assets, taxonomy, types,
+content/    site, company, products, catalogue(.json), solutions, projects(.json), manufacturing, assets,
+            taxonomy, types, legacy-urls.json,
             media-manifest.json (generated)
 lib/        gsap, smooth-scroll, placeholder, i18n helpers, seo, jsonld, amplify-client, motion tokens,
             image-loader + image-sizes.json (static WebP variants)

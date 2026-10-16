@@ -1,0 +1,2310 @@
+{
+  "categories": [
+    {
+      "slug": "roads-tunnels",
+      "name": {
+        "en": "Road & Tunnel Lighting",
+        "ar": "إضاءة الطرق والأنفاق"
+      }
+    },
+    {
+      "slug": "stadiums",
+      "name": {
+        "en": "Stadium Projects",
+        "ar": "مشاريع الملاعب"
+      }
+    },
+    {
+      "slug": "buildings-villas",
+      "name": {
+        "en": "Buildings & Villas",
+        "ar": "المباني والفيلات"
+      }
+    },
+    {
+      "slug": "landscape-gardens",
+      "name": {
+        "en": "Landscape & Garden Lighting",
+        "ar": "إضاءة المناظر الطبيعية والحدائق"
+      }
+    },
+    {
+      "slug": "schools-colleges",
+      "name": {
+        "en": "Schools & Colleges",
+        "ar": "مدارس وجامعات"
+      }
+    },
+    {
+      "slug": "health",
+      "name": {
+        "en": "Health Centers",
+        "ar": "المراكز الصحية"
+      }
+    },
+    {
+      "slug": "bus-stations",
+      "name": {
+        "en": "Bus Depots & Bus Stations",
+        "ar": "محطات الحافلات"
+      }
+    },
+    {
+      "slug": "mosques",
+      "name": {
+        "en": "Mosques",
+        "ar": "مساجد"
+      }
+    },
+    {
+      "slug": "hotels-towers",
+      "name": {
+        "en": "Hotels & Towers",
+        "ar": "الفنادق والأبراج"
+      }
+    }
+  ],
+  "projects": [
+    {
+      "slug": "al-emadi-hospital",
+      "category": "health",
+      "sector": "education-healthcare",
+      "featured": false,
+      "title": {
+        "en": "Al-Emadi Hospital",
+        "ar": "مستشفى العمادي"
+      },
+      "projectName": {
+        "en": "LED Lighting Supply – Al-Emadi Hospital",
+        "ar": "توريد إضاءة LED – مستشفى العمادي"
+      },
+      "client": {
+        "en": "Private",
+        "ar": "القطاع الخاص"
+      },
+      "consultant": null,
+      "contractor": null,
+      "year": 2021,
+      "location": {
+        "en": "Doha, Qatar",
+        "ar": "الدوحة، قطر"
+      },
+      "country": "QA",
+      "summary": {
+        "en": "Complete LED lighting solution for Al-Emadi Hospital, including lux-level calculations and on-site verification across patient rooms, clinics, surgical corridors and waiting areas.",
+        "ar": "حل إضاءة LED متكامل لمستشفى العمادي، يشمل حسابات مستوى الإضاءة والتحقق الميداني من الأداء في غرف المرضى والعيادات والممرات الجراحية ومناطق الانتظار."
+      },
+      "body": {
+        "en": [
+          "In 2021, Al Bayan Electronics & LED Technologies (B-LED) successfully delivered a complete LED lighting solution for Al-Emadi Hospital, a premier private healthcare facility in Qatar.",
+          "The scope included the supply of advanced B-LED luminaires, precise lux-level calculations, and on-site verification of achieved lighting performance. The solution was engineered to meet healthcare lighting standards across critical zones such as patient rooms, clinics, surgical corridors, and waiting areas.",
+          "The project focused on visual comfort, hygiene compliance, and energy efficiency, ensuring a safe and supportive lighting environment for both patients and healthcare professionals."
+        ],
+        "ar": [
+          "في عام 2021، نجحت شركة البيان للإلكترونيات وتقنيات الـ LED (B-LED) في تقديم حل إضاءة LED كامل لمستشفى العمادي، وهو مرفق رعاية صحية خاص رائد في قطر.",
+          "وشمل نطاق العمل توريد وحدات إنارة B-LED المتطورة وحسابات دقيقة لمستوى الإضاءة، والتحقق من أداء الإضاءة في الموقع. تم تصميم هذا الحل لتلبية معايير الإضاءة الخاصة بالرعاية الصحية في المناطق الحرجة مثل غرف المرضى والعيادات والممرات الجراحية ومناطق الانتظار.",
+          "ركز المشروع على الراحة البصرية والامتثال للنظافة وكفاءة الطاقة، مما يضمن بيئة إضاءة آمنة وداعمة لكل من المرضى وأخصائيي الرعاية الصحية."
+        ]
+      },
+      "scope": {
+        "en": ["Supply of B-LED luminaires", "Lux-level calculations", "On-site verification of lighting performance"],
+        "ar": ["توريد وحدات إنارة B-LED", "حسابات مستوى الإضاءة (اللوكس)", "التحقق الميداني من أداء الإضاءة"]
+      },
+      "image": "projects/al-emadi-hospital.jpg",
+      "gallery": ["projects/al-emadi-hospital-2.jpg"],
+      "hasRealPhoto": true
+    },
+    {
+      "slug": "four-seasons-hotel",
+      "category": "hotels-towers",
+      "sector": "hospitality",
+      "featured": false,
+      "title": {
+        "en": "Four Seasons Hotel",
+        "ar": "فندق فور سيزونز"
+      },
+      "projectName": {
+        "en": "LED Lighting Supply – Four Seasons Hotel",
+        "ar": "توريد إضاءة LED – فندق فور سيزونز"
+      },
+      "client": {
+        "en": "Confidential",
+        "ar": "سرّي"
+      },
+      "consultant": null,
+      "contractor": null,
+      "year": 2021,
+      "location": {
+        "en": "Doha, Qatar",
+        "ar": "الدوحة، قطر"
+      },
+      "country": "QA",
+      "summary": {
+        "en": "Premium indoor and outdoor LED lighting for the Four Seasons Hotel in Doha, covering guest suites, lounges, dining spaces, corridors and landscaped exteriors.",
+        "ar": "أنظمة إضاءة LED فاخرة للمناطق الداخلية والخارجية في فندق فور سيزونز الدوحة، تشمل أجنحة الضيوف وصالات الاستراحة والمطاعم والممرات والمساحات الخارجية."
+      },
+      "body": {
+        "en": [
+          "In 2021, Al Bayan Electronics & LED Technologies (B-LED) delivered premium LED lighting systems for the iconic Four Seasons Hotel in Doha, supporting the property’s goal of maintaining luxury standards while enhancing energy performance.",
+          "The project scope included the supply of high-efficiency B-LED luminaires for both indoor and outdoor areas, with lux-level calculations applied to ensure optimal brightness, ambiance, and visual comfort across guest suites, lounges, dining spaces, corridors, and landscaped exteriors.",
+          "This installation reflects B-LED’s ability to meet the demanding lighting requirements of world-class hospitality environments by delivering elegant, energy-saving, and guest-friendly lighting solutions."
+        ],
+        "ar": [
+          "في عام 2021، قامت شركة البيان للإلكترونيات وتقنيات الـ LED (B-LED) بتوريد أنظمة إضاءة LED فاخرة لفندق فور سيزونز الشهير في الدوحة، دعمًا لهدف الفندق في الحفاظ على معايير الفخامة مع تعزيز كفاءة الطاقة.",
+          "شمل نطاق المشروع توريد وحدات إضاءة B-LED عالية الكفاءة للمناطق الداخلية والخارجية، مع تطبيق حسابات مستوى الإضاءة لضمان السطوع الأمثل والأجواء والراحة البصرية في أجنحة الضيوف وصالات الاستراحة وأماكن تناول الطعام والممرات والمساحات الخارجية المنسقة.",
+          "يعكس هذا التركيب قدرة B-LED على تلبية متطلبات الإضاءة الصارمة لبيئات الضيافة العالمية من خلال توفير حلول إضاءة أنيقة وموفرة للطاقة وصديقة للضيوف."
+        ]
+      },
+      "scope": {
+        "en": ["Supply of indoor & outdoor LED luminaires", "Lux-level calculations"],
+        "ar": ["توريد وحدات إنارة LED داخلية وخارجية", "حسابات مستوى الإضاءة (اللوكس)"]
+      },
+      "image": "projects/four-seasons-hotel.jpg",
+      "gallery": [],
+      "hasRealPhoto": true
+    },
+    {
+      "slug": "industrial-area-bus-station",
+      "category": "bus-stations",
+      "sector": "infrastructure-roads",
+      "featured": false,
+      "title": {
+        "en": "Industrial Area Bus Station",
+        "ar": "محطة حافلات المنطقة الصناعية"
+      },
+      "projectName": {
+        "en": "LED Lighting Supply – Industrial Area Bus Station",
+        "ar": "توريد إضاءة LED – محطة حافلات المنطقة الصناعية"
+      },
+      "client": {
+        "en": "Ashghal – Public Works Authority",
+        "ar": "أشغال – هيئة الأشغال العامة"
+      },
+      "consultant": {
+        "en": "AECOM",
+        "ar": "AECOM"
+      },
+      "contractor": {
+        "en": "G.E.T",
+        "ar": "G.E.T"
+      },
+      "year": 2021,
+      "location": {
+        "en": "Industrial Area, Qatar",
+        "ar": "المنطقة الصناعية، قطر"
+      },
+      "country": "QA",
+      "summary": {
+        "en": "Indoor and outdoor LED lighting for the Industrial Area Bus Station, delivered with Ashghal under AECOM supervision and to GSAS environmental standards.",
+        "ar": "أنظمة إضاءة LED داخلية وخارجية لمحطة حافلات المنطقة الصناعية بالتعاون مع هيئة الأشغال العامة وتحت إشراف إيكوم، وفق معايير نظام GSAS البيئية."
+      },
+      "body": {
+        "en": [
+          "In 2021, Al Bayan Electronics & LED Technologies (B-LED) proudly supplied both indoor and outdoor LED lighting systems for the Industrial Area Bus Station, a key part of Qatar’s public transport infrastructure.",
+          "Delivered in collaboration with Ashghal, and under the supervision of AECOM with G.E.T as the main contractor, the project demanded compliance with strict technical specifications and GSAS (Global Sustainability Assessment System) environmental performance standards.",
+          "B-LED provided high-efficiency, low-maintenance luminaires designed to optimize visibility, safety, and energy savings across passenger platforms, service zones, parking areas, and station interiors—while supporting Qatar’s broader sustainability and infrastructure development goals."
+        ],
+        "ar": [
+          "في عام 2021، تفخر شركة البيان للإلكترونيات وتقنيات الـ LED (B-LED) بتوريد أنظمة إضاءة LED الداخلية والخارجية لمحطة حافلات المنطقة الصناعية، وهي جزء أساسي من البنية التحتية للنقل العام في قطر.",
+          "تم تنفيذ المشروع بالتعاون مع هيئة الأشغال العامة «أشغال»، وتحت إشراف شركة «إيكوم» مع شركة «جي إي تي» كمقاول رئيسي، وقد تطلب المشروع الامتثال للمواصفات الفنية الصارمة ومعايير الأداء البيئي لنظام تقييم الاستدامة العالمي (GSAS).",
+          "قدمت شركة B-LED وحدات إنارة عالية الكفاءة ومنخفضة الصيانة مصممة لتحسين الرؤية والسلامة وتوفير الطاقة على أرصفة الركاب ومناطق الخدمة ومواقف السيارات والأجزاء الداخلية للمحطة – مع دعم أهداف قطر الأوسع نطاقًا في مجال الاستدامة وتطوير البنية التحتية."
+        ]
+      },
+      "scope": {
+        "en": ["Supply of indoor & outdoor LED luminaires", "Compliance with project specifications & GSAS"],
+        "ar": [
+          "توريد وحدات إنارة LED داخلية وخارجية",
+          "الامتثال لمواصفات المشروع ومعايير نظام تقييم الاستدامة العالمي (GSAS)"
+        ]
+      },
+      "image": "projects/industrial-area-bus-station.png",
+      "gallery": ["projects/industrial-area-bus-station-2.png", "projects/industrial-area-bus-station-3.png"],
+      "hasRealPhoto": true
+    },
+    {
+      "slug": "multi-location-bus-stations",
+      "category": "bus-stations",
+      "sector": "infrastructure-roads",
+      "featured": false,
+      "title": {
+        "en": "Multi-Location Bus Stations",
+        "ar": "محطات الحافلات متعددة المواقع"
+      },
+      "projectName": {
+        "en": "LED Lighting Supply – Multi-Location Bus Stations",
+        "ar": "توريد إضاءة LED – محطات حافلات متعددة المواقع"
+      },
+      "client": {
+        "en": "Ashghal – Public Works Authority",
+        "ar": "أشغال – هيئة الأشغال العامة"
+      },
+      "consultant": {
+        "en": "AECOM",
+        "ar": "AECOM"
+      },
+      "contractor": null,
+      "year": 2021,
+      "location": {
+        "en": "Al Sudan, Lusail, Al Wakra & Qatar Foundation – Qatar",
+        "ar": "منطقة السودان، لوسيل، الوكرة ومؤسسة قطر – قطر"
+      },
+      "country": "QA",
+      "summary": {
+        "en": "Indoor and outdoor LED lighting for four new public bus stations in Al Sudan, Lusail, Al Wakra and Qatar Foundation, in full compliance with GSAS requirements.",
+        "ar": "إضاءة LED داخلية وخارجية لأربع محطات حافلات عامة جديدة في السودان ولوسيل والوكرة ومؤسسة قطر، مع الامتثال الكامل لمتطلبات نظام GSAS."
+      },
+      "body": {
+        "en": [
+          "In 2021, Al Bayan Electronics & LED Technologies (B-LED) was selected to supply indoor and outdoor LED lighting systems for four newly developed public bus stations located in Al Sudan, Lusail, Al Wakra, and Qatar Foundation.",
+          "The project, executed under the authority of Ashghal and the supervision of AECOM, required full compliance with project technical specifications and GSAS (Global Sustainability Assessment System) environmental performance standards.",
+          "B-LED provided energy-efficient, low-maintenance LED luminaires designed to ensure safety, comfort, and performance in both internal passenger areas and external facilities such as bus bays, parking, and public spaces. The lighting was engineered to meet operational needs while contributing to Qatar’s national sustainability and transportation goals."
+        ],
+        "ar": [
+          "في عام 2021، اختيرت شركة البيان للإلكترونيات وتقنيات الـ LED (B-LED) لتوريد أنظمة إضاءة LED داخلية وخارجية لأربع محطات حافلات عامة تم تطويرها حديثًا في منطقة السودان ولوسيل والوكرة ومؤسسة قطر.",
+          "وقد تطلب المشروع، الذي تم تنفيذه تحت سلطة هيئة الأشغال العامة وإشراف شركة إيكوم، الامتثال الكامل للمواصفات الفنية للمشروع ومعايير الأداء البيئي لنظام تقييم الاستدامة العالمي (GSAS).",
+          "وفرت شركة B-LED مصابيح LED موفرة للطاقة ومنخفضة الصيانة مصممة لضمان السلامة والراحة والأداء في كل من مناطق الركاب الداخلية والمرافق الخارجية مثل مواقف الحافلات ومواقف السيارات والأماكن العامة. وقد صُممت الإضاءة لتلبية الاحتياجات التشغيلية مع المساهمة في تحقيق أهداف الاستدامة الوطنية وأهداف النقل في قطر."
+        ]
+      },
+      "scope": {
+        "en": ["Supply of indoor & outdoor LED luminaires", "Compliance with project specifications & GSAS"],
+        "ar": [
+          "توريد وحدات إنارة LED داخلية وخارجية",
+          "الامتثال لمواصفات المشروع ومعايير نظام تقييم الاستدامة العالمي (GSAS)"
+        ]
+      },
+      "image": "projects/multi-location-bus-stations.png",
+      "gallery": [
+        "projects/multi-location-bus-stations-2.png",
+        "projects/multi-location-bus-stations-3.png",
+        "projects/multi-location-bus-stations-4.png",
+        "projects/multi-location-bus-stations-5.png",
+        "projects/multi-location-bus-stations-6.png"
+      ],
+      "hasRealPhoto": true
+    },
+    {
+      "slug": "primary-health-care-center",
+      "category": "health",
+      "sector": "education-healthcare",
+      "featured": false,
+      "title": {
+        "en": "Primary Health Care Center (PHCC)",
+        "ar": "مركز الرعاية الصحية الأولية (PHCC)"
+      },
+      "projectName": {
+        "en": "LED Lighting Supply – Primary Health Care Center",
+        "ar": "توريد إضاءة LED – مركز الرعاية الصحية الأولية"
+      },
+      "client": {
+        "en": "Confidential",
+        "ar": "سرّي"
+      },
+      "consultant": null,
+      "contractor": null,
+      "year": 2021,
+      "location": {
+        "en": "Qatar",
+        "ar": "قطر"
+      },
+      "country": "QA",
+      "summary": {
+        "en": "Supply of LED lighting for a Primary Health Care Center in Qatar, meeting medical-grade lighting standards in treatment rooms, waiting areas, corridors and external zones.",
+        "ar": "توريد أنظمة إضاءة LED لمركز رعاية صحية أولية في قطر وفق معايير الإضاءة الطبية، في غرف العلاج ومناطق الانتظار والممرات والمناطق الخارجية."
+      },
+      "body": {
+        "en": [
+          "In 2021, Al Bayan Electronics & LED Technologies (B-LED) was selected to supply LED lighting systems for a Primary Health Care Center (PHCC) in Qatar, as part of ongoing efforts to modernize the country’s healthcare infrastructure.",
+          "The project included the supply of B-LED luminaires and precise lux-level calculations to meet medical-grade lighting standards across treatment rooms, waiting areas, corridors, and external zones. The lighting solution emphasized visual clarity, energy efficiency, and patient comfort, while supporting staff productivity and operational reliability.",
+          "This project reflects B-LED’s dedication to delivering healthcare-specific lighting solutions that contribute to safer, smarter, and more sustainable clinical environments."
+        ],
+        "ar": [
+          "في عام 2021، وقع الاختيار على شركة البيان للإلكترونيات وتقنيات الـ LED (B-LED) لتوريد أنظمة إضاءة LED لمركز الرعاية الصحية الأولية في قطر، وذلك في إطار الجهود المستمرة لتحديث البنية التحتية للرعاية الصحية في البلاد.",
+          "وقد تضمن المشروع توريد وحدات إنارة B-LED وحسابات دقيقة لمستوى الإضاءة (اللوكس) لتلبية معايير الإضاءة الطبية في غرف العلاج ومناطق الانتظار والممرات والمناطق الخارجية. وقد ركّز حل الإضاءة على الوضوح البصري وكفاءة الطاقة وراحة المرضى مع دعم إنتاجية الموظفين والموثوقية التشغيلية.",
+          "يعكس هذا المشروع تفاني شركة B-LED في تقديم حلول الإضاءة الخاصة بالرعاية الصحية التي تساهم في توفير بيئات سريرية أكثر أمانًا وذكاءً واستدامة."
+        ]
+      },
+      "scope": {
+        "en": ["Supply of B-LED luminaires", "Lux-level calculations"],
+        "ar": ["توريد وحدات إنارة B-LED", "حسابات مستوى الإضاءة (اللوكس)"]
+      },
+      "image": "projects/primary-health-care-center.jpg",
+      "gallery": [],
+      "hasRealPhoto": true
+    },
+    {
+      "slug": "private-polyclinic",
+      "category": "health",
+      "sector": "education-healthcare",
+      "featured": false,
+      "title": {
+        "en": "Private Polyclinic",
+        "ar": "مستوصف خاص"
+      },
+      "projectName": {
+        "en": "LED Lighting Supply – Private Polyclinic",
+        "ar": "توريد إضاءة LED – مستوصف خاص"
+      },
+      "client": {
+        "en": "Private Healthcare Client",
+        "ar": "عميل من قطاع الرعاية الصحية الخاص"
+      },
+      "consultant": null,
+      "contractor": null,
+      "year": 2021,
+      "location": {
+        "en": "Qatar",
+        "ar": "قطر"
+      },
+      "country": "QA",
+      "summary": {
+        "en": "Tailored LED lighting for a private polyclinic in Qatar, covering examination rooms, reception areas, corridors and administrative zones.",
+        "ar": "حل إضاءة LED مصمم خصيصاً لمستوصف خاص في قطر، يشمل غرف الفحص ومناطق الاستقبال والممرات والمناطق الإدارية."
+      },
+      "body": {
+        "en": [
+          "In 2021, Al Bayan Electronics & LED Technologies (B-LED) delivered a tailored LED lighting solution for a private polyclinic in Qatar, supporting the development of modern, patient-centered healthcare environments.",
+          "The project involved the supply of high-efficiency B-LED luminaires, along with precision lux-level calculations to ensure optimal illumination in examination rooms, reception areas, corridors, and administrative zones. The lighting design prioritized visual comfort, energy efficiency, and hygiene compliance, key elements in clinical settings.",
+          "This project reflects B-LED’s growing presence in the healthcare sector, delivering smart lighting technologies that enhance both patient experience and operational efficiency."
+        ],
+        "ar": [
+          "في عام 2021، قدّمت شركة البيان للإلكترونيات وتقنيات الـ LED (B-LED) حل إضاءة LED مصمم خصيصًا لعيادة خاصة في قطر، لدعم تطوير بيئات رعاية صحية حديثة تركز على المريض.",
+          "تضمن المشروع توريد وحدات إنارة B-LED عالية الكفاءة، إلى جانب حسابات دقيقة لمستوى الإضاءة لضمان الإضاءة المثلى في غرف الفحص ومناطق الاستقبال والممرات والمناطق الإدارية. وقد أعطى تصميم الإضاءة الأولوية للراحة البصرية وكفاءة الطاقة والامتثال لقواعد النظافة، وهي عناصر أساسية في البيئات السريرية.",
+          "ويعكس هذا المشروع الحضور المتنامي لشركة B-LED في قطاع الرعاية الصحية، حيث تقدم تقنيات الإضاءة الذكية التي تعزز تجربة المرضى والكفاءة التشغيلية."
+        ]
+      },
+      "scope": {
+        "en": ["Supply of B-LED luminaires", "Lux-level calculations"],
+        "ar": ["توريد وحدات إنارة B-LED", "حسابات مستوى الإضاءة (اللوكس)"]
+      },
+      "image": "projects/private-polyclinic.jpg",
+      "gallery": [
+        "projects/private-polyclinic-2.jpg",
+        "projects/private-polyclinic-3.jpg",
+        "projects/private-polyclinic-4.jpg",
+        "projects/private-polyclinic-5.jpg",
+        "projects/private-polyclinic-6.jpg"
+      ],
+      "hasRealPhoto": true
+    },
+    {
+      "slug": "public-bus-stations",
+      "category": "bus-stations",
+      "sector": "infrastructure-roads",
+      "featured": false,
+      "title": {
+        "en": "Public Bus Stations",
+        "ar": "محطات الحافلات العامة"
+      },
+      "projectName": {
+        "en": "LED Lighting Supply – Bus Stations",
+        "ar": "توريد إضاءة LED – محطات الحافلات"
+      },
+      "client": {
+        "en": "Ashghal – Public Works Authority",
+        "ar": "أشغال – هيئة الأشغال العامة"
+      },
+      "consultant": null,
+      "contractor": null,
+      "year": 2021,
+      "location": {
+        "en": "Various Locations, Qatar",
+        "ar": "مواقع مختلفة، قطر"
+      },
+      "country": "QA",
+      "summary": {
+        "en": "Indoor and outdoor LED lighting for a network of public bus stations across Qatar, delivered with Ashghal for waiting areas, platforms, corridors, parking and staff facilities.",
+        "ar": "إضاءة LED داخلية وخارجية لشبكة من محطات الحافلات العامة في قطر بالتعاون مع هيئة الأشغال العامة، تشمل مناطق الانتظار والأرصفة والممرات ومواقف السيارات ومرافق الموظفين."
+      },
+      "body": {
+        "en": [
+          "In 2021, Al Bayan Electronics & LED Technologies (B-LED) provided indoor and outdoor LED lighting solutions for a network of public bus stations across Qatar, in collaboration with Ashghal.",
+          "The scope of work included the supply of high-efficiency B-LED luminaires and the execution of lux-level lighting calculations to meet project specifications and enhance visibility, safety, and energy performance within the stations. These lighting systems were implemented in waiting areas, platforms, service corridors, parking zones, and staff facilities.",
+          "This project demonstrates B-LED’s pivotal role in supporting Qatar’s public transport infrastructure with smart, sustainable lighting systems designed to improve operational efficiency and user experience."
+        ],
+        "ar": [
+          "في عام 2021، وفرت شركة البيان للإلكترونيات وتقنيات الـ LED (B-LED) حلول إضاءة LED داخلية وخارجية لشبكة من محطات الحافلات العامة في جميع أنحاء قطر، بالتعاون مع هيئة الأشغال العامة.",
+          "وشمل نطاق العمل توريد مصابيح B-LED عالية الكفاءة وتنفيذ حسابات مستوى الإضاءة (اللوكس) لتلبية مواصفات المشروع وتعزيز الرؤية والسلامة وأداء الطاقة داخل المحطات. تم تنفيذ أنظمة الإضاءة هذه في مناطق الانتظار، والأرصفة، وممرات الخدمة، ومناطق وقوف السيارات، ومرافق الموظفين.",
+          "يُظهر هذا المشروع الدور المحوري الذي تلعبه شركة B-LED في دعم البنية التحتية للنقل العام في قطر بأنظمة إضاءة ذكية ومستدامة مصممة لتحسين الكفاءة التشغيلية وتجربة المستخدم."
+        ]
+      },
+      "scope": {
+        "en": ["Supply of indoor & outdoor LED luminaires", "Lux-level calculations"],
+        "ar": ["توريد وحدات إنارة LED داخلية وخارجية", "حسابات مستوى الإضاءة (اللوكس)"]
+      },
+      "image": "projects/public-bus-stations.png",
+      "gallery": [],
+      "hasRealPhoto": false
+    },
+    {
+      "slug": "qatar-national-library",
+      "category": "schools-colleges",
+      "sector": "education-healthcare",
+      "featured": false,
+      "title": {
+        "en": "Qatar National Library",
+        "ar": "مكتبة قطر الوطنية"
+      },
+      "projectName": {
+        "en": "LED Lighting Supply – Qatar National Library",
+        "ar": "توريد إضاءة LED – مكتبة قطر الوطنية"
+      },
+      "client": {
+        "en": "Ashghal – Public Works Authority",
+        "ar": "أشغال – هيئة الأشغال العامة"
+      },
+      "consultant": null,
+      "contractor": null,
+      "year": 2021,
+      "location": {
+        "en": "Education City, Doha, Qatar",
+        "ar": "المدينة التعليمية، الدوحة، قطر"
+      },
+      "country": "QA",
+      "summary": {
+        "en": "Supply of LED lighting for the Qatar National Library in Education City, commissioned by Ashghal, covering reading areas, access roads and exterior landscapes.",
+        "ar": "توريد أنظمة إضاءة LED لمكتبة قطر الوطنية في المدينة التعليمية بتكليف من هيئة الأشغال العامة، تشمل مناطق القراءة العامة وطرق الوصول والمناظر الطبيعية الخارجية."
+      },
+      "body": {
+        "en": [
+          "In 2021, Al Bayan Electronics & LED Technologies (B-LED) proudly delivered premium LED lighting systems for the Qatar National Library, a cultural landmark and world-class learning institution located in Education City.",
+          "Commissioned by Ashghal, the project included the supply of high-efficiency B-LED luminaires along with precision lux-level calculations to ensure optimal illumination throughout key functional zones, including public reading areas, access roads, and exterior landscapes.",
+          "This project reflects B-LED’s commitment to supporting national institutions with sustainable, visually comfortable, and architecturally aligned lighting solutions, all while meeting rigorous performance and efficiency standards."
+        ],
+        "ar": [
+          "في عام 2021، قامت شركة البيان للإلكترونيات وتقنيات الـ LED (B-LED) بفخر بتسليم أنظمة إضاءة LED المتميزة لمكتبة قطر الوطنية، وهي معلم ثقافي ومؤسسة تعليمية عالمية المستوى تقع في المدينة التعليمية.",
+          "بتكليف من هيئة الأشغال العامة، تضمن المشروع توريد مصابيح B-LED عالية الكفاءة إلى جانب حسابات دقيقة لمستوى الإضاءة لضمان الإضاءة المثلى في جميع المناطق الوظيفية الرئيسية، بما في ذلك مناطق القراءة العامة وطرق الوصول والمناظر الطبيعية الخارجية.",
+          "ويعكس هذا المشروع التزام شركة B-LED بدعم المؤسسات الوطنية بحلول إضاءة مستدامة ومريحة بصريًا ومتناسقة مع الهندسة المعمارية، مع الالتزام بمعايير الأداء والكفاءة الصارمة."
+        ]
+      },
+      "scope": {
+        "en": ["Supply of B-LED luminaires", "Lux-level calculations"],
+        "ar": ["توريد وحدات إنارة B-LED", "حسابات مستوى الإضاءة (اللوكس)"]
+      },
+      "image": "projects/qatar-national-library.jpg",
+      "gallery": [],
+      "hasRealPhoto": true
+    },
+    {
+      "slug": "sheraton-park",
+      "category": "landscape-gardens",
+      "sector": "sports-outdoor",
+      "featured": true,
+      "title": {
+        "en": "Sheraton Park",
+        "ar": "شيراتون بارك"
+      },
+      "projectName": {
+        "en": "Outdoor Lighting Renovation – Sheraton Park",
+        "ar": "تجديد الإضاءة الخارجية – شيراتون بارك"
+      },
+      "client": {
+        "en": "Mawaqif Qatar",
+        "ar": "مواقف قطر"
+      },
+      "consultant": null,
+      "contractor": null,
+      "year": 2021,
+      "location": {
+        "en": "Doha, Qatar",
+        "ar": "الدوحة، قطر"
+      },
+      "country": "QA",
+      "summary": {
+        "en": "Outdoor lighting renovation at Sheraton Park for Mawaqif Qatar, upgrading landscape and parking lighting to energy-efficient LED luminaires.",
+        "ar": "تجديد الإضاءة الخارجية في حديقة شيراتون بارك لصالح مواقف قطر، بتحديث إضاءة المناظر الطبيعية ومواقف السيارات إلى وحدات إنارة LED موفرة للطاقة."
+      },
+      "body": {
+        "en": [
+          "In 2021, Al Bayan Electronics & LED Technologies (B-LED) was selected by Mawaqif Qatar to carry out the renovation of outdoor lighting at the iconic Sheraton Park, one of Doha’s most prominent public landscapes.",
+          "The project included the upgrade of landscape and parking lighting systems, replacing outdated fixtures with modern, energy-efficient LED luminaires. Special attention was given to maintaining the aesthetic integrity of the park while improving safety, visibility, and energy performance.",
+          "With detailed lux-level planning and the use of weather-resistant architectural lighting, B-LED delivered a solution that enhanced both the functionality and ambience of the space, contributing to the park’s long-term sustainability and nighttime appeal."
+        ],
+        "ar": [
+          "في عام 2021، اختارت شركة مواقف قطر شركة البيان للإلكترونيات وتقنيات الـ LED (B-LED) لتنفيذ مشروع تجديد الإضاءة الخارجية في حديقة الشيراتون الشهيرة، أحد أبرز المناظر الطبيعية العامة في الدوحة.",
+          "تضمن المشروع ترقية أنظمة إضاءة المناظر الطبيعية ومواقف السيارات، واستبدال التركيبات القديمة بمصابيح LED حديثة موفرة للطاقة. وقد تم إيلاء اهتمام خاص للحفاظ على التكامل الجمالي للحديقة مع تحسين السلامة والرؤية وأداء الطاقة.",
+          "ومن خلال التخطيط التفصيلي لمستوى الإضاءة (اللوكس) واستخدام الإضاءة المعمارية المقاومة للعوامل الجوية، قدمت شركة B-LED حلاً يعزز من وظائف المكان وأجواءه على حد سواء، مما يساهم في استدامة الحديقة على المدى الطويل وجاذبيتها الليلية."
+        ]
+      },
+      "scope": {
+        "en": ["Upgrade of landscape & car-park lighting", "Lux-level calculations"],
+        "ar": ["تحديث إضاءة المناظر الطبيعية ومواقف السيارات", "حسابات مستوى الإضاءة (اللوكس)"]
+      },
+      "image": "projects/sheraton-park.jpg",
+      "gallery": ["projects/sheraton-park-2.jpg"],
+      "hasRealPhoto": true
+    },
+    {
+      "slug": "temporary-bus-depots",
+      "category": "bus-stations",
+      "sector": "infrastructure-roads",
+      "featured": false,
+      "title": {
+        "en": "Temporary Bus Depots",
+        "ar": "مستودعات الحافلات المؤقتة"
+      },
+      "projectName": {
+        "en": "LED Lighting Supply – Temporary Bus Depots",
+        "ar": "توريد إضاءة LED – مستودعات الحافلات المؤقتة"
+      },
+      "client": {
+        "en": "Ashghal – Public Works Authority",
+        "ar": "أشغال – هيئة الأشغال العامة"
+      },
+      "consultant": null,
+      "contractor": null,
+      "year": 2021,
+      "location": {
+        "en": "Various Locations, Qatar",
+        "ar": "مواقع مختلفة، قطر"
+      },
+      "country": "QA",
+      "summary": {
+        "en": "Supply of LED lighting for several temporary bus depots built by Ashghal, with uniform lighting across parking bays, service areas and staff facilities.",
+        "ar": "توريد أنظمة إضاءة LED للعديد من مستودعات الحافلات المؤقتة التي أنشأتها هيئة الأشغال العامة، بإضاءة موحدة في مواقف الحافلات ومناطق الخدمات ومرافق الموظفين."
+      },
+      "body": {
+        "en": [
+          "In 2021, Al Bayan Electronics & LED Technologies (B-LED) was selected by Ashghal to supply LED lighting systems for several temporary bus depots constructed as part of Qatar’s public transportation support facilities.",
+          "The project involved the supply of high-efficiency B-LED luminaires and the application of detailed lux-level calculations to ensure safe and uniform lighting across operational zones, including parking bays, service areas, and staff facilities.",
+          "Designed to meet strict quality standards while offering rapid deployment capability, this project highlights B-LED’s expertise in delivering reliable, adaptable, and energy-efficient lighting solutions for fast-track infrastructure projects."
+        ],
+        "ar": [
+          "في عام 2021، اختارت هيئة الأشغال العامة (أشغال) شركة البيان للإلكترونيات وتقنيات الـ LED (B-LED) لتوريد أنظمة إضاءة LED للعديد من مستودعات الحافلات المؤقتة التي تم إنشاؤها كجزء من مرافق دعم النقل العام في قطر.",
+          "تضمن المشروع توريد وحدات إنارة B-LED عالية الكفاءة وتطبيق حسابات تفصيلية لمستوى الإضاءة لضمان إضاءة آمنة وموحدة في جميع مناطق التشغيل، بما في ذلك مواقف السيارات ومناطق الخدمات ومرافق الموظفين.",
+          "صُمم هذا المشروع لتلبية معايير الجودة الصارمة مع توفير إمكانية النشر السريع، ويسلط هذا المشروع الضوء على خبرة شركة B-LED في تقديم حلول إضاءة موثوقة وقابلة للتكيف وموفرة للطاقة لمشاريع البنية التحتية سريعة التنفيذ."
+        ]
+      },
+      "scope": {
+        "en": ["Supply of B-LED luminaires", "Lux-level calculations"],
+        "ar": ["توريد وحدات إنارة B-LED", "حسابات مستوى الإضاءة (اللوكس)"]
+      },
+      "image": "projects/temporary-bus-depots.png",
+      "gallery": [],
+      "hasRealPhoto": false
+    },
+    {
+      "slug": "al-mearad-muaither-road-lighting",
+      "category": "roads-tunnels",
+      "sector": "infrastructure-roads",
+      "featured": false,
+      "title": {
+        "en": "Al Mearad (Muaither) Road Lighting",
+        "ar": "إنارة طرق المعراض في معيذر"
+      },
+      "projectName": {
+        "en": "Roads Lighting – Al Mearad, Muaither",
+        "ar": "إنارة الطرق – المعراض، معيذر"
+      },
+      "client": {
+        "en": "Ashghal – Public Works Authority",
+        "ar": "أشغال – هيئة الأشغال العامة"
+      },
+      "consultant": null,
+      "contractor": null,
+      "year": 2020,
+      "location": {
+        "en": "Al Mearad, Muaither, Qatar",
+        "ar": "المعراض، معيذر، قطر"
+      },
+      "country": "QA",
+      "summary": {
+        "en": "Advanced LED street lighting for the Al Mearad area in Muaither, with a complete lux-level calculation for compliance with public road lighting standards.",
+        "ar": "إنارة شوارع متطورة بتقنية LED لمنطقة المعراض في معيذر، مع حساب كامل لمستوى الإضاءة لضمان الامتثال لمعايير إنارة الطرق العامة."
+      },
+      "body": {
+        "en": [
+          "Al Bayan Electronics & LED Technologies successfully supplied advanced LED street lighting for the Al Mearad area in Muaither. The project included a complete lux level calculation to ensure optimal illumination and compliance with lighting standards for public roads.",
+          "Our B-LED lighting systems were selected for their efficiency, durability, and ability to deliver precise lighting levels across key road sections—enhancing visibility, safety, and energy performance.",
+          "A trusted lighting partner for infrastructure excellence."
+        ],
+        "ar": [
+          "نجحت شركة البيان للإلكترونيات وتقنيات الـ LED (B-LED) في توريد إضاءة الشوارع المتطورة بتقنية LED لمنطقة المعراض في معيذر. وقد تضمن المشروع حسابًا كاملاً لمستوى الإضاءة (اللوكس) لضمان الإضاءة المثلى والامتثال لمعايير الإضاءة للطرق العامة.",
+          "تم اختيار أنظمة الإضاءة بتقنية B-LED التي نقدمها نظرًا لكفاءتها ومتانتها وقدرتها على توفير مستويات إضاءة دقيقة في المقاطع الرئيسية للطرق – مما يعزز الرؤية والسلامة وأداء الطاقة.",
+          "شريك إضاءة موثوق به للتميز في البنية التحتية."
+        ]
+      },
+      "scope": {
+        "en": ["Supply of LED street lighting", "Lux-level calculations"],
+        "ar": ["توريد إنارة شوارع LED", "حسابات مستوى الإضاءة (اللوكس)"]
+      },
+      "image": "projects/al-mearad-muaither-road-lighting.jpg",
+      "gallery": [
+        "projects/al-mearad-muaither-road-lighting-2.jpg",
+        "projects/al-mearad-muaither-road-lighting-3.jpg",
+        "projects/al-mearad-muaither-road-lighting-4.jpg",
+        "projects/al-mearad-muaither-road-lighting-5.jpg",
+        "projects/al-mearad-muaither-road-lighting-6.jpg"
+      ],
+      "hasRealPhoto": true
+    },
+    {
+      "slug": "al-sadd-health-center",
+      "category": "health",
+      "sector": "education-healthcare",
+      "featured": false,
+      "title": {
+        "en": "Al-Sadd Health Center",
+        "ar": "مركز السد الصحي"
+      },
+      "projectName": {
+        "en": "LED Lighting Supply – Al-Sadd Health Center",
+        "ar": "توريد إضاءة LED – مركز السد الصحي"
+      },
+      "client": {
+        "en": "Ashghal – Public Works Authority",
+        "ar": "أشغال – هيئة الأشغال العامة"
+      },
+      "consultant": null,
+      "contractor": null,
+      "year": 2020,
+      "location": {
+        "en": "Doha, Qatar",
+        "ar": "الدوحة، قطر"
+      },
+      "country": "QA",
+      "summary": {
+        "en": "LED lighting for the Al-Sadd Health Center, commissioned by Ashghal, with luminaires tailored for clinical environments across medical, administrative and public zones.",
+        "ar": "أنظمة إضاءة LED لمركز السد الصحي بتكليف من هيئة الأشغال العامة (أشغال)، بوحدات إنارة مصممة للبيئات السريرية في المناطق الطبية والإدارية والعامة."
+      },
+      "body": {
+        "en": [
+          "In 2020, Al Bayan Electronics & LED Technologies (B-LED) was commissioned by Ashghal to provide LED lighting systems for the Al-Sadd Health Center, a modern healthcare facility serving the Doha community.",
+          "The scope of the project included the supply of high-performance B-LED luminaires tailored for clinical environments, along with lux-level calculations to ensure optimal brightness, uniformity, and visual comfort across medical, administrative, and public zones.",
+          "The lighting design was developed with a focus on patient well-being, energy efficiency, and compliance with healthcare lighting standards, supporting both functionality and atmosphere throughout the facility."
+        ],
+        "ar": [
+          "في عام 2020، كلفت هيئة الأشغال العامة «أشغال» شركة البيان للإلكترونيات وتقنيات الـ LED (B-LED) بتوفير أنظمة إضاءة LED لمركز السد الصحي، وهو مرفق رعاية صحية حديث يخدم مجتمع الدوحة.",
+          "وشمل نطاق المشروع توريد وحدات إنارة B-LED عالية الأداء مصممة خصيصًا للبيئات السريرية، إلى جانب حسابات مستوى الإضاءة لضمان السطوع والتوحيد والراحة البصرية المثلى في المناطق الطبية والإدارية والعامة.",
+          "وقد تم تطوير تصميم الإضاءة مع التركيز على رفاهية المرضى وكفاءة الطاقة والامتثال لمعايير الإضاءة الخاصة بالرعاية الصحية، مما يدعم كل من الأداء الوظيفي والجو العام في جميع أنحاء المنشأة."
+        ]
+      },
+      "scope": {
+        "en": ["Supply of B-LED luminaires", "Lux-level calculations"],
+        "ar": ["توريد وحدات إنارة B-LED", "حسابات مستوى الإضاءة (اللوكس)"]
+      },
+      "image": "projects/al-sadd-health-center.jpg",
+      "gallery": [],
+      "hasRealPhoto": true
+    },
+    {
+      "slug": "azizia-movenpick-hotel",
+      "category": "hotels-towers",
+      "sector": "hospitality",
+      "featured": false,
+      "title": {
+        "en": "Azizia Movenpick Hotel",
+        "ar": "فندق العزيزية موفنبيك"
+      },
+      "projectName": {
+        "en": "LED Lighting Supply – Azizia Movenpick Hotel",
+        "ar": "توريد إضاءة LED – فندق العزيزية موفنبيك"
+      },
+      "client": {
+        "en": "Movenpick Hotels",
+        "ar": "فنادق موفنبيك"
+      },
+      "consultant": null,
+      "contractor": null,
+      "year": 2020,
+      "location": {
+        "en": "Doha, Qatar",
+        "ar": "الدوحة، قطر"
+      },
+      "country": "QA",
+      "summary": {
+        "en": "Premium LED lighting for the interior and exterior of the Azizia Movenpick Hotel near Aspire Zone, designed to complement the hotel’s architectural style.",
+        "ar": "حلول إضاءة LED متميزة للمناطق الداخلية والخارجية في فندق العزيزية موفنبيك بالقرب من أسباير زون، مصممة لتكمل الطراز المعماري للفندق."
+      },
+      "body": {
+        "en": [
+          "In 2020, Al Bayan Electronics & LED Technologies (B-LED) was selected to provide premium LED lighting solutions for the Azizia Movenpick Hotel, a luxury hospitality destination located near Aspire Zone in Doha.",
+          "The project included the supply of high-efficiency LED luminaires, with a focus on both interior and exterior zones, ensuring a perfect balance between ambiance, visual comfort, and energy performance. Through precise lux-level calculations, B-LED ensured that the lighting design complemented the architectural style of the hotel while meeting international hospitality lighting standards.",
+          "This project demonstrates B-LED’s ability to deliver elegant, functional lighting tailored to the high expectations of the hospitality industry."
+        ],
+        "ar": [
+          "في عام 2020، اختيرت شركة البيان للإلكترونيات وتقنيات الـ LED (B-LED) لتوفير حلول إضاءة LED المتميزة لفندق العزيزية موفنبيك، وجهة الضيافة الفاخرة الواقعة بالقرب من أسباير زون في الدوحة.",
+          "تضمن المشروع توريد وحدات إنارة LED عالية الكفاءة، مع التركيز على المناطق الداخلية والخارجية على حد سواء، مما يضمن تحقيق التوازن المثالي بين الأجواء والراحة البصرية وأداء الطاقة. ومن خلال حسابات دقيقة لمستوى الإضاءة (اللوكس)، حرصت شركة B-LED على أن يكون تصميم الإضاءة مكملاً للطراز المعماري للفندق مع تلبية معايير الإضاءة الدولية في مجال الضيافة.",
+          "يُظهر هذا المشروع قدرة شركة B-LED على تقديم إضاءة أنيقة وعملية مصممة خصيصًا لتلبية التوقعات العالية لقطاع الضيافة."
+        ]
+      },
+      "scope": {
+        "en": ["Supply of indoor & outdoor LED luminaires", "Lux-level calculations"],
+        "ar": ["توريد وحدات إنارة LED داخلية وخارجية", "حسابات مستوى الإضاءة (اللوكس)"]
+      },
+      "image": "projects/azizia-movenpick-hotel.jpg",
+      "gallery": ["projects/azizia-movenpick-hotel-2.jpg", "projects/azizia-movenpick-hotel-3.jpg"],
+      "hasRealPhoto": true
+    },
+    {
+      "slug": "hamad-hospital",
+      "category": "health",
+      "sector": "education-healthcare",
+      "featured": false,
+      "title": {
+        "en": "Hamad Hospital",
+        "ar": "مستشفى حمد"
+      },
+      "projectName": {
+        "en": "LED Lighting Supply – Hamad Hospital",
+        "ar": "توريد إضاءة LED – مستشفى حمد"
+      },
+      "client": {
+        "en": "Confidential",
+        "ar": "سرّي"
+      },
+      "consultant": null,
+      "contractor": null,
+      "year": 2020,
+      "location": {
+        "en": "Doha, Qatar",
+        "ar": "الدوحة، قطر"
+      },
+      "country": "QA",
+      "summary": {
+        "en": "Healthcare-grade LED lighting for Hamad Hospital, covering patient rooms, operating areas, corridors and administrative spaces.",
+        "ar": "أنظمة إضاءة LED مخصصة للرعاية الصحية في مستشفى حمد، تشمل غرف المرضى ومناطق العمليات والممرات والمساحات الإدارية."
+      },
+      "body": {
+        "en": [
+          "In 2020, Al Bayan Electronics & LED Technologies (B-LED) delivered advanced LED lighting systems for Hamad Hospital, one of Qatar’s leading healthcare institutions.",
+          "The project included the supply of B-LED luminaires designed specifically for healthcare environments, along with detailed lux-level calculations to ensure optimal lighting in patient rooms, operating areas, corridors, and administrative spaces.",
+          "The lighting solution focused on energy efficiency, visual comfort, hygiene compliance, and long-term reliability — key factors in supporting high-performance healthcare operations.",
+          "This project demonstrates B-LED’s capability to meet the strict demands of the medical sector and contribute to the development of safe, efficient, and patient-centered facilities."
+        ],
+        "ar": [
+          "في عام 2020، قدمت شركة البيان للإلكترونيات وتقنيات الـ LED (B-LED) أنظمة إضاءة LED المتطورة لمستشفى حمد، إحدى مؤسسات الرعاية الصحية الرائدة في قطر.",
+          "تضمن المشروع توريد وحدات إضاءة B-LED المصممة خصيصًا لبيئات الرعاية الصحية، بالإضافة إلى حسابات تفصيلية لمستوى الإضاءة لضمان الإضاءة المثلى في غرف المرضى ومناطق العمليات والممرات والمساحات الإدارية.",
+          "ركز حل الإضاءة على كفاءة الطاقة والراحة البصرية والامتثال للنظافة والموثوقية على المدى الطويل – وهي عوامل رئيسية في دعم عمليات الرعاية الصحية عالية الأداء.",
+          "يُظهر هذا المشروع قدرة شركة B-LED على تلبية المتطلبات الصارمة للقطاع الطبي والمساهمة في تطوير مرافق آمنة وفعالة ومتمحورة حول المريض."
+        ]
+      },
+      "scope": {
+        "en": ["Supply of B-LED luminaires", "Lux-level calculations"],
+        "ar": ["توريد وحدات إنارة B-LED", "حسابات مستوى الإضاءة (اللوكس)"]
+      },
+      "image": "projects/hamad-hospital.jpg",
+      "gallery": [],
+      "hasRealPhoto": true
+    },
+    {
+      "slug": "oman-education-buildings",
+      "category": "schools-colleges",
+      "sector": "education-healthcare",
+      "featured": false,
+      "title": {
+        "en": "Oman Education Buildings",
+        "ar": "المباني التعليمية في عُمان"
+      },
+      "projectName": {
+        "en": "LED Lighting Supply – Oman Education Facilities",
+        "ar": "توريد إضاءة LED – مرافق التعليم العمانية"
+      },
+      "client": {
+        "en": "Ashghal",
+        "ar": "أشغال"
+      },
+      "consultant": null,
+      "contractor": null,
+      "year": 2020,
+      "location": {
+        "en": "Sultanate of Oman",
+        "ar": "سلطنة عُمان"
+      },
+      "country": "OM",
+      "summary": {
+        "en": "Energy-efficient LED lighting for a series of educational buildings in the Sultanate of Oman, covering classrooms, administrative areas and campus surroundings.",
+        "ar": "أنظمة إضاءة LED موفرة للطاقة لسلسلة من المباني التعليمية في سلطنة عُمان، تشمل الفصول الدراسية والمناطق الإدارية والمناطق المحيطة."
+      },
+      "body": {
+        "en": [
+          "In 2020, Al Bayan Electronics & LED Technologies (B-LED) successfully supplied energy-efficient LED lighting systems for a series of educational buildings in the Sultanate of Oman, under the supervision of Ashghal.",
+          "The scope included the supply of B-LED luminaires along with comprehensive lux-level calculations to ensure proper illumination throughout classrooms, administrative areas, and campus surroundings. All lighting solutions were designed to enhance visual comfort, energy efficiency, and compliance with academic facility standards.",
+          "This project demonstrates B-LED’s continued expansion in the regional education sector and its capability to deliver smart lighting technologies that support both functionality and long-term sustainability in learning environments."
+        ],
+        "ar": [
+          "في عام 2020، نجحت شركة البيان للإلكترونيات وتقنيات الـ LED (B-LED) في توريد أنظمة إضاءة LED الموفرة للطاقة لسلسلة من المباني التعليمية في سلطنة عُمان، تحت إشراف هيئة الأشغال العامة «أشغال».",
+          "وشمل نطاق العمل توريد وحدات إنارة B-LED إلى جانب إجراء حسابات شاملة لمستوى الإضاءة (اللوكس) لضمان توفير الإضاءة المناسبة في جميع أنحاء الفصول الدراسية والمناطق الإدارية والمناطق المحيطة بالحرم الجامعي. تم تصميم جميع حلول الإضاءة لتعزيز الراحة البصرية وكفاءة الطاقة والامتثال لمعايير المرافق الأكاديمية.",
+          "يوضح هذا المشروع توسع شركة B-LED المستمر في قطاع التعليم الإقليمي وقدرتها على تقديم تقنيات الإضاءة الذكية التي تدعم كلاً من الأداء الوظيفي والاستدامة طويلة الأجل في بيئات التعلم."
+        ]
+      },
+      "scope": {
+        "en": ["Supply of B-LED luminaires", "Lux-level calculations"],
+        "ar": ["توريد وحدات إنارة B-LED", "حسابات مستوى الإضاءة (اللوكس)"]
+      },
+      "image": "projects/oman-education-buildings.jpg",
+      "gallery": ["projects/oman-education-buildings-2.jpg"],
+      "hasRealPhoto": true
+    },
+    {
+      "slug": "oman-ministry-of-finance",
+      "category": "buildings-villas",
+      "sector": "mosques-public",
+      "featured": false,
+      "title": {
+        "en": "Oman Ministry of Finance",
+        "ar": "وزارة المالية العُمانية"
+      },
+      "projectName": {
+        "en": "LED Lighting Supply – Ministry of Finance, Oman",
+        "ar": "توريد إضاءة LED – وزارة المالية، سلطنة عُمان"
+      },
+      "client": {
+        "en": "Ashghal",
+        "ar": "أشغال"
+      },
+      "consultant": null,
+      "contractor": null,
+      "year": 2020,
+      "location": {
+        "en": "Muscat, Oman",
+        "ar": "مسقط، عُمان"
+      },
+      "country": "OM",
+      "summary": {
+        "en": "Supply of high-performance LED lighting for the Ministry of Finance facilities in Muscat, Oman, with lux-level calculations for the building and its surroundings.",
+        "ar": "توريد أنظمة إضاءة LED عالية الأداء لمرافق وزارة المالية في مسقط بسلطنة عُمان، مع حسابات مستوى الإضاءة للمبنى والبنية التحتية المحيطة به."
+      },
+      "body": {
+        "en": [
+          "As part of a cross-border collaboration, Al Bayan Electronics & LED Technologies (B-LED) supplied high-performance LED lighting systems for the Ministry of Finance facilities in Oman, in coordination with Ashghal.",
+          "The scope of work included the supply of advanced LED luminaires, supported by comprehensive lux-level calculations to ensure appropriate illumination throughout the building and its surrounding infrastructure. All systems were designed to meet both local regulatory standards and international performance benchmarks.",
+          "This project reflects B-LED’s growing regional footprint and its ability to deliver customized, efficient lighting solutions for governmental and institutional facilities across the Gulf."
+        ],
+        "ar": [
+          "كجزء من التعاون عبر الحدود، قامت شركة البيان للإلكترونيات وتقنيات الـ LED (B-LED) بتوريد أنظمة إضاءة LED عالية الأداء لمرافق وزارة المالية في سلطنة عُمان، بالتنسيق مع هيئة الأشغال العامة (أشغال).",
+          "وشمل نطاق العمل توريد مصابيح LED متطورة، مدعومة بحسابات شاملة لمستوى الإضاءة لضمان الإضاءة المناسبة في جميع أنحاء المبنى والبنية التحتية المحيطة به. تم تصميم جميع الأنظمة لتلبية المعايير التنظيمية المحلية ومعايير الأداء الدولية.",
+          "ويعكس هذا المشروع الحضور الإقليمي المتنامي لشركة B-LED وقدرتها على تقديم حلول إضاءة مخصصة وفعالة للمرافق الحكومية والمؤسسية في جميع أنحاء الخليج."
+        ]
+      },
+      "scope": {
+        "en": ["Supply of LED luminaires", "Lux-level calculations"],
+        "ar": ["توريد وحدات إنارة LED", "حسابات مستوى الإضاءة (اللوكس)"]
+      },
+      "image": "projects/oman-ministry-of-finance.jpg",
+      "gallery": [
+        "projects/oman-ministry-of-finance-2.jpg",
+        "projects/oman-ministry-of-finance-3.jpg",
+        "projects/oman-ministry-of-finance-4.jpg"
+      ],
+      "hasRealPhoto": true
+    },
+    {
+      "slug": "sabah-al-ahmad-corridor",
+      "category": "roads-tunnels",
+      "sector": "infrastructure-roads",
+      "featured": false,
+      "title": {
+        "en": "Sabah Al-Ahmad Corridor",
+        "ar": "ممر صباح الأحمد"
+      },
+      "projectName": {
+        "en": "Sabah Al-Ahmad Corridor – Road Lighting",
+        "ar": "ممر صباح الأحمد – إنارة الطريق"
+      },
+      "client": {
+        "en": "Ashghal – Public Works Authority",
+        "ar": "أشغال – هيئة الأشغال العامة"
+      },
+      "consultant": null,
+      "contractor": null,
+      "year": 2020,
+      "location": {
+        "en": "Doha, Qatar",
+        "ar": "الدوحة، قطر"
+      },
+      "country": "QA",
+      "summary": {
+        "en": "Supply, lux-level design, testing and commissioning of LED road lighting for the Sabah Al-Ahmad Corridor, one of Doha’s key transportation routes.",
+        "ar": "توريد إضاءة الطرق بتقنية LED لممر صباح الأحمد، أحد طرق النقل الرئيسية في الدوحة، مع تصميم مستويات الإضاءة والاختبار والتشغيل."
+      },
+      "body": {
+        "en": [
+          "As part of Qatar’s national infrastructure expansion, Al Bayan Electronics & LED Technologies (B-LED) was selected to supply and commission LED lighting for the Sabah Al-Ahmad Corridor, one of Doha’s key transportation routes.",
+          "The scope of work included the supply of B-LED luminaires, complete lux-level design and calculations, and full testing and commissioning to ensure compliance with road safety standards and lighting uniformity across the corridor.",
+          "This project enhanced night-time visibility, road user safety, and energy efficiency — showcasing B-LED’s end-to-end capabilities in delivering sustainable lighting systems for large-scale infrastructure projects."
+        ],
+        "ar": [
+          "كجزء من توسع البنية التحتية الوطنية في قطر، تم اختيار شركة البيان للإلكترونيات وتقنيات الـ LED (B-LED) لتوريد وتشغيل إضاءة LED لممر صباح الأحمد، أحد طرق النقل الرئيسية في الدوحة.",
+          "وشمل نطاق العمل توريد وحدات إنارة B-LED والتصميم والحسابات الكاملة لمستوى الإضاءة (اللوكس)، وإجراء الاختبارات والتشغيل الكامل لضمان الامتثال لمعايير السلامة على الطرق وتوحيد الإضاءة عبر الممر.",
+          "وقد ساهم هذا المشروع في تحسين الرؤية الليلية وسلامة مستخدمي الطرق وكفاءة استخدام الطاقة، مما يُظهر قدرات شركة B-LED المتكاملة في تقديم أنظمة إضاءة مستدامة لمشروعات البنية التحتية واسعة النطاق."
+        ]
+      },
+      "scope": {
+        "en": ["Supply of B-LED luminaires", "Lux-level design & calculations", "Testing & commissioning"],
+        "ar": ["توريد وحدات إنارة B-LED", "تصميم مستويات الإضاءة وحساباتها (اللوكس)", "الاختبار والتشغيل"]
+      },
+      "image": "projects/sabah-al-ahmad-corridor.jpg",
+      "gallery": [],
+      "hasRealPhoto": false
+    },
+    {
+      "slug": "al-duhail-south-road-lighting",
+      "category": "roads-tunnels",
+      "sector": "infrastructure-roads",
+      "featured": false,
+      "title": {
+        "en": "Al-Duhail South Road Lighting",
+        "ar": "إنارة طريق الدحيل الجنوبي"
+      },
+      "projectName": {
+        "en": "Al-Duhail South Road Lighting",
+        "ar": "إنارة طريق الدحيل الجنوبي"
+      },
+      "client": {
+        "en": "Ashghal – Public Works Authority",
+        "ar": "أشغال – هيئة الأشغال العامة"
+      },
+      "consultant": null,
+      "contractor": null,
+      "year": 2019,
+      "location": {
+        "en": "Doha, Qatar",
+        "ar": "الدوحة، قطر"
+      },
+      "country": "QA",
+      "summary": {
+        "en": "Supply and installation support of LED street lighting for the Al-Duhail South area, with comprehensive lux-level calculations to road lighting standards.",
+        "ar": "توريد أنظمة إنارة الشوارع بتقنية LED ودعم تركيبها في منطقة الدحيل الجنوبي، مع حسابات شاملة لمستوى الإضاءة وفق معايير إنارة الطرق."
+      },
+      "body": {
+        "en": [
+          "As part of its ongoing collaboration with Ashghal, Al Bayan Electronics & LED Technologies (B-LED) successfully supplied and supported the installation of LED street lighting systems for the Al-Duhail South area. The project scope included the delivery of high-efficiency B-LED luminaires along with comprehensive lux-level calculations, ensuring optimal lighting distribution and compliance with road lighting standards.",
+          "Designed to enhance road safety, visibility, and energy efficiency, the project demonstrates B-LED’s ability to deliver reliable lighting solutions tailored to Qatar’s infrastructure requirements. All products used were developed and tested in accordance with local regulations and international performance standards."
+        ],
+        "ar": [
+          "كجزء من تعاونها المستمر مع هيئة الأشغال العامة، نجحت شركة البيان للإلكترونيات وتقنيات الـ LED (B-LED) في توريد ودعم تركيب أنظمة إنارة الشوارع بتقنية LED لمنطقة الدحيل الجنوبية. وشمل نطاق المشروع تسليم مصابيح B-LED عالية الكفاءة إلى جانب حسابات شاملة لمستوى الإضاءة (اللوكس)، مما يضمن التوزيع الأمثل للإضاءة والامتثال لمعايير إنارة الطرق.",
+          "وقد صُمم المشروع لتعزيز السلامة على الطرقات والرؤية وكفاءة استخدام الطاقة، وهو ما يُظهر قدرة شركة B-LED على تقديم حلول إضاءة موثوقة ومصممة خصيصًا لتلبية متطلبات البنية التحتية في قطر. تم تطوير جميع المنتجات المستخدمة واختبارها وفقًا للوائح المحلية ومعايير الأداء الدولية."
+        ]
+      },
+      "scope": {
+        "en": ["Supply of B-LED luminaires", "Installation support", "Lux-level calculations"],
+        "ar": ["توريد وحدات إنارة B-LED", "دعم أعمال التركيب", "حسابات مستوى الإضاءة (اللوكس)"]
+      },
+      "image": "projects/al-duhail-south-road-lighting.jpg",
+      "gallery": ["projects/al-duhail-south-road-lighting-2.jpg"],
+      "hasRealPhoto": true
+    },
+    {
+      "slug": "al-markhiya-road-lighting",
+      "category": "roads-tunnels",
+      "sector": "infrastructure-roads",
+      "featured": false,
+      "title": {
+        "en": "Al-Markhiya Road Lighting",
+        "ar": "إنارة طرق المرخية"
+      },
+      "projectName": {
+        "en": "Road Lighting – Al-Markhiya",
+        "ar": "إنارة الطرق – المرخية"
+      },
+      "client": {
+        "en": "Ashghal – Public Works Authority",
+        "ar": "أشغال – هيئة الأشغال العامة"
+      },
+      "consultant": null,
+      "contractor": null,
+      "year": 2019,
+      "location": {
+        "en": "Al Markhiya, Doha, Qatar",
+        "ar": "المرخية، الدوحة، قطر"
+      },
+      "country": "QA",
+      "summary": {
+        "en": "High-efficiency LED road lighting for the Al-Markhiya area under the supervision of Ashghal, backed by professional lux-level calculations.",
+        "ar": "إضاءة طرق بتقنية LED عالية الكفاءة لمنطقة المرخية تحت إشراف هيئة الأشغال العامة (أشغال)، مدعومة بحسابات احترافية لمستوى الإضاءة."
+      },
+      "body": {
+        "en": [
+          "In 2019, Al Bayan Electronics & LED Technologies supplied high-efficiency LED lighting for the Al-Markhiya area under the supervision of Ashghal. The project included professional lux level calculations to ensure the lighting design met required standards and provided consistent, optimal brightness.",
+          "The use of B-LED luminaires guaranteed long-lasting performance, reduced energy consumption, and improved visibility across the targeted road segments."
+        ],
+        "ar": [
+          "في عام 2019، قامت شركة البيان للإلكترونيات وتقنيات الـ LED (B-LED) بتزويد منطقة المرخية بإضاءة LED عالية الكفاءة تحت إشراف هيئة الأشغال العامة «أشغال». وشمل المشروع حسابات احترافية لمستوى الإضاءة (اللوكس) لضمان استيفاء تصميم الإضاءة للمعايير المطلوبة وتوفير مستوى سطوع مثالي ومتسق.",
+          "يضمن استخدام مصابيح B-LED أداءً يدوم طويلاً واستهلاكًا أقل للطاقة وتحسين الرؤية في قطاعات الطرق المستهدفة."
+        ]
+      },
+      "scope": {
+        "en": ["Supply of LED luminaires", "Lux-level calculations"],
+        "ar": ["توريد وحدات إنارة LED", "حسابات مستوى الإضاءة (اللوكس)"]
+      },
+      "image": "projects/al-markhiya-road-lighting.jpg",
+      "gallery": ["projects/al-markhiya-road-lighting-2.png"],
+      "hasRealPhoto": true
+    },
+    {
+      "slug": "al-ruwais-port",
+      "category": "roads-tunnels",
+      "sector": "infrastructure-roads",
+      "featured": false,
+      "title": {
+        "en": "Al-Ruwais Port",
+        "ar": "ميناء الرويس"
+      },
+      "projectName": {
+        "en": "Al-Ruwais Port Lighting",
+        "ar": "إنارة ميناء الرويس"
+      },
+      "client": {
+        "en": "Ashghal – Public Works Authority",
+        "ar": "أشغال – هيئة الأشغال العامة"
+      },
+      "consultant": null,
+      "contractor": null,
+      "year": 2019,
+      "location": {
+        "en": "Al-Ruwais, Qatar",
+        "ar": "الرويس، قطر"
+      },
+      "country": "QA",
+      "summary": {
+        "en": "High-efficiency LED lighting for Al-Ruwais Port, with luminaires engineered for coastal conditions and lux calculations across the port area.",
+        "ar": "إضاءة LED عالية الكفاءة لميناء الرويس بوحدات إنارة مصممة لتحمّل الظروف الساحلية، مع حسابات الإضاءة في جميع أنحاء منطقة الميناء."
+      },
+      "body": {
+        "en": [
+          "As part of the development and modernization of Qatar’s northern maritime infrastructure, Al Bayan Electronics & LED Technologies (B-LED) supplied and supported the installation of high-efficiency LED lighting systems for Al-Ruwais Port.",
+          "The project included the delivery of robust B-LED luminaires, engineered to withstand coastal environmental conditions, along with detailed lux calculations to ensure optimal light distribution throughout the port area.",
+          "This installation significantly enhanced safety, visibility, and operational efficiency at the port, supporting nighttime navigation and logistics while reducing energy consumption. All systems were installed in compliance with local and international lighting standards, tailored to the port’s specific layout and operational demands."
+        ],
+        "ar": [
+          "كجزء من تطوير وتحديث البنية التحتية البحرية الشمالية لدولة قطر، قامت شركة البيان للإلكترونيات وتقنيات الـ LED (B-LED) بتوريد ودعم تركيب أنظمة إضاءة LED عالية الكفاءة لميناء الرويس.",
+          "تضمن المشروع تسليم وحدات إنارة B-LED قوية مصممة هندسيًا لتتحمل الظروف البيئية الساحلية، بالإضافة إلى حسابات مفصلة للإنارة لضمان التوزيع الأمثل للضوء في جميع أنحاء منطقة الميناء.",
+          "وقد أدى هذا التركيب إلى تعزيز السلامة والرؤية والكفاءة التشغيلية في الميناء بشكل كبير، مما يدعم الملاحة الليلية والخدمات اللوجستية مع تقليل استهلاك الطاقة. تم تركيب جميع الأنظمة بما يتوافق مع معايير الإضاءة المحلية والدولية، حيث تم تصميمها خصيصًا لتتناسب مع التصميم الخاص بالميناء ومتطلباته التشغيلية."
+        ]
+      },
+      "scope": {
+        "en": ["Supply of B-LED luminaires", "Installation support", "Lux-level calculations"],
+        "ar": ["توريد وحدات إنارة B-LED", "دعم أعمال التركيب", "حسابات مستوى الإضاءة (اللوكس)"]
+      },
+      "image": "projects/al-ruwais-port.jpg",
+      "gallery": [],
+      "hasRealPhoto": true
+    },
+    {
+      "slug": "hilton-hotel",
+      "category": "hotels-towers",
+      "sector": "hospitality",
+      "featured": false,
+      "title": {
+        "en": "Hilton Hotel",
+        "ar": "فندق هيلتون"
+      },
+      "projectName": {
+        "en": "LED Lighting Supply – Hilton Hotel",
+        "ar": "توريد إضاءة LED – فندق هيلتون"
+      },
+      "client": {
+        "en": "Hilton Hotels",
+        "ar": "فنادق هيلتون"
+      },
+      "consultant": null,
+      "contractor": null,
+      "year": 2019,
+      "location": {
+        "en": "Doha, Qatar",
+        "ar": "الدوحة، قطر"
+      },
+      "country": "QA",
+      "summary": {
+        "en": "Custom indoor and outdoor LED lighting for a Hilton property in Doha, covering guest rooms, common areas, service corridors and landscape zones.",
+        "ar": "أنظمة إضاءة LED داخلية وخارجية مخصصة لأحد فنادق هيلتون في الدوحة، تشمل غرف النزلاء والمناطق المشتركة وممرات الخدمة ومناطق المناظر الطبيعية."
+      },
+      "body": {
+        "en": [
+          "In 2019, Al Bayan Electronics & LED Technologies (B-LED) partnered with the prestigious Hilton Hotels group to supply custom LED lighting systems for one of their high-end properties in Doha.",
+          "The project included the supply of premium indoor and outdoor B-LED luminaires, complemented by detailed lux-level calculations to ensure optimal lighting for guest rooms, common areas, service corridors, and landscape zones. The lighting was designed to match the hotel’s luxury standards while delivering energy efficiency, visual comfort, and seamless architectural integration.",
+          "This collaboration highlights B-LED’s strength in delivering hospitality-grade lighting solutions that balance elegance, performance, and sustainability."
+        ],
+        "ar": [
+          "في عام 2019، دخلت شركة البيان للإلكترونيات وتقنيات الـ LED (B-LED) في شراكة مع مجموعة فنادق هيلتون المرموقة لتوريد أنظمة إضاءة LED مخصصة لأحد فنادقها الراقية في الدوحة.",
+          "وقد تضمن المشروع توريد وحدات إنارة داخلية وخارجية متميزة بتقنية B-LED، مع إجراء حسابات تفصيلية لمستوى الإضاءة لضمان الإضاءة المثلى لغرف النزلاء والمناطق المشتركة وممرات الخدمة ومناطق المناظر الطبيعية. تم تصميم الإضاءة لتتناسب مع معايير الفخامة في الفندق مع توفير كفاءة الطاقة والراحة البصرية والتكامل المعماري السلس.",
+          "يسلط هذا التعاون الضوء على قوة شركة B-LED في تقديم حلول إضاءة على مستوى الضيافة توازن بين الأناقة والأداء والاستدامة."
+        ]
+      },
+      "scope": {
+        "en": ["Supply of indoor & outdoor LED luminaires", "Lux-level calculations"],
+        "ar": ["توريد وحدات إنارة LED داخلية وخارجية", "حسابات مستوى الإضاءة (اللوكس)"]
+      },
+      "image": "projects/hilton-hotel.jpg",
+      "gallery": ["projects/hilton-hotel-2.jpg", "projects/hilton-hotel-3.jpg", "projects/hilton-hotel-4.jpg"],
+      "hasRealPhoto": true
+    },
+    {
+      "slug": "manateq-industrial-units",
+      "category": "buildings-villas",
+      "sector": "industrial-warehouses",
+      "featured": false,
+      "title": {
+        "en": "MANATEQ Industrial Area Units",
+        "ar": "الوحدات الصناعية لشركة مناطق"
+      },
+      "projectName": {
+        "en": "LED Lighting Supply – MANATEQ Industrial Units",
+        "ar": "توريد إضاءة LED – الوحدات الصناعية التابعة لشركة مناطق"
+      },
+      "client": {
+        "en": "MANATEQ – Economic Zones Company",
+        "ar": "مناطق – شركة المناطق الاقتصادية"
+      },
+      "consultant": null,
+      "contractor": null,
+      "year": 2019,
+      "location": {
+        "en": "Industrial Area, Qatar",
+        "ar": "المنطقة الصناعية، قطر"
+      },
+      "country": "QA",
+      "summary": {
+        "en": "Supply of LED lighting for industrial units developed by MANATEQ within the Industrial Area, with lux-level calculations for each unit.",
+        "ar": "توريد أنظمة إضاءة LED لوحدات صناعية تابعة لشركة مناطق داخل المنطقة الصناعية، مع حسابات مستوى الإضاءة لكل وحدة."
+      },
+      "body": {
+        "en": [
+          "In 2019, Al Bayan Electronics & LED Technologies (B-LED) partnered with MANATEQ, Qatar’s leading developer of special economic zones, to supply LED lighting systems for various industrial units within the Industrial Area.",
+          "The project scope included the supply of high-efficiency B-LED luminaires, paired with lux-level calculations to ensure that each unit met the required standards for safety, brightness, and operational efficiency.",
+          "This collaboration supported MANATEQ’s mission to offer ready-built, infrastructure-ready industrial units for investors, while ensuring the highest levels of energy performance and reliability in lighting."
+        ],
+        "ar": [
+          "في عام 2019، أبرمت شركة البيان للإلكترونيات وتقنيات الـ LED (B-LED) شراكة مع شركة «مناطق» الرائدة في قطر في مجال تطوير المناطق الاقتصادية الخاصة، لتوريد أنظمة إضاءة LED لمختلف الوحدات الصناعية داخل المنطقة الصناعية.",
+          "شمل نطاق المشروع توريد وحدات إنارة B-LED عالية الكفاءة، مقترنة بحسابات مستوى الإضاءة لضمان استيفاء كل وحدة للمعايير المطلوبة للسلامة والسطوع والكفاءة التشغيلية.",
+          "وقد دعم هذا التعاون مهمة شركة مناطق في تقديم وحدات صناعية جاهزة ومجهزة بالبنية التحتية للمستثمرين، مع ضمان أعلى مستويات أداء الطاقة والموثوقية في الإضاءة."
+        ]
+      },
+      "scope": {
+        "en": ["Supply of B-LED luminaires", "Lux-level calculations"],
+        "ar": ["توريد وحدات إنارة B-LED", "حسابات مستوى الإضاءة (اللوكس)"]
+      },
+      "image": "projects/manateq-industrial-units.jpg",
+      "gallery": ["projects/manateq-industrial-units-2.jpg", "projects/manateq-industrial-units-3.jpg"],
+      "hasRealPhoto": true
+    },
+    {
+      "slug": "masjid-abdelwahab",
+      "category": "mosques",
+      "sector": "mosques-public",
+      "featured": true,
+      "title": {
+        "en": "Masjid AbdelWahab",
+        "ar": "مسجد عبد الوهاب"
+      },
+      "projectName": {
+        "en": "LED Lighting Renovation – Masjid AbdelWahab",
+        "ar": "تجديد إضاءة LED – مسجد عبد الوهاب"
+      },
+      "client": {
+        "en": "Ministry of Awqaf (AWQAF)",
+        "ar": "وزارة الأوقاف والشؤون الإسلامية (الأوقاف)"
+      },
+      "consultant": null,
+      "contractor": null,
+      "year": 2019,
+      "location": {
+        "en": "Doha, Qatar",
+        "ar": "الدوحة، قطر"
+      },
+      "country": "QA",
+      "summary": {
+        "en": "LED lighting renovation of Masjid AbdelWahab with the Ministry of Awqaf, covering prayer halls, minarets, walkways and exterior facades.",
+        "ar": "تجديد إضاءة مسجد عبد الوهاب بتقنية LED بالشراكة مع وزارة الأوقاف والشؤون الإسلامية، ويشمل قاعات الصلاة والمآذن والممرات والواجهات الخارجية."
+      },
+      "body": {
+        "en": [
+          "In 2019, Al Bayan Electronics & LED Technologies (B-LED) was honored to take part in the renovation of Masjid AbdelWahab, one of Qatar’s prominent religious landmarks, in partnership with the Ministry of Awqaf (AWQAF).",
+          "The project involved the supply of both indoor and outdoor LED lighting systems, specifically selected to preserve the mosque’s spiritual atmosphere while improving illumination, energy performance, and architectural harmony. B-LED ensured that lighting levels across prayer halls, minarets, walkways, and exterior facades were carefully balanced through lux-level calculations and product customization.",
+          "This project reflects B-LED’s experience in working on culturally significant sites, delivering lighting that respects the sanctity of the space while embracing sustainability and innovation."
+        ],
+        "ar": [
+          "في عام 2019، تشرفت شركة البيان للإلكترونيات وتقنيات الـ LED (B-LED) بالمشاركة في تجديد مسجد عبد الوهاب، أحد المعالم الدينية البارزة في قطر، بالشراكة مع وزارة الأوقاف والشؤون الإسلامية.",
+          "وقد تضمن المشروع توريد أنظمة إضاءة LED الداخلية والخارجية على حد سواء، والتي تم اختيارها خصيصًا للحفاظ على الجو الروحاني للمسجد مع تحسين الإضاءة وأداء الطاقة والتناغم المعماري. وقد حرصت شركة B-LED على أن تكون مستويات الإضاءة في قاعات الصلاة والمآذن والممرات والواجهات الخارجية متوازنة بعناية من خلال حسابات مستوى الإضاءة (اللوكس) وتخصيص المنتج.",
+          "يعكس هذا المشروع خبرة شركة B-LED في العمل في المواقع ذات الأهمية الثقافية، حيث تقدم إضاءة تحترم قدسية المكان مع تبني الاستدامة والابتكار في الوقت نفسه."
+        ]
+      },
+      "scope": {
+        "en": ["Supply of indoor & outdoor LED luminaires", "Lux-level calculations", "Product customisation"],
+        "ar": ["توريد وحدات إنارة LED داخلية وخارجية", "حسابات مستوى الإضاءة (اللوكس)", "تخصيص المنتجات"]
+      },
+      "image": "projects/masjid-abdelwahab.jpg",
+      "gallery": [
+        "projects/masjid-abdelwahab-2.jpg",
+        "projects/masjid-abdelwahab-3.jpg",
+        "projects/masjid-abdelwahab-4.jpg",
+        "projects/masjid-abdelwahab-5.jpg",
+        "projects/masjid-abdelwahab-6.jpg"
+      ],
+      "hasRealPhoto": true
+    },
+    {
+      "slug": "moi-civil-defence-building",
+      "category": "buildings-villas",
+      "sector": "mosques-public",
+      "featured": false,
+      "title": {
+        "en": "MOI Civil Defence Building",
+        "ar": "مبنى الدفاع المدني بوزارة الداخلية"
+      },
+      "projectName": {
+        "en": "LED Lighting Supply – Civil Defence Building",
+        "ar": "توريد إضاءة LED – مبنى الدفاع المدني"
+      },
+      "client": {
+        "en": "Ministry of Interior – Qatar",
+        "ar": "وزارة الداخلية – قطر"
+      },
+      "consultant": null,
+      "contractor": null,
+      "year": 2019,
+      "location": {
+        "en": "Doha, Qatar",
+        "ar": "الدوحة، قطر"
+      },
+      "country": "QA",
+      "summary": {
+        "en": "Supply of LED lighting for the Ministry of Interior’s Civil Defence Building, covering indoor and outdoor operational zones of an emergency response facility.",
+        "ar": "توريد أنظمة إضاءة LED لمبنى الدفاع المدني التابع لوزارة الداخلية، تشمل مناطق التشغيل الداخلية والخارجية لمرفق الاستجابة للطوارئ."
+      },
+      "body": {
+        "en": [
+          "In 2019, Al Bayan Electronics & LED Technologies (B-LED) was honored to supply LED lighting systems for the Civil Defence Building operated by the Ministry of Interior in Qatar.",
+          "The project included the delivery of high-efficiency B-LED luminaires, along with precise lux-level calculations to meet the specific illumination requirements of emergency response facilities. The lighting design prioritized clarity, reliability, and energy efficiency, supporting both indoor and outdoor operational zones.",
+          "This collaboration reflects B-LED’s expertise in serving critical government facilities, ensuring optimal visibility, safety, and compliance with national standards for mission-critical environments."
+        ],
+        "ar": [
+          "في عام 2019، تشرفت شركة البيان للإلكترونيات وتقنيات الـ LED (B-LED) بتوريد أنظمة إضاءة LED لمبنى الدفاع المدني الذي تديره وزارة الداخلية في قطر.",
+          "تضمن المشروع تسليم وحدات إضاءة B-LED عالية الكفاءة مع إجراء حسابات دقيقة لمستوى الإضاءة (اللوكس) لتلبية متطلبات الإضاءة الخاصة بمرافق الاستجابة لحالات الطوارئ. وقد أعطى تصميم الإضاءة الأولوية للوضوح والموثوقية وكفاءة الطاقة ودعم مناطق التشغيل الداخلية والخارجية على حد سواء.",
+          "يعكس هذا التعاون خبرة شركة B-LED في خدمة المرافق الحكومية الحرجة، مما يضمن الرؤية المثلى والسلامة والامتثال للمعايير الوطنية للبيئات ذات المهام الحرجة."
+        ]
+      },
+      "scope": {
+        "en": ["Supply of B-LED luminaires", "Lux-level calculations"],
+        "ar": ["توريد وحدات إنارة B-LED", "حسابات مستوى الإضاءة (اللوكس)"]
+      },
+      "image": "projects/moi-civil-defence-building.jpg",
+      "gallery": [
+        "projects/moi-civil-defence-building-2.jpg",
+        "projects/moi-civil-defence-building-3.jpg",
+        "projects/moi-civil-defence-building-4.jpg"
+      ],
+      "hasRealPhoto": true
+    },
+    {
+      "slug": "north-atlantic-college",
+      "category": "schools-colleges",
+      "sector": "education-healthcare",
+      "featured": false,
+      "title": {
+        "en": "North Atlantic College",
+        "ar": "كلية شمال الأطلنطي"
+      },
+      "projectName": {
+        "en": "LED Lighting Supply – North Atlantic College",
+        "ar": "توريد إضاءة LED – كلية شمال الأطلنطي"
+      },
+      "client": {
+        "en": "Acontec Engineering WLL",
+        "ar": "شركة أكونتك الهندسية ذ.م.م"
+      },
+      "consultant": null,
+      "contractor": null,
+      "year": 2019,
+      "location": {
+        "en": "Doha, Qatar",
+        "ar": "الدوحة، قطر"
+      },
+      "country": "QA",
+      "summary": {
+        "en": "Supply of LED lighting for the North Atlantic College campus in Doha, delivered with Acontec Engineering across academic, administrative and common areas.",
+        "ar": "توريد أنظمة إضاءة LED لحرم كلية شمال الأطلنطي في الدوحة بالتعاون مع شركة أكونتك الهندسية، في المناطق الأكاديمية والإدارية والمشتركة."
+      },
+      "body": {
+        "en": [
+          "In 2019, Al Bayan Electronics & LED Technologies (B-LED) partnered with Acontec Engineering WLL to supply LED lighting systems for the North Atlantic College campus in Doha.",
+          "The project included the supply of high-efficiency B-LED luminaires, supported by detailed lux-level calculations to ensure optimal brightness, energy savings, and visual comfort across various academic, administrative, and common areas.",
+          "By integrating advanced lighting design with durable, sustainable fixtures, B-LED helped create a well-lit environment that supports productivity, safety, and aesthetic consistency across the educational facility."
+        ],
+        "ar": [
+          "في عام 2019، أبرمت شركة البيان للإلكترونيات وتقنيات الـ LED (B-LED) شراكة مع شركة أكونتك الهندسية ذ.م.م. لتوريد أنظمة إضاءة LED لحرم كلية شمال الأطلنطي في الدوحة.",
+          "تضمن المشروع توريد وحدات إنارة B-LED عالية الكفاءة مدعومة بحسابات مفصلة لمستوى الإضاءة لضمان السطوع الأمثل وتوفير الطاقة والراحة البصرية في مختلف المناطق الأكاديمية والإدارية والمشتركة.",
+          "من خلال دمج تصميم الإضاءة المتطور مع تركيبات الإضاءة المتينة والمستدامة، ساعدت شركة B-LED في خلق بيئة مضاءة جيدًا تدعم الإنتاجية والسلامة والاتساق الجمالي في جميع أنحاء المنشأة التعليمية."
+        ]
+      },
+      "scope": {
+        "en": ["Supply of B-LED luminaires", "Lux-level calculations"],
+        "ar": ["توريد وحدات إنارة B-LED", "حسابات مستوى الإضاءة (اللوكس)"]
+      },
+      "image": "projects/north-atlantic-college.jpg",
+      "gallery": ["projects/north-atlantic-college-2.jpg", "projects/north-atlantic-college-3.jpg"],
+      "hasRealPhoto": true
+    },
+    {
+      "slug": "palm-tower-b",
+      "category": "hotels-towers",
+      "sector": "commercial-offices",
+      "featured": false,
+      "title": {
+        "en": "Palm Tower-B",
+        "ar": "برج النخلة B"
+      },
+      "projectName": {
+        "en": "LED Lighting Supply – Palm Tower-B",
+        "ar": "توريد إضاءة LED – برج النخلة B"
+      },
+      "client": {
+        "en": "Confidential",
+        "ar": "سرّي"
+      },
+      "consultant": null,
+      "contractor": null,
+      "year": 2019,
+      "location": {
+        "en": "Doha, Qatar",
+        "ar": "الدوحة، قطر"
+      },
+      "country": "QA",
+      "summary": {
+        "en": "LED lighting for Palm Tower-B, a high-rise in the heart of Doha, tailored for its lobbies, corridors, office spaces and service areas.",
+        "ar": "حلول إضاءة LED لبرج النخلة B، أحد الأبراج الشاهقة في قلب الدوحة، مصممة لردهاته وممراته ومساحاته المكتبية ومناطق الخدمات."
+      },
+      "body": {
+        "en": [
+          "In 2019, Al Bayan Electronics & LED Technologies (B-LED) delivered LED lighting solutions for Palm Tower-B, a prominent high-rise development in the heart of Doha.",
+          "The project involved the supply of high-performance B-LED luminaires, tailored for various zones within the tower, including lobbies, corridors, office spaces, and service areas. B-LED also provided detailed lux-level calculations to ensure compliance with architectural and functional lighting standards, focusing on energy efficiency, lighting uniformity, and modern visual appeal.",
+          "This project showcases B-LED’s ability to support commercial and mixed-use developments with lighting systems that combine functionality, efficiency, and elegant integration."
+        ],
+        "ar": [
+          "في عام 2019، قدّمت شركة البيان للإلكترونيات وتقنيات الـ LED (B-LED) حلول إضاءة LED لبرج النخلة B، وهو مشروع تطويري شاهق بارز في قلب الدوحة.",
+          "تضمن المشروع توريد وحدات إضاءة B-LED عالية الأداء، مصممة خصيصًا لمختلف المناطق داخل البرج، بما في ذلك الردهات والممرات والمساحات المكتبية ومناطق الخدمات. كما قدمت شركة B-LED أيضًا حسابات مفصّلة لمستوى الإضاءة (اللوكس) لضمان الامتثال لمعايير الإضاءة المعمارية والوظيفية، مع التركيز على كفاءة الطاقة وتوحيد الإضاءة والجاذبية البصرية الحديثة.",
+          "يُظهر هذا المشروع قدرة شركة B-LED على دعم المشروعات التجارية والمشروعات متعددة الاستخدامات بأنظمة إضاءة تجمع بين الأداء الوظيفي والكفاءة والتكامل الأنيق."
+        ]
+      },
+      "scope": {
+        "en": ["Supply of B-LED luminaires", "Lux-level calculations"],
+        "ar": ["توريد وحدات إنارة B-LED", "حسابات مستوى الإضاءة (اللوكس)"]
+      },
+      "image": "projects/palm-tower-b.jpg",
+      "gallery": [
+        "projects/palm-tower-b-2.jpg",
+        "projects/palm-tower-b-3.jpg",
+        "projects/palm-tower-b-4.jpg",
+        "projects/palm-tower-b-5.jpg",
+        "projects/palm-tower-b-6.jpg",
+        "projects/palm-tower-b-7.jpg",
+        "projects/palm-tower-b-8.jpg",
+        "projects/palm-tower-b-9.jpg",
+        "projects/palm-tower-b-10.jpg"
+      ],
+      "hasRealPhoto": true
+    },
+    {
+      "slug": "private-villas",
+      "category": "buildings-villas",
+      "sector": "residential-villas",
+      "featured": false,
+      "title": {
+        "en": "Various Private Villas",
+        "ar": "فيلات خاصة متنوعة"
+      },
+      "projectName": {
+        "en": "Residential Villa Lighting Projects",
+        "ar": "مشاريع إضاءة الفلل السكنية"
+      },
+      "client": {
+        "en": "Private Clients",
+        "ar": "عملاء من القطاع الخاص"
+      },
+      "consultant": null,
+      "contractor": null,
+      "year": 2019,
+      "location": {
+        "en": "Various Locations, Qatar",
+        "ar": "مواقع مختلفة، قطر"
+      },
+      "country": "QA",
+      "summary": {
+        "en": "Premium LED lighting fixtures for private residential villas across Qatar, tailored to each villa’s architecture and supported by custom lux-level calculations.",
+        "ar": "تركيبات إضاءة LED متميزة لفلل سكنية خاصة في مختلف أنحاء قطر، مصممة لتناسب الطابع المعماري لكل فيلا ومدعومة بحسابات مخصصة لمستوى الإضاءة."
+      },
+      "body": {
+        "en": [
+          "In 2019, Al Bayan Electronics & LED Technologies (B-LED) successfully executed multiple lighting supply projects for private residential villas across Qatar. These bespoke projects involved the supply of premium LED lighting fixtures tailored to the architectural and aesthetic preferences of each villa.",
+          "Each installation was supported by custom lux-level calculations, ensuring that both indoor and outdoor areas were lit to optimal levels — balancing energy efficiency, functionality, and visual elegance.",
+          "These projects highlight B-LED’s adaptability in delivering personalized lighting solutions for high-end residential developments, maintaining the same commitment to quality and performance seen in larger infrastructure projects."
+        ],
+        "ar": [
+          "في عام 2019، نفذت شركة البيان للإلكترونيات وتقنيات الـ LED (B-LED) بنجاح العديد من مشاريع توريد الإضاءة للفلل السكنية الخاصة في جميع أنحاء قطر. وقد تضمنت هذه المشاريع المصممة حسب الطلب توريد تركيبات إضاءة LED متميزة مصممة خصيصًا لتناسب التفضيلات المعمارية والجمالية لكل فيلا.",
+          "تم دعم كل عملية تركيب بحسابات مخصصة لمستوى الإضاءة (اللوكس)، مما يضمن إضاءة المناطق الداخلية والخارجية على حد سواء بالمستويات المثلى – لتحقيق التوازن بين كفاءة الطاقة والأداء الوظيفي والأناقة البصرية.",
+          "تسلط هذه المشاريع الضوء على قدرة B-LED على التكيف في تقديم حلول إضاءة مخصصة للمشاريع السكنية الراقية، مع الحفاظ على نفس الالتزام بالجودة والأداء الذي نراه في مشاريع البنية التحتية الأكبر حجمًا."
+        ]
+      },
+      "scope": {
+        "en": ["Supply of LED lighting fixtures for indoor & outdoor areas", "Lux-level calculations"],
+        "ar": ["توريد تركيبات إضاءة LED للمناطق الداخلية والخارجية", "حسابات مستوى الإضاءة (اللوكس)"]
+      },
+      "image": "projects/private-villas.jpg",
+      "gallery": [
+        "projects/private-villas-2.jpg",
+        "projects/private-villas-3.jpg",
+        "projects/private-villas-4.jpg",
+        "projects/private-villas-5.jpg",
+        "projects/private-villas-6.jpg"
+      ],
+      "hasRealPhoto": true
+    },
+    {
+      "slug": "sarfayt-road-salalah",
+      "category": "roads-tunnels",
+      "sector": "infrastructure-roads",
+      "featured": false,
+      "title": {
+        "en": "Sarfayt Road, Salalah",
+        "ar": "طريق صرفيت، صلالة"
+      },
+      "projectName": {
+        "en": "Sarfayt Road LED Street Lighting Upgrade",
+        "ar": "ترقية إنارة شوارع طريق صرفيت بمصابيح LED"
+      },
+      "client": {
+        "en": "Salalah Municipality – Sultanate of Oman",
+        "ar": "بلدية صلالة – سلطنة عُمان"
+      },
+      "consultant": null,
+      "contractor": null,
+      "year": 2019,
+      "location": {
+        "en": "Sarfayt Road, Salalah, Oman",
+        "ar": "طريق صرفيت، صلالة، سلطنة عُمان"
+      },
+      "country": "OM",
+      "summary": {
+        "en": "Replacement of conventional HPS street lights with energy-efficient LED luminaires along Sarfayt Road in Salalah, for Salalah Municipality.",
+        "ar": "استبدال مصابيح الشوارع التقليدية من نوع الصوديوم عالي الضغط بوحدات إنارة LED موفرة للطاقة على طول طريق صرفيت في صلالة لصالح بلدية صلالة."
+      },
+      "body": {
+        "en": [
+          "As part of regional efforts to enhance energy efficiency and public safety, Al Bayan Electronics & LED Technologies (B-LED) partnered with Salalah Municipality to carry out the replacement of conventional HPS (High Pressure Sodium) street lights with energy-efficient LED luminaires along Sarfayt Road in Salalah.",
+          "The project involved the supply and implementation of durable LED street lighting tailored for long-distance roadways, offering superior light quality, extended lifespan, and significant energy savings. The new LED system ensured enhanced visibility, reduced maintenance needs, and aligned with Oman’s sustainability objectives."
+        ],
+        "ar": [
+          "كجزء من الجهود الإقليمية الرامية إلى تعزيز كفاءة الطاقة والسلامة العامة، تعاونت شركة البيان للإلكترونيات وتقنيات الـ LED (B-LED) مع بلدية صلالة لتنفيذ استبدال مصابيح الشوارع التقليدية من نوع HPS (الصوديوم عالي الضغط) بمصابيح LED الموفرة للطاقة على طول طريق صرفيت في صلالة.",
+          "وقد تضمن المشروع توريد وتنفيذ مصابيح إنارة الشوارع بمصابيح LED المتينة المصممة خصيصًا للطرق ذات المسافات الطويلة، والتي توفر جودة إضاءة فائقة وعمرًا افتراضيًا طويلًا وتوفيرًا كبيرًا في الطاقة. يضمن نظام LED الجديد تعزيز الرؤية وتقليل احتياجات الصيانة ومواءمته مع أهداف الاستدامة في عُمان."
+        ]
+      },
+      "scope": {
+        "en": ["Replacement of HPS fittings with LED luminaires", "Supply of LED street lighting"],
+        "ar": ["استبدال مصابيح الصوديوم عالي الضغط (HPS) بوحدات إنارة LED", "توريد إنارة شوارع LED"]
+      },
+      "image": "projects/sarfayt-road-salalah.jpg",
+      "gallery": [],
+      "hasRealPhoto": true
+    },
+    {
+      "slug": "sultan-qaboos-hospital",
+      "category": "health",
+      "sector": "education-healthcare",
+      "featured": false,
+      "title": {
+        "en": "Sultan Qaboos Hospital",
+        "ar": "مستشفى السلطان قابوس"
+      },
+      "projectName": {
+        "en": "LED Lighting Supply – Sultan Qaboos Hospital",
+        "ar": "توريد إضاءة LED – مستشفى السلطان قابوس"
+      },
+      "client": {
+        "en": "Sultan Qaboos Hospital",
+        "ar": "مستشفى السلطان قابوس"
+      },
+      "consultant": null,
+      "contractor": null,
+      "year": 2019,
+      "location": {
+        "en": "Sultanate of Oman",
+        "ar": "سلطنة عُمان"
+      },
+      "country": "OM",
+      "summary": {
+        "en": "Energy-efficient LED lighting for Sultan Qaboos Hospital in Oman, covering patient wards, outpatient areas, corridors and medical support spaces.",
+        "ar": "أنظمة إضاءة LED موفرة للطاقة لمستشفى السلطان قابوس في سلطنة عُمان، تشمل أجنحة المرضى والعيادات الخارجية والممرات ومساحات الدعم الطبي."
+      },
+      "body": {
+        "en": [
+          "In 2019, Al Bayan Electronics & LED Technologies (B-LED) successfully supplied energy-efficient LED lighting systems for Sultan Qaboos Hospital, one of the largest and most important medical facilities in the Sultanate of Oman.",
+          "The project involved the supply of high-performance B-LED luminaires, along with detailed lux-level calculations to ensure proper lighting across critical zones such as patient wards, outpatient areas, corridors, and medical support spaces.",
+          "The solution was designed to meet stringent healthcare lighting standards—enhancing visibility, patient comfort, and operational efficiency—while delivering long-term energy savings and reduced maintenance requirements."
+        ],
+        "ar": [
+          "في عام 2019، نجحت شركة البيان للإلكترونيات وتقنيات الـ LED (B-LED) في توريد أنظمة إضاءة LED الموفرة للطاقة لمستشفى السلطان قابوس، أحد أكبر وأهم المرافق الطبية في سلطنة عُمان.",
+          "تضمن المشروع توريد وحدات إنارة B-LED عالية الأداء، بالإضافة إلى حسابات تفصيلية لمستوى الإضاءة لضمان توفير إضاءة مناسبة في المناطق الحرجة مثل أجنحة المرضى ومناطق العيادات الخارجية والممرات ومساحات الدعم الطبي.",
+          "وقد تم تصميم هذا الحل لتلبية معايير الإضاءة الصارمة في مجال الرعاية الصحية – تعزيز الرؤية وراحة المرضى والكفاءة التشغيلية – مع توفير الطاقة على المدى الطويل وتقليل متطلبات الصيانة."
+        ]
+      },
+      "scope": {
+        "en": ["Supply of B-LED luminaires", "Lux-level calculations"],
+        "ar": ["توريد وحدات إنارة B-LED", "حسابات مستوى الإضاءة (اللوكس)"]
+      },
+      "image": "projects/sultan-qaboos-hospital.jpg",
+      "gallery": ["projects/sultan-qaboos-hospital-2.jpg"],
+      "hasRealPhoto": true
+    },
+    {
+      "slug": "woqod-tower",
+      "category": "hotels-towers",
+      "sector": "commercial-offices",
+      "featured": false,
+      "title": {
+        "en": "Woqod Tower",
+        "ar": "برج وقود"
+      },
+      "projectName": {
+        "en": "LED Lighting Supply – Woqod Tower",
+        "ar": "توريد إضاءة LED – برج وقود"
+      },
+      "client": {
+        "en": "Confidential",
+        "ar": "سرّي"
+      },
+      "consultant": null,
+      "contractor": null,
+      "year": 2019,
+      "location": {
+        "en": "Doha, Qatar",
+        "ar": "الدوحة، قطر"
+      },
+      "country": "QA",
+      "summary": {
+        "en": "Energy-efficient indoor and outdoor LED lighting for Woqod Tower in Doha, covering office floors, common areas, service zones and external perimeters.",
+        "ar": "أنظمة إضاءة LED داخلية وخارجية موفرة للطاقة لبرج وقود في الدوحة، تشمل طوابق المكاتب والمناطق المشتركة ومناطق الخدمة والمحيط الخارجي."
+      },
+      "body": {
+        "en": [
+          "In 2019, Al Bayan Electronics & LED Technologies (B-LED) successfully supplied energy-efficient LED lighting systems for the prestigious Woqod Tower in Doha, Qatar.",
+          "The project included the delivery of indoor and outdoor B-LED luminaires, along with lux-level calculations to ensure compliance with performance, safety, and visual standards across office floors, common areas, service zones, and external perimeters.",
+          "This installation provided significant improvements in energy savings, lighting quality, and maintenance efficiency, reinforcing B-LED’s role in supporting corporate and high-rise developments with advanced, future-ready lighting solutions."
+        ],
+        "ar": [
+          "في عام 2019، نجحت شركة البيان للإلكترونيات وتقنيات الـ LED (B-LED) في توريد أنظمة إضاءة LED الموفرة للطاقة لبرج وقود المرموق في الدوحة، قطر.",
+          "تضمن المشروع تسليم مصابيح الإنارة الداخلية والخارجية بتقنية B-LED، إلى جانب حسابات مستوى الإضاءة (اللوكس) لضمان الامتثال لمعايير الأداء والسلامة والمعايير البصرية في طوابق المكاتب والمناطق المشتركة ومناطق الخدمة والمحيط الخارجي.",
+          "وقد وفرت هذه التركيبات تحسينات كبيرة في توفير الطاقة وجودة الإضاءة وكفاءة الصيانة، مما يعزز دور شركة B-LED في دعم مشاريع الشركات والمباني الشاهقة بحلول إضاءة متطورة وجاهزة للمستقبل."
+        ]
+      },
+      "scope": {
+        "en": ["Supply of indoor & outdoor LED luminaires", "Lux-level calculations"],
+        "ar": ["توريد وحدات إنارة LED داخلية وخارجية", "حسابات مستوى الإضاءة (اللوكس)"]
+      },
+      "image": "projects/woqod-tower.jpg",
+      "gallery": [
+        "projects/woqod-tower-2.jpg",
+        "projects/woqod-tower-3.jpg",
+        "projects/woqod-tower-4.jpg",
+        "projects/woqod-tower-5.jpg",
+        "projects/woqod-tower-6.jpg",
+        "projects/woqod-tower-7.jpg"
+      ],
+      "hasRealPhoto": true
+    },
+    {
+      "slug": "al-bayt-stadium",
+      "category": "stadiums",
+      "sector": "sports-outdoor",
+      "featured": false,
+      "title": {
+        "en": "Al-Bayt Stadium",
+        "ar": "استاد البيت"
+      },
+      "projectName": {
+        "en": "Al-Bayt Stadium – External LED Lighting Supply",
+        "ar": "استاد البيت – توريد إضاءة LED خارجية"
+      },
+      "client": {
+        "en": "Aspire Zone",
+        "ar": "أسباير زون"
+      },
+      "consultant": null,
+      "contractor": null,
+      "year": 2018,
+      "location": {
+        "en": "Al Khor, Qatar",
+        "ar": "الخور، قطر"
+      },
+      "country": "QA",
+      "summary": {
+        "en": "Supply of durable, energy-saving LED luminaires for the external and infrastructure lighting around Al-Bayt Stadium, including lux calculations for access roads and service areas.",
+        "ar": "توريد وحدات إنارة LED متينة وموفرة للطاقة لأعمال الإضاءة الخارجية والبنية التحتية المحيطة باستاد البيت، مع حسابات الإضاءة لطرق الوصول ومناطق الخدمات."
+      },
+      "body": {
+        "en": [
+          "As part of Qatar’s flagship sports infrastructure, Al Bayan Electronics & LED Technologies (B-LED) was selected to supply high-efficiency LED lighting systems for the Al-Bayt Stadium project in collaboration with Aspire Zone.",
+          "B-LED contributed to the external and infrastructure lighting works surrounding the stadium, delivering durable, energy-saving LED luminaires designed to withstand the outdoor environment while maintaining high visual performance. The lighting scope included lux calculations to ensure safe and compliant illumination across access roads and service areas.",
+          "This project reflects B-LED’s ongoing commitment to excellence and its strategic role in delivering smart lighting solutions for world-class venues aligned with Qatar’s ambitious development goals."
+        ],
+        "ar": [
+          "كجزء من البنية التحتية الرياضية الرائدة في قطر، تم اختيار شركة البيان للإلكترونيات وتقنيات الـ LED (B-LED) لتوريد أنظمة إضاءة LED عالية الكفاءة لمشروع استاد البيت بالتعاون مع أسباير زون.",
+          "وقد ساهمت شركة B-LED في أعمال الإضاءة الخارجية وأعمال البنية التحتية المحيطة بالملعب، حيث قامت بتوفير مصابيح LED المتينة والموفرة للطاقة والمصممة لتحمل البيئة الخارجية مع الحفاظ على الأداء البصري العالي. وقد تضمن نطاق الإضاءة حسابات معدل الإضاءة لضمان توفير إضاءة آمنة ومتوافقة مع معايير الإضاءة في طرق الوصول ومناطق الخدمات.",
+          "ويعكس هذا المشروع التزام شركة B-LED المستمر بالتميز ودورها الاستراتيجي في تقديم حلول الإضاءة الذكية للمواقع ذات المستوى العالمي بما يتماشى مع أهداف التنمية الطموحة في قطر."
+        ]
+      },
+      "scope": {
+        "en": ["Supply of LED luminaires for external & infrastructure lighting", "Lux-level calculations"],
+        "ar": ["توريد وحدات إنارة LED للإضاءة الخارجية وإضاءة البنية التحتية", "حسابات مستوى الإضاءة (اللوكس)"]
+      },
+      "image": "projects/al-bayt-stadium.jpg",
+      "gallery": ["projects/al-bayt-stadium-2.jpg", "projects/al-bayt-stadium-3.jpg", "projects/al-bayt-stadium-4.jpg"],
+      "hasRealPhoto": true
+    },
+    {
+      "slug": "al-fardan-exchange",
+      "category": "buildings-villas",
+      "sector": "commercial-offices",
+      "featured": false,
+      "title": {
+        "en": "Al Fardan Exchange",
+        "ar": "الفردان للصرافة"
+      },
+      "projectName": {
+        "en": "LED Lighting Retrofit – Al Fardan Exchange",
+        "ar": "تحديث إضاءة LED – الفردان للصرافة"
+      },
+      "client": {
+        "en": "Al Fardan Exchange",
+        "ar": "شركة الفردان للصرافة"
+      },
+      "consultant": null,
+      "contractor": null,
+      "year": 2018,
+      "location": {
+        "en": "Doha, Qatar",
+        "ar": "الدوحة، قطر"
+      },
+      "country": "QA",
+      "summary": {
+        "en": "Full LED lighting retrofit for the branches and facilities of Al Fardan Exchange, with lux-level calculations for customer areas, workspaces and service counters.",
+        "ar": "تحديث كامل للإضاءة بتقنية LED في فروع ومرافق الفردان للصرافة، مع حسابات مستوى الإضاءة لمناطق العملاء ومساحات العمل وكاونترات الخدمة."
+      },
+      "body": {
+        "en": [
+          "In 2018, Al Bayan Electronics & LED Technologies (B-LED) completed a full LED lighting retrofit for the branches and facilities of Al Fardan Exchange, one of Qatar’s leading financial service providers.",
+          "The project involved the replacement of conventional lighting systems with energy-efficient LED fittings, providing significantly improved brightness, reduced heat emissions, and long-term energy savings. Lux-level calculations were performed to ensure optimal lighting in customer areas, workspaces, and service counters, contributing to a modern and efficient environment.",
+          "This retrofit supports Al Fardan’s vision of operational excellence and sustainability by adopting smarter, more efficient technologies across its infrastructure."
+        ],
+        "ar": [
+          "في عام 2018، استكملت شركة البيان للإلكترونيات وتقنيات الـ LED (B-LED) تحديثًا كاملًا لإضاءة LED لفروع ومرافق شركة الفردان للصرافة، إحدى الشركات الرائدة في مجال الخدمات المالية في قطر.",
+          "وقد تضمن المشروع استبدال أنظمة الإضاءة التقليدية بتجهيزات LED الموفرة للطاقة، مما أدى إلى تحسين السطوع بشكل كبير وتقليل الانبعاثات الحرارية وتوفير الطاقة على المدى الطويل. تم إجراء حسابات مستوى الإضاءة (اللوكس) لضمان الإضاءة المثلى في مناطق العملاء ومساحات العمل وكاونترات الخدمة، مما ساهم في توفير بيئة عصرية وفعّالة.",
+          "يدعم هذا التحديث رؤية الفردان للتميز التشغيلي والاستدامة من خلال اعتماد تقنيات أكثر ذكاءً وكفاءة في بنيتها التحتية."
+        ]
+      },
+      "scope": {
+        "en": ["Full LED lighting retrofit", "Lux-level calculations"],
+        "ar": ["تحديث كامل للإضاءة إلى تقنية LED", "حسابات مستوى الإضاءة (اللوكس)"]
+      },
+      "image": "projects/al-fardan-exchange.jpg",
+      "gallery": [],
+      "hasRealPhoto": true
+    },
+    {
+      "slug": "al-jazeera-network-outdoor-lighting",
+      "category": "landscape-gardens",
+      "sector": "commercial-offices",
+      "featured": true,
+      "title": {
+        "en": "Outdoor Lighting Renovation at Al Jazeera Network",
+        "ar": "تجديد الإضاءة الخارجية في شبكة الجزيرة الإخبارية"
+      },
+      "projectName": {
+        "en": "Outdoor Lighting Renovation – Al Jazeera Network (JSC)",
+        "ar": "تجديد الإضاءة الخارجية – شبكة قنوات الجزيرة"
+      },
+      "client": {
+        "en": "Al Jazeera Network Channels",
+        "ar": "قنوات شبكة الجزيرة"
+      },
+      "consultant": null,
+      "contractor": null,
+      "year": 2018,
+      "location": {
+        "en": "Doha, Qatar",
+        "ar": "الدوحة، قطر"
+      },
+      "country": "QA",
+      "summary": {
+        "en": "Replacement and redesign of facade, landscape and perimeter lighting at the Al Jazeera Network headquarters in Doha, using architectural-grade LED luminaires.",
+        "ar": "استبدال وإعادة تصميم إضاءة الواجهات والمناظر الطبيعية والمحيط الخارجي في مقر شبكة الجزيرة بالدوحة، باستخدام وحدات إنارة LED معمارية."
+      },
+      "body": {
+        "en": [
+          "In 2018, Al Bayan Electronics & LED Technologies (B-LED) carried out a comprehensive outdoor lighting renovation for the headquarters of Al Jazeera Network Channels in Doha.",
+          "The scope of work included the replacement and redesign of facade lighting, landscape illumination, and urban perimeter lighting, utilizing architectural-grade LED luminaires tailored to the visual and functional needs of the network’s prestigious campus. Detailed lux calculations were implemented to ensure balanced brightness, visual comfort, and energy savings while enhancing the site’s aesthetic appeal.",
+          "This project showcased B-LED’s ability to integrate technical performance with creative lighting design, elevating both security and ambience for one of the region’s most influential media institutions."
+        ],
+        "ar": [
+          "في عام 2018، قامت شركة البيان للإلكترونيات وتقنيات الـ LED (B-LED) بتنفيذ عملية تجديد شاملة للإضاءة الخارجية لمقر قنوات شبكة الجزيرة في الدوحة.",
+          "وشمل نطاق العمل استبدال وإعادة تصميم إضاءة الواجهات وإضاءة المناظر الطبيعية وإضاءة المحيط الحضري باستخدام مصابيح LED من الدرجة المعمارية المصممة خصيصًا لتلبية الاحتياجات البصرية والوظيفية لمقر الشبكة المرموق. تم تنفيذ حسابات مفصّلة لمعدل الإضاءة لضمان توازن السطوع والراحة البصرية وتوفير الطاقة مع تعزيز المظهر الجمالي للموقع.",
+          "وقد أظهر هذا المشروع قدرة شركة B-LED على دمج الأداء الفني مع التصميم الإبداعي للإضاءة، مما أدى إلى رفع مستوى الأمان والأجواء المحيطة لواحدة من أكثر المؤسسات الإعلامية تأثيرًا في المنطقة."
+        ]
+      },
+      "scope": {
+        "en": ["Facade, landscape & perimeter lighting", "Lux-level calculations"],
+        "ar": ["إضاءة الواجهات والمناظر الطبيعية والمحيط الخارجي", "حسابات مستوى الإضاءة (اللوكس)"]
+      },
+      "image": "projects/al-jazeera-network-outdoor-lighting.jpg",
+      "gallery": [
+        "projects/al-jazeera-network-outdoor-lighting-2.jpg",
+        "projects/al-jazeera-network-outdoor-lighting-3.jpg",
+        "projects/al-jazeera-network-outdoor-lighting-4.jpg"
+      ],
+      "hasRealPhoto": true
+    },
+    {
+      "slug": "al-jazeera-network-street-lighting",
+      "category": "roads-tunnels",
+      "sector": "infrastructure-roads",
+      "featured": false,
+      "title": {
+        "en": "Al Jazeera Network Street Lighting Renovation",
+        "ar": "تجديد إنارة الشوارع في شبكة الجزيرة"
+      },
+      "projectName": {
+        "en": "Street Lighting Renovation – Al Jazeera Network Premises",
+        "ar": "تجديد إنارة الشوارع – مباني شبكة الجزيرة"
+      },
+      "client": {
+        "en": "Al Jazeera Network Channels",
+        "ar": "قنوات شبكة الجزيرة"
+      },
+      "consultant": null,
+      "contractor": null,
+      "year": 2018,
+      "location": {
+        "en": "Doha, Qatar",
+        "ar": "الدوحة، قطر"
+      },
+      "country": "QA",
+      "summary": {
+        "en": "Comprehensive street lighting renovation for the internal and surrounding roads of the Al Jazeera Network premises in Doha, replacing outdated fittings with LED luminaires.",
+        "ar": "تجديد شامل لإنارة الطرق الداخلية والمحيطة بمقر شبكة الجزيرة في الدوحة، مع استبدال الإضاءة القديمة بوحدات إنارة LED حديثة."
+      },
+      "body": {
+        "en": [
+          "In 2018, Al Bayan Electronics & LED Technologies (B-LED) was selected to execute a comprehensive street lighting renovation for the internal and surrounding roads of the Al Jazeera Network premises in Doha.",
+          "The project included the replacement of outdated lighting systems with modern LED luminaires, along with detailed lux-level calculations to ensure proper illumination, energy efficiency, and visual comfort across access roads and perimeter areas.",
+          "This renovation improved safety, enhanced the nighttime aesthetics of the network’s facilities, and contributed to reducing operational energy costs—reflecting Al Jazeera’s ongoing investment in sustainable, high-performance infrastructure."
+        ],
+        "ar": [
+          "في عام 2018، اختيرت شركة البيان للإلكترونيات وتقنيات الـ LED (B-LED) لتنفيذ عملية تجديد شاملة لإضاءة الشوارع في الطرق الداخلية والمحيطة بمبنى شبكة الجزيرة في الدوحة.",
+          "تضمن المشروع استبدال أنظمة الإضاءة القديمة بمصابيح LED حديثة، إلى جانب إجراء حسابات تفصيلية لمستوى الإضاءة لضمان الإضاءة المناسبة وكفاءة الطاقة والراحة البصرية في الطرقات والمناطق المحيطة.",
+          "وقد أدى هذا التجديد إلى تحسين السلامة وتعزيز جماليات مرافق الشبكة ليلاً، وساهم في خفض تكاليف الطاقة التشغيلية – مما يعكس استثمار الجزيرة المستمر في البنية التحتية المستدامة عالية الأداء."
+        ]
+      },
+      "scope": {
+        "en": ["Replacement of outdated lighting with LED luminaires", "Lux-level calculations"],
+        "ar": ["استبدال الإضاءة القديمة بوحدات إنارة LED", "حسابات مستوى الإضاءة (اللوكس)"]
+      },
+      "image": "projects/al-jazeera-network-street-lighting.jpg",
+      "gallery": [
+        "projects/al-jazeera-network-street-lighting-2.jpg",
+        "projects/al-jazeera-network-street-lighting-3.jpg",
+        "projects/al-jazeera-network-street-lighting-4.jpg"
+      ],
+      "hasRealPhoto": true
+    },
+    {
+      "slug": "al-rayyan-stadium",
+      "category": "stadiums",
+      "sector": "sports-outdoor",
+      "featured": false,
+      "title": {
+        "en": "Al-Rayyan Stadium",
+        "ar": "استاد الريان"
+      },
+      "projectName": {
+        "en": "Al-Rayyan Stadium – LED Lighting Supply",
+        "ar": "استاد الريان – توريد إضاءة LED"
+      },
+      "client": {
+        "en": "Supreme Committee for Delivery & Legacy",
+        "ar": "اللجنة العليا للمشاريع والإرث"
+      },
+      "consultant": null,
+      "contractor": null,
+      "year": 2018,
+      "location": {
+        "en": "Al-Rayyan, Qatar",
+        "ar": "الريان، قطر"
+      },
+      "country": "QA",
+      "summary": {
+        "en": "Supply of high-efficiency B-LED luminaires for the access routes, surrounding areas and support facilities of Al-Rayyan Stadium, for the Supreme Committee for Delivery & Legacy.",
+        "ar": "توريد وحدات إنارة B-LED عالية الكفاءة لطرق الوصول والمناطق المحيطة والمرافق المساندة في استاد الريان، لصالح اللجنة العليا للمشاريع والإرث."
+      },
+      "body": {
+        "en": [
+          "As part of Qatar’s preparations for hosting global sporting events, Al Bayan Electronics & LED Technologies (B-LED) proudly contributed to the Al-Rayyan Stadium project by supplying advanced LED lighting systems.",
+          "The project involved the supply of high-efficiency B-LED luminaires, along with precise lux-level calculations to ensure optimal lighting performance across designated stadium access routes, surrounding areas, and support facilities. All lighting solutions were selected to meet the highest international standards for safety, energy efficiency, and visual comfort.",
+          "This collaboration with the Supreme Committee for Delivery & Legacy marked a significant milestone in B-LED’s commitment to supporting Qatar’s national infrastructure and sporting legacy."
+        ],
+        "ar": [
+          "في إطار استعدادات دولة قطر لاستضافة الفعاليات الرياضية العالمية، تفخر شركة البيان للإلكترونيات وتقنيات الـ LED (B-LED) بمساهمتها في مشروع استاد الريان من خلال توريد أنظمة إضاءة LED المتطورة.",
+          "وقد تضمن المشروع توريد وحدات إنارة B-LED عالية الكفاءة مع إجراء حسابات دقيقة لمستوى الإضاءة لضمان الأداء الأمثل للإضاءة في طرق الوصول إلى الاستاد والمناطق المحيطة به والمرافق المساندة. تم اختيار جميع حلول الإضاءة لتلبية أعلى المعايير الدولية للسلامة وكفاءة الطاقة والراحة البصرية.",
+          "ويمثل هذا التعاون مع اللجنة العليا للمشاريع والإرث علامة فارقة في التزام شركة B-LED بدعم البنية التحتية الوطنية والإرث الرياضي لدولة قطر."
+        ]
+      },
+      "scope": {
+        "en": ["Supply of B-LED luminaires", "Lux-level calculations"],
+        "ar": ["توريد وحدات إنارة B-LED", "حسابات مستوى الإضاءة (اللوكس)"]
+      },
+      "image": "projects/al-rayyan-stadium.jpg",
+      "gallery": [],
+      "hasRealPhoto": true
+    },
+    {
+      "slug": "ashghal-tower",
+      "category": "hotels-towers",
+      "sector": "commercial-offices",
+      "featured": false,
+      "title": {
+        "en": "Ashghal Tower",
+        "ar": "برج أشغال"
+      },
+      "projectName": {
+        "en": "LED Lighting Renovation – Ashghal Tower",
+        "ar": "تجديد إضاءة LED – برج أشغال"
+      },
+      "client": {
+        "en": "Ashghal – Public Works Authority",
+        "ar": "أشغال – هيئة الأشغال العامة"
+      },
+      "consultant": null,
+      "contractor": null,
+      "year": 2018,
+      "location": {
+        "en": "Doha, Qatar",
+        "ar": "الدوحة، قطر"
+      },
+      "country": "QA",
+      "summary": {
+        "en": "LED lighting renovation of Ashghal Tower, one of the Public Works Authority’s key administrative buildings in Doha, across interior and exterior areas.",
+        "ar": "تجديد إضاءة برج أشغال بتقنية LED، أحد المباني الإدارية الرئيسية لهيئة الأشغال العامة في الدوحة، في المناطق الداخلية والخارجية."
+      },
+      "body": {
+        "en": [
+          "In 2018, Al Bayan Electronics & LED Technologies (B-LED) was selected by Ashghal to carry out the LED lighting renovation of Ashghal Tower, one of the authority’s key administrative buildings in Doha.",
+          "The project included the supply of high-efficiency B-LED luminaires and detailed lux-level calculations to ensure optimal lighting performance across various interior and exterior areas. The renovation aimed to modernize the tower’s lighting infrastructure, improve energy efficiency, and provide a visually enhanced working environment for staff and visitors.",
+          "This project reflects B-LED’s ability to support government facilities with smart lighting upgrades, combining technical compliance with sustainable design."
+        ],
+        "ar": [
+          "في عام 2018، اختارت هيئة الأشغال العامة (أشغال) شركة البيان للإلكترونيات وتقنيات الـ LED (B-LED) لتنفيذ مشروع تجديد إضاءة LED لبرج أشغال الذي يعد أحد المباني الإدارية الرئيسية للهيئة في الدوحة.",
+          "تضمن المشروع توريد وحدات إنارة B-LED عالية الكفاءة وحسابات مفصلة لمستوى الإضاءة لضمان الأداء الأمثل للإضاءة في مختلف المناطق الداخلية والخارجية. تهدف عملية التجديد إلى تحديث البنية التحتية للإضاءة في البرج وتحسين كفاءة الطاقة وتوفير بيئة عمل محسنة بصرياً للموظفين والزوار.",
+          "يعكس هذا المشروع قدرة شركة B-LED على دعم المنشآت الحكومية بتحديثات الإضاءة الذكية، والجمع بين الامتثال التقني والتصميم المستدام."
+        ]
+      },
+      "scope": {
+        "en": ["LED lighting renovation", "Supply of B-LED luminaires", "Lux-level calculations"],
+        "ar": ["تجديد الإضاءة بتقنية LED", "توريد وحدات إنارة B-LED", "حسابات مستوى الإضاءة (اللوكس)"]
+      },
+      "image": "projects/ashghal-tower.jpg",
+      "gallery": ["projects/ashghal-tower-2.jpg", "projects/ashghal-tower-3.jpg", "projects/ashghal-tower-4.jpg"],
+      "hasRealPhoto": true
+    },
+    {
+      "slug": "doha-industrial-area",
+      "category": "roads-tunnels",
+      "sector": "infrastructure-roads",
+      "featured": false,
+      "title": {
+        "en": "Doha Industrial Area",
+        "ar": "منطقة الدوحة الصناعية"
+      },
+      "projectName": {
+        "en": "LED Lighting Supply – Doha Industrial Area",
+        "ar": "توريد إضاءة LED – منطقة الدوحة الصناعية"
+      },
+      "client": {
+        "en": "Ashghal – Public Works Authority",
+        "ar": "أشغال – هيئة الأشغال العامة"
+      },
+      "consultant": null,
+      "contractor": null,
+      "year": 2018,
+      "location": {
+        "en": "Doha, Qatar",
+        "ar": "الدوحة، قطر"
+      },
+      "country": "QA",
+      "summary": {
+        "en": "Supply of LED street lighting for the road network of the Doha Industrial Area, selected by Ashghal, with lux-level calculations to road safety standards.",
+        "ar": "توريد أنظمة إنارة الشوارع بتقنية LED لشبكة طرق منطقة الدوحة الصناعية بتكليف من هيئة الأشغال العامة (أشغال)، مع حسابات مستوى الإضاءة وفق معايير السلامة على الطرق."
+      },
+      "body": {
+        "en": [
+          "In 2018, Al Bayan Electronics & LED Technologies (B-LED) was selected by Ashghal to supply LED street lighting systems for the Doha Industrial Area, a key commercial and logistics hub in Qatar.",
+          "The scope of work included the delivery of high-performance B-LED luminaires designed for industrial-scale road networks, supported by detailed lux-level calculations to ensure compliance with road safety standards, optimal visibility, and long-term energy efficiency.",
+          "This project played a vital role in improving night-time safety and operational functionality within one of Qatar’s most active industrial zones, reinforcing B-LED’s leadership in large-scale infrastructure lighting."
+        ],
+        "ar": [
+          "في عام 2018، تم اختيار شركة البيان للإلكترونيات وتقنيات الـ LED (B-LED) من قبل هيئة الأشغال العامة (أشغال) لتوريد أنظمة إنارة الشوارع بتقنية LED لمنطقة الدوحة الصناعية، وهي مركز تجاري ولوجستي رئيسي في قطر.",
+          "وشمل نطاق العمل تسليم مصابيح B-LED عالية الأداء مصممة لشبكات الطرق على النطاق الصناعي، مدعومة بحسابات مفصلة لمستوى الإضاءة لضمان الامتثال لمعايير السلامة على الطرق والرؤية المثلى وكفاءة الطاقة على المدى الطويل.",
+          "وقد لعب هذا المشروع دورًا حيويًا في تحسين السلامة الليلية والوظائف التشغيلية في واحدة من أكثر المناطق الصناعية نشاطًا في قطر، مما يعزز ريادة شركة B-LED في مجال إضاءة البنية التحتية واسعة النطاق."
+        ]
+      },
+      "scope": {
+        "en": ["Supply of LED street lighting", "Lux-level calculations"],
+        "ar": ["توريد إنارة شوارع LED", "حسابات مستوى الإضاءة (اللوكس)"]
+      },
+      "image": "projects/doha-industrial-area.jpg",
+      "gallery": [],
+      "hasRealPhoto": false
+    },
+    {
+      "slug": "education-city-stadium",
+      "category": "stadiums",
+      "sector": "sports-outdoor",
+      "featured": false,
+      "title": {
+        "en": "Education City Stadium",
+        "ar": "استاد المدينة التعليمية"
+      },
+      "projectName": {
+        "en": "Education City Stadium – LED Lighting Supply",
+        "ar": "استاد المدينة التعليمية – توريد إضاءة LED"
+      },
+      "client": {
+        "en": "Qatar Foundation",
+        "ar": "مؤسسة قطر"
+      },
+      "consultant": null,
+      "contractor": null,
+      "year": 2018,
+      "location": {
+        "en": "Education City, Doha, Qatar",
+        "ar": "المدينة التعليمية، الدوحة، قطر"
+      },
+      "country": "QA",
+      "summary": {
+        "en": "Supply of advanced LED lighting for the roadways, access areas and perimeter zones of Education City Stadium, in partnership with Qatar Foundation.",
+        "ar": "توريد أنظمة إضاءة LED متطورة للطرق ومناطق الوصول والمناطق المحيطة باستاد المدينة التعليمية، بالشراكة مع مؤسسة قطر."
+      },
+      "body": {
+        "en": [
+          "In partnership with Qatar Foundation, Al Bayan Electronics & LED Technologies (B-LED) contributed to the development of Education City Stadium, a flagship venue and architectural icon within Doha’s Education City.",
+          "As part of the stadium’s infrastructure works, B-LED was entrusted with the supply of advanced LED lighting systems to support the surrounding roadways, access areas, and perimeter zones. The lighting design included lux-level calculations to ensure safety, compliance, and visual harmony with the stadium’s modern architecture.",
+          "This project is a reflection of B-LED’s commitment to sustainable innovation and excellence, especially within high-impact developments connected to education, sports, and national vision initiatives."
+        ],
+        "ar": [
+          "بالشراكة مع مؤسسة قطر، ساهمت شركة البيان للإلكترونيات وتقنيات الـ LED (B-LED) في تطوير استاد المدينة التعليمية، وهو مكان رئيسي وأيقونة معمارية في المدينة التعليمية بالدوحة.",
+          "وكجزء من أعمال البنية التحتية للملعب، عُهد إلى شركة B-LED بتوريد أنظمة إضاءة LED المتطورة لدعم الطرق المحيطة بالملعب ومناطق الوصول والمناطق المحيطة به. وقد تضمن تصميم الإضاءة حسابات مستوى الإضاءة (اللوكس) لضمان السلامة والتوافق والتناغم البصري مع الهندسة المعمارية الحديثة للملعب.",
+          "هذا المشروع هو انعكاس لالتزام شركة B-LED بالابتكار والتميز المستدامين، خاصةً في المشاريع عالية التأثير المرتبطة بالتعليم والرياضة ومبادرات الرؤية الوطنية."
+        ]
+      },
+      "scope": {
+        "en": ["Supply of LED lighting for surrounding roads, access & perimeter areas", "Lux-level calculations"],
+        "ar": ["توريد إضاءة LED للطرق المحيطة ومناطق الوصول والمحيط الخارجي", "حسابات مستوى الإضاءة (اللوكس)"]
+      },
+      "image": "projects/education-city-stadium.jpg",
+      "gallery": ["projects/education-city-stadium-2.jpg", "projects/education-city-stadium-3.jpg"],
+      "hasRealPhoto": true
+    },
+    {
+      "slug": "private-industrial-buildings",
+      "category": "buildings-villas",
+      "sector": "industrial-warehouses",
+      "featured": false,
+      "title": {
+        "en": "Various Private Industrial Buildings",
+        "ar": "مبانٍ صناعية خاصة متنوعة"
+      },
+      "projectName": {
+        "en": "LED Lighting for Private Industrial Facilities",
+        "ar": "إضاءة LED للمنشآت الصناعية الخاصة"
+      },
+      "client": {
+        "en": "Private Sector Clients",
+        "ar": "عملاء من القطاع الخاص"
+      },
+      "consultant": null,
+      "contractor": null,
+      "year": 2018,
+      "location": {
+        "en": "Various Locations, Qatar",
+        "ar": "مواقع مختلفة، قطر"
+      },
+      "country": "QA",
+      "summary": {
+        "en": "Industrial-grade LED lighting for privately owned warehouses, workshops and production facilities across Qatar.",
+        "ar": "حلول إضاءة LED صناعية لمستودعات وورش ومنشآت إنتاج مملوكة للقطاع الخاص في مختلف أنحاء قطر."
+      },
+      "body": {
+        "en": [
+          "In 2018, Al Bayan Electronics & LED Technologies (B-LED) was contracted to supply industrial-grade LED lighting solutions for a series of privately owned industrial buildings across Qatar.",
+          "These projects involved the delivery of durable, high-output luminaires suited for warehouses, workshops, and production environments, all supported by precise lux-level calculations to ensure optimal brightness, safety, and compliance with industrial lighting standards.",
+          "The installations contributed to improved working conditions, reduced energy costs, and longer maintenance cycles — solidifying B-LED’s position as a trusted provider of reliable, high-efficiency lighting systems for the industrial sector."
+        ],
+        "ar": [
+          "في عام 2018، تم التعاقد مع شركة البيان للإلكترونيات وتقنيات الـ LED (B-LED) لتوريد حلول إضاءة LED الصناعية لسلسلة من المباني الصناعية المملوكة للقطاع الخاص في جميع أنحاء قطر.",
+          "تضمنت هذه المشاريع تسليم وحدات إنارة متينة وعالية الإنتاجية تناسب المستودعات وورش العمل وبيئات الإنتاج، وكلها مدعومة بحسابات دقيقة لمستوى الإضاءة (اللوكس) لضمان السطوع الأمثل والسلامة والامتثال لمعايير الإضاءة الصناعية.",
+          "وقد ساهمت هذه التركيبات في تحسين ظروف العمل، وخفض تكاليف الطاقة، وإطالة الفترات بين أعمال الصيانة – مما عزز مكانة B-LED كمزوّد موثوق لأنظمة الإضاءة عالية الكفاءة للقطاع الصناعي."
+        ]
+      },
+      "scope": {
+        "en": ["Supply of high-output industrial LED luminaires", "Lux-level calculations"],
+        "ar": ["توريد وحدات إنارة LED صناعية عالية القدرة", "حسابات مستوى الإضاءة (اللوكس)"]
+      },
+      "image": "projects/private-industrial-buildings.jpg",
+      "gallery": [
+        "projects/private-industrial-buildings-2.jpg",
+        "projects/private-industrial-buildings-3.jpg",
+        "projects/private-industrial-buildings-4.jpg",
+        "projects/private-industrial-buildings-5.jpg",
+        "projects/private-industrial-buildings-6.jpg",
+        "projects/private-industrial-buildings-7.jpg"
+      ],
+      "hasRealPhoto": true
+    },
+    {
+      "slug": "qatar-public-works-authority",
+      "category": "buildings-villas",
+      "sector": "commercial-offices",
+      "featured": false,
+      "title": {
+        "en": "Qatar Public Works Authority",
+        "ar": "هيئة الأشغال العامة القطرية"
+      },
+      "projectName": {
+        "en": "LED Lighting Supply – Qatar Public Works Authority",
+        "ar": "توريد إضاءة LED – هيئة الأشغال العامة القطرية"
+      },
+      "client": {
+        "en": "Ashghal – Public Works Authority",
+        "ar": "أشغال – هيئة الأشغال العامة"
+      },
+      "consultant": null,
+      "contractor": null,
+      "year": 2018,
+      "location": {
+        "en": "Doha, Qatar",
+        "ar": "الدوحة، قطر"
+      },
+      "country": "QA",
+      "summary": {
+        "en": "High-efficiency LED lighting for facilities operated by the Public Works Authority (Ashghal), covering office areas, infrastructure zones and outdoor environments.",
+        "ar": "أنظمة إضاءة LED عالية الكفاءة للمرافق التي تديرها هيئة الأشغال العامة (أشغال)، تشمل مناطق المكاتب ومناطق البنية التحتية والبيئات الخارجية."
+      },
+      "body": {
+        "en": [
+          "In 2018, Al Bayan Electronics & LED Technologies (B-LED) delivered high-efficiency LED lighting systems for facilities operated by the Qatar Public Works Authority (Ashghal).",
+          "The project included the supply of B-LED luminaires along with detailed lux-level calculations to ensure precise, uniform lighting across office areas, infrastructure zones, and outdoor environments. The goal was to enhance operational efficiency, safety, and energy performance, in line with national standards and sustainability goals.",
+          "This collaboration reinforced B-LED’s position as a reliable lighting partner for government infrastructure, capable of delivering tailored, performance-driven solutions for public institutions."
+        ],
+        "ar": [
+          "في عام 2018، قامت شركة البيان للإلكترونيات وتقنيات الـ LED (B-LED) بتسليم أنظمة إضاءة LED عالية الكفاءة للمرافق التي تديرها هيئة الأشغال العامة القطرية (أشغال).",
+          "تضمن المشروع توريد وحدات إنارة B-LED إلى جانب حسابات تفصيلية لمستوى الإضاءة لضمان إضاءة دقيقة وموحدة في مناطق المكاتب ومناطق البنية التحتية والبيئات الخارجية. وكان الهدف هو تعزيز الكفاءة التشغيلية والسلامة وأداء الطاقة بما يتماشى مع المعايير الوطنية وأهداف الاستدامة.",
+          "وقد عزز هذا التعاون من مكانة شركة B-LED كشريك إضاءة موثوق به للبنية التحتية الحكومية، وقادر على تقديم حلول مصممة خصيصًا للمؤسسات العامة تعتمد على الأداء."
+        ]
+      },
+      "scope": {
+        "en": ["Supply of B-LED luminaires", "Lux-level calculations"],
+        "ar": ["توريد وحدات إنارة B-LED", "حسابات مستوى الإضاءة (اللوكس)"]
+      },
+      "image": "projects/qatar-public-works-authority.webp",
+      "gallery": [
+        "projects/qatar-public-works-authority-2.jpg",
+        "projects/qatar-public-works-authority-3.jpg",
+        "projects/qatar-public-works-authority-4.jpg"
+      ],
+      "hasRealPhoto": true
+    },
+    {
+      "slug": "warwick-hotel-doha",
+      "category": "hotels-towers",
+      "sector": "hospitality",
+      "featured": false,
+      "title": {
+        "en": "Warwick Hotel Doha",
+        "ar": "فندق وارويك الدوحة"
+      },
+      "projectName": {
+        "en": "LED Lighting Supply – Warwick Hotel Doha",
+        "ar": "توريد إضاءة LED – فندق وارويك الدوحة"
+      },
+      "client": {
+        "en": "Warwick Hotel Doha",
+        "ar": "فندق وارويك الدوحة"
+      },
+      "consultant": null,
+      "contractor": null,
+      "year": 2018,
+      "location": {
+        "en": "Doha, Qatar",
+        "ar": "الدوحة، قطر"
+      },
+      "country": "QA",
+      "summary": {
+        "en": "Customised indoor and outdoor LED lighting for Warwick Hotel Doha, covering guest rooms, lobbies, restaurants, corridors and landscape areas.",
+        "ar": "حل إضاءة LED مخصص للمساحات الداخلية والخارجية في فندق وارويك الدوحة، يشمل غرف النزلاء والردهات والمطاعم والممرات والمناطق الخارجية."
+      },
+      "body": {
+        "en": [
+          "In 2018, Al Bayan Electronics & LED Technologies (B-LED) partnered with Warwick Hotel Doha to provide a customized LED lighting solution aligned with the hotel’s commitment to luxury, comfort, and operational efficiency.",
+          "The scope included the supply of high-efficiency B-LED luminaires for both indoor and outdoor spaces, accompanied by precise lux-level calculations to ensure optimal illumination in guest rooms, lobbies, restaurants, corridors, and landscape areas. The lighting system was carefully selected to enhance the hotel’s ambiance while significantly reducing energy consumption and maintenance costs.",
+          "This project highlights B-LED’s ability to deliver tailored lighting solutions that align with the exacting standards of the hospitality industry."
+        ],
+        "ar": [
+          "في عام 2018، تعاونت شركة البيان للإلكترونيات وتقنيات الـ LED (B-LED) مع فندق وارويك الدوحة لتوفير حل إضاءة LED مخصص يتماشى مع التزام الفندق بالفخامة والراحة والكفاءة التشغيلية.",
+          "شمل نطاق العمل توريد وحدات إضاءة B-LED عالية الكفاءة للمساحات الداخلية والخارجية، مصحوبة بحسابات دقيقة لمستويات الإضاءة لضمان الإنارة المثلى في غرف النزلاء والردهات والمطاعم والممرات والمناطق الخارجية. تم اختيار نظام الإضاءة بعناية لتعزيز أجواء الفندق مع تقليل استهلاك الطاقة وتكاليف الصيانة بشكل كبير.",
+          "يسلط هذا المشروع الضوء على قدرة B-LED على تقديم حلول إضاءة مخصصة تتوافق مع المعايير الدقيقة لقطاع الضيافة."
+        ]
+      },
+      "scope": {
+        "en": ["Supply of indoor & outdoor LED luminaires", "Lux-level calculations"],
+        "ar": ["توريد وحدات إنارة LED داخلية وخارجية", "حسابات مستوى الإضاءة (اللوكس)"]
+      },
+      "image": "projects/warwick-hotel-doha.jpg",
+      "gallery": ["projects/warwick-hotel-doha-2.jpg", "projects/warwick-hotel-doha-3.jpg"],
+      "hasRealPhoto": true
+    },
+    {
+      "slug": "al-tadamon-motors-trading",
+      "category": "buildings-villas",
+      "sector": "retail-malls",
+      "featured": false,
+      "title": {
+        "en": "Al Tadamon Motors & Trading",
+        "ar": "التضامن للسيارات والتجارة"
+      },
+      "projectName": {
+        "en": "LED Lighting Supply – Al Tadamon Motors & Trading",
+        "ar": "توريد إضاءة LED – التضامن للسيارات والتجارة"
+      },
+      "client": {
+        "en": "Al Tadamon Motors & Trading",
+        "ar": "شركة التضامن للسيارات والتجارة"
+      },
+      "consultant": null,
+      "contractor": null,
+      "year": 2017,
+      "location": {
+        "en": "Doha, Qatar",
+        "ar": "الدوحة، قطر"
+      },
+      "country": "QA",
+      "summary": {
+        "en": "High-performance LED lighting for the showroom and operational facilities of Al Tadamon Motors & Trading, designed for automotive retail and service environments.",
+        "ar": "أنظمة إضاءة LED عالية الأداء لصالة العرض والمرافق التشغيلية لشركة التضامن للسيارات والتجارة، مصممة لبيئات بيع السيارات وخدماتها."
+      },
+      "body": {
+        "en": [
+          "In 2017, Al Bayan Electronics & LED Technologies (B-LED) partnered with Al Tadamon Motors & Trading to enhance the lighting infrastructure across their showroom and operational facilities.",
+          "The project involved the supply of high-performance LED lighting systems, engineered to meet the specific needs of automotive retail and service environments. Through carefully conducted lux-level calculations, B-LED ensured optimal illumination levels that improved visual clarity, enhanced customer experience, and supported employee productivity.",
+          "The result was a modern, energy-efficient lighting upgrade that aligned with the brand’s standards while significantly reducing long-term energy consumption and maintenance costs."
+        ],
+        "ar": [
+          "في عام 2017، أبرمت شركة البيان للإلكترونيات وتقنيات الـ LED (B-LED) شراكة مع شركة التضامن للسيارات والتجارة لتحسين البنية التحتية للإضاءة في صالة العرض والمرافق التشغيلية.",
+          "وقد تضمن المشروع توريد أنظمة إضاءة LED عالية الأداء، والتي تم تصميمها لتلبية الاحتياجات الخاصة ببيئات البيع بالتجزئة والخدمات الخاصة بالسيارات. من خلال حسابات مستوى الإضاءة التي تم إجراؤها بعناية، ضمنت B-LED مستويات الإضاءة المثلى التي حسّنت الوضوح البصري وعززت تجربة العملاء ودعمت إنتاجية الموظفين.",
+          "وكانت النتيجة ترقية الإضاءة الحديثة الموفرة للطاقة والتي تتماشى مع معايير العلامة التجارية مع تقليل استهلاك الطاقة وتكاليف الصيانة على المدى الطويل بشكل كبير."
+        ]
+      },
+      "scope": {
+        "en": ["Supply of LED luminaires", "Lux-level calculations"],
+        "ar": ["توريد وحدات إنارة LED", "حسابات مستوى الإضاءة (اللوكس)"]
+      },
+      "image": "projects/al-tadamon-motors-trading.jpg",
+      "gallery": ["projects/al-tadamon-motors-trading-2.jpg"],
+      "hasRealPhoto": true
+    },
+    {
+      "slug": "barwa-village-street-lighting",
+      "category": "roads-tunnels",
+      "sector": "infrastructure-roads",
+      "featured": false,
+      "title": {
+        "en": "Barwa Village Street Lighting",
+        "ar": "إنارة شوارع قرية بروة"
+      },
+      "projectName": {
+        "en": "Barwa Village Street Lighting Retrofit",
+        "ar": "تحديث إنارة شوارع قرية بروة"
+      },
+      "client": {
+        "en": "Barwa Real Estate",
+        "ar": "شركة بروة العقارية"
+      },
+      "consultant": null,
+      "contractor": null,
+      "year": 2017,
+      "location": {
+        "en": "Barwa Village, Qatar",
+        "ar": "قرية بروة، قطر"
+      },
+      "country": "QA",
+      "summary": {
+        "en": "Street lighting upgrade in Barwa Village for Barwa Real Estate, replacing High-Pressure Sodium fittings with high-efficiency LED luminaires.",
+        "ar": "تحديث إنارة الشوارع في قرية بروة لصالح شركة بروة العقارية، باستبدال مصابيح الصوديوم عالي الضغط بوحدات إنارة LED عالية الكفاءة."
+      },
+      "body": {
+        "en": [
+          "In alignment with Qatar’s energy efficiency goals, Al Bayan Electronics & LED Technologies (B-LED) partnered with Barwa Real Estate to upgrade the street lighting infrastructure in Barwa Village.",
+          "The project focused on the replacement of outdated High-Pressure Sodium (HPS) fixtures with high-efficiency LED luminaires, delivering improved lighting quality, reduced energy consumption, and lower maintenance costs. The transition to LED enhanced visibility across the residential and commercial areas while supporting Barwa’s commitment to sustainability and long-term urban development.",
+          "This early retrofit project marked a significant step in B-LED’s contribution to smart lighting transformation in key developments across Qatar."
+        ],
+        "ar": [
+          "تماشياً مع أهداف كفاءة الطاقة في قطر، تعاونت شركة البيان للإلكترونيات وتقنيات الـ LED (B-LED) مع شركة بروة العقارية لتحديث البنية التحتية لإنارة الشوارع في قرية بروة.",
+          "وقد ركز المشروع على استبدال تركيبات الصوديوم عالي الضغط (HPS) القديمة بمصابيح LED عالية الكفاءة، مما أدى إلى تحسين جودة الإضاءة وتقليل استهلاك الطاقة وخفض تكاليف الصيانة. وقد أدى الانتقال إلى مصابيح LED إلى تحسين الرؤية في المناطق السكنية والتجارية مع دعم التزام بروة بالاستدامة والتنمية الحضرية طويلة الأجل.",
+          "يمثّل هذا المشروع، وهو من أوائل مشاريع التحديث، خطوة مهمة في مساهمة شركة B-LED في التحوّل نحو الإضاءة الذكية في المشاريع الرئيسية في جميع أنحاء قطر."
+        ]
+      },
+      "scope": {
+        "en": ["Replacement of HPS fittings with LED luminaires"],
+        "ar": ["استبدال مصابيح الصوديوم عالي الضغط (HPS) بوحدات إنارة LED"]
+      },
+      "image": "projects/barwa-village-street-lighting.jpg",
+      "gallery": ["projects/barwa-village-street-lighting-2.jpg"],
+      "hasRealPhoto": true
+    },
+    {
+      "slug": "omar-bin-al-khattab-mosque",
+      "category": "mosques",
+      "sector": "mosques-public",
+      "featured": false,
+      "title": {
+        "en": "Omar bin Al-Khattab Mosque",
+        "ar": "مسجد عمر بن الخطاب رضي الله عنه"
+      },
+      "projectName": {
+        "en": "LED Lighting Supply – Omar bin Al-Khattab Mosque",
+        "ar": "توريد إضاءة LED – مسجد عمر بن الخطاب رضي الله عنه"
+      },
+      "client": {
+        "en": "Arabilla Trading & Contracting Co. W.L.L",
+        "ar": "شركة أرابيلا للتجارة والمقاولات ذ.م.م"
+      },
+      "consultant": null,
+      "contractor": null,
+      "year": null,
+      "location": {
+        "en": "Qatar",
+        "ar": "قطر"
+      },
+      "country": "QA",
+      "summary": {
+        "en": "Lighting design and supply of tailored LED luminaires for the interior and exterior of Omar bin Al-Khattab Mosque, delivered with Arabilla Trading & Contracting.",
+        "ar": "تصميم الإضاءة وتوريد وحدات إنارة LED مخصصة للمساحات الداخلية والخارجية لمسجد عمر بن الخطاب، بالتعاون مع شركة أرابيلا للتجارة والمقاولات."
+      },
+      "body": {
+        "en": [
+          "Al Bayan Electronics & LED Technologies (B-LED) was honored to contribute to the lighting design and supply for the Omar bin Al-Khattab Mosque, a project delivered in collaboration with Arabilla Trading & Contracting Co. W.L.L.",
+          "The scope included the supply of tailored LED luminaires designed to enhance both the spiritual ambiance and architectural beauty of the mosque’s interior and exterior spaces. B-LED also conducted lux-level calculations to ensure optimal illumination for worship areas, ablution spaces, walkways, and façade elements—while maintaining energy efficiency and lighting uniformity.",
+          "This project showcases B-LED’s capability in delivering custom lighting solutions that are respectful of religious architecture and supportive of both functionality and serenity."
+        ],
+        "ar": [
+          "تشرفت شركة البيان للإلكترونيات وتقنيات الـ LED (B-LED) بالمساهمة في تصميم وتوريد الإضاءة لمسجد عمر بن الخطاب، وهو مشروع تم تسليمه بالتعاون مع شركة أرابيلا للتجارة والمقاولات ذ.م.م.",
+          "وشمل نطاق العمل توريد وحدات إنارة LED مصممة خصيصًا لتعزيز الأجواء الروحانية والجمال المعماري للمساحات الداخلية والخارجية للمسجد. كما أجرت شركة B-LED أيضًا حسابات مستوى الإضاءة (اللوكس) لضمان الإضاءة المثلى لأماكن العبادة وأماكن الوضوء والممرات وعناصر الواجهة – مع الحفاظ على كفاءة الطاقة وتوحيد الإضاءة.",
+          "يُظهر هذا المشروع قدرة شركة B-LED على تقديم حلول إضاءة مخصصة تحترم الهندسة المعمارية الدينية وتدعم كلاً من الأداء الوظيفي والصفاء."
+        ]
+      },
+      "scope": {
+        "en": ["Lighting design", "Supply of LED luminaires", "Lux-level calculations"],
+        "ar": ["تصميم الإضاءة", "توريد وحدات إنارة LED", "حسابات مستوى الإضاءة (اللوكس)"]
+      },
+      "image": "projects/omar-bin-al-khattab-mosque.jpg",
+      "gallery": ["projects/omar-bin-al-khattab-mosque-2.jpg", "projects/omar-bin-al-khattab-mosque-3.jpg"],
+      "hasRealPhoto": true
+    }
+  ]
+}

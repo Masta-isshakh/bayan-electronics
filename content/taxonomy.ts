@@ -31,13 +31,3 @@ export type ProductCategory = (typeof productCategories)[number];
 
 export const specKeys = ["efficacy", "cct", "cri", "ipik", "power", "warranty"] as const;
 export type SpecKey = (typeof specKeys)[number];
-
-export const projectSlugs = [
-  "project-01",
-  "project-02",
-  "project-03",
-  "project-04",
-  "project-05",
-  "project-06",
-] as const;
-export type ProjectSlug = (typeof projectSlugs)[number];

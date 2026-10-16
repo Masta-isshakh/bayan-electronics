@@ -68,7 +68,11 @@ export default function MobileMenu({ open, onClose, returnFocusTo, logo, isCurre
     };
   }, [open, onClose, returnFocusTo]);
 
-  const links = [{ key: "products", href: "/products" }, ...primaryNav, { key: "contact", href: "/contact" }] as const;
+  const links = [
+    { key: "products", href: "/products" },
+    { key: "catalogue", href: "/catalogue" },
+    ...primaryNav,
+  ] as const;
 
   return (
     <MotionScope>

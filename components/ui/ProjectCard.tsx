@@ -1,6 +1,5 @@
 import { Image } from "@/components/ui/Image";
-import type { Project } from "@/content/projects";
-import { getSector } from "@/content/solutions";
+import { getProjectCategory, type Project } from "@/content/projects";
 import { Link } from "@/i18n/navigation";
 import type { Locale } from "@/i18n/locales";
 import { cn } from "@/lib/cn";
@@ -17,7 +16,7 @@ type ProjectCardProps = {
   priority?: boolean;
 };
 
-/** Project tile: image (revealed once with a clip-path wipe), sector tag, sample badge, title. */
+/** Project tile: image (revealed once with a clip-path wipe), category tag, title, location and year. */
 export function ProjectCard({
   project,
   locale,
@@ -28,7 +27,7 @@ export function ProjectCard({
   priority = false,
 }: ProjectCardProps) {
   const Heading = headingLevel;
-  const sector = getSector(project.sector);
+  const category = getProjectCategory(project.category);
 
   return (
     <Link href={`/projects/${project.slug}`} className="group block">
@@ -46,10 +45,14 @@ export function ProjectCard({
         />
       </span>
       <span className="mt-4 flex flex-wrap items-center gap-2">
-        {sector && <Tag>{sector.name[locale]}</Tag>}
+        {category && <Tag>{category.name[locale]}</Tag>}
         {project.isPlaceholder && <SampleBadge label={sampleLabel} />}
       </span>
       <Heading className="mt-3 text-xl font-medium text-fg">{project.title[locale]}</Heading>
+      <span className="mt-1 block text-sm text-fg-muted">
+        {project.location[locale]}
+        {project.year ? ` · ${project.year}` : ""}
+      </span>
     </Link>
   );
 }

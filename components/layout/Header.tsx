@@ -8,6 +8,8 @@ import { useIdle } from "@/components/motion/useIdle";
 import { buttonClasses } from "@/components/ui/Button";
 import { cn } from "@/lib/cn";
 import { LanguageSwitch } from "./LanguageSwitch";
+import { QuoteListLink } from "./QuoteListLink";
+import { SearchButton } from "@/components/search/SearchButton";
 import { primaryNav, type NavFamily, type NavFeature, type NavLabels } from "./nav";
 
 // Menus (and motion with them) load after first paint; they mount on idle or first open.
@@ -139,6 +141,8 @@ export function Header({ logo, families, feature, labels }: HeaderProps) {
 
           <div className="flex items-center gap-4">
             <LanguageSwitch labels={labels.language} className="hidden lg:flex" />
+            <SearchButton labels={labels.search} />
+            <QuoteListLink label={labels.quoteList} onClick={closePanel} />
             <Link href="/quote" onClick={closePanel} className={buttonClasses("lumen", "min-h-11 max-sm:hidden")}>
               {labels.requestQuote}
             </Link>

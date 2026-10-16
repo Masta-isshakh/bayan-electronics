@@ -5,8 +5,10 @@ import { AlertCircle, Check, Mail, MessageCircle } from "lucide-react";
 import { Button, buttonClasses } from "@/components/ui/Button";
 import { cn } from "@/lib/cn";
 import type { InquiryInput } from "@/lib/amplify-client";
+import { formatQuoteItems, quoteList, useQuoteList } from "@/lib/quote-list";
 import { controlClass, FormField } from "./FormField";
 import type { FormLabels } from "./labels";
+import { QuoteListEditor } from "./QuoteListEditor";
 
 export type FormVariant = "contact" | "quote" | "distributor";
 
@@ -69,7 +71,13 @@ const fieldOrder: FieldName[] = [
   "message",
 ];
 
-function validate(values: Values, variant: FormVariant, labels: FormLabels, today: string | undefined): Errors {
+function validate(
+  values: Values,
+  variant: FormVariant,
+  labels: FormLabels,
+  today: string | undefined,
+  quoteItems: number,
+): Errors {
   const errors: Errors = {};
   if (!values.name.trim()) errors.name = labels.errors.nameRequired;
   if (!values.email.trim()) errors.email = labels.errors.emailRequired;
@@ -83,7 +91,8 @@ function validate(values: Values, variant: FormVariant, labels: FormLabels, toda
   }
   if (variant === "quote") {
     if (!values.role) errors.role = labels.errors.roleRequired;
-    if (!values.productFamily) errors.productFamily = labels.errors.familyRequired;
+    // A quote list names the products; the family is then optional.
+    if (!values.productFamily && quoteItems === 0) errors.productFamily = labels.errors.familyRequired;
     if (values.deliveryDate && today && values.deliveryDate < today) errors.deliveryDate = labels.errors.dateInvalid;
   }
   return errors;
@@ -129,6 +138,8 @@ export function InquiryForm({ variant, locale, labels, families, whatsappNumber,
   const statusRef = useRef<HTMLDivElement>(null);
   const isQuote = variant === "quote";
   const isDistributor = variant === "distributor";
+  const listed = useQuoteList();
+  const quoteItems = isQuote ? listed : [];
 
   // Client-only: today's date (static pages must not bake in the build date) and a
   // product family preselected from ?family=…
@@ -149,12 +160,12 @@ export function InquiryForm({ variant, locale, labels, families, whatsappNumber,
     const next = { ...values, [name]: event.target.value };
     setValues(next);
     if (name !== "website" && errors[name]) {
-      setErrors((current) => ({ ...current, [name]: validate(next, variant, labels, today)[name] }));
+      setErrors((current) => ({ ...current, [name]: validate(next, variant, labels, today, quoteItems.length)[name] }));
     }
   }
 
   function check(name: FieldName) {
-    setErrors((current) => ({ ...current, [name]: validate(values, variant, labels, today)[name] }));
+    setErrors((current) => ({ ...current, [name]: validate(values, variant, labels, today, quoteItems.length)[name] }));
   }
 
   // Loads the Amplify client in the background once the visitor starts typing.
@@ -164,7 +175,7 @@ export function InquiryForm({ variant, locale, labels, families, whatsappNumber,
 
   async function submit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    const found = validate(values, variant, labels, today);
+    const found = validate(values, variant, labels, today, quoteItems.length);
     setErrors(found);
     const firstInvalid = fieldOrder.find((name) => found[name]);
     if (firstInvalid) {
@@ -196,6 +207,7 @@ export function InquiryForm({ variant, locale, labels, families, whatsappNumber,
       quantity: values.quantity.trim() || undefined,
       projectName: values.projectName.trim() || undefined,
       deliveryDate: values.deliveryDate || undefined,
+      items: quoteItems.length ? formatQuoteItems(quoteItems) : undefined,
       message: values.message.trim() || undefined,
       page: window.location.pathname,
     };
@@ -208,6 +220,7 @@ export function InquiryForm({ variant, locale, labels, families, whatsappNumber,
           new Promise((_, reject) => window.setTimeout(() => reject(new Error("timeout")), SUBMIT_TIMEOUT_MS)),
         ]);
         rememberSubmission();
+        if (isQuote) quoteList.clear();
         setStatus("success");
       } catch (error) {
         setStatus(error instanceof BackendUnavailableError ? "fallback" : "error");
@@ -238,6 +251,13 @@ export function InquiryForm({ variant, locale, labels, families, whatsappNumber,
     [labels.quantity, values.quantity],
     [labels.projectName, values.projectName],
     [labels.deliveryDate, values.deliveryDate],
+    [
+      labels.quoteList.title,
+      quoteItems.length
+        ? `
+${formatQuoteItems(quoteItems)}`
+        : "",
+    ],
     [messageLabel, values.message],
   ]
     .filter(([, value]) => value)
@@ -355,6 +375,8 @@ export function InquiryForm({ variant, locale, labels, families, whatsappNumber,
           )}
         </FormField>
       )}
+
+      {isQuote && <QuoteListEditor items={quoteItems} labels={labels.quoteList} />}
 
       {isQuote && (
         <>

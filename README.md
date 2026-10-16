@@ -69,7 +69,6 @@ cropped by the layout. The client's original uploads are kept in `media-src/uplo
 | `products/<family>.jpg` × 11                                                                                          | 1600×2000                                | Product tiles and family pages                         |
 | `solutions/<sector>.jpg` × 9                                                                                          | 2400×1600                                | Sector cards and pages                                 |
 | `manufacturing/{smt-line,assembly-line,aging-racks,ip-test,thermal-imaging,calibration-bench,warehouse,engineer}.jpg` | 2400×1600                                | Process steps, laboratory                              |
-| `projects/project-01.jpg` … `project-06.jpg`                                                                          | 2400×1600                                | Projects                                               |
 | `about/factory-exterior.jpg`                                                                                          | 2880×1620                                | About, manufacturing                                   |
 | `about/team.jpg`                                                                                                      | 2400×1600                                | About (hidden until team details exist)                |
 | `brand/logo.svg`, `brand/logo-mark.svg`, `brand/logo-white.svg`                                                       | vector                                   | Real logo (the header switches automatically)          |
@@ -114,14 +113,17 @@ never overwrites, so it is safe to re-run after dropping in real files.
 
 ## Editing content
 
-| What                                                                                                        | Where                                  |
-| ----------------------------------------------------------------------------------------------------------- | -------------------------------------- |
-| Brand names, contact details, social links, hero video switch, stats, certifications, team, story, timeline | `content/site.ts`                      |
-| Product families (names, descriptors, specs, applications, downloads)                                       | `content/products.ts`                  |
-| Sectors                                                                                                     | `content/solutions.ts`                 |
-| Projects                                                                                                    | `content/projects.ts`                  |
-| Manufacturing steps, QC, laboratory, traceability, documents                                                | `content/manufacturing.ts`             |
-| Interface text (navigation, headings, forms, legal)                                                         | `messages/en.json`, `messages/ar.json` |
+| What                                                                                                          | Where                                       |
+| ------------------------------------------------------------------------------------------------------------- | ------------------------------------------- |
+| Brand names, contact details, offices, social links, hero video switch, stats, certifications, team, timeline | `content/site.ts`                           |
+| About, mission, vision, values, CEO message, organization, distributor benefits                               | `content/company.ts`                        |
+| Product families (names, descriptors, specs, applications, downloads)                                         | `content/products.ts`                       |
+| Sectors                                                                                                       | `content/solutions.ts`                      |
+| Product catalogue: 218 models, variants, categories (read by `content/catalogue.ts`)                          | `content/catalogue.json`                    |
+| Projects: 44 references, categories, photos (read by `content/projects.ts`)                                   | `content/projects.json`                     |
+| Old website URLs → new pages (product and project ids)                                                        | `content/legacy-urls.json`, `lib/legacy.ts` |
+| Manufacturing steps, QC, laboratory, traceability, documents                                                  | `content/manufacturing.ts`                  |
+| Interface text (navigation, headings, forms, legal)                                                           | `messages/en.json`, `messages/ar.json`      |
 
 Every text value has `en` and `ar`. Unconfirmed values are written as `"[[CONFIRM: what is needed]]"` (helper
 `pending()` in `lib/placeholder.ts`); the site hides them or shows "To be confirmed", and they are listed in
@@ -131,7 +133,12 @@ Every text value has `en` and `ar`. Unconfirmed values are written as `"[[CONFIR
 - Contact channels, the WhatsApp button, the map, social links, certifications, team and timeline appear
   automatically once their values are no longer placeholders.
 - "In numbers" (home) appears only when every figure in `site.stats` is confirmed.
-- Sample projects carry a visible "Sample" badge and are `noindex` until `isPlaceholder` is set to `false`.
+- The catalogue and the projects were imported from the previous website (b-ledtec.com). What the import
+  decided, and what to check, is in `docs/catalogue-review.md` and `docs/projects-review.md`.
+- Family spec ranges (power, efficacy, CCT, IP) are computed from the family's catalogue models
+  (`familySpecs` in `content/catalogue.ts`); CRI and warranty stay in `content/products.ts`.
+- Catalogue photos live in `public/media/catalogue/<model>.png|jpg`, project photos in
+  `public/media/projects/<slug>[-n].jpg`. Replace a file in place with a better one and keep its name.
 
 ## Project structure
 

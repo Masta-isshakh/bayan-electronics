@@ -1,155 +1,65 @@
-import { pending } from "@/lib/placeholder";
-import { assets } from "./assets";
-import type { FamilySlug, ProjectSlug, SectorSlug } from "./taxonomy";
+// Project references: 44 projects published on the company's previous website
+// (b-ledtec.com, English and Arabic posts), imported with their photos. Client names,
+// years and locations are the company's own; items to verify are in CONTENT-TODO.md.
+import data from "./projects.json";
+import { mediaImage } from "./assets";
+import type { SectorSlug } from "./taxonomy";
 import type { ImageAsset, Localized } from "./types";
 
-export type ProjectFactKey = "client" | "location" | "year" | "scope";
+export type ProjectCategory = { slug: string; name: Localized };
 
-export type Project = {
-  slug: ProjectSlug;
-  /** Sample record — shown with a visible "Sample" badge until replaced by a real project. */
-  isPlaceholder: boolean;
-  featured: boolean;
+type RawProject = {
+  slug: string;
+  category: string;
   sector: SectorSlug;
+  featured: boolean;
   title: Localized;
+  projectName: Localized;
+  client: Localized;
+  consultant: Localized | null;
+  contractor: Localized | null;
+  year: number | null;
+  location: Localized;
+  country: string;
   summary: Localized;
+  body: { en: string[]; ar: string[] };
+  scope: { en: string[]; ar: string[] } | null;
+  image: string | null;
+  gallery: string[];
+  hasRealPhoto: boolean;
+};
+
+export type Project = Omit<RawProject, "image" | "gallery"> & {
+  /** Kept for the sample-project features (badge, noindex); every imported project is real. */
+  isPlaceholder: false;
   image: ImageAsset;
   alt: Localized;
   gallery: { image: ImageAsset; alt: Localized }[];
-  facts: Record<ProjectFactKey, Localized>;
-  products: FamilySlug[];
 };
 
-function sampleFacts(project: string): Record<ProjectFactKey, Localized> {
-  return {
-    client: { en: pending(`client name — ${project}`), ar: pending(`client name (Arabic) — ${project}`) },
-    location: { en: pending(`location — ${project}`), ar: pending(`location (Arabic) — ${project}`) },
-    year: { en: pending(`completion year — ${project}`), ar: pending(`completion year — ${project}`) },
-    scope: { en: pending(`scope of supply — ${project}`), ar: pending(`scope of supply (Arabic) — ${project}`) },
-  };
-}
+export const projectCategories: ProjectCategory[] = data.categories;
 
-function sampleSummary(project: string): Localized {
-  return { en: pending(`project summary — ${project}`), ar: pending(`project summary (Arabic) — ${project}`) };
-}
+const altFor = (project: RawProject, index?: number): Localized => ({
+  en: `${project.title.en}, ${project.location.en}${index ? ` — photo ${index + 1}` : ""}`,
+  ar: `${project.title.ar}، ${project.location.ar}${index ? ` — صورة ${index + 1}` : ""}`,
+});
 
-export const projects: Project[] = [
-  {
-    slug: "project-01",
-    isPlaceholder: true,
-    featured: false,
-    sector: "commercial-offices",
-    title: { en: "Office tower, Doha — sample", ar: "برج مكاتب، الدوحة — نموذج" },
-    summary: sampleSummary("project-01"),
-    image: assets.projects["project-01"],
-    alt: { en: "Office tower entrance lit at dusk", ar: "مدخل برج مكاتب مضاء عند الغسق" },
-    gallery: [
-      { image: assets.home.factoryOverview, alt: { en: "LED panels in production", ar: "ألواح LED قيد الإنتاج" } },
-      {
-        image: assets.manufacturing.assemblyLine,
-        alt: { en: "Linear luminaires on the assembly line", ar: "وحدات إنارة خطية على خط التجميع" },
-      },
-    ],
-    facts: sampleFacts("project-01"),
-    products: ["led-panels", "linear-batten", "smart-connected"],
-  },
-  {
-    slug: "project-02",
-    isPlaceholder: true,
-    featured: false,
-    sector: "industrial-warehouses",
-    title: { en: "Logistics warehouse, Qatar — sample", ar: "مستودع لوجستي، قطر — نموذج" },
-    summary: sampleSummary("project-02"),
-    image: assets.projects["project-02"],
-    alt: { en: "Warehouse under high-bay lighting", ar: "مستودع تحت إنارة الأسقف العالية" },
-    gallery: [
-      {
-        image: assets.solutions["industrial-warehouses"],
-        alt: { en: "Industrial building at sunset", ar: "مبنى صناعي عند الغروب" },
-      },
-      {
-        image: assets.manufacturing.agingRacks,
-        alt: { en: "Luminaires switched on before dispatch", ar: "وحدات إنارة قيد التشغيل قبل الشحن" },
-      },
-    ],
-    facts: sampleFacts("project-02"),
-    products: ["high-bay-industrial", "linear-batten", "floodlights-area"],
-  },
-  {
-    slug: "project-03",
-    isPlaceholder: true,
-    featured: true,
-    sector: "infrastructure-roads",
-    title: { en: "Roadway lighting upgrade, Qatar — sample", ar: "تحديث إنارة طريق، قطر — نموذج" },
-    summary: sampleSummary("project-03"),
-    image: assets.projects["project-03"],
-    alt: { en: "Roundabout and road lit by LED street lights", ar: "دوّار وطريق مضاءان بوحدات إنارة شوارع LED" },
-    gallery: [
-      {
-        image: assets.solutions["infrastructure-roads"],
-        alt: { en: "Road interchange at night", ar: "تقاطع طرق ليلاً" },
-      },
-      {
-        image: assets.home.qcLab,
-        alt: { en: "Photometric testing in the laboratory", ar: "اختبار ضوئي في المختبر" },
-      },
-    ],
-    facts: sampleFacts("project-03"),
-    products: ["street-roadway", "smart-connected"],
-  },
-  {
-    slug: "project-04",
-    isPlaceholder: true,
-    featured: true,
-    sector: "hospitality",
-    title: { en: "Hotel courtyard and façades, Doha — sample", ar: "فناء فندق وواجهاته، الدوحة — نموذج" },
-    summary: sampleSummary("project-04"),
-    image: assets.projects["project-04"],
-    alt: { en: "Hotel courtyard with the Doha skyline at dusk", ar: "فناء فندق وأفق الدوحة عند الغسق" },
-    gallery: [
-      { image: assets.solutions.hospitality, alt: { en: "Courtyard and pool", ar: "فناء ومسبح" } },
-      { image: assets.home.dohaNight, alt: { en: "Doha waterfront at night", ar: "واجهة الدوحة البحرية ليلاً" } },
-    ],
-    facts: sampleFacts("project-04"),
-    products: ["downlights-spotlights", "led-strips-profiles", "facade-architectural"],
-  },
-  {
-    slug: "project-05",
-    isPlaceholder: true,
-    featured: true,
-    sector: "mosques-public",
-    title: { en: "Mosque interior and exterior, Qatar — sample", ar: "إنارة داخلية وخارجية لمسجد، قطر — نموذج" },
-    summary: sampleSummary("project-05"),
-    image: assets.projects["project-05"],
-    alt: { en: "Mosque and minaret floodlit at dusk", ar: "مسجد ومئذنة مضاءان بالكشافات عند الغسق" },
-    gallery: [
-      { image: assets.solutions["mosques-public"], alt: { en: "Mosque at night", ar: "مسجد ليلاً" } },
-      {
-        image: assets.manufacturing.thermalImaging,
-        alt: { en: "Luminaire checked under load", ar: "فحص وحدة إنارة أثناء التشغيل" },
-      },
-    ],
-    facts: sampleFacts("project-05"),
-    products: ["facade-architectural", "downlights-spotlights", "custom-oem"],
-  },
-  {
-    slug: "project-06",
-    isPlaceholder: true,
-    featured: false,
-    sector: "education-healthcare",
-    title: { en: "School campus, Qatar — sample", ar: "حرم مدرسي، قطر — نموذج" },
-    summary: sampleSummary("project-06"),
-    image: assets.projects["project-06"],
-    alt: { en: "Classroom lit by LED panels", ar: "فصل دراسي مضاء بألواح LED" },
-    gallery: [
-      { image: assets.solutions["education-healthcare"], alt: { en: "Classroom", ar: "فصل دراسي" } },
-      { image: assets.home.factoryOverview, alt: { en: "LED panels in production", ar: "ألواح LED قيد الإنتاج" } },
-    ],
-    facts: sampleFacts("project-06"),
-    products: ["led-panels", "linear-batten"],
-  },
-];
+export const projects: Project[] = (data.projects as RawProject[])
+  .map((project) => {
+    const gallery = project.gallery
+      .map((path, index) => ({ image: mediaImage(path), alt: altFor(project, index + 1) }))
+      .filter((item): item is { image: ImageAsset; alt: Localized } => Boolean(item.image));
+    const image = (project.image && mediaImage(project.image)) ?? gallery[0]?.image ?? null;
+    return image ? { ...project, isPlaceholder: false as const, image, alt: altFor(project), gallery } : null;
+  })
+  .filter((project): project is Project => Boolean(project));
 
 export function getProject(slug: string): Project | undefined {
   return projects.find((project) => project.slug === slug);
 }
+
+export function getProjectCategory(slug: string): ProjectCategory | undefined {
+  return projectCategories.find((category) => category.slug === slug);
+}
+
+export const projectsInSector = (sector: SectorSlug) => projects.filter((project) => project.sector === sector);

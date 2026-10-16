@@ -1,4 +1,5 @@
 import { pending } from "@/lib/placeholder";
+import { familySpecs } from "./catalogue";
 import { assets } from "./assets";
 import type { FamilySlug, ProductCategory, SectorSlug, SpecKey } from "./taxonomy";
 import type { Confirmable, ImageAsset, Localized } from "./types";
@@ -45,7 +46,7 @@ function pendingDownloads(family: string): Download[] {
   ];
 }
 
-export const products: ProductFamily[] = [
+const families: ProductFamily[] = [
   {
     slug: "led-panels",
     confirm: true,
@@ -298,6 +299,12 @@ export const products: ProductFamily[] = [
     downloads: pendingDownloads("Custom & OEM manufacturing"),
   },
 ];
+
+/** Families, with power / efficacy / CCT / IP computed from their catalogue models where they have any. */
+export const products: ProductFamily[] = families.map((family) => ({
+  ...family,
+  specs: { ...family.specs, ...familySpecs(family.slug) },
+}));
 
 export function getFamily(slug: string): ProductFamily | undefined {
   return products.find((family) => family.slug === slug);

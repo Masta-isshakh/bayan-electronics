@@ -12,5 +12,8 @@ export function generateStaticParams() {
 
 /** Default share card for every page under /[locale] that has no card of its own. */
 export default async function OpengraphImage() {
-  return renderOgImage({ kicker: site.brand.name.en, title: "Light, engineered and built in Qatar." });
+  return renderOgImage({
+    kicker: `${site.brand.trade} · ${site.brand.name.en}`,
+    title: "Light, engineered and built in Qatar.",
+  });
 }

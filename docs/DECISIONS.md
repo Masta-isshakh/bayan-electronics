@@ -235,3 +235,52 @@ The client uploaded 25 images and 3 clips. Originals are kept, unchanged, in `me
   has finished loading, or 1200 px before they scroll into view, instead of within 400 px — so fast scrolling no
   longer reveals empty tiles. The home sector rail switches its images to eager when it nears the viewport, so cards
   off to the side are loaded before they are swiped in.
+
+## Previous website integrated (2026-10-16)
+
+Source: the company's previous WordPress/WooCommerce site, b-ledtec.com (English and Arabic), read through its
+public pages and REST/Store APIs. Everything taken from it is the company's own published content.
+
+- **Branding.** The B-LED identity replaces the provisional palette: brand blue `#014B92`, a navy derived from it for
+  dark surfaces, and the amber of the logo's rays (`#F8B810`) as the accent. The solid header is brand blue, as on the
+  old site. Colours are tokens in `app/globals.css`; CSS modules reference them through `color-mix()`.
+- **Logo.** Only a 209×63 px PNG exists. Tracing it gave lumpy edges, so the logo was rebuilt as geometry measured from
+  the PNG at 8× (letters, rays), with the strapline set in Archivo outlines: `logo.svg`, `logo-white.svg`,
+  `logo-mark.svg` (favicon). CONTENT-TODO asks for the original artwork.
+- **Names.** The company's own usage: company name "Al Bayan Electronics & LED Technologies", trading brand "B-LED"
+  ("B-LED Lighting Technologies"). Titles read "… — B-LED | Al Bayan Electronics & LED Technologies"; Product JSON-LD
+  uses the brand "B-LED".
+- **Company content.** About (overview, offer, differentiators, mission, vision, six values), CEO message, organization
+  structure and distributor benefits come from the old site's pages, lightly copy-edited in both languages
+  (`content/company.ts`). Phone, email, Doha address, offices (Kuwait distributor, Oman) and social links are filled
+  in; inconsistent items carry `confirm` flags. No WhatsApp number is published, so the WhatsApp button stays off.
+- **Catalogue instead of a shop.** The old site was a grocery-theme WooCommerce shop (cart, checkout, wishlist, order
+  tracking, currency switcher, countdown sales, "delivery from 1 hour"). For a B2B manufacturer the useful parts are the
+  products and their data, so: a catalogue of 218 models / 1008 variants (`/catalogue`: category tree, search, IP and
+  CCT filters, shareable URLs), a page per model (specifications, variants table, related models, Product JSON-LD) and
+  a **quote list** that replaces cart and wishlist. Models or single variants are collected (localStorage, synced
+  across tabs), shown with quantities in the quotation form and sent with it (Inquiry `items`). No prices (the old ones
+  were partial and dated) and no online payment; both would need the client's decision.
+- **Catalogue data** was rebuilt from the per-family SKU structure because the old category tree was wrong (all
+  downlights were filed under Pendant › Decorative). Every choice is listed in `docs/catalogue-review.md`. Implausible
+  efficacies (> 200 lm/W, data errors) are left out of computed ranges.
+- **Catalogue photos** are small (most about 220 px). They are shown at no more than their own size on white cards
+  (1.5× on the model page) and the TODO asks for new photography. Cards are plain markup (an `<a>` and an `<img>` with a
+  pre-computed srcset): 218 hydrated link + image components cost about 500 ms of main-thread time on mobile.
+- **Families ↔ catalogue.** Each model maps to at most one of the 11 families (`familyOf`); family pages list their
+  models, and their spec ranges are computed from them. Retrofit lamps and indoor wall lights are catalogue-only.
+- **Projects.** The six sample projects are replaced by the 44 real references (2017–2021, Qatar and Oman) with their
+  photos and the company's own descriptions; three were recategorised as the import suggested. Each project maps to a
+  site sector, so sector pages list their real projects. Project pages show "related products" for the sector, not
+  "products used", because the old posts do not say which products were supplied. Three sector photos that were
+  placeholders now come from project galleries. Open questions are in `docs/projects-review.md`.
+- **Site search** (header, "/" or Ctrl/⌘+K): models, families, sectors, projects and pages in both languages, from a
+  static per-locale index (`/<locale>/search-index.json`) loaded only when search opens.
+- **Old URLs.** `middleware.ts` → `lib/legacy.ts`: old pages, products (`/shop/<sku>`, product categories), project
+  posts (English and Arabic ids) and Arabic page slugs redirect (301) to the new pages; the spam under `/archives/*`
+  and WordPress internals (`/feed`, `/wp-json`, …) answer 410 Gone with `noindex`, so search engines drop them once
+  this site serves the domain.
+- **News** is not carried over: every post on the old site is injected spam.
+- **Headline font fallback.** `.display` sets Archivo at 118 % width; next/font's Arial fallback is sized for 100 %, so
+  long titles gained a line when the font arrived (CLS 0.12–0.16 on the catalogue and distributor pages). Width-matched
+  fallback faces (Arial Bold × 116 %, Roboto Bold × 121 %) keep the line breaks: CLS 0.

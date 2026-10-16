@@ -8,6 +8,7 @@ import { ButtonLink } from "@/components/ui/Button";
 import { FilterBar, type FilterOption } from "@/components/ui/FilterBar";
 import { PageHeader } from "@/components/ui/PageHeader";
 import { assets } from "@/content/assets";
+import { catalogueStats } from "@/content/catalogue";
 import { getFamily, products } from "@/content/products";
 import { productCategories } from "@/content/taxonomy";
 import { type LocaleParams, resolveLocale } from "@/lib/i18n";
@@ -22,6 +23,7 @@ export async function generateMetadata({ params }: LocaleParams): Promise<Metada
 export default async function ProductsPage({ params }: LocaleParams) {
   const locale = await resolveLocale(params);
   const t = await getTranslations("products");
+  const tcat = await getTranslations("catalogue");
   const custom = getFamily("custom-oem");
 
   const options: FilterOption[] = [
@@ -41,6 +43,20 @@ export default async function ProductsPage({ params }: LocaleParams) {
         intro={t("intro")}
         crumbs={[{ label: t("title"), href: "/products" }]}
       />
+
+      <section aria-labelledby="catalogue-band-title" className="shell pb-12">
+        <div className="flex flex-col gap-6 rounded-frame border border-line bg-surface p-6 sm:flex-row sm:items-center sm:justify-between lg:p-10">
+          <div>
+            <h2 id="catalogue-band-title" className="text-2xl font-medium">
+              {tcat("title")}
+            </h2>
+            <p className="mt-2 text-base text-fg-muted">{tcat("intro", catalogueStats)}</p>
+          </div>
+          <ButtonLink href="/catalogue" className="shrink-0">
+            {tcat("browseAll")}
+          </ButtonLink>
+        </div>
+      </section>
 
       <section aria-label={t("title")} className="shell pb-24 lg:pb-32">
         <FilterBar param="category" options={options} label={t("filterLabel")} targetId="family-grid" />

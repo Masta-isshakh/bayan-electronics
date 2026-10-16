@@ -3,7 +3,7 @@
 // scripts/make-placeholders.mjs generates any missing file at that size, and real files
 // report their own pixel size from the manifest (same aspect ratio, never upscaled).
 import manifest from "./media-manifest.json";
-import { familySlugs, projectSlugs, sectorSlugs, type FamilySlug, type ProjectSlug, type SectorSlug } from "./taxonomy";
+import { familySlugs, sectorSlugs, type FamilySlug, type SectorSlug } from "./taxonomy";
 import type { ImageAsset, MediaFile } from "./types";
 
 type ManifestEntry = { v: string; placeholder: boolean; w?: number; h?: number };
@@ -70,7 +70,6 @@ export const assets = {
       mobile: { webm: media("manufacturing/line-mobile.webm"), mp4: media("manufacturing/line-mobile.mp4") },
     },
   },
-  projects: bySlug<ProjectSlug>(projectSlugs, (slug) => img(`projects/${slug}.jpg`, 2400, 1600)),
   about: {
     factoryExterior: img("about/factory-exterior.jpg", 2880, 1620),
     team: img("about/team.jpg", 2400, 1600),
@@ -87,6 +86,12 @@ export const assets = {
     noise: img("textures/noise.png", 256, 256),
   },
 } as const;
+
+/** A real image under public/media at its own pixel size (catalogue photos); null if missing. */
+export function mediaImage(path: string): ImageAsset | null {
+  const entry = files[path];
+  return entry?.w && entry.h ? img(path, entry.w, entry.h) : null;
+}
 
 /** Every image the site expects, for the placeholder generator. */
 export function listImages(node: unknown = assets): ImageAsset[] {

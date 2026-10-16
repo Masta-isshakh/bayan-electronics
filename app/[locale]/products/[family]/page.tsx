@@ -3,22 +3,27 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { getTranslations } from "next-intl/server";
 import { Download } from "lucide-react";
+import { ModelCard } from "@/components/catalogue/ModelCard";
 import { FamilyTile } from "@/components/products/FamilyTile";
 import { FlashlightGrid } from "@/components/products/FlashlightGrid";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { ButtonLink } from "@/components/ui/Button";
 import { CtaBand } from "@/components/ui/CtaBand";
 import { PageHeader } from "@/components/ui/PageHeader";
+import { modelsForFamily } from "@/content/catalogue";
 import { familiesBySlugs, getFamily, products } from "@/content/products";
 import { site } from "@/content/site";
 import { sectorsBySlugs } from "@/content/solutions";
 import { specKeys } from "@/content/taxonomy";
 import { Link } from "@/i18n/navigation";
+import { toCardData } from "@/lib/catalogue-view";
 import { resolveLocale } from "@/lib/i18n";
 import { isPlaceholder } from "@/lib/placeholder";
 import { absoluteUrl, pageMetadata } from "@/lib/seo";
 
 type Params = { params: Promise<{ locale: string; family: string }> };
+
+const MODELS_SHOWN = 12;
 
 export const dynamicParams = false;
 
@@ -50,6 +55,9 @@ export default async function FamilyPage({ params }: Params) {
   const applications = sectorsBySlugs(family.applications);
   const related = familiesBySlugs(family.related);
   const downloads = family.downloads.filter((download) => !isPlaceholder(download.href));
+  const tcat = await getTranslations("catalogue");
+  // Most-configurable models first.
+  const familyModels = [...modelsForFamily(family.slug)].sort((a, b) => b.variants.length - a.variants.length);
 
   return (
     <>
@@ -127,6 +135,31 @@ export default async function FamilyPage({ params }: Params) {
         </div>
       </section>
 
+      {familyModels.length > 0 && (
+        <section aria-labelledby="models-title" className="daylight section-y cv-auto border-t border-rule">
+          <div className="shell">
+            <div className="flex flex-wrap items-end justify-between gap-6">
+              <div>
+                <h2 id="models-title" className="display text-4xl">
+                  {tcat("modelsTitle")}
+                </h2>
+                <p className="mt-3 text-base text-fg-muted">{tcat("modelsIntro", { count: familyModels.length })}</p>
+              </div>
+              <ButtonLink href="/catalogue" variant="outline">
+                {tcat("browseAll")}
+              </ButtonLink>
+            </div>
+            <ul className="mt-10 grid grid-cols-2 gap-3 sm:gap-4 md:grid-cols-3 lg:grid-cols-4">
+              {familyModels.slice(0, MODELS_SHOWN).map((model) => (
+                <li key={model.slug}>
+                  <ModelCard model={toCardData(model, locale)} variantsLabel={tcat("variants")} />
+                </li>
+              ))}
+            </ul>
+          </div>
+        </section>
+      )}
+
       <section aria-labelledby="applications-title" className="section-y cv-auto">
         <div className="shell grid gap-12 lg:grid-cols-12">
           <div className="lg:col-span-6">
@@ -193,7 +226,7 @@ export default async function FamilyPage({ params }: Params) {
           category: family.name.en,
           url: absoluteUrl(locale, `/products/${family.slug}`),
           ...(family.image.placeholder ? {} : { image: `${site.url}${family.image.src}` }),
-          brand: { "@type": "Brand", name: site.brand.name[locale] },
+          brand: { "@type": "Brand", name: site.brand.trade },
           manufacturer: { "@type": "Organization", name: site.brand.legalName[locale], url: site.url },
         }}
       />

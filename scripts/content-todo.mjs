@@ -32,6 +32,14 @@ const manualItems = [
     "The B-LED logo in `public/media/brand/` is a vector rebuild of the 209×63 px PNG on the previous website. Supply the original artwork (AI, EPS, PDF or SVG) to replace `logo.svg`, `logo-white.svg` and `logo-mark.svg`.",
   ],
   [
+    "Product catalogue review",
+    "218 models / 1008 variants were imported from the previous website. `docs/catalogue-review.md` lists every inconsistency the import resolved (wattage/IP conflicts, truncated specs, a test item) and the photo situation: most product photos are about 220 px — new photography (≥ 1200 px, white background) is needed for a sharp catalogue.",
+  ],
+  [
+    "Project references review",
+    "44 projects were imported from the previous website. `docs/projects-review.md` lists the items to confirm: clients that look wrong (e.g. Ashghal for Oman projects), confidential clients, a missing year, possible duplicate bus-station entries, renders instead of photos, and usage rights for hotel and stadium photos.",
+  ],
+  [
     "Previous website (b-ledtec.com) is compromised",
     "The WordPress site carries ~900 injected casino/steroid/forex posts, hidden spam links inside its pages, and `/en/` redirects to a casino post. Clean or retire it (malware scan, delete spam posts, update WordPress and plugins, change all passwords) and request removal of the spam URLs in Google Search Console. When this site goes live on the domain, `/archives/*` returns 410 Gone (see middleware).",
   ],

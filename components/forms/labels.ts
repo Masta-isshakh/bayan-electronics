@@ -62,6 +62,16 @@ export async function getFormLabels() {
       email: t("fallback.email"),
       whatsapp: t("fallback.whatsapp"),
     },
+    quoteList: {
+      title: t("quoteList.title"),
+      empty: t("quoteList.empty"),
+      browse: t("quoteList.browse"),
+      addMore: t("quoteList.addMore"),
+      quantity: t("quoteList.quantity"),
+      increase: t("quoteList.increase"),
+      decrease: t("quoteList.decrease"),
+      remove: t("quoteList.remove"),
+    },
     mailSubject: t("mailSubject"),
     mailSubjectDistributor: t("mailSubjectDistributor"),
   };

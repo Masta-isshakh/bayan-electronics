@@ -207,13 +207,39 @@
 }
 
 /* Display headings: Archivo expanded. Arabic: Plex 700, no tracking, taller lines. */
+/* Headline fallback while Archivo loads: .display sets Archivo at 118 % width, which
+   next/font's Arial fallback (sized for 100 %) cannot match, so titles re-wrapped on swap
+   (CLS up to 0.16). These faces scale Arial Bold / Roboto Bold to the same text width
+   (measured: Archivo 650 @ 118 % = 116 % of Arial Bold), keeping the line breaks. */
+@font-face {
+  font-family: "Archivo Display Fallback";
+  src: local("Arial Bold"), local("Arial-BoldMT"), local("Arial");
+  font-weight: 400 900;
+  size-adjust: 116%;
+  ascent-override: 75.7%;
+  descent-override: 18.1%;
+  line-gap-override: 0%;
+}
+
+@font-face {
+  font-family: "Archivo Display Fallback Android";
+  src: local("Roboto Bold"), local("Roboto-Bold"), local("Roboto");
+  font-weight: 400 900;
+  size-adjust: 121%;
+  ascent-override: 72.6%;
+  descent-override: 17.4%;
+  line-gap-override: 0%;
+}
+
 @utility display {
+  font-family: var(--font-display, var(--font-body));
   font-weight: 650;
   font-stretch: 118%;
   letter-spacing: -0.02em;
   text-wrap: balance;
 
   &:lang(ar) {
+    font-family: var(--font-body);
     font-weight: 700;
     letter-spacing: 0;
     line-height: 1.25;

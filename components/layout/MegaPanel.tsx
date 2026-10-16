@@ -13,7 +13,7 @@ type MegaPanelProps = {
   families: NavFamily[];
   feature: NavFeature;
   onNavigate: () => void;
-  labels: Pick<NavLabels, "productsIntro" | "allProducts">;
+  labels: Pick<NavLabels, "productsIntro" | "allProducts" | "catalogueLink">;
 };
 
 /** Products mega panel: eleven families in three columns plus one featured family. Loaded lazily. */
@@ -34,13 +34,22 @@ export default function MegaPanel({ id, open, families, feature, onNavigate, lab
               <div className="col-span-8">
                 <div className="flex items-baseline justify-between gap-6 border-b border-line pb-4">
                   <p className="text-sm text-fg-muted">{labels.productsIntro}</p>
-                  <Link
-                    href="/products"
-                    onClick={onNavigate}
-                    className="text-sm font-medium text-lumen hover:underline"
-                  >
-                    {labels.allProducts}
-                  </Link>
+                  <span className="flex items-baseline gap-6">
+                    <Link
+                      href="/catalogue"
+                      onClick={onNavigate}
+                      className="text-sm font-medium text-fg hover:text-lumen hover:underline"
+                    >
+                      {labels.catalogueLink}
+                    </Link>
+                    <Link
+                      href="/products"
+                      onClick={onNavigate}
+                      className="text-sm font-medium text-lumen hover:underline"
+                    >
+                      {labels.allProducts}
+                    </Link>
+                  </span>
                 </div>
                 <ul className="mt-4 grid grid-flow-col grid-cols-3 grid-rows-4 gap-x-6 gap-y-1">
                   {families.map((family) => (

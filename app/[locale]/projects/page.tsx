@@ -4,8 +4,7 @@ import { CtaBand } from "@/components/ui/CtaBand";
 import { FilterBar, type FilterOption } from "@/components/ui/FilterBar";
 import { PageHeader } from "@/components/ui/PageHeader";
 import { ProjectCard } from "@/components/ui/ProjectCard";
-import { projects } from "@/content/projects";
-import { sectors } from "@/content/solutions";
+import { projectCategories, projects } from "@/content/projects";
 import { type LocaleParams, resolveLocale } from "@/lib/i18n";
 import { pageMetadata } from "@/lib/seo";
 
@@ -24,13 +23,11 @@ export default async function ProjectsPage({ params }: LocaleParams) {
 
   const options: FilterOption[] = [
     { value: "all", label: t("all"), summary: t("results", { count: projects.length }) },
-    ...sectors
-      .filter((sector) => projects.some((project) => project.sector === sector.slug))
-      .map((sector) => ({
-        value: sector.slug,
-        label: sector.name[locale],
-        summary: t("results", { count: projects.filter((project) => project.sector === sector.slug).length }),
-      })),
+    ...projectCategories.map((category) => ({
+      value: category.slug,
+      label: category.name[locale],
+      summary: t("results", { count: projects.filter((project) => project.category === category.slug).length }),
+    })),
   ];
 
   return (
@@ -43,10 +40,10 @@ export default async function ProjectsPage({ params }: LocaleParams) {
       />
 
       <section aria-label={t("title")} className="shell pb-24 lg:pb-32">
-        <FilterBar param="sector" options={options} label={t("filterLabel")} targetId="project-grid" />
+        <FilterBar param="category" options={options} label={t("filterLabel")} targetId="project-grid" />
         <ul id="project-grid" className="mt-8 grid gap-x-6 gap-y-14 sm:grid-cols-2 lg:grid-cols-3">
           {projects.map((project, index) => (
-            <li key={project.slug} data-categories={project.sector}>
+            <li key={project.slug} data-categories={project.category}>
               <ProjectCard
                 project={project}
                 priority={index === 0}

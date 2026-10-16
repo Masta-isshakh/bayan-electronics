@@ -1,6 +1,6 @@
 {
   "meta": {
-    "titleSuffix": "Al Bayan Electronics & LED Technologies",
+    "titleSuffix": "B-LED | Al Bayan Electronics & LED Technologies",
     "home": {
       "title": "LED lighting engineered and manufactured in Qatar",
       "description": "Al Bayan designs and manufactures LED luminaires and electronics in Qatar. Every fixture inspected, tested in our own laboratory and traceable from supplier batch to your project."
@@ -23,7 +23,7 @@
     },
     "projects": {
       "title": "Projects",
-      "description": "LED lighting projects delivered by Al Bayan across Qatar."
+      "description": "LED lighting projects by B-LED (Al Bayan Electronics & LED Technologies): stadiums, roads, hospitals, mosques, hotels and public buildings in Qatar and Oman."
     },
     "about": {
       "title": "About us",
@@ -56,6 +56,13 @@
     "distributor": {
       "title": "Become a distributor",
       "description": "Partner with B-LED Lighting Technologies: customised products, an experienced team and flexible production capacity for distributors."
+    },
+    "catalogue": {
+      "title": "Product catalogue",
+      "description": "Browse every B-LED LED luminaire: {models} models in {variants} variants of indoor, outdoor and industrial lighting, with specifications and quotation lists."
+    },
+    "model": {
+      "description": "{type} {code} by B-LED: {power}, {lumens}, {cct}, {ip}. Designed and built in Qatar — add it to a quotation list."
     }
   },
   "common": {
@@ -72,7 +79,7 @@
     "previous": "Previous",
     "next": "Next",
     "madeInQatar": "Manufactured in Qatar",
-    "whatsAppGreeting": "Hello Al Bayan, I would like to ask about LED lighting for a project in Qatar."
+    "whatsAppGreeting": "Hello B-LED, I would like to ask about LED lighting for a project."
   },
   "nav": {
     "primary": "Main",
@@ -89,7 +96,11 @@
     "menu": "Menu",
     "language": "Language",
     "switchLanguage": "Switch language to {language}",
-    "homeLink": "home page"
+    "homeLink": "home page",
+    "quoteList": "Quote list",
+    "catalogue": "Catalogue",
+    "catalogueIntro": "Every model, with specifications",
+    "catalogueLink": "Full catalogue — {count} models"
   },
   "a11y": {
     "skipToContent": "Skip to content",
@@ -115,7 +126,7 @@
   "hero": {
     "headline": "Light, engineered and built in Qatar.",
     "subline": "Every fixture inspected, tested in our own laboratory, and traceable from supplier batch to your project.",
-    "proofLabel": "Why Al Bayan",
+    "proofLabel": "Why B-LED",
     "proof": {
       "made": "Manufactured in Qatar",
       "lab": "In-house testing laboratory",
@@ -175,7 +186,7 @@
     },
     "projects": {
       "title": "Selected projects",
-      "intro": "A look at the kind of work we deliver across Qatar.",
+      "intro": "Stadiums, roads, hospitals and mosques we have lit across Qatar and Oman.",
       "viewAll": "All projects"
     },
     "stats": {
@@ -262,7 +273,7 @@
     "challenge": "The challenge",
     "approach": "How we approach it",
     "products": "Typical products",
-    "project": "Related project",
+    "project": "Projects in this sector",
     "ctaTitle": "Planning a project in this sector?",
     "ctaText": "Send us what you have — drawings, quantities or a short description — and we will reply with a proposal."
   },
@@ -288,9 +299,9 @@
   },
   "projects": {
     "title": "Projects",
-    "intro": "Lighting we have engineered, built and delivered for projects across Qatar.",
-    "filterLabel": "Filter by sector",
-    "all": "All sectors",
+    "intro": "LED lighting we have supplied for stadiums, hospitals, mosques, hotels, roads and public buildings — 44 projects in Qatar and Oman since 2017.",
+    "filterLabel": "Filter by category",
+    "all": "All projects",
     "results": "{count, plural, one {# project} other {# projects}}",
     "promiseTitle": "What every project receives",
     "promise": {
@@ -313,16 +324,21 @@
   "project": {
     "factsTitle": "Project facts",
     "facts": {
+      "project": "Project",
       "client": "Client",
+      "consultant": "Consultant",
+      "contractor": "Contractor",
       "location": "Location",
       "year": "Completed",
       "scope": "Scope of supply"
     },
     "sampleNote": "This is a sample project layout. The real project, its details and photographs will be published once confirmed.",
-    "productsTitle": "Products used",
+    "productsTitle": "Related products",
     "galleryLabel": "Project photographs",
     "ctaTitle": "Planning a similar project?",
-    "ctaText": "Tell us about the space and the timeline. We will reply with a proposal."
+    "ctaText": "Tell us about the space and the timeline. We will reply with a proposal.",
+    "aboutTitle": "About the project",
+    "moreTitle": "More projects: {category}"
   },
   "about": {
     "title": "About B-LED",
@@ -489,10 +505,20 @@
       "whatsapp": "Send on WhatsApp"
     },
     "mailSubject": "Inquiry from the website",
-    "mailSubjectDistributor": "Distributor application from the website"
+    "mailSubjectDistributor": "Distributor application from the website",
+    "quoteList": {
+      "title": "Your quote list",
+      "empty": "Selecting specific models? Add them to your quote list from the catalogue — or describe what you need below.",
+      "browse": "Browse the catalogue",
+      "addMore": "Add more models from the catalogue",
+      "quantity": "Quantity",
+      "increase": "Increase quantity",
+      "decrease": "Decrease quantity",
+      "remove": "Remove from quote list"
+    }
   },
   "company": {
-    "label": "Company",
+    "label": "Company pages",
     "nav": {
       "about": "About us",
       "ceo": "CEO message",
@@ -522,5 +548,63 @@
     "networkTitle": "Our network today",
     "contactHint": "Prefer to talk first?",
     "contactLink": "Contact our team"
+  },
+  "search": {
+    "open": "Search",
+    "title": "Search the site",
+    "placeholder": "Search products, model codes, projects…",
+    "close": "Close search",
+    "empty": "No results. Try a model code such as HB82, or a word such as “downlight”.",
+    "hint": "Type a model code (e.g. PL15), a product type or a project name.",
+    "kinds": {
+      "model": "Model",
+      "family": "Product family",
+      "sector": "Sector",
+      "project": "Project",
+      "page": "Page"
+    }
+  },
+  "catalogue": {
+    "title": "Product catalogue",
+    "intro": "{models} models in {variants} variants — indoor, outdoor and industrial LED lighting, designed and built in Qatar.",
+    "search": "Search by model code, product or category…",
+    "all": "All products",
+    "categories": "Categories",
+    "ip": "IP rating",
+    "cct": "Colour temperature",
+    "results": "{count} models",
+    "clear": "Clear filters",
+    "empty": "No models match these filters. Try fewer filters or another word.",
+    "variants": "variants",
+    "quoteHint": "Add the models you need to your quote list, then send one request with quantities.",
+    "browseAll": "Browse the full catalogue",
+    "modelsTitle": "Models in this range",
+    "modelsIntro": "{count} models from our catalogue.",
+    "ctaTitle": "Can’t find the exact model?",
+    "ctaText": "We also build to drawings and specifications. Send us what you need — we reply in Arabic or English with a proposal."
+  },
+  "model": {
+    "specsTitle": "Specifications",
+    "power": "Power",
+    "lumens": "Luminous flux",
+    "efficacy": "Efficacy",
+    "cct": "Colour temperature",
+    "ip": "Protection",
+    "material": "Body & diffuser",
+    "driver": "Driver",
+    "sizes": "Sizes",
+    "variantsTitle": "Variants",
+    "variantsIntro": "Each variant can be added to your quote list on its own.",
+    "sku": "Model number",
+    "size": "Size",
+    "options": "Options",
+    "perMetre": "per metre",
+    "addModel": "Add to quote list",
+    "added": "In quote list",
+    "addVariant": "Add to quote list",
+    "relatedTitle": "Related models",
+    "familyLink": "Part of the {family} range",
+    "categoryLink": "All {category}",
+    "photoNote": "Photo for illustration; finishes and dimensions are confirmed in the quotation."
   }
 }

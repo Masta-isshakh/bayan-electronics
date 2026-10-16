@@ -6,9 +6,10 @@ import { FamilyTile } from "@/components/products/FamilyTile";
 import { FlashlightGrid } from "@/components/products/FlashlightGrid";
 import { CtaBand } from "@/components/ui/CtaBand";
 import { PageHeader } from "@/components/ui/PageHeader";
+import { TextLink } from "@/components/ui/SectionHeading";
 import { ProjectCard } from "@/components/ui/ProjectCard";
 import { familiesBySlugs } from "@/content/products";
-import { projects } from "@/content/projects";
+import { projectsInSector } from "@/content/projects";
 import { getSector, sectors } from "@/content/solutions";
 import { resolveLocale } from "@/lib/i18n";
 import { pageMetadata } from "@/lib/seo";
@@ -41,8 +42,9 @@ export default async function SectorPage({ params }: Params) {
   const t = await getTranslations("sector");
   const ts = await getTranslations("solutions");
   const tc = await getTranslations("common");
+  const tp = await getTranslations("projects");
   const families = familiesBySlugs(sector.products);
-  const project = projects.find((candidate) => candidate.sector === sector.slug);
+  const sectorProjects = projectsInSector(sector.slug).slice(0, 3);
 
   return (
     <>
@@ -106,17 +108,24 @@ export default async function SectorPage({ params }: Params) {
             ))}
           </FlashlightGrid>
 
-          {project && (
-            <div className="mt-20 grid gap-6 lg:grid-cols-12">
-              <h2 className="text-2xl font-medium lg:col-span-4">{t("project")}</h2>
-              <div className="lg:col-span-8">
-                <ProjectCard
-                  project={project}
-                  locale={locale}
-                  sampleLabel={tc("sample")}
-                  sizes="(min-width: 1024px) 60vw, 100vw"
-                />
+          {sectorProjects.length > 0 && (
+            <div className="mt-20">
+              <div className="flex flex-wrap items-end justify-between gap-4">
+                <h2 className="text-2xl font-medium">{t("project")}</h2>
+                <TextLink href="/projects">{tp("title")}</TextLink>
               </div>
+              <ul className="mt-8 grid gap-x-6 gap-y-12 sm:grid-cols-2 lg:grid-cols-3">
+                {sectorProjects.map((project) => (
+                  <li key={project.slug}>
+                    <ProjectCard
+                      project={project}
+                      locale={locale}
+                      sampleLabel={tc("sample")}
+                      sizes="(min-width: 1024px) 30vw, (min-width: 640px) 45vw, 100vw"
+                    />
+                  </li>
+                ))}
+              </ul>
             </div>
           )}
         </div>

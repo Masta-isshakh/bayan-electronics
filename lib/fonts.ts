@@ -14,6 +14,9 @@ export const archivo = localFont({
   adjustFontFallback: "Arial",
 });
 
+/** Display stack: Archivo, then fallbacks sized for its 118 % width (see app/globals.css). */
+export const displayFontStack = `${archivo.style.fontFamily.split(",")[0]}, "Archivo Display Fallback", "Archivo Display Fallback Android", ui-sans-serif, sans-serif`;
+
 /**
  * Arabic font files (declared with @font-face in app/globals.css). Preloaded by the
  * [locale] layout on /ar only — English pages never request them. Self-hosted rather

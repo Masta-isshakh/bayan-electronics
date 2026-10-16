@@ -1,3 +1,4 @@
+import type { CSSProperties } from "react";
 import "../globals.css";
 import type { Metadata, Viewport } from "next";
 import type { ReactNode } from "react";
@@ -14,7 +15,7 @@ import { JsonLd } from "@/components/seo/JsonLd";
 import { site } from "@/content/site";
 import { localeMeta } from "@/i18n/locales";
 import { whatsappHref } from "@/lib/contact";
-import { arabicFontFiles, archivo } from "@/lib/fonts";
+import { arabicFontFiles, archivo, displayFontStack } from "@/lib/fonts";
 import { organizationJsonLd } from "@/lib/jsonld";
 import { localeStaticParams, resolveLocale } from "@/lib/i18n";
 
@@ -50,7 +51,12 @@ export default async function LocaleLayout({
   }
 
   return (
-    <html lang={locale} dir={localeMeta[locale].dir} className={archivo.variable}>
+    <html
+      lang={locale}
+      dir={localeMeta[locale].dir}
+      className={archivo.variable}
+      style={{ "--font-display": displayFontStack } as CSSProperties}
+    >
       <body>
         {/* Locale context only: client components receive their strings as props, so no
             messages (or message-formatting runtime) are shipped to the browser. */}

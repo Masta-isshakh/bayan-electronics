@@ -1,4 +1,5 @@
 import type { MetadataRoute } from "next";
+import { models } from "@/content/catalogue";
 import { products } from "@/content/products";
 import { projects } from "@/content/projects";
 import { sectors } from "@/content/solutions";
@@ -8,6 +9,7 @@ import { absoluteUrl, languageAlternates } from "@/lib/seo";
 const staticPaths = [
   "/",
   "/products",
+  "/catalogue",
   "/solutions",
   "/manufacturing",
   "/projects",
@@ -26,6 +28,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const paths = [
     ...staticPaths,
     ...products.map((family) => `/products/${family.slug}`),
+    ...models.map((model) => `/catalogue/${model.slug}`),
     ...sectors.map((sector) => `/solutions/${sector.slug}`),
     ...projects.filter((project) => !project.isPlaceholder).map((project) => `/projects/${project.slug}`),
   ];

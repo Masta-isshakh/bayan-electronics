@@ -1,6 +1,7 @@
 import type { ReactNode } from "react";
 import { getTranslations } from "next-intl/server";
 import { Mail, MapPin, MessageCircle, Phone } from "lucide-react";
+import { catalogueStats } from "@/content/catalogue";
 import { products } from "@/content/products";
 import { sectors } from "@/content/solutions";
 import { site } from "@/content/site";
@@ -55,6 +56,11 @@ export async function Footer({ locale }: { locale: Locale }) {
                   </Link>
                 </li>
               ))}
+              <li>
+                <Link href="/catalogue" className={`${linkClass} text-lumen hover:text-lumen`}>
+                  {tn("catalogueLink", { count: catalogueStats.models })}
+                </Link>
+              </li>
             </FooterColumn>
 
             <FooterColumn title={t("solutions")}>

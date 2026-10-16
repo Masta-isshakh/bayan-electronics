@@ -24,6 +24,864 @@
       "v": "d8590a48",
       "placeholder": false
     },
+    "catalogue/bd31.png": {
+      "v": "b227c582",
+      "placeholder": false,
+      "w": 83,
+      "h": 280
+    },
+    "catalogue/bd34.png": {
+      "v": "c00bd4da",
+      "placeholder": false,
+      "w": 102,
+      "h": 277
+    },
+    "catalogue/bd61.jpg": {
+      "v": "7a75850a",
+      "placeholder": false,
+      "w": 320,
+      "h": 270
+    },
+    "catalogue/bd91.png": {
+      "v": "72add4fb",
+      "placeholder": false,
+      "w": 223,
+      "h": 279
+    },
+    "catalogue/bdl1.png": {
+      "v": "bed6410d",
+      "placeholder": false,
+      "w": 81,
+      "h": 274
+    },
+    "catalogue/bh11.png": {
+      "v": "9258c46b",
+      "placeholder": false,
+      "w": 248,
+      "h": 200
+    },
+    "catalogue/bh27.png": {
+      "v": "2a0a29e9",
+      "placeholder": false,
+      "w": 250,
+      "h": 185
+    },
+    "catalogue/bh2a.png": {
+      "v": "8dbc6f0d",
+      "placeholder": false,
+      "w": 250,
+      "h": 160
+    },
+    "catalogue/bh31.png": {
+      "v": "96b51bea",
+      "placeholder": false,
+      "w": 247,
+      "h": 185
+    },
+    "catalogue/bh41.png": {
+      "v": "bc870c66",
+      "placeholder": false,
+      "w": 247,
+      "h": 314
+    },
+    "catalogue/bh51.png": {
+      "v": "3c70708b",
+      "placeholder": false,
+      "w": 246,
+      "h": 149
+    },
+    "catalogue/bh71.png": {
+      "v": "3c93fac0",
+      "placeholder": false,
+      "w": 249,
+      "h": 250
+    },
+    "catalogue/bh91.png": {
+      "v": "90bf607b",
+      "placeholder": false,
+      "w": 249,
+      "h": 258
+    },
+    "catalogue/bh92.png": {
+      "v": "7cf4ab9f",
+      "placeholder": false,
+      "w": 246,
+      "h": 257
+    },
+    "catalogue/bh94.png": {
+      "v": "6cf31cdd",
+      "placeholder": false,
+      "w": 242,
+      "h": 344
+    },
+    "catalogue/bh95.png": {
+      "v": "1d832d35",
+      "placeholder": false,
+      "w": 232,
+      "h": 344
+    },
+    "catalogue/bh97.png": {
+      "v": "0207fd6e",
+      "placeholder": false,
+      "w": 244,
+      "h": 241
+    },
+    "catalogue/bhe1.png": {
+      "v": "011a1659",
+      "placeholder": false,
+      "w": 247,
+      "h": 303
+    },
+    "catalogue/bl-h.jpg": {
+      "v": "8fdc0f5f",
+      "placeholder": false,
+      "w": 470,
+      "h": 470
+    },
+    "catalogue/bl-t.jpg": {
+      "v": "89a8d5bf",
+      "placeholder": false,
+      "w": 470,
+      "h": 470
+    },
+    "catalogue/bl12.png": {
+      "v": "ca236f42",
+      "placeholder": false,
+      "w": 178,
+      "h": 253
+    },
+    "catalogue/bt11.png": {
+      "v": "eb72cf40",
+      "placeholder": false,
+      "w": 220,
+      "h": 154
+    },
+    "catalogue/bt14.png": {
+      "v": "fa360251",
+      "placeholder": false,
+      "w": 218,
+      "h": 142
+    },
+    "catalogue/cl31.png": {
+      "v": "30341832",
+      "placeholder": false,
+      "w": 220,
+      "h": 131
+    },
+    "catalogue/cl51.png": {
+      "v": "4e78124e",
+      "placeholder": false,
+      "w": 222,
+      "h": 133
+    },
+    "catalogue/cl64.png": {
+      "v": "81bbeb9c",
+      "placeholder": false,
+      "w": 220,
+      "h": 118
+    },
+    "catalogue/cl71.png": {
+      "v": "ccce90ac",
+      "placeholder": false,
+      "w": 216,
+      "h": 228
+    },
+    "catalogue/cl86.png": {
+      "v": "edaf1a3e",
+      "placeholder": false,
+      "w": 216,
+      "h": 135
+    },
+    "catalogue/cl91.png": {
+      "v": "4699ee9a",
+      "placeholder": false,
+      "w": 303,
+      "h": 376
+    },
+    "catalogue/dl21.png": {
+      "v": "c4f5494b",
+      "placeholder": false,
+      "w": 223,
+      "h": 164
+    },
+    "catalogue/dl22.png": {
+      "v": "cd5b4e3d",
+      "placeholder": false,
+      "w": 225,
+      "h": 177
+    },
+    "catalogue/dl24.png": {
+      "v": "43f649f1",
+      "placeholder": false,
+      "w": 225,
+      "h": 141
+    },
+    "catalogue/dl31.png": {
+      "v": "80fe298c",
+      "placeholder": false,
+      "w": 235,
+      "h": 221
+    },
+    "catalogue/dl32.png": {
+      "v": "a7d70355",
+      "placeholder": false,
+      "w": 234,
+      "h": 180
+    },
+    "catalogue/dl44.png": {
+      "v": "670610ef",
+      "placeholder": false,
+      "w": 234,
+      "h": 176
+    },
+    "catalogue/dl61.png": {
+      "v": "8d7ecdd3",
+      "placeholder": false,
+      "w": 237,
+      "h": 289
+    },
+    "catalogue/dl63.png": {
+      "v": "9de578a6",
+      "placeholder": false,
+      "w": 235,
+      "h": 254
+    },
+    "catalogue/dl65.png": {
+      "v": "5b733022",
+      "placeholder": false,
+      "w": 221,
+      "h": 187
+    },
+    "catalogue/dl67.png": {
+      "v": "53f47c6c",
+      "placeholder": false,
+      "w": 233,
+      "h": 147
+    },
+    "catalogue/dl71.png": {
+      "v": "2892d875",
+      "placeholder": false,
+      "w": 232,
+      "h": 186
+    },
+    "catalogue/dl87.png": {
+      "v": "6234c2e8",
+      "placeholder": false,
+      "w": 194,
+      "h": 254
+    },
+    "catalogue/dl88.png": {
+      "v": "b3718599",
+      "placeholder": false,
+      "w": 220,
+      "h": 167
+    },
+    "catalogue/dl89.png": {
+      "v": "26f72727",
+      "placeholder": false,
+      "w": 219,
+      "h": 147
+    },
+    "catalogue/dl91.png": {
+      "v": "5dab1da5",
+      "placeholder": false,
+      "w": 235,
+      "h": 203
+    },
+    "catalogue/dl95.png": {
+      "v": "538983f9",
+      "placeholder": false,
+      "w": 233,
+      "h": 161
+    },
+    "catalogue/dla1.png": {
+      "v": "bf8140ef",
+      "placeholder": false,
+      "w": 220,
+      "h": 156
+    },
+    "catalogue/dla2.png": {
+      "v": "5c644f03",
+      "placeholder": false,
+      "w": 222,
+      "h": 148
+    },
+    "catalogue/dla3.png": {
+      "v": "473e07d8",
+      "placeholder": false,
+      "w": 222,
+      "h": 154
+    },
+    "catalogue/dlb1.png": {
+      "v": "be5c25f6",
+      "placeholder": false,
+      "w": 222,
+      "h": 162
+    },
+    "catalogue/dld9.png": {
+      "v": "36555243",
+      "placeholder": false,
+      "w": 221,
+      "h": 199
+    },
+    "catalogue/dlf2.png": {
+      "v": "00aba174",
+      "placeholder": false,
+      "w": 222,
+      "h": 142
+    },
+    "catalogue/dlf8.png": {
+      "v": "c3644137",
+      "placeholder": false,
+      "w": 685,
+      "h": 541
+    },
+    "catalogue/dlg2.png": {
+      "v": "a70fa52e",
+      "placeholder": false,
+      "w": 220,
+      "h": 139
+    },
+    "catalogue/dlk4.png": {
+      "v": "fac4e760",
+      "placeholder": false,
+      "w": 218,
+      "h": 166
+    },
+    "catalogue/dll2.png": {
+      "v": "51faf4df",
+      "placeholder": false,
+      "w": 220,
+      "h": 131
+    },
+    "catalogue/dlm8.png": {
+      "v": "5df496fb",
+      "placeholder": false,
+      "w": 221,
+      "h": 195
+    },
+    "catalogue/dlq2.png": {
+      "v": "bbe84bd3",
+      "placeholder": false,
+      "w": 219,
+      "h": 135
+    },
+    "catalogue/fl21.png": {
+      "v": "76467ccd",
+      "placeholder": false,
+      "w": 245,
+      "h": 244
+    },
+    "catalogue/fl22.png": {
+      "v": "a99b610d",
+      "placeholder": false,
+      "w": 249,
+      "h": 202
+    },
+    "catalogue/fl23.png": {
+      "v": "100b3774",
+      "placeholder": false,
+      "w": 245,
+      "h": 245
+    },
+    "catalogue/fl24.png": {
+      "v": "10171abd",
+      "placeholder": false,
+      "w": 248,
+      "h": 245
+    },
+    "catalogue/fl31.png": {
+      "v": "88c06660",
+      "placeholder": false,
+      "w": 217,
+      "h": 249
+    },
+    "catalogue/fl36.png": {
+      "v": "9993d636",
+      "placeholder": false,
+      "w": 219,
+      "h": 259
+    },
+    "catalogue/fl37.png": {
+      "v": "d554aaf2",
+      "placeholder": false,
+      "w": 217,
+      "h": 254
+    },
+    "catalogue/fl38.png": {
+      "v": "ac22d3f2",
+      "placeholder": false,
+      "w": 132,
+      "h": 268
+    },
+    "catalogue/fl45.png": {
+      "v": "660cb4d5",
+      "placeholder": false,
+      "w": 220,
+      "h": 255
+    },
+    "catalogue/fl49.png": {
+      "v": "c48037a5",
+      "placeholder": false,
+      "w": 222,
+      "h": 248
+    },
+    "catalogue/fl51.png": {
+      "v": "c7f0c147",
+      "placeholder": false,
+      "w": 247,
+      "h": 213
+    },
+    "catalogue/fl71.png": {
+      "v": "07d52bb0",
+      "placeholder": false,
+      "w": 249,
+      "h": 252
+    },
+    "catalogue/fl72.png": {
+      "v": "83de0283",
+      "placeholder": false,
+      "w": 244,
+      "h": 236
+    },
+    "catalogue/fla1.png": {
+      "v": "f6c82570",
+      "placeholder": false,
+      "w": 244,
+      "h": 231
+    },
+    "catalogue/fla2.png": {
+      "v": "2f7624c6",
+      "placeholder": false,
+      "w": 249,
+      "h": 235
+    },
+    "catalogue/fla3.jpg": {
+      "v": "3121d1fd",
+      "placeholder": false,
+      "w": 2560,
+      "h": 1707
+    },
+    "catalogue/flb1.png": {
+      "v": "b715e85b",
+      "placeholder": false,
+      "w": 251,
+      "h": 185
+    },
+    "catalogue/flc1.png": {
+      "v": "72a35257",
+      "placeholder": false,
+      "w": 253,
+      "h": 266
+    },
+    "catalogue/flg1.png": {
+      "v": "09190a68",
+      "placeholder": false,
+      "w": 220,
+      "h": 256
+    },
+    "catalogue/hb12.png": {
+      "v": "0e571a3c",
+      "placeholder": false,
+      "w": 250,
+      "h": 241
+    },
+    "catalogue/hb51.jpg": {
+      "v": "7c88eef8",
+      "placeholder": false,
+      "w": 470,
+      "h": 470
+    },
+    "catalogue/hb60.png": {
+      "v": "05cd6aba",
+      "placeholder": false,
+      "w": 249,
+      "h": 148
+    },
+    "catalogue/hb61.png": {
+      "v": "f503803b",
+      "placeholder": false,
+      "w": 247,
+      "h": 133
+    },
+    "catalogue/hb81.png": {
+      "v": "1800b9e0",
+      "placeholder": false,
+      "w": 249,
+      "h": 125
+    },
+    "catalogue/hc41.png": {
+      "v": "834757ab",
+      "placeholder": false,
+      "w": 248,
+      "h": 178
+    },
+    "catalogue/ll11.png": {
+      "v": "55102386",
+      "placeholder": false,
+      "w": 223,
+      "h": 148
+    },
+    "catalogue/ll14.png": {
+      "v": "95398035",
+      "placeholder": false,
+      "w": 218,
+      "h": 175
+    },
+    "catalogue/ll71.png": {
+      "v": "f089f927",
+      "placeholder": false,
+      "w": 222,
+      "h": 170
+    },
+    "catalogue/ll74.png": {
+      "v": "54aa2e0b",
+      "placeholder": false,
+      "w": 222,
+      "h": 147
+    },
+    "catalogue/ll77.png": {
+      "v": "f2f7375d",
+      "placeholder": false,
+      "w": 223,
+      "h": 178
+    },
+    "catalogue/llr3.png": {
+      "v": "6b89dd1e",
+      "placeholder": false,
+      "w": 222,
+      "h": 213
+    },
+    "catalogue/lls3.png": {
+      "v": "a23e504f",
+      "placeholder": false,
+      "w": 220,
+      "h": 140
+    },
+    "catalogue/ml21.png": {
+      "v": "80337417",
+      "placeholder": false,
+      "w": 221,
+      "h": 179
+    },
+    "catalogue/ml41.png": {
+      "v": "a4c30f39",
+      "placeholder": false,
+      "w": 224,
+      "h": 165
+    },
+    "catalogue/pd11.png": {
+      "v": "dd346a2b",
+      "placeholder": false,
+      "w": 121,
+      "h": 251
+    },
+    "catalogue/pd31.png": {
+      "v": "21e2881c",
+      "placeholder": false,
+      "w": 150,
+      "h": 274
+    },
+    "catalogue/pf53.png": {
+      "v": "e734041c",
+      "placeholder": false,
+      "w": 221,
+      "h": 128
+    },
+    "catalogue/pf63.png": {
+      "v": "2e7a39d1",
+      "placeholder": false,
+      "w": 225,
+      "h": 147
+    },
+    "catalogue/pl15.png": {
+      "v": "4aec7b37",
+      "placeholder": false,
+      "w": 225,
+      "h": 180
+    },
+    "catalogue/pl31.png": {
+      "v": "d4d64f57",
+      "placeholder": false,
+      "w": 219,
+      "h": 168
+    },
+    "catalogue/pl45.png": {
+      "v": "d0e667f3",
+      "placeholder": false,
+      "w": 221,
+      "h": 124
+    },
+    "catalogue/pl51.png": {
+      "v": "7516310a",
+      "placeholder": false,
+      "w": 221,
+      "h": 133
+    },
+    "catalogue/pl52.png": {
+      "v": "39a86007",
+      "placeholder": false,
+      "w": 219,
+      "h": 99
+    },
+    "catalogue/pl71.jpg": {
+      "v": "158dd9c3",
+      "placeholder": false,
+      "w": 1707,
+      "h": 2560
+    },
+    "catalogue/pl72.png": {
+      "v": "353f3d7d",
+      "placeholder": false,
+      "w": 225,
+      "h": 151
+    },
+    "catalogue/pl81.png": {
+      "v": "6e64b4a9",
+      "placeholder": false,
+      "w": 221,
+      "h": 231
+    },
+    "catalogue/sp11.png": {
+      "v": "81b43eb3",
+      "placeholder": false,
+      "w": 218,
+      "h": 164
+    },
+    "catalogue/sp12.png": {
+      "v": "9cc7aabe",
+      "placeholder": false,
+      "w": 222,
+      "h": 126
+    },
+    "catalogue/sp41.png": {
+      "v": "d74687c2",
+      "placeholder": false,
+      "w": 248,
+      "h": 185
+    },
+    "catalogue/sp42.png": {
+      "v": "8541aefe",
+      "placeholder": false,
+      "w": 250,
+      "h": 176
+    },
+    "catalogue/sr21.png": {
+      "v": "fea018f6",
+      "placeholder": false,
+      "w": 192,
+      "h": 278
+    },
+    "catalogue/sr44.png": {
+      "v": "d8fce570",
+      "placeholder": false,
+      "w": 196,
+      "h": 281
+    },
+    "catalogue/sr48.png": {
+      "v": "eb0fd01d",
+      "placeholder": false,
+      "w": 214,
+      "h": 232
+    },
+    "catalogue/st20e.png": {
+      "v": "5cb3e464",
+      "placeholder": false,
+      "w": 328,
+      "h": 433
+    },
+    "catalogue/st30e.jpg": {
+      "v": "f5e64bb7",
+      "placeholder": false,
+      "w": 470,
+      "h": 470
+    },
+    "catalogue/stp4.png": {
+      "v": "e9f990b8",
+      "placeholder": false,
+      "w": 243,
+      "h": 123
+    },
+    "catalogue/stp7.png": {
+      "v": "634b41a4",
+      "placeholder": false,
+      "w": 221,
+      "h": 234
+    },
+    "catalogue/tl11.png": {
+      "v": "32986af3",
+      "placeholder": false,
+      "w": 220,
+      "h": 232
+    },
+    "catalogue/tn11.png": {
+      "v": "813181a4",
+      "placeholder": false,
+      "w": 220,
+      "h": 180
+    },
+    "catalogue/tp18.png": {
+      "v": "70e422f6",
+      "placeholder": false,
+      "w": 322,
+      "h": 183
+    },
+    "catalogue/tp48.png": {
+      "v": "960604fb",
+      "placeholder": false,
+      "w": 250,
+      "h": 202
+    },
+    "catalogue/tp58.png": {
+      "v": "bd997186",
+      "placeholder": false,
+      "w": 246,
+      "h": 142
+    },
+    "catalogue/tpb1.png": {
+      "v": "1a338881",
+      "placeholder": false,
+      "w": 403,
+      "h": 304
+    },
+    "catalogue/tr21.png": {
+      "v": "f3980e4f",
+      "placeholder": false,
+      "w": 160,
+      "h": 284
+    },
+    "catalogue/tr25.png": {
+      "v": "a95a4376",
+      "placeholder": false,
+      "w": 223,
+      "h": 250
+    },
+    "catalogue/tr31.png": {
+      "v": "285ea20a",
+      "placeholder": false,
+      "w": 213,
+      "h": 281
+    },
+    "catalogue/tr51.png": {
+      "v": "7b2fd3b7",
+      "placeholder": false,
+      "w": 155,
+      "h": 276
+    },
+    "catalogue/ud21.png": {
+      "v": "ca7fb15d",
+      "placeholder": false,
+      "w": 198,
+      "h": 329
+    },
+    "catalogue/ud51.png": {
+      "v": "757941d9",
+      "placeholder": false,
+      "w": 198,
+      "h": 323
+    },
+    "catalogue/ul22.png": {
+      "v": "7b48dc09",
+      "placeholder": false,
+      "w": 247,
+      "h": 207
+    },
+    "catalogue/ul26.png": {
+      "v": "d2121288",
+      "placeholder": false,
+      "w": 252,
+      "h": 205
+    },
+    "catalogue/ul27.png": {
+      "v": "8ec3a5d5",
+      "placeholder": false,
+      "w": 250,
+      "h": 198
+    },
+    "catalogue/ul28.png": {
+      "v": "e1ff5078",
+      "placeholder": false,
+      "w": 252,
+      "h": 245
+    },
+    "catalogue/ul2c.png": {
+      "v": "f60d3204",
+      "placeholder": false,
+      "w": 417,
+      "h": 347
+    },
+    "catalogue/ul4a.png": {
+      "v": "afed84df",
+      "placeholder": false,
+      "w": 257,
+      "h": 245
+    },
+    "catalogue/ul4h.png": {
+      "v": "4015961f",
+      "placeholder": false,
+      "w": 236,
+      "h": 296
+    },
+    "catalogue/ul51.png": {
+      "v": "a87d5316",
+      "placeholder": false,
+      "w": 253,
+      "h": 266
+    },
+    "catalogue/ul52.png": {
+      "v": "9e9a771d",
+      "placeholder": false,
+      "w": 256,
+      "h": 244
+    },
+    "catalogue/ul71.png": {
+      "v": "e49347a9",
+      "placeholder": false,
+      "w": 230,
+      "h": 290
+    },
+    "catalogue/wb11.png": {
+      "v": "2ed7f656",
+      "placeholder": false,
+      "w": 246,
+      "h": 197
+    },
+    "catalogue/wb31.png": {
+      "v": "099cb269",
+      "placeholder": false,
+      "w": 345,
+      "h": 487
+    },
+    "catalogue/wl51.png": {
+      "v": "84add27c",
+      "placeholder": false,
+      "w": 219,
+      "h": 200
+    },
+    "catalogue/ww11.png": {
+      "v": "d7986d6a",
+      "placeholder": false,
+      "w": 245,
+      "h": 195
+    },
+    "catalogue/ww45.png": {
+      "v": "65249806",
+      "placeholder": false,
+      "w": 219,
+      "h": 183
+    },
+    "catalogue/ww91.png": {
+      "v": "909cda43",
+      "placeholder": false,
+      "w": 244,
+      "h": 204
+    },
+    "catalogue/wwc1.png": {
+      "v": "baa0bb5c",
+      "placeholder": false,
+      "w": 247,
+      "h": 167
+    },
     "hero/hero-desktop.mp4": {
       "v": "418eeda9",
       "placeholder": false
@@ -224,41 +1082,819 @@
       "w": 819,
       "h": 1024
     },
-    "projects/project-01.jpg": {
-      "v": "bd6230d1",
+    "projects/al-bayt-stadium-2.jpg": {
+      "v": "0dd94e5f",
       "placeholder": false,
-      "w": 1260,
-      "h": 840
+      "w": 715,
+      "h": 738
     },
-    "projects/project-02.jpg": {
-      "v": "858e9eb8",
+    "projects/al-bayt-stadium-3.jpg": {
+      "v": "4b7467ec",
       "placeholder": false,
-      "w": 1536,
-      "h": 1024
+      "w": 492,
+      "h": 439
     },
-    "projects/project-03.jpg": {
-      "v": "77f1f32b",
+    "projects/al-bayt-stadium-4.jpg": {
+      "v": "6ced5daf",
       "placeholder": false,
-      "w": 1536,
-      "h": 1024
+      "w": 1013,
+      "h": 774
     },
-    "projects/project-04.jpg": {
-      "v": "b208fbdd",
+    "projects/al-bayt-stadium.jpg": {
+      "v": "fdd7d428",
       "placeholder": false,
-      "w": 1536,
-      "h": 1024
+      "w": 1120,
+      "h": 630
     },
-    "projects/project-05.jpg": {
-      "v": "969e6f6c",
+    "projects/al-duhail-south-road-lighting-2.jpg": {
+      "v": "0ae90c98",
       "placeholder": false,
-      "w": 1536,
-      "h": 1024
+      "w": 470,
+      "h": 470
     },
-    "projects/project-06.jpg": {
-      "v": "d90e0e2f",
-      "placeholder": true,
-      "w": 2400,
+    "projects/al-duhail-south-road-lighting.jpg": {
+      "v": "8b962f11",
+      "placeholder": false,
+      "w": 470,
+      "h": 470
+    },
+    "projects/al-emadi-hospital-2.jpg": {
+      "v": "1ba18f52",
+      "placeholder": false,
+      "w": 830,
+      "h": 430
+    },
+    "projects/al-emadi-hospital.jpg": {
+      "v": "86856bb9",
+      "placeholder": false,
+      "w": 863,
+      "h": 631
+    },
+    "projects/al-fardan-exchange.jpg": {
+      "v": "37208e23",
+      "placeholder": false,
+      "w": 470,
+      "h": 470
+    },
+    "projects/al-jazeera-network-outdoor-lighting-2.jpg": {
+      "v": "fb2ba11f",
+      "placeholder": false,
+      "w": 866,
+      "h": 815
+    },
+    "projects/al-jazeera-network-outdoor-lighting-3.jpg": {
+      "v": "d1f22b8b",
+      "placeholder": false,
+      "w": 592,
+      "h": 426
+    },
+    "projects/al-jazeera-network-outdoor-lighting-4.jpg": {
+      "v": "e27bc079",
+      "placeholder": false,
+      "w": 1144,
+      "h": 663
+    },
+    "projects/al-jazeera-network-outdoor-lighting.jpg": {
+      "v": "4a7700e5",
+      "placeholder": false,
+      "w": 1184,
+      "h": 659
+    },
+    "projects/al-jazeera-network-street-lighting-2.jpg": {
+      "v": "f4120f3e",
+      "placeholder": false,
+      "w": 1600,
+      "h": 904
+    },
+    "projects/al-jazeera-network-street-lighting-3.jpg": {
+      "v": "3880a05b",
+      "placeholder": false,
+      "w": 960,
       "h": 1600
+    },
+    "projects/al-jazeera-network-street-lighting-4.jpg": {
+      "v": "e6d2d80e",
+      "placeholder": false,
+      "w": 960,
+      "h": 1600
+    },
+    "projects/al-jazeera-network-street-lighting.jpg": {
+      "v": "76259024",
+      "placeholder": false,
+      "w": 1600,
+      "h": 904
+    },
+    "projects/al-markhiya-road-lighting-2.png": {
+      "v": "06e0c166",
+      "placeholder": false,
+      "w": 828,
+      "h": 477
+    },
+    "projects/al-markhiya-road-lighting.jpg": {
+      "v": "a5a96f0e",
+      "placeholder": false,
+      "w": 470,
+      "h": 470
+    },
+    "projects/al-mearad-muaither-road-lighting-2.jpg": {
+      "v": "44fac96f",
+      "placeholder": false,
+      "w": 470,
+      "h": 470
+    },
+    "projects/al-mearad-muaither-road-lighting-3.jpg": {
+      "v": "3f671425",
+      "placeholder": false,
+      "w": 470,
+      "h": 470
+    },
+    "projects/al-mearad-muaither-road-lighting-4.jpg": {
+      "v": "4a62f099",
+      "placeholder": false,
+      "w": 470,
+      "h": 470
+    },
+    "projects/al-mearad-muaither-road-lighting-5.jpg": {
+      "v": "9472650c",
+      "placeholder": false,
+      "w": 470,
+      "h": 470
+    },
+    "projects/al-mearad-muaither-road-lighting-6.jpg": {
+      "v": "b61b47d5",
+      "placeholder": false,
+      "w": 470,
+      "h": 470
+    },
+    "projects/al-mearad-muaither-road-lighting.jpg": {
+      "v": "0c1302f1",
+      "placeholder": false,
+      "w": 470,
+      "h": 470
+    },
+    "projects/al-rayyan-stadium.jpg": {
+      "v": "f77ffadc",
+      "placeholder": false,
+      "w": 470,
+      "h": 470
+    },
+    "projects/al-ruwais-port.jpg": {
+      "v": "2cc94028",
+      "placeholder": false,
+      "w": 470,
+      "h": 470
+    },
+    "projects/al-sadd-health-center.jpg": {
+      "v": "d11bf51f",
+      "placeholder": false,
+      "w": 470,
+      "h": 470
+    },
+    "projects/al-tadamon-motors-trading-2.jpg": {
+      "v": "e7473df5",
+      "placeholder": false,
+      "w": 1024,
+      "h": 1011
+    },
+    "projects/al-tadamon-motors-trading.jpg": {
+      "v": "3f03ddfb",
+      "placeholder": false,
+      "w": 960,
+      "h": 640
+    },
+    "projects/ashghal-tower-2.jpg": {
+      "v": "0c287e74",
+      "placeholder": false,
+      "w": 470,
+      "h": 470
+    },
+    "projects/ashghal-tower-3.jpg": {
+      "v": "353297b8",
+      "placeholder": false,
+      "w": 470,
+      "h": 470
+    },
+    "projects/ashghal-tower-4.jpg": {
+      "v": "12f90881",
+      "placeholder": false,
+      "w": 470,
+      "h": 470
+    },
+    "projects/ashghal-tower.jpg": {
+      "v": "e1058491",
+      "placeholder": false,
+      "w": 470,
+      "h": 470
+    },
+    "projects/azizia-movenpick-hotel-2.jpg": {
+      "v": "9d79ab10",
+      "placeholder": false,
+      "w": 550,
+      "h": 413
+    },
+    "projects/azizia-movenpick-hotel-3.jpg": {
+      "v": "3eb6a42d",
+      "placeholder": false,
+      "w": 1280,
+      "h": 980
+    },
+    "projects/azizia-movenpick-hotel.jpg": {
+      "v": "86f579fd",
+      "placeholder": false,
+      "w": 1132,
+      "h": 706
+    },
+    "projects/barwa-village-street-lighting-2.jpg": {
+      "v": "b99aecf0",
+      "placeholder": false,
+      "w": 1200,
+      "h": 1600
+    },
+    "projects/barwa-village-street-lighting.jpg": {
+      "v": "4169eeff",
+      "placeholder": false,
+      "w": 1600,
+      "h": 1200
+    },
+    "projects/doha-industrial-area.jpg": {
+      "v": "035f189c",
+      "placeholder": false,
+      "w": 470,
+      "h": 470
+    },
+    "projects/education-city-stadium-2.jpg": {
+      "v": "cbf57ed2",
+      "placeholder": false,
+      "w": 500,
+      "h": 500
+    },
+    "projects/education-city-stadium-3.jpg": {
+      "v": "16ced374",
+      "placeholder": false,
+      "w": 500,
+      "h": 500
+    },
+    "projects/education-city-stadium.jpg": {
+      "v": "a584639f",
+      "placeholder": false,
+      "w": 1194,
+      "h": 555
+    },
+    "projects/four-seasons-hotel.jpg": {
+      "v": "33cc6169",
+      "placeholder": false,
+      "w": 470,
+      "h": 470
+    },
+    "projects/hamad-hospital.jpg": {
+      "v": "ec4d3fba",
+      "placeholder": false,
+      "w": 470,
+      "h": 470
+    },
+    "projects/hilton-hotel-2.jpg": {
+      "v": "e5e76fce",
+      "placeholder": false,
+      "w": 470,
+      "h": 470
+    },
+    "projects/hilton-hotel-3.jpg": {
+      "v": "e60ca28c",
+      "placeholder": false,
+      "w": 470,
+      "h": 470
+    },
+    "projects/hilton-hotel-4.jpg": {
+      "v": "a92b8577",
+      "placeholder": false,
+      "w": 470,
+      "h": 470
+    },
+    "projects/hilton-hotel.jpg": {
+      "v": "9a666102",
+      "placeholder": false,
+      "w": 470,
+      "h": 470
+    },
+    "projects/industrial-area-bus-station-2.png": {
+      "v": "71078a1d",
+      "placeholder": false,
+      "w": 720,
+      "h": 480
+    },
+    "projects/industrial-area-bus-station-3.png": {
+      "v": "34ab93d8",
+      "placeholder": false,
+      "w": 720,
+      "h": 480
+    },
+    "projects/industrial-area-bus-station.png": {
+      "v": "45000c55",
+      "placeholder": false,
+      "w": 720,
+      "h": 480
+    },
+    "projects/manateq-industrial-units-2.jpg": {
+      "v": "95f4db51",
+      "placeholder": false,
+      "w": 470,
+      "h": 470
+    },
+    "projects/manateq-industrial-units-3.jpg": {
+      "v": "ceb5e76b",
+      "placeholder": false,
+      "w": 470,
+      "h": 470
+    },
+    "projects/manateq-industrial-units.jpg": {
+      "v": "0de02ff3",
+      "placeholder": false,
+      "w": 470,
+      "h": 470
+    },
+    "projects/masjid-abdelwahab-2.jpg": {
+      "v": "060d4279",
+      "placeholder": false,
+      "w": 583,
+      "h": 587
+    },
+    "projects/masjid-abdelwahab-3.jpg": {
+      "v": "42369b4f",
+      "placeholder": false,
+      "w": 902,
+      "h": 754
+    },
+    "projects/masjid-abdelwahab-4.jpg": {
+      "v": "899bba12",
+      "placeholder": false,
+      "w": 1157,
+      "h": 645
+    },
+    "projects/masjid-abdelwahab-5.jpg": {
+      "v": "4388ad9f",
+      "placeholder": false,
+      "w": 588,
+      "h": 596
+    },
+    "projects/masjid-abdelwahab-6.jpg": {
+      "v": "090c8826",
+      "placeholder": false,
+      "w": 555,
+      "h": 688
+    },
+    "projects/masjid-abdelwahab.jpg": {
+      "v": "3f02fd75",
+      "placeholder": false,
+      "w": 1164,
+      "h": 660
+    },
+    "projects/moi-civil-defence-building-2.jpg": {
+      "v": "53690091",
+      "placeholder": false,
+      "w": 470,
+      "h": 470
+    },
+    "projects/moi-civil-defence-building-3.jpg": {
+      "v": "f7d4af36",
+      "placeholder": false,
+      "w": 470,
+      "h": 470
+    },
+    "projects/moi-civil-defence-building-4.jpg": {
+      "v": "45c1692b",
+      "placeholder": false,
+      "w": 470,
+      "h": 470
+    },
+    "projects/moi-civil-defence-building.jpg": {
+      "v": "415aa91a",
+      "placeholder": false,
+      "w": 470,
+      "h": 470
+    },
+    "projects/multi-location-bus-stations-2.png": {
+      "v": "c91a6c77",
+      "placeholder": false,
+      "w": 720,
+      "h": 480
+    },
+    "projects/multi-location-bus-stations-3.png": {
+      "v": "95008353",
+      "placeholder": false,
+      "w": 720,
+      "h": 480
+    },
+    "projects/multi-location-bus-stations-4.png": {
+      "v": "6b33da38",
+      "placeholder": false,
+      "w": 720,
+      "h": 480
+    },
+    "projects/multi-location-bus-stations-5.png": {
+      "v": "87d88d51",
+      "placeholder": false,
+      "w": 720,
+      "h": 480
+    },
+    "projects/multi-location-bus-stations-6.png": {
+      "v": "dc34c448",
+      "placeholder": false,
+      "w": 720,
+      "h": 480
+    },
+    "projects/multi-location-bus-stations.png": {
+      "v": "fe5706be",
+      "placeholder": false,
+      "w": 720,
+      "h": 480
+    },
+    "projects/north-atlantic-college-2.jpg": {
+      "v": "88d95aed",
+      "placeholder": false,
+      "w": 470,
+      "h": 470
+    },
+    "projects/north-atlantic-college-3.jpg": {
+      "v": "b4161fe9",
+      "placeholder": false,
+      "w": 927,
+      "h": 868
+    },
+    "projects/north-atlantic-college.jpg": {
+      "v": "88137d2a",
+      "placeholder": false,
+      "w": 933,
+      "h": 866
+    },
+    "projects/oman-education-buildings-2.jpg": {
+      "v": "0d4fbe0c",
+      "placeholder": false,
+      "w": 470,
+      "h": 470
+    },
+    "projects/oman-education-buildings.jpg": {
+      "v": "b1820909",
+      "placeholder": false,
+      "w": 470,
+      "h": 470
+    },
+    "projects/oman-ministry-of-finance-2.jpg": {
+      "v": "d0e53d15",
+      "placeholder": false,
+      "w": 470,
+      "h": 470
+    },
+    "projects/oman-ministry-of-finance-3.jpg": {
+      "v": "6c77705d",
+      "placeholder": false,
+      "w": 470,
+      "h": 470
+    },
+    "projects/oman-ministry-of-finance-4.jpg": {
+      "v": "8a2b37fe",
+      "placeholder": false,
+      "w": 470,
+      "h": 470
+    },
+    "projects/oman-ministry-of-finance.jpg": {
+      "v": "a263d8c8",
+      "placeholder": false,
+      "w": 470,
+      "h": 470
+    },
+    "projects/omar-bin-al-khattab-mosque-2.jpg": {
+      "v": "d7133420",
+      "placeholder": false,
+      "w": 544,
+      "h": 393
+    },
+    "projects/omar-bin-al-khattab-mosque-3.jpg": {
+      "v": "ef301056",
+      "placeholder": false,
+      "w": 550,
+      "h": 413
+    },
+    "projects/omar-bin-al-khattab-mosque.jpg": {
+      "v": "7d7e2552",
+      "placeholder": false,
+      "w": 544,
+      "h": 394
+    },
+    "projects/palm-tower-b-10.jpg": {
+      "v": "10ca2482",
+      "placeholder": false,
+      "w": 470,
+      "h": 470
+    },
+    "projects/palm-tower-b-2.jpg": {
+      "v": "8be4d039",
+      "placeholder": false,
+      "w": 470,
+      "h": 470
+    },
+    "projects/palm-tower-b-3.jpg": {
+      "v": "25e87c6e",
+      "placeholder": false,
+      "w": 470,
+      "h": 470
+    },
+    "projects/palm-tower-b-4.jpg": {
+      "v": "df75e2bd",
+      "placeholder": false,
+      "w": 470,
+      "h": 470
+    },
+    "projects/palm-tower-b-5.jpg": {
+      "v": "b3e704c9",
+      "placeholder": false,
+      "w": 470,
+      "h": 470
+    },
+    "projects/palm-tower-b-6.jpg": {
+      "v": "beb8aca8",
+      "placeholder": false,
+      "w": 470,
+      "h": 470
+    },
+    "projects/palm-tower-b-7.jpg": {
+      "v": "b79e5861",
+      "placeholder": false,
+      "w": 470,
+      "h": 470
+    },
+    "projects/palm-tower-b-8.jpg": {
+      "v": "e9ffebdc",
+      "placeholder": false,
+      "w": 470,
+      "h": 470
+    },
+    "projects/palm-tower-b-9.jpg": {
+      "v": "07ee3c1a",
+      "placeholder": false,
+      "w": 470,
+      "h": 470
+    },
+    "projects/palm-tower-b.jpg": {
+      "v": "53ea9969",
+      "placeholder": false,
+      "w": 470,
+      "h": 470
+    },
+    "projects/primary-health-care-center.jpg": {
+      "v": "d11bf51f",
+      "placeholder": false,
+      "w": 470,
+      "h": 470
+    },
+    "projects/private-industrial-buildings-2.jpg": {
+      "v": "fce023b0",
+      "placeholder": false,
+      "w": 470,
+      "h": 470
+    },
+    "projects/private-industrial-buildings-3.jpg": {
+      "v": "17b4f78a",
+      "placeholder": false,
+      "w": 470,
+      "h": 470
+    },
+    "projects/private-industrial-buildings-4.jpg": {
+      "v": "954dcb91",
+      "placeholder": false,
+      "w": 470,
+      "h": 470
+    },
+    "projects/private-industrial-buildings-5.jpg": {
+      "v": "34664139",
+      "placeholder": false,
+      "w": 470,
+      "h": 470
+    },
+    "projects/private-industrial-buildings-6.jpg": {
+      "v": "b80bc91d",
+      "placeholder": false,
+      "w": 470,
+      "h": 470
+    },
+    "projects/private-industrial-buildings-7.jpg": {
+      "v": "9b5078b0",
+      "placeholder": false,
+      "w": 470,
+      "h": 470
+    },
+    "projects/private-industrial-buildings.jpg": {
+      "v": "58cb53ae",
+      "placeholder": false,
+      "w": 470,
+      "h": 470
+    },
+    "projects/private-polyclinic-2.jpg": {
+      "v": "dd3ff666",
+      "placeholder": false,
+      "w": 470,
+      "h": 470
+    },
+    "projects/private-polyclinic-3.jpg": {
+      "v": "7417e7a9",
+      "placeholder": false,
+      "w": 470,
+      "h": 470
+    },
+    "projects/private-polyclinic-4.jpg": {
+      "v": "daa0eb6d",
+      "placeholder": false,
+      "w": 470,
+      "h": 470
+    },
+    "projects/private-polyclinic-5.jpg": {
+      "v": "50be06b7",
+      "placeholder": false,
+      "w": 470,
+      "h": 470
+    },
+    "projects/private-polyclinic-6.jpg": {
+      "v": "4318e49e",
+      "placeholder": false,
+      "w": 470,
+      "h": 470
+    },
+    "projects/private-polyclinic.jpg": {
+      "v": "fc370c4d",
+      "placeholder": false,
+      "w": 470,
+      "h": 470
+    },
+    "projects/private-villas-2.jpg": {
+      "v": "02408ba7",
+      "placeholder": false,
+      "w": 470,
+      "h": 470
+    },
+    "projects/private-villas-3.jpg": {
+      "v": "0b6da023",
+      "placeholder": false,
+      "w": 470,
+      "h": 470
+    },
+    "projects/private-villas-4.jpg": {
+      "v": "4201e6f4",
+      "placeholder": false,
+      "w": 470,
+      "h": 470
+    },
+    "projects/private-villas-5.jpg": {
+      "v": "f855561f",
+      "placeholder": false,
+      "w": 470,
+      "h": 470
+    },
+    "projects/private-villas-6.jpg": {
+      "v": "0245096c",
+      "placeholder": false,
+      "w": 470,
+      "h": 470
+    },
+    "projects/private-villas.jpg": {
+      "v": "5fba6bc9",
+      "placeholder": false,
+      "w": 470,
+      "h": 470
+    },
+    "projects/public-bus-stations.png": {
+      "v": "e9f9af69",
+      "placeholder": false,
+      "w": 720,
+      "h": 480
+    },
+    "projects/qatar-national-library.jpg": {
+      "v": "29e958c9",
+      "placeholder": false,
+      "w": 470,
+      "h": 470
+    },
+    "projects/qatar-public-works-authority-2.jpg": {
+      "v": "9a3c4ff0",
+      "placeholder": false,
+      "w": 470,
+      "h": 470
+    },
+    "projects/qatar-public-works-authority-3.jpg": {
+      "v": "ef14ef61",
+      "placeholder": false,
+      "w": 470,
+      "h": 470
+    },
+    "projects/qatar-public-works-authority-4.jpg": {
+      "v": "0e353812",
+      "placeholder": false,
+      "w": 470,
+      "h": 470
+    },
+    "projects/qatar-public-works-authority.webp": {
+      "v": "66598128",
+      "placeholder": false
+    },
+    "projects/sabah-al-ahmad-corridor.jpg": {
+      "v": "2bea2ca6",
+      "placeholder": false,
+      "w": 470,
+      "h": 470
+    },
+    "projects/sarfayt-road-salalah.jpg": {
+      "v": "86334da0",
+      "placeholder": false,
+      "w": 470,
+      "h": 470
+    },
+    "projects/sheraton-park-2.jpg": {
+      "v": "dcac3cac",
+      "placeholder": false,
+      "w": 1200,
+      "h": 800
+    },
+    "projects/sheraton-park.jpg": {
+      "v": "2e0b5afc",
+      "placeholder": false,
+      "w": 1600,
+      "h": 1200
+    },
+    "projects/sultan-qaboos-hospital-2.jpg": {
+      "v": "066bec6c",
+      "placeholder": false,
+      "w": 470,
+      "h": 470
+    },
+    "projects/sultan-qaboos-hospital.jpg": {
+      "v": "7abcb42c",
+      "placeholder": false,
+      "w": 470,
+      "h": 470
+    },
+    "projects/temporary-bus-depots.png": {
+      "v": "e95477e8",
+      "placeholder": false,
+      "w": 720,
+      "h": 480
+    },
+    "projects/warwick-hotel-doha-2.jpg": {
+      "v": "66f59a85",
+      "placeholder": false,
+      "w": 800,
+      "h": 450
+    },
+    "projects/warwick-hotel-doha-3.jpg": {
+      "v": "014e8b85",
+      "placeholder": false,
+      "w": 1080,
+      "h": 719
+    },
+    "projects/warwick-hotel-doha.jpg": {
+      "v": "07bfa850",
+      "placeholder": false,
+      "w": 470,
+      "h": 470
+    },
+    "projects/woqod-tower-2.jpg": {
+      "v": "de1a026a",
+      "placeholder": false,
+      "w": 470,
+      "h": 470
+    },
+    "projects/woqod-tower-3.jpg": {
+      "v": "acc8686f",
+      "placeholder": false,
+      "w": 470,
+      "h": 470
+    },
+    "projects/woqod-tower-4.jpg": {
+      "v": "2b5f1830",
+      "placeholder": false,
+      "w": 470,
+      "h": 470
+    },
+    "projects/woqod-tower-5.jpg": {
+      "v": "3ba8c786",
+      "placeholder": false,
+      "w": 470,
+      "h": 470
+    },
+    "projects/woqod-tower-6.jpg": {
+      "v": "ad4468c1",
+      "placeholder": false,
+      "w": 470,
+      "h": 470
+    },
+    "projects/woqod-tower-7.jpg": {
+      "v": "05324cb1",
+      "placeholder": false,
+      "w": 470,
+      "h": 470
+    },
+    "projects/woqod-tower.jpg": {
+      "v": "2eaac993",
+      "placeholder": false,
+      "w": 470,
+      "h": 470
     },
     "solutions/commercial-offices.jpg": {
       "v": "17e0d95a",
@@ -267,10 +1903,10 @@
       "h": 1024
     },
     "solutions/education-healthcare.jpg": {
-      "v": "dd1ad276",
-      "placeholder": true,
-      "w": 2400,
-      "h": 1600
+      "v": "01e5389d",
+      "placeholder": false,
+      "w": 863,
+      "h": 575
     },
     "solutions/hospitality.jpg": {
       "v": "5ac61704",
@@ -303,16 +1939,16 @@
       "h": 1024
     },
     "solutions/retail-malls.jpg": {
-      "v": "6384260f",
-      "placeholder": true,
-      "w": 2400,
-      "h": 1600
+      "v": "5bd33e43",
+      "placeholder": false,
+      "w": 960,
+      "h": 640
     },
     "solutions/sports-outdoor.jpg": {
-      "v": "41b906d6",
-      "placeholder": true,
-      "w": 2400,
-      "h": 1600
+      "v": "b11ee90b",
+      "placeholder": false,
+      "w": 833,
+      "h": 555
     },
     "textures/noise.png": {
       "v": "b232bdc1",

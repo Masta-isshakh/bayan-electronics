@@ -1,3 +1,4 @@
+import type { SearchLabels } from "@/components/search/search-types";
 import type { ImageAsset } from "@/content/types";
 import type { Locale } from "@/i18n/locales";
 
@@ -10,7 +11,7 @@ export const primaryNav = [
   { key: "contact", href: "/contact" },
 ] as const;
 
-export type NavKey = (typeof primaryNav)[number]["key"] | "products";
+export type NavKey = (typeof primaryNav)[number]["key"] | "products" | "catalogue";
 
 /** Serializable data the client header needs (no content modules on the client). */
 export type NavFamily = { slug: string; name: string; descriptor: string };
@@ -25,11 +26,14 @@ export type LanguageLabels = { group: string; switchTo: Record<Locale, string> }
 export type NavLabels = Record<NavKey, string> & {
   primary: string;
   allProducts: string;
+  catalogueLink: string;
   productsIntro: string;
   openMenu: string;
   closeMenu: string;
   menu: string;
   homeLink: string;
   requestQuote: string;
+  quoteList: string;
+  search: SearchLabels;
   language: LanguageLabels;
 };
