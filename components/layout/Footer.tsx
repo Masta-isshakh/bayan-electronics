@@ -27,6 +27,7 @@ export async function Footer({ locale }: { locale: Locale }) {
   const t = await getTranslations("footer");
   const tn = await getTranslations("nav");
   const tc = await getTranslations("common");
+  const tcn = await getTranslations("company.nav");
   const channels = contactChannels(locale, tc("whatsAppGreeting"));
   const social = site.social.filter((link) => !isPlaceholder(link.href));
   const year = new Date().getFullYear();
@@ -67,10 +68,20 @@ export async function Footer({ locale }: { locale: Locale }) {
             </FooterColumn>
 
             <FooterColumn title={t("company")}>
-              {(["manufacturing", "projects", "about", "contact"] as const).map((key) => (
-                <li key={key}>
-                  <Link href={`/${key}`} className={linkClass}>
-                    {tn(key)}
+              {(
+                [
+                  ["/about", tcn("about")],
+                  ["/about/ceo-message", tcn("ceo")],
+                  ["/about/organization", tcn("organization")],
+                  ["/manufacturing", tn("manufacturing")],
+                  ["/projects", tn("projects")],
+                  ["/distributors", tcn("distributor")],
+                  ["/contact", tn("contact")],
+                ] as const
+              ).map(([href, label]) => (
+                <li key={href}>
+                  <Link href={href} className={linkClass}>
+                    {label}
                   </Link>
                 </li>
               ))}

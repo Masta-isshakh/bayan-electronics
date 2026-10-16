@@ -10,6 +10,7 @@ export async function getFormLabels() {
     email: t("email"),
     phone: t("phone"),
     phoneHint: t("phoneHint"),
+    country: t("country"),
     role: t("role"),
     roles: {
       contractor: t("roles.contractor"),
@@ -28,13 +29,17 @@ export async function getFormLabels() {
     deliveryDate: t("deliveryDate"),
     message: t("message"),
     messageQuote: t("messageQuoteLabel"),
+    messageDistributor: t("messageDistributor"),
     honeypot: t("honeypot"),
     submit: t("submit"),
     submitQuote: t("submitQuote"),
+    submitDistributor: t("submitDistributor"),
     submitting: t("submitting"),
     errors: {
       summary: t("errors.summary"),
       nameRequired: t("errors.nameRequired"),
+      companyRequired: t("errors.companyRequired"),
+      countryRequired: t("errors.countryRequired"),
       emailRequired: t("errors.emailRequired"),
       emailInvalid: t("errors.emailInvalid"),
       phoneInvalid: t("errors.phoneInvalid"),
@@ -58,6 +63,7 @@ export async function getFormLabels() {
       whatsapp: t("fallback.whatsapp"),
     },
     mailSubject: t("mailSubject"),
+    mailSubjectDistributor: t("mailSubjectDistributor"),
   };
 }
 

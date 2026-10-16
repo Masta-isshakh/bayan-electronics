@@ -27,7 +27,7 @@
     },
     "about": {
       "title": "About us",
-      "description": "Al Bayan Electronics & LED Technologies designs, manufactures and tests LED lighting in Qatar."
+      "description": "Al Bayan Electronics & LED Technologies (B-LED) — a Qatar-based manufacturer of LED lighting for industrial, commercial, municipal and residential projects."
     },
     "privacy": {
       "title": "Privacy notice",
@@ -44,6 +44,18 @@
     "quote": {
       "title": "Request a quotation",
       "description": "Request a quotation for LED lighting manufactured in Qatar: product family, quantity, project and delivery date."
+    },
+    "ceo": {
+      "title": "CEO message",
+      "description": "A message from the CEO of Al Bayan Electronics & LED Technologies (B-LED) on lighting, sustainability and Qatar National Vision 2030."
+    },
+    "organization": {
+      "title": "Organization structure",
+      "description": "How B-LED is organised: leadership and the departments behind every LED luminaire we deliver."
+    },
+    "distributor": {
+      "title": "Become a distributor",
+      "description": "Partner with B-LED Lighting Technologies: customised products, an experienced team and flexible production capacity for distributors."
     }
   },
   "common": {
@@ -68,7 +80,7 @@
     "solutions": "Solutions",
     "manufacturing": "Manufacturing",
     "projects": "Projects",
-    "about": "About",
+    "about": "Company",
     "contact": "Contact",
     "allProducts": "All products",
     "productsIntro": "Eleven product families, designed, built and tested in Qatar.",
@@ -313,52 +325,11 @@
     "ctaText": "Tell us about the space and the timeline. We will reply with a proposal."
   },
   "about": {
-    "title": "About Al Bayan",
-    "intro": "A Qatari manufacturer of LED lighting and electronics, with production, testing and records under one roof.",
-    "whatTitle": "What we do",
-    "what": {
-      "production": {
-        "title": "In-house production",
-        "text": "From electronics assembly to finished luminaires, built in our factory in Qatar."
-      },
-      "lab": {
-        "title": "Our own laboratory",
-        "text": "Photometric, electrical, thermal and protection tests, recorded against each order."
-      },
-      "trace": {
-        "title": "Traceability",
-        "text": "Supplier, purchase order, material batch, production order, test results and delivery — linked."
-      },
-      "quality": {
-        "title": "A documented quality system",
-        "text": "Inspections, non-conformance reports, corrective actions and controlled documents."
-      },
-      "digital": {
-        "title": "Digitally managed production",
-        "text": "Planning, materials, inventory and maintenance managed digitally, from order to dispatch."
-      },
-      "language": {
-        "title": "Arabic and English",
-        "text": "We work with customers in both languages, by email and WhatsApp."
-      }
-    },
+    "title": "About B-LED",
+    "intro": "Al Bayan Electronics & LED Technologies — B-LED Lighting Technologies — manufactures LED lighting in Qatar.",
     "madeTitle": "Made in Qatar",
     "madeText": "We design, build and test in Qatar. The factory, the laboratory and the people who made your fixtures are within reach of every project we supply.",
-    "valuesTitle": "What we hold ourselves to",
-    "values": {
-      "precision": {
-        "title": "Precision",
-        "text": "Specifications that mean what they say, and fixtures built to them — checked, measured and recorded."
-      },
-      "reliability": {
-        "title": "Reliability",
-        "text": "Light that keeps working in Qatar's heat and dust, from a supplier that answers when you call."
-      },
-      "responsibility": {
-        "title": "Responsibility",
-        "text": "We stand behind every fixture we ship: if something is wrong, we trace it, fix it and make sure it does not happen again."
-      }
-    },
+    "valuesTitle": "Our core values",
     "facilityTitle": "The factory",
     "facilityText": "Planning, production, testing and dispatch run in one facility in Qatar.",
     "facilityCta": "How we manufacture",
@@ -366,7 +337,13 @@
     "teamTitle": "Our team",
     "timelineTitle": "Milestones",
     "ctaTitle": "Talk to the people who make it",
-    "ctaText": "Questions about a product, a project or the factory — we reply in Arabic or English."
+    "ctaText": "Questions about a product, a project or the factory — we reply in Arabic or English.",
+    "offerTitle": "What we offer",
+    "apartTitle": "What sets us apart",
+    "missionTitle": "Our mission",
+    "visionTitle": "Our vision",
+    "ceoTeaser": "Read the CEO’s message",
+    "organizationTeaser": "See how we are organised"
   },
   "legal": {
     "draftNote": "Draft — to be reviewed by Al Bayan's legal adviser before publication.",
@@ -435,7 +412,12 @@
     "formTitle": "Send an inquiry",
     "formIntro": "Tell us what you need. Fields marked optional can be left empty.",
     "quoteHint": "Pricing a specific project?",
-    "quoteLink": "Request a quotation instead"
+    "quoteLink": "Request a quotation instead",
+    "officesTitle": "Our offices",
+    "officesIntro": "We serve clients across the region and internationally through our offices and distributors.",
+    "contactPerson": "Contact person",
+    "mapLink": "Open in Google Maps",
+    "followTitle": "Follow us"
   },
   "quote": {
     "title": "Request a quotation",
@@ -450,6 +432,7 @@
     "email": "Email",
     "phone": "Phone",
     "phoneHint": "Include the country code, e.g. +974.",
+    "country": "Country",
     "role": "I am a",
     "roles": {
       "contractor": "Contractor",
@@ -468,13 +451,17 @@
     "deliveryDate": "Required delivery date",
     "message": "Message",
     "messageQuoteLabel": "Project details",
+    "messageDistributor": "Your company and markets",
     "honeypot": "Leave this field empty",
     "submit": "Send inquiry",
     "submitQuote": "Send request",
+    "submitDistributor": "Apply to become a distributor",
     "submitting": "Sending…",
     "errors": {
       "summary": "Please check the highlighted fields.",
       "nameRequired": "Enter your name.",
+      "companyRequired": "Enter your company name.",
+      "countryRequired": "Enter the country you would distribute in.",
       "emailRequired": "Enter your email address.",
       "emailInvalid": "Enter a valid email address, like name@company.com.",
       "phoneInvalid": "Enter a valid phone number.",
@@ -501,6 +488,39 @@
       "email": "Send by email",
       "whatsapp": "Send on WhatsApp"
     },
-    "mailSubject": "Inquiry from the website"
+    "mailSubject": "Inquiry from the website",
+    "mailSubjectDistributor": "Distributor application from the website"
+  },
+  "company": {
+    "label": "Company",
+    "nav": {
+      "about": "About us",
+      "ceo": "CEO message",
+      "organization": "Organization",
+      "distributor": "Become a distributor"
+    }
+  },
+  "ceo": {
+    "title": "CEO message",
+    "intro": "Lighting is more than a product.",
+    "quoteLabel": "Message from the Chief Executive Officer"
+  },
+  "organization": {
+    "title": "Organization structure",
+    "intro": "Built for agility, innovation and excellence across every department.",
+    "leadershipTitle": "Leadership",
+    "president": "President & CEO",
+    "vicePresident": "Vice President – Manufacturing Director",
+    "departmentsTitle": "Key departments"
+  },
+  "distributor": {
+    "title": "Become a distributor",
+    "intro": "Partner with B-LED Lighting Technologies.",
+    "benefitsTitle": "Why partner with us",
+    "formTitle": "Apply to become a distributor",
+    "formIntro": "Tell us about your company and the markets you serve. A member of our team will get back to you promptly.",
+    "networkTitle": "Our network today",
+    "contactHint": "Prefer to talk first?",
+    "contactLink": "Contact our team"
   }
 }

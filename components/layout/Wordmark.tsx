@@ -17,9 +17,9 @@ export function LumenMark({ className }: { className?: string }) {
 }
 
 /**
- * Brand lockup. Uses the real logo once public/media/brand/logo-white.svg is supplied;
- * until then a typographic "AL BAYAN" wordmark in Archivo expanded. Its text (or the
- * logo's alt) starts the surrounding link's accessible name.
+ * Brand lockup: the B-LED logo (public/media/brand/logo-white.svg, a vector rebuild of the
+ * client's logo) on dark backgrounds; a typographic wordmark while no logo file exists.
+ * Its alt text starts the surrounding link's accessible name.
  */
 export function Wordmark({ className }: { className?: string }) {
   const logo = assets.brand.logoWhite;
@@ -28,12 +28,12 @@ export function Wordmark({ className }: { className?: string }) {
     return (
       <Image
         src={logo.src}
-        alt="AL BAYAN"
-        width={160}
-        height={28}
+        alt="B-LED"
+        width={133}
+        height={40}
         unoptimized
         priority
-        className={cn("h-7 w-auto", className)}
+        className={cn("h-9 w-auto lg:h-10", className)}
       />
     );
   }

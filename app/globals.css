@@ -2,27 +2,35 @@
 
 /* ── Design tokens ──────────────────────────────────────────────────────────
    "Light is the product": a dark site the content illuminates, with one
-   daylight section per page. Palette, type scale, radii and easing live here;
-   components use the generated utilities (bg-void, text-lumen, rounded-media…). */
+   daylight section per page. Palette from the B-LED identity: brand blue #014B92,
+   a navy derived from it, and the amber of the logo's rays (--lumen). Type scale,
+   radii and easing live here; components use the generated utilities. */
 @theme {
   --color-*: initial;
-  --color-void: #070a12;
-  --color-surface: #0f1424;
-  --color-surface-2: #161c30;
-  --color-line: rgb(255 255 255 / 0.08);
-  --color-line-strong: rgb(255 255 255 / 0.16);
-  --color-text: #f2f4f8;
-  --color-muted: #9aa5bc;
-  --color-lumen: #ffc247;
-  --color-lumen-deep: #8a5a00;
+  --color-void: #051330;
+  --color-surface: #0a1f45;
+  --color-surface-2: #10295a;
+  --color-line: rgb(255 255 255 / 0.09);
+  --color-line-strong: rgb(255 255 255 / 0.18);
+  --color-text: #f3f6fb;
+  --color-muted: #a4b2cc;
+  /* B-LED blue: header bar, tags, links and accents on light backgrounds. */
+  --color-brand: #014b92;
+  --color-brand-deep: #003a75;
+  /* The brand blue lifted to read on navy (6.3:1 on --void). */
+  --color-brand-bright: #4a9be8;
+  /* The amber of the logo's rays. */
+  --color-lumen: #f8b810;
+  --color-lumen-deep: #8a5d00;
   --color-lumen-cool: #cde6ff;
+  /* Qatar maroon: the "made in Qatar" mark and form errors only. */
   --color-maroon: #8a1538;
-  --color-day: #f5f6f9;
+  --color-day: #f3f6fb;
   --color-day-surface: #ffffff;
-  --color-day-text: #0b0f1c;
-  --color-day-muted: #5b6578;
-  --color-day-line: rgb(11 15 28 / 0.1);
-  --color-day-line-strong: rgb(11 15 28 / 0.2);
+  --color-day-text: #0a1b36;
+  --color-day-muted: #53627c;
+  --color-day-line: rgb(10 27 54 / 0.1);
+  --color-day-line-strong: rgb(10 27 54 / 0.2);
   /* CCT explorer endpoints: 2700 K and 6500 K. */
   --color-cct-warm: #ffb65c;
   --color-cct-cool: #d7e8ff;

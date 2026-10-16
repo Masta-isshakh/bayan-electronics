@@ -28,8 +28,12 @@ const manualItems = [
     'The success message says "we reply within one business day" (`form.success` in messages/*.json). Confirm or change the commitment.',
   ],
   [
-    "Logo",
-    'Supply `public/media/brand/logo.svg`, `logo-mark.svg` and `logo-white.svg`. Until then the site renders a typographic "AL BAYAN" wordmark.',
+    "Logo artwork",
+    "The B-LED logo in `public/media/brand/` is a vector rebuild of the 209×63 px PNG on the previous website. Supply the original artwork (AI, EPS, PDF or SVG) to replace `logo.svg`, `logo-white.svg` and `logo-mark.svg`.",
+  ],
+  [
+    "Previous website (b-ledtec.com) is compromised",
+    "The WordPress site carries ~900 injected casino/steroid/forex posts, hidden spam links inside its pages, and `/en/` redirects to a casino post. Clean or retire it (malware scan, delete spam posts, update WordPress and plugins, change all passwords) and request removal of the spam URLs in Google Search Console. When this site goes live on the domain, `/archives/*` returns 410 Gone (see middleware).",
   ],
   [
     "Legal pages",

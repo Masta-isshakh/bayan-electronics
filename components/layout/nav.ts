@@ -7,9 +7,10 @@ export const primaryNav = [
   { key: "manufacturing", href: "/manufacturing" },
   { key: "projects", href: "/projects" },
   { key: "about", href: "/about" },
+  { key: "contact", href: "/contact" },
 ] as const;
 
-export type NavKey = (typeof primaryNav)[number]["key"] | "products" | "contact";
+export type NavKey = (typeof primaryNav)[number]["key"] | "products";
 
 /** Serializable data the client header needs (no content modules on the client). */
 export type NavFamily = { slug: string; name: string; descriptor: string };

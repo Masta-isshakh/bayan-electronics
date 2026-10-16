@@ -1,18 +1,19 @@
 import { Image } from "@/components/ui/Image";
 import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
+import { Check } from "lucide-react";
+import { CompanyNav } from "@/components/company/CompanyNav";
 import { QatarMark } from "@/components/layout/QatarMark";
 import { ButtonLink } from "@/components/ui/Button";
 import { CtaBand } from "@/components/ui/CtaBand";
 import { PageHeader } from "@/components/ui/PageHeader";
+import { TextLink } from "@/components/ui/SectionHeading";
 import { assets } from "@/content/assets";
+import { differentiators, mission, offer, overview, values, vision } from "@/content/company";
 import { site } from "@/content/site";
 import { type LocaleParams, resolveLocale } from "@/lib/i18n";
 import { isPlaceholder } from "@/lib/placeholder";
 import { pageMetadata } from "@/lib/seo";
-
-const whatKeys = ["production", "lab", "trace", "quality", "digital", "language"] as const;
-const valueKeys = ["precision", "reliability", "responsibility"] as const;
 
 export async function generateMetadata({ params }: LocaleParams): Promise<Metadata> {
   const locale = await resolveLocale(params);
@@ -25,8 +26,7 @@ export default async function AboutPage({ params }: LocaleParams) {
   const t = await getTranslations("about");
   const tc = await getTranslations("common");
 
-  // Story, team and timeline appear only once the client has confirmed them.
-  const story = site.story.map((paragraph) => paragraph[locale]).filter((paragraph) => !isPlaceholder(paragraph));
+  // Team and timeline appear only once the client has confirmed them.
   const team = site.team.filter((member) => !isPlaceholder(member.name[locale]) && !member.photo.placeholder);
   const timeline = site.timeline.filter((item) => !isPlaceholder(item.year) && !isPlaceholder(item.text[locale]));
 
@@ -38,26 +38,43 @@ export default async function AboutPage({ params }: LocaleParams) {
         intro={t("intro")}
         crumbs={[{ label: t("title"), href: "/about" }]}
       >
-        {story.map((paragraph) => (
-          <p key={paragraph} className="measure mt-5 text-base text-fg/85">
-            {paragraph}
+        {overview.map((paragraph) => (
+          <p key={paragraph.en} className="measure mt-5 text-base text-fg/85">
+            {paragraph[locale]}
           </p>
         ))}
       </PageHeader>
 
-      <section aria-labelledby="what-title" className="section-y border-t border-line">
-        <div className="shell">
-          <h2 id="what-title" className="display text-4xl">
-            {t("whatTitle")}
-          </h2>
-          <ul className="mt-12 grid gap-px overflow-hidden rounded-media border border-line bg-line sm:grid-cols-2 lg:grid-cols-3">
-            {whatKeys.map((key) => (
-              <li key={key} className="bg-void p-6 lg:p-8">
-                <h3 className="text-lg font-medium">{t(`what.${key}.title`)}</h3>
-                <p className="mt-2 text-base text-fg-muted">{t(`what.${key}.text`)}</p>
-              </li>
-            ))}
-          </ul>
+      <CompanyNav current="about" />
+
+      <section aria-labelledby="offer-title" className="section-y">
+        <div className="shell grid gap-12 lg:grid-cols-12 lg:gap-16">
+          <div className="lg:col-span-6">
+            <h2 id="offer-title" className="display text-4xl">
+              {t("offerTitle")}
+            </h2>
+            <p className="mt-6 text-lg text-fg-muted">{offer.lead[locale]}</p>
+            <ul className="mt-6 divide-y divide-line border-y border-line">
+              {offer.items.map((item) => (
+                <li key={item.en} className="flex items-center gap-4 py-4 text-lg">
+                  <span aria-hidden="true" className="size-1.5 shrink-0 rounded-full bg-lumen" />
+                  {item[locale]}
+                </li>
+              ))}
+            </ul>
+            <p className="mt-6 text-base text-fg-muted">{offer.custom[locale]}</p>
+          </div>
+          <div className="rounded-media border border-line bg-surface p-6 lg:col-span-5 lg:col-start-8 lg:p-10">
+            <h2 className="text-2xl font-medium">{t("apartTitle")}</h2>
+            <ul className="mt-6 space-y-4">
+              {differentiators.map((item) => (
+                <li key={item.en} className="flex gap-3 text-base">
+                  <Check aria-hidden="true" strokeWidth={1.75} className="mt-1 size-5 shrink-0 text-lumen" />
+                  {item[locale]}
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
       </section>
 
@@ -89,17 +106,38 @@ export default async function AboutPage({ params }: LocaleParams) {
         </div>
       </section>
 
+      <section
+        aria-label={`${t("missionTitle")} · ${t("visionTitle")}`}
+        className="section-y cv-auto border-t border-line"
+      >
+        <div className="shell grid gap-6 md:grid-cols-2">
+          {[
+            { title: t("missionTitle"), text: mission[locale] },
+            { title: t("visionTitle"), text: vision[locale] },
+          ].map((item) => (
+            <div key={item.title} className="rounded-media border border-line bg-surface p-8 lg:p-12">
+              <h2 className="text-sm font-medium tracking-[0.12em] text-lumen uppercase">{item.title}</h2>
+              <p className="display mt-6 text-3xl">{item.text}</p>
+            </div>
+          ))}
+        </div>
+        <div className="shell mt-10 flex flex-wrap gap-x-8 gap-y-2">
+          <TextLink href="/about/ceo-message">{t("ceoTeaser")}</TextLink>
+          <TextLink href="/about/organization">{t("organizationTeaser")}</TextLink>
+        </div>
+      </section>
+
       <section aria-labelledby="values-title" className="daylight section-y cv-auto">
         <div className="shell">
           <h2 id="values-title" className="display text-4xl">
             {t("valuesTitle")}
           </h2>
-          <ul className="mt-12 grid gap-10 md:grid-cols-3 md:gap-8">
-            {valueKeys.map((key, index) => (
-              <li key={key} className="border-t-2 border-day-text pt-6">
+          <ul className="mt-12 grid gap-x-8 gap-y-10 sm:grid-cols-2 lg:grid-cols-3">
+            {values.map((value, index) => (
+              <li key={value.id} className="border-t-2 border-brand pt-6">
                 <span className="text-sm text-fg-muted tabular-nums">{String(index + 1).padStart(2, "0")}</span>
-                <h3 className="display mt-3 text-3xl">{t(`values.${key}.title`)}</h3>
-                <p className="mt-4 text-lg text-fg-muted">{t(`values.${key}.text`)}</p>
+                <h3 className="display mt-3 text-3xl">{value.title[locale]}</h3>
+                <p className="mt-4 text-lg text-fg-muted">{value.text[locale]}</p>
               </li>
             ))}
           </ul>

@@ -6,7 +6,7 @@ export const ogSize = { width: 1200, height: 630 };
 export const ogContentType = "image/png";
 
 // OG renders use literal colours: they are rasterised by Satori, outside the CSS tokens.
-const palette = { void: "#070a12", text: "#f2f4f8", muted: "#9aa5bc", lumen: "#ffc247", line: "#1d2335" };
+const palette = { void: "#051330", text: "#f3f6fb", muted: "#a4b2cc", lumen: "#f8b810", line: "#16305e" };
 
 async function loadFonts() {
   const dir = join(process.cwd(), "fonts", "og");

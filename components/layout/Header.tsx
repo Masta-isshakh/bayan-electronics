@@ -90,7 +90,7 @@ export function Header({ logo, families, feature, labels }: HeaderProps) {
         onBlur={closeOnFocusLeave}
         className={cn(
           "fixed inset-x-0 top-0 z-50 border-b border-transparent transition-[background-color,border-color] duration-300 ease-entrance",
-          "data-[solid=true]:border-line data-[solid=true]:bg-surface/85 data-[solid=true]:backdrop-blur-md",
+          "data-[solid=true]:border-line data-[solid=true]:bg-brand/95 data-[solid=true]:backdrop-blur-md",
         )}
       >
         <div className="shell flex h-[var(--header-h)] items-center justify-between gap-6">
@@ -184,5 +184,5 @@ export function Header({ logo, families, feature, labels }: HeaderProps) {
 
 const navLinkClass =
   "relative inline-flex min-h-11 items-center px-3 text-sm text-fg/80 transition-colors hover:text-fg aria-[current=page]:text-fg " +
-  "after:absolute after:inset-x-3 after:bottom-2 after:h-px after:origin-left after:scale-x-0 after:bg-maroon after:transition-transform after:duration-300 rtl:after:origin-right " +
+  "after:absolute after:inset-x-3 after:bottom-2 after:h-px after:origin-left after:scale-x-0 after:bg-brand-bright after:transition-transform after:duration-300 rtl:after:origin-right " +
   "hover:after:scale-x-100 aria-[current=page]:after:scale-x-100 aria-[current=page]:after:bg-lumen";

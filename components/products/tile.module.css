@@ -23,7 +23,7 @@
 .dim {
   position: absolute;
   inset: 0;
-  background-color: rgb(7 10 18 / 0.5);
+  background-color: color-mix(in srgb, var(--color-void) 50%, transparent);
   transition: background-color 500ms var(--ease-entrance);
 }
 
@@ -31,14 +31,23 @@
   position: absolute;
   inset: 0;
   opacity: 0;
-  background: radial-gradient(320px circle at var(--mx) var(--my), rgb(255 194 71 / 0.18), transparent 70%);
+  background: radial-gradient(
+    320px circle at var(--mx) var(--my),
+    color-mix(in srgb, var(--color-lumen) 18%, transparent),
+    transparent 70%
+  );
   transition: opacity 400ms var(--ease-entrance);
 }
 
 .shade {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to top, rgb(7 10 18 / 0.92) 0%, rgb(7 10 18 / 0.35) 45%, rgb(7 10 18 / 0) 70%);
+  background: linear-gradient(
+    to top,
+    color-mix(in srgb, var(--color-void) 92%, transparent) 0%,
+    color-mix(in srgb, var(--color-void) 35%, transparent) 45%,
+    color-mix(in srgb, var(--color-void) 0%, transparent) 70%
+  );
 }
 
 .chips {
@@ -67,7 +76,7 @@
 .tile:hover,
 .tile:focus-visible,
 .tile[data-lit] {
-  border-color: rgb(255 194 71 / 0.35);
+  border-color: color-mix(in srgb, var(--color-lumen) 35%, transparent);
 }
 
 .tile:hover .image,
@@ -79,7 +88,7 @@
 .tile:hover .dim,
 .tile:focus-visible .dim,
 .tile[data-lit] .dim {
-  background-color: rgb(7 10 18 / 0.32);
+  background-color: color-mix(in srgb, var(--color-void) 32%, transparent);
   mask-image: radial-gradient(320px circle at var(--mx) var(--my), transparent 0%, rgb(0 0 0 / 0.5) 45%, #000 75%);
 }
 

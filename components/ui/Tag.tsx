@@ -1,10 +1,10 @@
 import type { ReactNode } from "react";
 import { cn } from "@/lib/cn";
 
-/** Sector tag: a small maroon chip (maroon is never used for large fills). */
+/** Sector tag: a small chip in the B-LED brand blue. */
 export function Tag({ children, className }: { children: ReactNode; className?: string }) {
   return (
-    <span className={cn("inline-flex items-center rounded-control bg-maroon px-2 py-0.5 text-sm text-text", className)}>
+    <span className={cn("inline-flex items-center rounded-control bg-brand px-2 py-0.5 text-sm text-text", className)}>
       {children}
     </span>
   );

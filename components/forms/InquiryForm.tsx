@@ -8,7 +8,7 @@ import type { InquiryInput } from "@/lib/amplify-client";
 import { controlClass, FormField } from "./FormField";
 import type { FormLabels } from "./labels";
 
-export type FormVariant = "contact" | "quote";
+export type FormVariant = "contact" | "quote" | "distributor";
 
 export const roleKeys = ["contractor", "consultant", "developer", "distributor", "endUser", "other"] as const;
 const NOT_SURE = "not-sure";
@@ -25,6 +25,7 @@ type Values = {
   company: string;
   email: string;
   phone: string;
+  country: string;
   role: string;
   productFamily: string;
   quantity: string;
@@ -43,6 +44,7 @@ const emptyValues: Values = {
   company: "",
   email: "",
   phone: "",
+  country: "",
   role: "",
   productFamily: "",
   quantity: "",
@@ -58,6 +60,7 @@ const fieldOrder: FieldName[] = [
   "company",
   "email",
   "phone",
+  "country",
   "role",
   "productFamily",
   "quantity",
@@ -72,8 +75,12 @@ function validate(values: Values, variant: FormVariant, labels: FormLabels, toda
   if (!values.email.trim()) errors.email = labels.errors.emailRequired;
   else if (!EMAIL_PATTERN.test(values.email.trim())) errors.email = labels.errors.emailInvalid;
   if (values.phone.trim() && !PHONE_PATTERN.test(values.phone.trim())) errors.phone = labels.errors.phoneInvalid;
-  if (variant === "contact" && values.message.trim().length < MIN_MESSAGE_LENGTH)
+  if (variant !== "quote" && values.message.trim().length < MIN_MESSAGE_LENGTH)
     errors.message = labels.errors.messageRequired;
+  if (variant === "distributor") {
+    if (!values.company.trim()) errors.company = labels.errors.companyRequired;
+    if (!values.country.trim()) errors.country = labels.errors.countryRequired;
+  }
   if (variant === "quote") {
     if (!values.role) errors.role = labels.errors.roleRequired;
     if (!values.productFamily) errors.productFamily = labels.errors.familyRequired;
@@ -121,6 +128,7 @@ export function InquiryForm({ variant, locale, labels, families, whatsappNumber,
   const formRef = useRef<HTMLFormElement>(null);
   const statusRef = useRef<HTMLDivElement>(null);
   const isQuote = variant === "quote";
+  const isDistributor = variant === "distributor";
 
   // Client-only: today's date (static pages must not bake in the build date) and a
   // product family preselected from ?family=…
@@ -182,6 +190,7 @@ export function InquiryForm({ variant, locale, labels, families, whatsappNumber,
       company: values.company.trim() || undefined,
       email: values.email.trim(),
       phone: values.phone.trim() || undefined,
+      country: values.country.trim() || undefined,
       role: values.role || undefined,
       productFamily: values.productFamily || undefined,
       quantity: values.quantity.trim() || undefined,
@@ -214,6 +223,8 @@ export function InquiryForm({ variant, locale, labels, families, whatsappNumber,
     setStatus("idle");
   }
 
+  const messageLabel = isQuote ? labels.messageQuote : isDistributor ? labels.messageDistributor : labels.message;
+
   // A readable summary of the form for the WhatsApp / email fallback.
   const familyLabel = families.find((option) => option.value === values.productFamily)?.label;
   const summary = [
@@ -221,19 +232,20 @@ export function InquiryForm({ variant, locale, labels, families, whatsappNumber,
     [labels.company, values.company],
     [labels.email, values.email],
     [labels.phone, values.phone],
+    [labels.country, values.country],
     [labels.role, values.role ? labels.roles[values.role as (typeof roleKeys)[number]] : ""],
     [labels.productFamily, familyLabel ?? ""],
     [labels.quantity, values.quantity],
     [labels.projectName, values.projectName],
     [labels.deliveryDate, values.deliveryDate],
-    [isQuote ? labels.messageQuote : labels.message, values.message],
+    [messageLabel, values.message],
   ]
     .filter(([, value]) => value)
     .map(([label, value]) => `${label}: ${value}`)
     .join("\n");
   const whatsappHref = whatsappNumber ? `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(summary)}` : null;
   const mailHref = email
-    ? `mailto:${email}?subject=${encodeURIComponent(labels.mailSubject)}&body=${encodeURIComponent(summary)}`
+    ? `mailto:${email}?subject=${encodeURIComponent(isDistributor ? labels.mailSubjectDistributor : labels.mailSubject)}&body=${encodeURIComponent(summary)}`
     : null;
   const hasChannels = Boolean(whatsappHref || mailHref);
 
@@ -281,7 +293,7 @@ export function InquiryForm({ variant, locale, labels, families, whatsappNumber,
       <FormField
         id={`${variant}-company`}
         label={labels.company}
-        optionalLabel={labels.optional}
+        optionalLabel={isDistributor ? undefined : labels.optional}
         error={errors.company}
       >
         {(describedBy) => (
@@ -289,6 +301,7 @@ export function InquiryForm({ variant, locale, labels, families, whatsappNumber,
             {...field("company")}
             type="text"
             autoComplete="organization"
+            required={isDistributor}
             aria-describedby={describedBy}
             className={controlClass}
           />
@@ -327,6 +340,21 @@ export function InquiryForm({ variant, locale, labels, families, whatsappNumber,
           />
         )}
       </FormField>
+
+      {isDistributor && (
+        <FormField id={`${variant}-country`} label={labels.country} error={errors.country} className="sm:col-span-2">
+          {(describedBy) => (
+            <input
+              {...field("country")}
+              type="text"
+              autoComplete="country-name"
+              required
+              aria-describedby={describedBy}
+              className={controlClass}
+            />
+          )}
+        </FormField>
+      )}
 
       {isQuote && (
         <>
@@ -421,7 +449,7 @@ export function InquiryForm({ variant, locale, labels, families, whatsappNumber,
 
       <FormField
         id={`${variant}-message`}
-        label={isQuote ? labels.messageQuote : labels.message}
+        label={messageLabel}
         optionalLabel={isQuote ? labels.optional : undefined}
         error={errors.message}
         className="sm:col-span-2"
@@ -464,7 +492,13 @@ export function InquiryForm({ variant, locale, labels, families, whatsappNumber,
           aria-disabled={status === "submitting"}
           className="w-full sm:w-auto"
         >
-          {status === "submitting" ? labels.submitting : isQuote ? labels.submitQuote : labels.submit}
+          {status === "submitting"
+            ? labels.submitting
+            : isQuote
+              ? labels.submitQuote
+              : isDistributor
+                ? labels.submitDistributor
+                : labels.submit}
         </Button>
       </div>
 

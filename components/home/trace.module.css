@@ -47,7 +47,8 @@
   border: 2px solid color-mix(in oklab, var(--color-lumen) calc(var(--lit) * 100%), var(--color-line-strong));
   border-radius: 50%;
   background-color: color-mix(in oklab, var(--color-lumen) calc(var(--lit) * 100%), var(--color-void));
-  box-shadow: 0 0 calc(var(--lit) * 18px) rgb(255 194 71 / calc(var(--lit) * 0.55));
+  box-shadow: 0 0 calc(var(--lit) * 18px)
+    color-mix(in srgb, var(--color-lumen) calc(var(--lit) * 55.00000000000001%), transparent);
 }
 
 .line {

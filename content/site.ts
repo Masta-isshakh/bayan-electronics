@@ -3,7 +3,19 @@ import { assets } from "./assets";
 import type { ImageAsset, Localized, VideoSources } from "./types";
 
 export type Stat = { id: string; value: string; label: Localized };
-export type SocialLink = { id: string; label: string; href: string };
+export type SocialLink = { id: string; label: string; href: string; confirm?: string };
+export type Office = {
+  id: string;
+  country: Localized;
+  role: Localized;
+  company: Localized;
+  address?: Localized;
+  contactPerson?: Localized;
+  phones: string[];
+  email?: string;
+  /** Set when the client still has to confirm the published details. */
+  confirm?: string;
+};
 export type Certification = { id: string; name: string; issuer: Localized; document: string };
 export type TeamMember = { id: string; name: Localized; role: Localized; photo: ImageAsset };
 export type Milestone = { id: string; year: string; text: Localized };
@@ -18,26 +30,32 @@ export const site = {
   url: (process.env.NEXT_PUBLIC_SITE_URL ?? "https://albayan.example").replace(/\/$/, ""),
 
   brand: {
+    /** Trading brand, as on the logo (B-LED Lighting Technologies). */
+    trade: "B-LED",
+    tradeFull: { en: "B-LED Lighting Technologies", ar: "B-LED لتقنيات الإضاءة" },
     name: {
       en: "Al Bayan Electronics & LED Technologies",
-      ar: "البيان للإلكترونيات وتقنيات الإضاءة LED",
-      confirm: "Arabic brand name spelling",
+      ar: "البيان للإلكترونيات وتقنيات الـ LED",
     },
     legalName: {
       en: "Al Bayan Electronics & LED Technologies Factory",
       ar: "مصنع البيان للإلكترونيات وتقنيات الإضاءة LED",
       confirm: "Arabic legal name exactly as on the commercial registration",
     },
-    short: { en: "Al Bayan", ar: "البيان", confirm: "Arabic short name" },
+    short: { en: "Al Bayan", ar: "البيان" },
   },
 
+  // Phone, email and address as published on the company's previous website (b-ledtec.com).
   contact: {
-    phone: pending("main phone number in international format, e.g. +974 4000 0000"),
-    whatsapp: pending("WhatsApp business number, digits only with country code, e.g. 97450000000"),
-    email: pending("inquiry email address"),
+    phone: "+974 3348 8020",
+    phoneAlt: "+974 7747 8254",
+    whatsapp: pending(
+      "WhatsApp business number, digits only with country code — +974 3348 8020 (main line) if it is on WhatsApp",
+    ),
+    email: "info@b-ledtec.com",
     address: {
-      en: pending("street address (English)"),
-      ar: pending("street address (Arabic)"),
+      en: "81 New Industrial Area, Doha, Qatar",
+      ar: "81، المنطقة الصناعية الجديدة، الدوحة، قطر",
     },
     poBox: pending("P.O. box"),
     hours: {
@@ -75,11 +93,56 @@ export const site = {
   ] satisfies Stat[],
 
   social: [
+    { id: "instagram", label: "Instagram", href: "https://www.instagram.com/albayanledtec" },
+    {
+      id: "facebook",
+      label: "Facebook",
+      href: "https://www.facebook.com/people/B-LED-Technologies",
+      confirm: "Facebook page URL (the previous site links to /people/B-LED-Technologies without the page id)",
+    },
     { id: "linkedin", label: "LinkedIn", href: pending("LinkedIn page URL") },
-    { id: "instagram", label: "Instagram", href: pending("Instagram profile URL") },
-    { id: "x", label: "X", href: pending("X profile URL") },
     { id: "youtube", label: "YouTube", href: pending("YouTube channel URL") },
   ] satisfies SocialLink[],
+
+  /** Offices and distributors, as listed on the previous website's contact page. */
+  offices: [
+    {
+      id: "doha",
+      country: { en: "Qatar", ar: "قطر" },
+      role: { en: "Head office & factory", ar: "المقر الرئيسي والمصنع" },
+      company: { en: "Al Bayan Electronics & LED Technologies", ar: "البيان للإلكترونيات وتقنيات الـ LED" },
+      address: { en: "81 New Industrial Area, Doha, Qatar", ar: "81، المنطقة الصناعية الجديدة، الدوحة، قطر" },
+      phones: ["+974 3348 8020", "+974 7747 8254"],
+      email: "info@b-ledtec.com",
+    },
+    {
+      id: "kuwait",
+      country: { en: "Kuwait", ar: "الكويت" },
+      role: { en: "Distributor", ar: "الموزّع" },
+      company: {
+        en: "Arab Harvest General Trading & Contracting Co.",
+        ar: "شركة أرب هارفيست العامة للتجارة والمقاولات",
+      },
+      address: {
+        en: "Al-Fahaheel, Block 7, Street 65, Building 10, 5th floor, Offices 01–03, Kuwait",
+        ar: "الكويت، الفحيحيل - القطاع (7) - الشارع (65)، المبنى 10 - الطابق الخامس، مكتب رقم 01، 02، 03",
+      },
+      contactPerson: { en: "Faisal Abdul Hadi Theeb Al Hajri", ar: "فيصل عبد الهادي ذيب الهاجري" },
+      phones: ["+965 6613 3331", "+965 2392 8540"],
+      email: "Arab_Harvest@hotmail.com",
+      confirm: "Kuwait distributor details are current",
+    },
+    {
+      id: "oman",
+      country: { en: "Oman", ar: "عُمان" },
+      role: { en: "Office", ar: "مكتب" },
+      company: { en: "Al Bayan Electronics & LED Technologies", ar: "البيان للإلكترونيات وتقنيات الـ LED" },
+      phones: ["+968 9339 6422"],
+      email: "houssam@b-ledtec.com",
+      confirm:
+        "Oman office address and phone — the previous site shows the Doha address for Oman, and different numbers on its English and Arabic pages",
+    },
+  ] satisfies Office[],
 
   /** Slots — hidden on the site until confirmed. */
   certifications: [
@@ -107,16 +170,4 @@ export const site = {
       text: { en: pending("milestone (English)"), ar: pending("milestone (Arabic)") },
     },
   ] satisfies Milestone[],
-
-  /** About-page story paragraphs, to be written with the client. */
-  story: [
-    {
-      en: pending("company story, paragraph 1 — origins and why the factory was set up"),
-      ar: pending("company story, paragraph 1 (Arabic)"),
-    },
-    {
-      en: pending("company story, paragraph 2 — today: capacity, people, customers"),
-      ar: pending("company story, paragraph 2 (Arabic)"),
-    },
-  ] satisfies Localized[],
 };

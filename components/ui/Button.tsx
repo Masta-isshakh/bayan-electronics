@@ -11,7 +11,7 @@ const base =
 const variants: Record<ButtonVariant, string> = {
   lumen: "bg-lumen text-void hover:brightness-110",
   outline: "border border-rule-strong text-fg hover:border-fg/50 hover:bg-fg/5",
-  quiet: "px-0 text-fg underline decoration-transparent decoration-2 underline-offset-[0.4em] hover:decoration-maroon",
+  quiet: "px-0 text-fg underline decoration-transparent decoration-2 underline-offset-[0.4em] hover:decoration-lumen",
 };
 
 export function buttonClasses(variant: ButtonVariant = "lumen", className?: string) {

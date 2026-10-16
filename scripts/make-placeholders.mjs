@@ -18,7 +18,7 @@ const root = fileURLToPath(new URL("..", import.meta.url));
 const mediaDir = join(root, "public", "media");
 const { listImages, listMediaFiles } = await tsImport("../content/assets.ts", import.meta.url);
 
-const palette = { void: "#070A12", surface: "#0F1424", lumen: "#FFC247", muted: "#9AA5BC" };
+const palette = { void: "#051330", surface: "#0A1F45", lumen: "#F8B810", muted: "#A4B2CC" };
 
 /** Deterministic 0..1 value per path, so each placeholder has its own light position. */
 function seed(path, salt) {
