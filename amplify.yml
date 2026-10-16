@@ -3,8 +3,9 @@ backend:
   phases:
     preBuild:
       commands:
-        # Tailwind v4 (oxide) and sharp 0.35 require Node >= 20.
-        - nvm install 22
+        # Tailwind v4 (oxide) and sharp 0.35 require Node >= 20. Skip nvm's default global
+        # packages (Amplify CLI, Cypress, Bower, …): unused here and ~1 min per build.
+        - nvm install 22 --skip-default-packages
         - nvm use 22
     build:
       commands:

@@ -16,10 +16,9 @@ const immutable = [{ key: "Cache-Control", value: `public, max-age=${ONE_YEAR_SE
 const nextConfig: NextConfig = {
   reactStrictMode: true,
   poweredByHeader: false,
-  experimental: {
-    // Inline the (small) stylesheet into the HTML: removes a render-blocking round trip.
-    inlineCss: true,
-  },
+  // experimental.inlineCss is off on purpose: it put the 57 KB stylesheet into every page's HTML
+  // and RSC payload (three copies per page, ~100 MB across 600 static pages, past Amplify's 220 MB
+  // build-output limit). One cached stylesheet is cheaper.
   images: {
     // Photos are pre-built as static WebP variants (scripts/media-manifest.mjs) and mapped by
     // lib/image-loader.ts, passed as the loader in components/ui/Image.tsx and HeroPoster:

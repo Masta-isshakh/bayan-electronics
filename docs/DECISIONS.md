@@ -284,3 +284,16 @@ public pages and REST/Store APIs. Everything taken from it is the company's own 
 - **Headline font fallback.** `.display` sets Archivo at 118 % width; next/font's Arial fallback is sized for 100 %, so
   long titles gained a line when the font arrived (CLS 0.12–0.16 on the catalogue and distributor pages). Width-matched
   fallback faces (Arial Bold × 116 %, Roboto Bold × 121 %) keep the line breaks: CLS 0.
+
+## Amplify build fixes (2026-10-16)
+
+- **Lock file.** Deployments 2–7 failed in the backend phase at `npm ci`: "Missing: @opentelemetry/core@2.0.0 from
+  lock file". Two Amplify backend packages bundle OpenTelemetry modules pinned to core 2.0.0; npm 10.9.2 (local)
+  wrote a lock without those nested copies and the npm on Amplify's Node 22 (10.9.9) rejects it. The lock was
+  regenerated with npm 10.9.9 (14 nested entries, no version changes); `npm run lockfile:check` guards it.
+- **No inline CSS.** `experimental.inlineCss` embedded the 57 KB stylesheet three times per page (HTML `<style>`, the RSC
+  payload inside the HTML, and the `.rsc` file every client navigation fetches). With 603 static pages the server
+  output reached 215 MB — over Amplify's 220 MiB build-output limit once node_modules are added. Off: 109 MB, model
+  page 228 → 116 KB HTML and 118 → 58 KB RSC; Lighthouse mobile home 96, catalogue 98, model 97 (TBT down, FCP
+  +0.2 s on a first visit for the stylesheet request).
+- **nvm default packages** (Amplify CLI, Cypress, Bower, …) are skipped (`--skip-default-packages`): ~1 min per build.
